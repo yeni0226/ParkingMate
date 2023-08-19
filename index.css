@@ -56,9 +56,12 @@ ul, li {
   transition-timing-function: ease-out;
 }
 
+#main{
+  height: 100vh;
+}
+
 .web-header {
-  position: relative;
-  position: sticky;
+  position: absolute;
   top: 0;
   transition: top .25s;
   z-index: 99;
@@ -67,7 +70,7 @@ ul, li {
 
 @media screen and (min-width: 1097px){
   .web-header {
-      position: static;
+      position: absolute;
   }
 }
 
