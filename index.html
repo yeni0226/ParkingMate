@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>와디즈</title>
+    <link
+      href="https://static.wadiz.kr/assets/icon/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
+    <link
+      rel="stylesheet"
+      href="https://static.wadiz.kr/assets/fonts/font.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=07677ab6a81e578eeb1d2a9e0ea97529"
+    ></script>
+
+    <style>
+      @font-face {
+        font-family: "SegoeUI_online_security";
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+      }
+
+      @font-face {
+        font-family: "SegoeUI_bold_online_security";
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <main id="main">
+        <div class="web-header">
+          <div class="web-header-large">
+            <header class="header-wrapper">
+              <div class="header-container">
+                <h1 class="wadiz-logo">
+                  <a href="index.html">
+                    <span class="label">주차메이트</span>
+                    <span class="parkingmate-logo">ParkingMate</span>
+                  </a>
+                </h1>
+                <ul class="nav-container">
+                  <li class="nav-item">
+                    <a href="" onclick="setCenter()" class="item-text"
+                      ><span>내위치</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="item-text"><span>예약하기</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="item-text"><span>이벤트</span></a>
+                  </li>
+                </ul>
+                <div class="header-utils">
+                  <div class="search-container">
+                    <form>
+                      <div class="search-form">
+                        <div class="search-left"></div>
+                        <div class="search-controll">
+                          <input
+                            type="search"
+                            placeholder="위치 검색하기"
+                            aria-label="검색"
+                            value=""
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          class="saerch-button"
+                          aria-label="검색"
+                        >
+                          <svg
+                            viewBox="0 0 40 40"
+                            focusable="false"
+                            role="presentation"
+                            class="withIcon_icon__3VTbq"
+                            aria-hidden="true"
+                            style="width: 24px; height: 24px"
+                          >
+                            <path fill="none" d="M0 0h40v40H0z"></path>
+                            <path
+                              d="M29.2 27.91a14.38 14.38 0 1 0-1.42 1.4l7.16 7.15.07.08 1.41-1.41zM18.45 6a12.36 12.36 0 0 1 8.35 3.23 12.24 12.24 0 0 1 4 8.59A12.39 12.39 0 1 1 17.88 6z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="search-info" style="display: none"></div>
+                  </div>
+                  <div class="header-user">
+                    <div class="user-container">
+                      <button type="button" class="user-button">로그인</button>
+                      <button class="user-button">회원가입</button>
+                    </div>
+                  </div>
+                  <div class="header-funding-open">
+                    <button class="funding-button">
+                      <span>
+                        <span class="button-children">주차장 업로드</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div id="parkingmate-map" style="width: 100%; height: 94vh"></div>
+      </main>
+    </div>
+  </body>
+  <script>
+    var mapContainer = document.getElementById("parkingmate-map"), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+      };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+  </script>
+</html>
