@@ -8,6 +8,10 @@ body, button, html, input, textarea {
   font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
 }
 
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
 body, table th {
   font-weight: 400;
 }
@@ -30,17 +34,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline;
 }
 
-main, section, article {
+article, aside, figcaption, figure, footer, header, nav, section {
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a, button {
-  outline: none;
+main, section, article {
+  display: block;
 }
 
 ul, li {
@@ -49,32 +48,42 @@ ul, li {
   list-style: none;
 }
 
-#page-container {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+iframe, img, video {
+  vertical-align: top;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+#parkingmate-page-container {
   transform-origin: 50% 0;
   transition-property: opacity,transform;
   transition-duration: 80ms;
   transition-timing-function: ease-out;
 }
 
-#main{
-  height: 100vh;
-}
-
-.web-header {
-  position: absolute;
+.parkingmate-web-header{
+  position: relative;
+  position: sticky;
   top: 0;
   transition: top .25s;
-  z-index: 99;
+  z-index: 1201;
   width: 100%;
 }
 
-@media screen and (min-width: 1097px){
-  .web-header {
-      position: absolute;
-  }
+.parkingmate-web-header-mobile{
+  display: block;
+  position: relative;
 }
 
-.header-wrapper {
+.parkingmate-header-wrapper{
   position: relative;
   top: 0;
   z-index: 9998;
@@ -84,37 +93,7 @@ ul, li {
   text-align: center;
 }
 
-@media screen and (min-width: 1097px){
-  .header-wrapper {
-    position: relative;
-    border-bottom: 1px solid #f2f4f6;
-    padding: 0;
-    height: 56px;
-    text-align: left;
-  }
-}
-
-.header-wrapper {
-  position: relative;
-  top: 0;
-  z-index: 9998;
-  background-color: #fff;
-  width: 100%;
-  height: 56px;
-  text-align: center;
-}
-
-@media screen and (min-width: 1097px){
-  .header-wrapper {
-    position: relative;
-    border-bottom: 1px solid #f2f4f6;
-    padding: 0;
-    height: 56px;
-    text-align: left;
-  }
-}
-
-.header-container {
+.parkingmate-header-container{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,231 +103,179 @@ ul, li {
   height: 100%;
 }
 
-@media screen and (min-width: 1097px){
-  .header-container {
-      padding: 0 80px;
-  }
-}
-.parkingmate-logo{
-  letter-spacing:-2px;
-  font-size: 24px;
-}
-
-.wadiz-logo {
-  display: inline-block;
-  margin: 0;
-  line-height: 22px;
-  font-size: 32px;
-}
-
-@media screen and (min-width: 1097px){
-  .wadiz-logo {
-    position: static;
-  }
-}
-
-.wadiz-logo>a {
-  display: block;
-  padding: 11px 0 13px;
-}
-
-@media screen and (min-width: 1097px){
-  .wadiz-logo>a {
-      padding: 14px 0 18px;
-  }
-}
-
-.label {
-  display: block;
-  position: absolute;
-  left: -9999px;
-  visibility: none;
-  height: 1px;
-}
-
-.nav-container{
-  display: inline-block;
-  position: static;
+.parkingmate-footer-button{
+  display: flex;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-  flex-shrink: 0;
   justify-content: space-between;
-  z-index: 1;
-  margin-left: 24px;
-  padding: 0;
-  width: auto;
+  transform: translateY(0);
+  transition: transform .25s;
+  z-index: 100;
+  margin-left: 0;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.15);
+  background-color: #fff;
+  padding: 0 0 8px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
   list-style: none;
-  vertical-align: top;
 }
 
-.nav-item{
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-  color: #212529;
-}
-
-.item-text {
-  line-height: 30px;
-  font-size: 20px;
-  font-weight: 700;
+.parkingmate-footer-button-item{
   position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.parkingmate-footer-button-item-in{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
   transition: .2s;
   cursor: pointer;
-  padding: 14px 16px;
-  text-align: center;
-  color: #212529;
-}
-
-.header-utils{
-  top: 0;
-  right: 0;
-  vertical-align: top;
-  position: absolute;
-}
-
-@media screen and (min-width: 1097px){
-  .header-utils {
-      display: flex;
-      position: relative;
-      margin-left: auto;
-  }
-}
-
-.search-container{
-  display: inline-block;
-  position: relative;
-  padding: 8px 16px 8px 0;
-  min-width: 185px;
-  height: 56px;
-}
-
-
-
-.search-form{
-  line-height: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  display: flex;
-  position: relative;
-  transition-property: border-color,background-color,color;
-  transition-duration: .15s;
-  outline: none;
-  border: 1px solid #dde2e6;
-  border-radius: 4px;
-  background-color: #fff;
-  padding: 0 10px 0 0;
-  height: 40px;
-  min-height: 40px;
-  line-height: 40px;
-  color: #212529;
-}
-
-@media screen and (min-width: 1097px){
-  .search-form {
-      border: 1px solid #00c4c4;
-  }
-}
-
-@media screen and (min-width: 1360px){
-  .search-container {
-    min-width: 360px;
-  }
-}
-
-.search-left{
-  position: relative;
-  width: 16px;
-}
-
-.search-controll{
-  display: flex;
-  position: relative;
-  flex: 1 1 0%;
-  margin-right: 40px;
-}
-
-.search-controll input{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  position: relative;
-  flex-grow: 1;
-  outline: none;
-  background: none;
-  padding-right: 32px;
+  padding-top: 7px;
+  padding-bottom: 2px;
   width: 100%;
-  appearance: none;
-  font-size: 14px;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto
 }
 
-.saerch-button{
+.item-active{
+  color: #212529;
+  font-weight: 700;
+}
+
+.parkingmate-footer-button-item-in-text{
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
   position: absolute;
-  top: 52%;
-  right: 16px;
-  left: auto;
-  transform: translateY(-52%);
-  z-index: 1;
-  pointer-events: visible;
+  top: 33px;
+  color: #868e96;
 }
 
-.saerch-button svg {
+.item-active .parkingmate-footer-button-item-in-text{
+  color: #212529;
+  font-weight: 700;
+}
+
+.parkingmate-footer-button-item-svg{
   display: block;
   transform: scale(1);
   transition: transform .3s ease-out;
-  width: 24px;
-  height: 24px;
   fill: currentColor;
+  position: absolute;
+  top: 9px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  color: #868e96;
+  font-size: 24px;
 }
 
-.header-user{
-  display: inline-block;
+.item-active .parkingmate-footer-button-item-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  top: 3px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  font-size: 24px;
+  color: #212529;
+}
+
+.parkingmate-footer-button-plus{
+  display: flex;
   position: relative;
-  vertical-align: top;
-}
-
-.user-container{
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  position: relative;
-}
-
-.user-button{
-  display: inline-block;
-  cursor: pointer;
-  padding: 0 8px;
-  text-align: center;
-  line-height: 56px;
-  color: #495057;
-  font-size: 15px;
-}
-
-.header-funding-open{
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 12px;
-}
-
-.funding-button{
-  padding: 9px 15px;
-  line-height: 1.45;
-  font-size: 14px;
-  border-color: #00c4c4;
-  background-color: #00c4c4;
-  color: #fff;
-  margin-top: 8px;
-  border-radius: 4px;
-  vertical-align: top;
-}
-
-.funding-button span{
-  display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  vertical-align: top;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto;
 }
 
-.button-children{
-  vertical-align: top;
+.parkingmate-search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dde2e6;
+  width: 100%;
+  height: 40px;
+  margin-right: 16px;
+  padding: 0 16px;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+
+.parkingmate-search-container-input {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.parkingmate-search-container-input::placeholder{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #adb5bd;
+}
+
+
+
+.parkingmate-search-container-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  color: #495057;
+}
+
+.parkingmate-alram{
+  display: inline-block;
+}
+
+.parkingmate-alram-button{
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+}
+
+.parkingmate-alram-button-svg{
+  display: inline;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  color: #000;
+  font-size: 24px;
 }
