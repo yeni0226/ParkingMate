@@ -76,6 +76,17 @@
   margin: 0 auto;
 }
 
+.GNBMobile_icon__3OOAF {
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  color: #868e96;
+  font-size: 24px;
+}
+
+/* 하단 배너 클릭 기능 */
 .on{
   color: #212529 !important;
   font-weight: 700 !important;
