@@ -1,0 +1,25 @@
+/* 메인박스 */
+.main {
+  position: relative;
+}
+
+/* 내 위치 버튼 */
+.my-location-button {
+  position: absolute;
+  z-index: 10000;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50px;
+
+  top: 12px;
+  right: 12px;
+
+  background-color: #fff;
+}
+
+/* 내 위치 이미지 */
+.my-location-image {
+  width: 52px;
+  height: 52px;
+}
