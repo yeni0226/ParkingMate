@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Regular.subset.woff2') format('woff2'),
+    url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Regular.subset.woff') format('woff'),
+    url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Regular.subset.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Medium.subset.woff2') format('woff2'),
+    url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Medium.subset.woff') format('woff'),
+    url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Medium.subset.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Bold.subset.woff2') format('woff2'),
+    url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Bold.subset.woff') format('woff'),
+    url('https://static.wadiz.kr/assets/fonts/pretendard/Pretendard-Bold.subset.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'wadizicon';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.eot?#iefix') format('embedded-opentype'),
+    url('https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.woff2') format('woff2'),
+    url('https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.woff') format('woff'),
+    url('https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.ttf') format('truetype'),
+    url('https://static.wadiz.kr/assets/fonts/wadizicon/wadizicon.svg#wadizicon') format('svg');
+}
