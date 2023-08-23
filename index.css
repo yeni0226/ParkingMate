@@ -279,3 +279,10 @@ button:not(:disabled) {
   color: #000;
   font-size: 24px;
 }
+
+#parkingmate-map{
+  width: 100%; 
+  height: calc(100vh - 110px); 
+  margin: auto;
+  /* padding-bottom: 57px; */
+}
