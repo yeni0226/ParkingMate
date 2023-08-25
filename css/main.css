@@ -37,10 +37,183 @@
   left: 0;
   text-align: left;
   z-index: 1;
-  border-radius: 36px;
+  border-radius: 20px;
+  outline: 2px solid #868e96;
 }
 
-/* 하단 배너 클릭 이벤트 */
+/* 하단에서 위로 올라오는 페이지 클릭 이벤트 */
 .open {
   top: 30%;
+}
+
+/* 이미지박스 */
+.imagebx {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: 200px;
+  left: 20px;
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* 이미지 */
+.pk-img {
+  background: url(../images/주차장\ 예시.jpg) no-repeat center;
+  display: inline-block;
+  background-position: center 0;
+  background-size: contain;
+  padding-bottom: 57%;
+  width: 100%;
+  height: 0;
+  vertical-align: top;
+  margin: auto;
+}
+
+/* 사진 아래 전체박스 */
+.footer-page-ibx {
+  position: absolute;
+
+  width: 350px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  top: 252px;
+  left: 20px;
+}
+
+/* 주차장 이름, 공유버튼 박스 */
+.parking-name-share{
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-point-roadview {
+  margin-top: 12px;
+}
+
+/* 주차장 이름박스 */
+.parking-name {
+  width: 67%;
+}
+
+/* 주차장 이름 */
+.parking-name-p,
+.point-p {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* 주차장 공유 */
+.parking-share {
+  margin-top: auto;
+}
+
+/* 주차장 공유 텍스트 */
+.parking-share-p,
+.loadview-p {
+  font-size: 14px;
+  font-weight: 800;
+  color: #868e96;
+}
+
+/* 별, 리뷰점수, 로드뷰  전체박스 */
+.star-point-roadview {
+  display: flex;
+}
+
+.star-point-roadview>li {
+  margin-top: auto;
+}
+
+/* 별 박스 */
+.star-box {
+  height: 34px;
+}
+
+/* 별 이미지 */
+.star-img {
+  width: 34px;
+}
+
+/* 별점 박스 */
+.point-box {
+  margin-left: 8px;
+}
+
+/* 리뷰 박스 */
+.review-number {
+  margin-left: 2px;
+}
+
+/* 리뷰 텍스트 */
+.review-p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 로드뷰 박스 */
+.loadview-box {
+  margin-left: auto;
+}
+
+/* 로드뷰 텍스트 */
+.loadview-p {
+  font-size: 14px;
+  font-weight: 800;
+  color: #868e96;
+}
+
+/* 가격 박스 */
+.price-box {
+  display: flex;
+  margin-top: 8px;
+}
+
+/* 가격 숫자 */
+.price-number {
+  margin-top: auto;
+  font-size: 30px;
+  font-weight: 700;
+  color: #00c4c4;
+}
+
+/* 가격 원 */
+.price-number2 {
+  margin-top: auto;
+  margin-left: 2px;
+  font-size: 18px;
+}
+
+/* 주차장 설명 박스 */
+.parking-content-box {
+  margin-top: 16px;
+}
+
+/* 주차장 설명 */
+.parking-content {
+  font-weight: 600;
+}
+
+/* 예약하기 버튼 */
+.reservation-button {
+  display: grid;
+  place-items: center;
+
+  width: 350px;
+  height: 60px;
+
+  margin-top: 12px;
+  background-color: #00c4c4;
+
+  border-radius: 20px;
+}
+
+/* 예약하기 */
+.reservation-button>p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
 }

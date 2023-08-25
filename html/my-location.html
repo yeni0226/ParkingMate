@@ -178,6 +178,120 @@
 
       <!-- 밑에서 올라오는 페이지 -->
       <div class="footer-page">
+        
+        <!-- 이미지 div -->
+        <div class="imagebx">
+          
+          <!-- 이미지 span -->
+          <div class="pk-img"></div>
+
+        </div>
+
+        <!-- 밑에서 올라오는 페이지 사진 아래 전체박스 -->
+        <div class="footer-page-ibx">
+          
+          <!-- 주차장 제목, 공유 -->
+          <div class="parking-name-share">
+
+            <!-- 주차장 이름 -->
+            <div class="parking-name">
+
+              <!-- 주차장 이름 텍스트 -->
+              <p class="parking-name-p">
+                어디어디어디 주차장
+              </p>
+            </div>
+
+            <!-- 주차장 공유 버튼 -->
+            <div class="parking-share">
+
+              <!-- 주차장 공유 -->
+              <p class="parking-share-p">
+                
+                <a href="">
+                  주차장 공유
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- 별, 점수, 리뷰갯수, 로드뷰 -->
+          <ul class="star-point-roadview">
+
+            <!-- 별모양 박스 -->
+            <li class="star-box">
+
+              <!-- 별 이미지 -->
+              <img src="../images/star.png" class="star-img">
+
+            </li>
+
+            <!-- 리뷰 점수 -->
+            <li class="point-box">
+
+              <!-- 리뷰 텍스트 -->
+              <p class="point-p">4.7</p>
+
+            </li>
+
+            <!-- 리뷰 갯수 -->
+            <li class="review-number">
+
+              <!-- 리뷰 갯수 텍스트 -->
+              <p class="review-p">(200)</p>
+
+            </li>
+
+            <!-- 로드뷰 박스 -->
+            <li class="loadview-box">
+
+              <!-- 로드뷰 텍스트 -->
+              <p class="loadview-p">
+                
+                <a href="">
+                  로드뷰
+                </a>
+
+              </p>
+
+            </li>
+
+          </ul>
+
+          <!-- 가격박스 -->
+          <div class="price-box">
+
+            <!-- 가격 숫자 -->
+            <p class="price-number">29,000</p>
+
+            <!-- 가격 뒤 원 -->
+            <p class="price-number2">원</p>
+
+          </div>
+
+          <!-- 주차장 설명박스 -->
+          <div class="parking-content-box">
+
+            <!-- 주차장 설명 -->
+            <p class="parking-content">
+              경기도 성남시 탁구 우동 주차장-주소 <br>
+              주차장 설명입니다 설명설명 명설명설
+              추석추석 가을가을 겨울겨울 산타산타
+            </p>
+
+          </div>
+
+          <!-- 예약하기 버튼 박스 -->
+          <div class="reservation-button">
+
+            <!-- 예약하기 텍스트 -->
+            <p>예약하기</p>
+
+          </div>
+
+        </div>
 
       </div>
       
@@ -187,7 +301,6 @@
     <div class="footer">
 
     </div>
-
   </div>
 </body>
 
@@ -201,6 +314,12 @@ var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
 // 밑에서 올라오는 페이지 선택
 const footerPage = document.querySelector(".footer-page");
+
+// 밑에서 올라오는 페이지 위치
+const footerPageOpen = document.querySelector(".open")
+
+// 밑에서 올라오는 페이지 안 제목
+const footerPageTitle = document.querySelector(".parking-name-p")
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
@@ -238,14 +357,25 @@ function displayMarker(place) {
     kakao.maps.event.addListener(marker, 'click', function() {
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
         infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
-        footerPage.classList.add("open");
+        // footerPage.classList.add("open");
         infowindow.open(map, marker);
+        footerPageTitle.textContent = place.place_name;
+        let placeNameLength = place.place_name.length;
+        console.log(placeNameLength);
+        if(placeNameLength > 12){
+          footerPage.style.top = "27%"
+        } else if(placeNameLength <= 12) {
+          footerPage.style.top = "30%"
+        }
+        
     });
 
     // 하단에서 위로 올라오는 페이지 삭제 함수
     function handleDocumentClick(event) {
       if (!footerPage.contains(event.target)) {
-        footerPage.classList.remove("open"); // 클래스 삭제
+        // footerPage.classList.remove("open"); // 클래스 삭제
+        footerPage.style.top = "100%"
+        infowindow.close(map, marker);
       }
     }
 
