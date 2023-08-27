@@ -1,0 +1,486 @@
+body{
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+input, optgroup, select, textarea {
+  color: inherit;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, textarea {
+  background: none;
+}
+
+body, div, a, ul, li, header, input, dl, dt, span, button, p, h2, h3, em{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+button {
+  background-color: transparent;
+}
+
+a, button {
+  color: inherit;
+  outline: none;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+:root {
+  --scrollbar-width: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.fb_reset {
+  background: none;
+  border: 0;
+  border-spacing: 0;
+  color: #000;
+  cursor: auto;
+  direction: ltr;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  visibility: visible;
+  white-space: normal;
+  word-spacing: normal;
+}
+
+.fb_reset>div {
+  overflow: hidden;
+}
+
+body>#root, #page-container {
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+main, section, article {
+  display: block;
+}
+
+#main-app .web-header {
+  z-index: 1201;
+}
+
+.web-header{
+  position: sticky;
+  top: 0;
+  transition: top .25s;
+  width: 100%;
+}
+
+.web-header .web-header-mobile {
+  display: block;
+  position: relative;
+}
+
+.web-header .header-wrapper {
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+.web-header .header-wrapper .header-container {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.HeaderMobile_back_mSo62{
+  left: 6px;
+}
+
+.HeaderMobile_button_3V4yt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+}
+
+.Button_icon_2Lds2{
+  color: #495057;
+}
+
+.withIcon_icon_3VTbq{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+}
+
+.HeaderMobile_home_1oUFL{
+  right: 6px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.TitleField_container_KPCmF{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.TitleField_container_KPCmF .TitleField_title_3MvYO{
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.PreviewOverlay_container_W6b-E{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ff9d9d;
+  border-bottom: 1px solid #ff9d9d;
+  background-color: #fff1f1;
+  color: #f66;
+}
+
+.PreviewOverlay_container_W6b-E .PreviewOverlay_title_1p_pc{
+  line-height: 28px;
+  font-size: 16px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.PreviewOverlay_container_W6b-E .PreviewOverlay_description_3Cqx5{
+  margin-left: 16px;
+}
+
+.MainWrapper_content_GZkTa{
+  transition: padding-top .25s;
+  padding-top: 0;
+}
+
+.MyRewardContainer_container_2qXDp{
+  padding: 40px 16px 0;
+}
+
+.MyRewardContainer_title_2TKbO{
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 700;
+  display: none;
+  padding: 0 0 32px;
+  text-align: center;
+}
+
+.MyRewardContainer_column_1d06O{
+  position: relative;
+}
+
+.SimplePayInfo_simplePayInfo_ejCel{
+  max-width: 420px;
+}
+
+.SimplePayInfo_simplePayInfo_ejCel .SimplePayInfo_title_1a9F1{
+  margin-bottom: 32px;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #495057;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_info_3rLl3{
+  max-width: 464px;
+}
+
+.SimplePayCard_simplecard_2wYo7{
+  position: relative;
+  transform: translateY(0);
+  transition: max-width .45s,transform .45s;
+  width: 100%;
+  overflow: hidden;
+  color: #1d2129;
+  bottom: -136px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_noInfo_pdX40 .SimplePayCard_unregisted_2uiqp{
+  display: block;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_unregisted_2uiqp{
+  text-align: center;
+  position: relative;
+  bottom: -10px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_addCard_2eagF{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  cursor: pointer;
+  padding: 44px 0;
+  color: #60656a;
+  font-size: 13px;
+  position: relative;
+  bottom: 51px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_addCard_2eagF .SimplePayCard_addIcon_2DOov{
+  width: 32px;
+  height: 32px;
+  color: #00b2b2;
+  font-size: 24px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_addCard_2eagF .SimplePayCard_title_PpPWZ{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #00b2b2;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_addCard_2eagF .SimplePayCard_description_IFa0t{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #868e96;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_notice_3PRPU{
+  display: none;
+  position: relative;
+  padding-top: 17px;
+  padding-left: 27px;
+  line-height: 18px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_notice_3PRPU svg{
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  color: rgba(0,0,0,.54);
+  font-size: 18px;
+}
+
+.withIcon_inline_1lwwX{
+  display: inline;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_notice_3PRPU em{
+  padding: 0;
+  color: rgba(0,0,0,.85);
+  font-size: 13px;
+  font-style: normal;
+}
+
+address, cite, dfn, em, var {
+  font-weight: inherit;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_notice_3PRPU p{
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.54);
+  font-size: 13px;
+}
+
+.SimplePayCard_simplecard_2wYo7.SimplePayCard_noInfo_pdX40 .SimplePayCard_registed_2yAC4{
+  display: none;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_registed_2yAC4 .SimplePayCard_creditCard_2nvHf{
+  position: relative;
+  border: 1px solid #5cdede;
+  border-radius: 8px;
+  background-color: #e7f9f9;
+  padding: 77px 20px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_cardName_1no5L{
+  display: flex;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  align-items: center;
+  color: #495057;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_editButton_Q120P{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 24px;
+  color: #495057;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_deleteIcon_1tC7k{
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_cardNumber_3fnJ{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #00b2b2;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_createdAt_Alwbk{
+  line-height: 20px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  margin-top: 6px;
+  text-align: center;
+  color: #868e96;
+  font-size: 14px;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_createdAt_Alwbk>span{
+  margin-left: 8px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_info_3rLl3 .SimplePayCard_registed_2yAC4 .SimplePayCard_notice_3PRPU{
+  display: block;
+  margin-top: 12px;
+  padding: 0;
+}
+
+.SimplePayCard_simplecard_2wYo7 .SimplePayCard_notice_3PRPU{
+  position: relative;
+}
+
+.SimplePayInfo_noticeList_VXr7r{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 16px;
+  color: #495057;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::marker{
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+.SimplePayInfo_noticeList_VXr7r li {
+  list-style: disc;
+}
+
+.MyRewardContainer_container_2qXDp::after{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.SimplePayCard_simplecard_2wYo7 .car_number{
+
+  text-align: center;
+  margin: auto;
+    display: block;
+    align-items: center
+}
+
+.car_register{
+  position: relative;
+  top:50%;
+  border: 1px solid #5cdede;
+  background-color: #5cdede;
+  color: #fff;
+  border-radius:5px;
+  min-height:45px; 
+  width: 100%;
+  line-height: 48px;
+  font-size: 20px;
+  font-weight: 600;
+  bottom: -308px;
+}

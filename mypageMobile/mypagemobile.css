@@ -664,7 +664,7 @@ button {
 
 .MyParkingMateSupporterActivity_investIcon_Zm-kv{
   display: inline-block;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOS4wMDA3IDEyLjMyMTRMMTguOTk1NyA0LjE5MTQxTDExLjE5NTcgNC4xOTY0MVY1LjM5NjQxTDE3LjA2NTcgNS4zOTE0MUwxMC42ODU3IDEyLjIwMTRMNy40MjA3IDguODI2NDFMMC45NzA3MDMgMTUuNDI2NEwxLjgzMDcgMTYuMjYxNEw3LjQxNTcgMTAuNTQ2NEwxMC43MDA3IDEzLjk0MTRMMTcuNzk1NyA2LjM2NjQxTDE3LjgwMDcgMTIuMzIxNEgxOS4wMDA3WiIgZmlsbD0iIzQ5NTA1NyIvPgo8L3N2Zz4K) no-repeat center/20px 20px;
+  background: url("freeCar.svg") no-repeat center/20px 20px;
   width: 20px;
   height: 20px;
   vertical-align: top;
@@ -753,4 +753,24 @@ button {
 
 .Button_button_2FuOU .Button_children_ilFun{
   vertical-align: top;
+}
+/* 하단 바 첫번째, 두번째 아이콘 */
+.MyParkingMateMenu_icon_Home_pwW81 .MyParkingMateSupporterProjectHome_icon_32Rsj{
+  display: inline-block;
+  margin-right: 0px;
+  background: url("logo.svg") no-repeat center/26px 26px;
+  width: 21px;
+  height: 30px;
+  color: #868e96;
+  fill: gray;
+}
+
+.MyParkingMateMenu_icon_registor_pwW81 .MyParkingMateSupporterProjectregistor_icon_32Rsj{
+  display: inline-block;
+  margin-right: 0px;
+  background: url("freebooking.svg") no-repeat center/24px 24px;
+  width: 21px;
+  height: 26px;
+  color: #868e96;
+  fill: gray;
 }
