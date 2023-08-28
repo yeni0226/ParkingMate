@@ -37,9 +37,31 @@ ul, li {
 }
 
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .dn {
   display: none;
+}
+
+address, cite, dfn, em, var {
+  font-weight: inherit;
+  font-style: normal;
+}
+
+.no-scroll {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.wrap {
+  position: relative;
+}
+
+address, cite, dfn, em, var {
+  font-weight: inherit;
+  font-style: normal;
 }
