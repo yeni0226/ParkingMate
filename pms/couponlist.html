@@ -7,9 +7,10 @@
     <meta property="og:logo" content="" size="150x150" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title>주차메이트 쿠폰</title>
-    <link rel="stylesheet" href="coupons.css" />
+    <link rel="stylesheet" href="couponlist.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
     <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <style>
       @font-face {
@@ -54,12 +55,12 @@
             <nav class="parkingmate-coupon-header-nav">
               <ul>
                 <li>
-                  <a href="" class="parkingmate-coupon-header-link link-active">
+                  <a href="" class="parkingmate-coupon-header-link">
                     나의 쿠폰<em>2</em>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="parkingmate-coupon-header-link">
+                  <a href="" class="parkingmate-coupon-header-link link-active">
                     쿠폰존<em>3</em>
                   </a>
                 </li>
@@ -67,120 +68,253 @@
             </nav>
           </div>
           <div class="parkingmate-coupon-container">
-            <div class="parkingmate-coupon-wrapper">
-              <div class="parkingmate-myCoupon-header">
-                <strong class="parkingmate-coupon-title">
-                  현재 사용가능 쿠폰 <span>2장</span>
-                </strong>
-                <p>
-                  현재 사용가능한 쿠폰 내역 입니다.<br>
-                  사용, 만료에 대한 정보는 <a href="">지난 쿠폰 내역</a>에서 확인하세요.
-                </p>
-              </div>
-            </div>
+            <div class="parkingmate-coupon-container-wrapper"></div>
           </div>
-          <div class="parkingmate-coupon-container my-coupons">
-            <div class="parkingmate-coupon-wrapper">
-              <div class="parkingmate-coupon-list-container">
-                <div class="parkingmate-coupon-list-header">
-                  <div class="parkingmate-coupon-list-left">
-                    <button type="button" class="parkingmate-coupon-list-button">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-coupon-list-button-svg" aria-hidden="true"><path d="M24 15.2h-7.2V8h-1.6v7.2H8v1.6h7.2V24h1.6v-7.2H24v-1.6z"></path><path d="M16 3.2c7.069 0 12.8 5.731 12.8 12.8S23.069 28.8 16 28.8C8.931 28.8 3.2 23.069 3.2 16S8.931 3.2 16 3.2zm0-1.6C8.047 1.6 1.6 8.047 1.6 16S8.047 30.4 16 30.4 30.4 23.953 30.4 16 23.953 1.6 16 1.6z"></path></svg>
-                      쿠폰 등록하기
-                    </button>
+          <div class="parkingmate-coupon-list-container">
+            <div class="parkingmate-coupon-list-wrapper">
+              <div class="parkingmate-couponDownloadList-container">
+                <div class="parkingmate-listContainer">
+                  <!-- 쿠폰한칸 -->
+                  <div class="parkingmate-coupon-item">
+                    <div class="parkingmate-coupon-item-container">
+                      <div class="parkingmate-coupon-item-content">
+                        <dl>
+                          <dt class="hidden-text">카테고리</dt>
+                          <dd class="parkingmate-coupon-type">스토어</dd>
+                          <dt class="hidden-text">쿠폰명</dt>
+                          <dd class="parkingmate-coupon-title">스토어 8월 보너스 10% 쿠폰</dd>
+                          <dt class="hidden-text">할인 정보</dt>
+                          <dd class="parkingmate-coupon-amount">
+                            <span>10%</span>
+                          </dd>
+                          <dt class="hidden-text">사용 기간</dt>
+                          <dd>
+                            <p>2023.08.28 23시 59분까지 사용 가능</p>
+                          </dd>
+                        </dl>
+                        <button class="parkingmate-downloadItem-more">
+                          상세 조건 보기<svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg close" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+                          <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg open" aria-hidden="true"><path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path></svg>
+                        </button>
+                        <div class="parkingmate-couponDownloadItem-expand hidden">
+                          <div class="parkingmate-coupon-table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">발급기간</th>
+                                  <td>2023.08.28 23시 59분까지</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">사용조건</th>
+                                  <td>60,000원 이상 상품 구매 시<br>최대 50,000원 할인 가능</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">적용대상</th>
+                                  <td>
+                                    <p>
+                                      <a href="" class="parkingmate-store-link">
+                                        스토어 프로젝트
+                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-store-link-svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                                      </a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="parkingmate-coupon-download-button" type="button">
+                        <span>
+                          <span class="parkingmate-button-children">
+                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="parkingmate-button-children-svg" aria-hidden="true"><path d="M40.8 43.2H7.2v-2.4h33.6v2.4zm-5.28-22.08L25.2 31.44V4.8h-2.4v26.64L12.48 21.12 10.8 22.8 24 36l13.2-13.2-1.68-1.68z"></path></svg>
+                            <span class="parkingmate-coupon-label">쿠폰 받기</span>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
                   </div>
-                  <div class="parkingmate-coupon-list-right">
-                    <div class="parkingmate-coupon-list-right-select-container">전체
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-coupon-list-right-select-container-svg" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
-                      <select class="parkingmate-coupon-list-right-select">
-                        <option value="">전체</option>
-                        <option value="reward">펀딩・프리오더</option>
-                        <option value="store">스토어</option>
-                        <option value="equity">투자</option>
-                      </select>
+                  <div class="parkingmate-coupon-item">
+                    <div class="parkingmate-coupon-item-container">
+                      <div class="parkingmate-coupon-item-content">
+                        <dl>
+                          <dt class="hidden-text">카테고리</dt>
+                          <dd class="parkingmate-coupon-type">스토어</dd>
+                          <dt class="hidden-text">쿠폰명</dt>
+                          <dd class="parkingmate-coupon-title">스토어 8월 보너스 10% 쿠폰</dd>
+                          <dt class="hidden-text">할인 정보</dt>
+                          <dd class="parkingmate-coupon-amount">
+                            <span>10%</span>
+                          </dd>
+                          <dt class="hidden-text">사용 기간</dt>
+                          <dd>
+                            <p>2023.08.28 23시 59분까지 사용 가능</p>
+                          </dd>
+                        </dl>
+                        <button class="parkingmate-downloadItem-more">
+                          상세 조건 보기<svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg close" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+                          <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg open" aria-hidden="true"><path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path></svg>
+                        </button>
+                        <div class="parkingmate-couponDownloadItem-expand hidden">
+                          <div class="parkingmate-coupon-table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">발급기간</th>
+                                  <td>2023.08.28 23시 59분까지</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">사용조건</th>
+                                  <td>60,000원 이상 상품 구매 시<br>최대 50,000원 할인 가능</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">적용대상</th>
+                                  <td>
+                                    <p>
+                                      <a href="" class="parkingmate-store-link">
+                                        스토어 프로젝트
+                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-store-link-svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                                      </a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="parkingmate-coupon-download-button" type="button">
+                        <span>
+                          <span class="parkingmate-button-children">
+                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="parkingmate-button-children-svg" aria-hidden="true"><path d="M40.8 43.2H7.2v-2.4h33.6v2.4zm-5.28-22.08L25.2 31.44V4.8h-2.4v26.64L12.48 21.12 10.8 22.8 24 36l13.2-13.2-1.68-1.68z"></path></svg>
+                            <span class="parkingmate-coupon-label">쿠폰 받기</span>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="parkingmate-coupon-item">
+                    <div class="parkingmate-coupon-item-container">
+                      <div class="parkingmate-coupon-item-content">
+                        <dl>
+                          <dt class="hidden-text">카테고리</dt>
+                          <dd class="parkingmate-coupon-type">스토어</dd>
+                          <dt class="hidden-text">쿠폰명</dt>
+                          <dd class="parkingmate-coupon-title">스토어 8월 보너스 10% 쿠폰</dd>
+                          <dt class="hidden-text">할인 정보</dt>
+                          <dd class="parkingmate-coupon-amount">
+                            <span>10%</span>
+                          </dd>
+                          <dt class="hidden-text">사용 기간</dt>
+                          <dd>
+                            <p>2023.08.28 23시 59분까지 사용 가능</p>
+                          </dd>
+                        </dl>
+                        <button class="parkingmate-downloadItem-more">
+                          상세 조건 보기<svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg close" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+                          <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg open" aria-hidden="true"><path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path></svg>
+                        </button>
+                        <div class="parkingmate-couponDownloadItem-expand hidden">
+                          <div class="parkingmate-coupon-table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">발급기간</th>
+                                  <td>2023.08.28 23시 59분까지</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">사용조건</th>
+                                  <td>60,000원 이상 상품 구매 시<br>최대 50,000원 할인 가능</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">적용대상</th>
+                                  <td>
+                                    <p>
+                                      <a href="" class="parkingmate-store-link">
+                                        스토어 프로젝트
+                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-store-link-svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                                      </a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="parkingmate-coupon-download-button" type="button">
+                        <span>
+                          <span class="parkingmate-button-children">
+                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="parkingmate-button-children-svg" aria-hidden="true"><path d="M40.8 43.2H7.2v-2.4h33.6v2.4zm-5.28-22.08L25.2 31.44V4.8h-2.4v26.64L12.48 21.12 10.8 22.8 24 36l13.2-13.2-1.68-1.68z"></path></svg>
+                            <span class="parkingmate-coupon-label">쿠폰 받기</span>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="parkingmate-coupon-item">
+                    <div class="parkingmate-coupon-item-container">
+                      <div class="parkingmate-coupon-item-content">
+                        <dl>
+                          <dt class="hidden-text">카테고리</dt>
+                          <dd class="parkingmate-coupon-type">스토어</dd>
+                          <dt class="hidden-text">쿠폰명</dt>
+                          <dd class="parkingmate-coupon-title">스토어 8월 보너스 10% 쿠폰</dd>
+                          <dt class="hidden-text">할인 정보</dt>
+                          <dd class="parkingmate-coupon-amount">
+                            <span>10%</span>
+                          </dd>
+                          <dt class="hidden-text">사용 기간</dt>
+                          <dd>
+                            <p>2023.08.28 23시 59분까지 사용 가능</p>
+                          </dd>
+                        </dl>
+                        <button class="parkingmate-downloadItem-more">
+                          상세 조건 보기<svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg close" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+                          <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-downloadItem-more-svg open" aria-hidden="true"><path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path></svg>
+                        </button>
+                        <div class="parkingmate-couponDownloadItem-expand hidden">
+                          <div class="parkingmate-coupon-table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">발급기간</th>
+                                  <td>2023.08.28 23시 59분까지</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">사용조건</th>
+                                  <td>60,000원 이상 상품 구매 시<br>최대 50,000원 할인 가능</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">적용대상</th>
+                                  <td>
+                                    <p>
+                                      <a href="" class="parkingmate-store-link">
+                                        스토어 프로젝트
+                                        <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-store-link-svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                                      </a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="parkingmate-coupon-download-button" type="button">
+                        <span>
+                          <span class="parkingmate-button-children">
+                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="parkingmate-button-children-svg" aria-hidden="true"><path d="M40.8 43.2H7.2v-2.4h33.6v2.4zm-5.28-22.08L25.2 31.44V4.8h-2.4v26.64L12.48 21.12 10.8 22.8 24 36l13.2-13.2-1.68-1.68z"></path></svg>
+                            <span class="parkingmate-coupon-label">쿠폰 받기</span>
+                          </span>
+                        </span>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div class="parkingmate-coupon-list-container-container">
-                  <div class="parkingmate-coupon-list-item">
-                    <div class="parkingmate-coupon-list-item-container">
-                      <p class="parkingmate-coupon-list-item-campaign">스토어</p>
-                      <div class="parkingmate-coupon-item-container">
-                        <dl>
-                          <dd class="parkingmate-discount-rate">
-                            <span class="parkingmate-discount-rate-text">10%</span>
-                          </dd>
-                          <dd class="parkingmate-coupon-dd-text">스토어 8월 보너스 10% 쿠폰</dd>
-                          <dd>
-                            <div class="parkingmate-coupon-dd-text-container">
-                              <table>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">유효기간</th>
-                                    <td>2023.08.28 23시 59분</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">사용조건</th>
-                                    <td>60,000원 이상 상품 구매 시<br>최대 50,000원 할인 가능</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">적용대상</th>
-                                    <td>
-                                      <p>
-                                        <a href="" class="parkingmate-coupon-dd-link">스토어 프로젝트<svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-coupon-dd-link-svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg></a>
-                                      </p>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </dd>
-                        </dl>
-                      </div>
-                    </div>
-                    <div class="parkingmate-coupon-list-item-container">
-                      <p class="parkingmate-coupon-list-item-campaign">스토어</p>
-                      <div class="parkingmate-coupon-item-container">
-                        <dl>
-                          <dd class="parkingmate-discount-rate">
-                            <span class="parkingmate-discount-rate-text">7,000원</span>
-                          </dd>
-                          <dd class="parkingmate-coupon-dd-text">스토어 가을의발견 7천원 쿠폰</dd>
-                          <dd>
-                            <div class="parkingmate-coupon-dd-text-container">
-                              <table>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">유효기간</th>
-                                    <td>2023.08.31 23시 59분</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">사용조건</th>
-                                    <td>100,000원 이상 상품 구매 시
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">적용대상</th>
-                                    <td>
-                                      <p>
-                                        <a href="" class="parkingmate-coupon-dd-link">가을의 발견<svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-coupon-dd-link-svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg></a>
-                                      </p>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </dd>
-                        </dl>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
         </section>
         <footer id="footer" class="parkingmate-footer">
           <div class="parkingmate-FooterMenu-container">
@@ -303,4 +437,5 @@
       </main>
     </div>
 </body>
+<script type="text/javascript" src="couponlist.js"></script>
 </html>
