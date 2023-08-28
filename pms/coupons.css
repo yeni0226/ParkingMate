@@ -1,0 +1,890 @@
+@charset "utf-8";
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body, button, html, input, textarea {
+  font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+div {
+  display: block;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+address, cite, dfn, em, var {
+  font-weight: inherit;
+  font-style: normal;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+main, section, article {
+  display: block;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+iframe, img, video {
+  vertical-align: top;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+}
+
+address, cite, dfn, em, var {
+  font-weight: inherit;
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#parkingmate-page-container{
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+#parkingmate-header{
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.parkingmate-web-header{
+  position: sticky;
+  top: 0;
+  transition: top .25s;
+  z-index: 99;
+  width: 100%;
+}
+
+.parkingmate-web-header-mobile{
+  display: block;
+  position: relative;
+}
+
+.parkingmate-header-wrapper{
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+.parkingmate-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+
+.parkingmate-footer-button{
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  transform: translateY(0);
+  transition: transform .25s;
+  z-index: 100;
+  margin-left: 0;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.15);
+  background-color: #fff;
+  padding: 0 0 8px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+  list-style: none;
+}
+
+.parkingmate-footer-button-item{
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.parkingmate-footer-button-item-in{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto
+}
+
+.item-active{
+  color: #212529;
+  font-weight: 700;
+}
+
+.parkingmate-footer-button-item-in-text{
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  top: 33px;
+  color: #868e96;
+}
+
+.item-active .parkingmate-footer-button-item-in-text{
+  color: #212529;
+  font-weight: 700;
+}
+
+.parkingmate-footer-button-item-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  top: 9px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  color: #868e96;
+  font-size: 24px;
+}
+
+.item-active .parkingmate-footer-button-item-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  top: 3px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  font-size: 24px;
+  color: #212529;
+}
+
+.parkingmate-footer-button-plus{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto;
+}
+
+.parkingmate-search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dde2e6;
+  width: 100%;
+  height: 40px;
+  margin-right: 16px;
+  padding: 0 16px;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+
+.parkingmate-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+.parkingmate-header-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+}
+
+.back-button {
+  left: 6px;
+}
+
+.home-button{
+  right: 6px;
+}
+
+.search-button{
+  right: 50px;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.parkingmate-header-button-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  color: #495057;
+}
+
+.parkingmate-titleField{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.parkingmate-title{
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.parkingmate-main-wrapper{
+  transition: padding-top .25s;
+  padding-top: 0;
+}
+
+.parkingmate-couponPage{
+  position: relative;
+  height: 100%;
+}
+
+.parkingmate-coupon-header-container{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px rgba(0,0,0,.08);
+  background-color: #fff;
+}
+
+.parkingmate-coupon-header-nav{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.parkingmate-coupon-header-nav li {
+  float: left;
+  width: 50%;
+}
+
+.parkingmate-coupon-header-link{
+  display: block;
+  text-align: center;
+  line-height: 48px;
+  color: #90949c;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.parkingmate-coupon-header-link em{
+  margin-left: 2px;
+  color: #557cf2;
+}
+
+.link-active{
+  border-bottom: 2px solid #557cf2;
+  color: #44484b;
+}
+
+.parkingmate-coupon-header-nav ul::after{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.parkingmate-coupon-container{
+  margin: 24px auto -36px;
+  padding: 0 16px;
+  max-width: 1000px;
+  box-sizing: content-box;
+}
+
+.parkingmate-coupon-wrapper{
+  padding-bottom: 16px;
+  max-width: 658px;
+}
+
+.parkingmate-myCoupon-header{
+  margin-top: 58px;
+  margin-bottom: 36px;
+  text-align: center;
+  line-height: 20px;
+  color: rgba(0,0,0,.84);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.parkingmate-coupon-title{
+  display: block;
+  margin: 24px 0;
+  line-height: 24px;
+  color: rgba(0,0,0,.84);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.parkingmate-coupon-title span{
+  color: #557cf2;
+}
+
+.parkingmate-myCoupon-header a {
+  text-decoration: underline;
+  color: #395bbf;
+}
+
+.my-coupons{
+  margin-bottom: 112px;
+}
+
+.parkingmate-coupon-list-container{
+  position: relative;
+}
+
+.parkingmate-coupon-list-header{
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  padding: 12px 0;
+}
+
+.parkingmate-coupon-list-left{
+  float: left;
+}
+
+.parkingmate-coupon-list-button{
+  display: flex;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  line-height: 24px;
+  color: #395bbf;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.parkingmate-coupon-list-button-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  margin-right: 8px;
+}
+
+.parkingmate-coupon-list-right{
+  float: right;
+}
+
+.parkingmate-coupon-list-right-select-container{
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  line-height: 24px;
+  color: rgba(0,0,0,.87);
+  font-size: 15px;
+}
+
+.parkingmate-coupon-list-right-select-container-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  color: rgba(0,0,0,.54);
+  font-size: 16px;
+}
+
+.parkingmate-coupon-list-right-select{
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  line-height: 24px;
+  font-size: 15px;
+}
+
+.parkingmate-coupon-list-header::after{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.parkingmate-coupon-list-container-container{
+  position: relative;
+}
+
+.parkingmate-coupon-list-item{
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding: 20px 0;
+}
+
+.parkingmate-coupon-list-item-container{
+  position: relative;
+  padding: 24px 0 18px;
+  line-height: 18px;
+  color: rgba(0,0,0,.84);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.parkingmate-coupon-list-item-campaign{
+  position: absolute;
+  top: 24px;
+  right: 0;
+  line-height: 18px;
+  color: #4167d9;
+  font-size: 13px;
+}
+
+.parkingmate-discount-rate{
+  margin-bottom: 8px;
+  line-height: 28px;
+  color: #4167d9;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.parkingmate-discount-rate-text{
+  display: block;
+}
+
+.parkingmate-coupon-dd-text{
+  margin-bottom: 12px;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+.parkingmate-coupon-dd-text-container{
+  margin-top: 7px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.parkingmate-coupon-dd-text-container th {
+  vertical-align: top;
+  text-align: left;
+  line-height: 18px;
+  font-size: 12px;
+  padding-right: 11px;
+}
+
+.parkingmate-coupon-dd-text-container td {
+  vertical-align: top;
+  text-align: left;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.parkingmate-coupon-dd-link{
+  display: inline-flex;
+  align-items: center;
+}
+
+.parkingmate-coupon-dd-link-svg{
+  display: inline;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.parkingmate-footer{
+  background: #fff;
+  padding-top: 120px;
+  color: #212121;
+  font-size: 12px;
+  position: relative;
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)){
+  .parkingmate-footer {
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+  }
+}
+
+.parkingmate-FooterMenu-container{
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  text-align: left;
+}
+
+.parkingmate-FooterMenu-bar{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.parkingmate-FooterMenu-left{
+  display: flex;
+  flex-direction: row;
+}
+
+.parkingmate-FooterMenu-menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 50%;
+  height: 40px;
+  text-align: left;
+  color: #495057;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.parkingmate-linker-button{
+  position: relative;
+  outline: none;
+}
+
+.parkingmate-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  font-size: 16px;
+}
+
+.parkingmate-linker-button > .parkingmate-linkerIcon{
+  display: inline-block!important;
+  transform: rotate(90deg);
+  animation: Linker_activeHide__1EcPt .5s forwards;
+  margin-left: 4px;
+  color: rgba(0,0,0,.54);
+}
+
+.parkingmate-FooterMenu-bold{
+  font-weight: 700;
+}
+
+.parkingmate-FooterMenu-right{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.parkingmate-openLinkIcon{
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: text-top;
+}
+
+.parkingmate-FooterMenu-languageMenu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+}
+
+.parkingmate-FooterMenu-languageIcon{
+  height: auto;
+  max-width: fit-content;
+}
+
+.parkingmate-FooterContainer{
+  padding-bottom: 0;
+}
+
+.parkingmate-FooterContainer-inner{
+  display: flex;
+  flex-direction: column;
+}
+
+.parkingmate-FooterContainer-leftSection{
+  border-bottom: 1px solid #f2f4f6;
+  padding: 16px;
+}
+
+.parkingmate-FooterContainer-title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #212529;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.parkingmate-FooterContainer-title::before{
+  display: inline-block;
+  margin-right: 8px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURUdwTCUoLSEmKyEmKSElKScsLiImKiElKSElKSEmKiElKiIlKyElKiInKyIlKSIlKiImKSQqLS1AQCElKRLEMhcAAAATdFJOUwAiVJbvEoz7vm7ZSaMxdqumGwUhhJyxAAABbElEQVRIx6VW2aKEIAglcwGrafH///VW0zSh0DKXR0Q8HDYB/i/OkB8QW0/GXVtXhCHtEpDGc/M+FdJWOpY6JEGCV5A1NiliG8n+lXQJVJhPbTqVesouXNjPNy7whCJ+hqrhZ7hkzBnkLg6RO8aP3X3R8Zlgv+zWzJWZPVBd03xu2IHf88vw9p+MLOyzzIdPznk9dDBuCO0IHa+S7QGeVQB/wMCz/65EYroIsLODAFGgFjn/MQb1Aq6cZikKLLscUliYNXo5NFnQK+VZCFn5eKE+vGY/c9SFUgeDYv8CGGOuHHKSuP/CfqVJvhAn6ISWRRWSARcF9aAFPRP+UoDKtEYFKmmJ0y4YoTTeNYtoZaQ6r5KgUN6nQkIDbTEQSZAqqUW3PpX89OIQ2Po0b4XjEMjGzPZCdzItx8KZ9b7UOXVUav13czl8++PRuG8fLpR2erSycjy/LUV97dbu0WLvq2dfh+r252S49zm5lD8cD271e3tWtwAAAABJRU5ErkJggg==) no-repeat center/16px 16px;
+  width: 16px;
+  height: 16px;
+  content: "";
+}
+
+.parkingmate-FooterContainer-directButton{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  margin: 8px 0;
+  cursor: pointer;
+  padding: 0;
+  width: 50%;
+  text-align: left;
+  color: #495057;
+}
+
+.parkingmate-FooterContainer-customcenterButton{
+  width: 100%;
+}
+
+.parkingmate-FooterContainer-enableTime{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  border-top: 1px solid #f2f4f6;
+  padding-top: 16px;
+  white-space: nowrap;
+  color: #868e96;
+}
+
+.parkingmate-FooterContainer-enableTime dt {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.parkingmate-FooterContainer-rightSection{
+  padding: 24px 16px 0;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.parkingmate-FooterInfo li{
+  display: inline;
+  color: #495057;
+}
+
+.parkingmate-FooterInfo li::after{
+  content: "|";
+  color: #dde2e6;
+  margin: 0 5px;
+}
+
+.parkingmate-FooterInfo-contactInfoWrap{
+  display: block;
+}
+
+.parkingmate-FooterInfo-contactInfo{
+  margin-top: 4px;
+}
+
+.parkingmate-FooterInfo-contactInfo li{
+  display: inline;
+  color: #495057;
+}
+
+.parkingmate-FooterInfo-contactInfo li::after{
+  content: "|";
+  color: #dde2e6;
+  margin: 0 5px;
+}
+
+.parkingmate-footer a{
+  transition: color .2s;
+}
+
+.parkingmate-FooterInfo-copyright{
+  display: inline-block;
+  margin-top: 4px;
+  color: #000;
+  font-weight: 900;
+}
+
+.parkingmate-FooterContainer-infoNotice{
+  margin-top: 16px;
+  color: #868e96;
+}
+
+.parkingmate-FooterContainer-infoNotice p{
+  display: inline;
+}
+
+.parkingmate-FooterContainer-appStoreSection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 32px;
+  margin-bottom: 160px;
+  gap: 37px;
+}
+
+.parkingmate-FooterContainer-appStoreSection a{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #212529;
+}
+
+.parkingmate-FooterContainer-appStoreSection a::before{
+  color: #545a60;
+  font-size: 24px;
+  transition: color .2s;
+  margin-right: 4px;
+}
+
+.parkingmate-Footer-icon-google-play::before{
+  display: inline-block;
+  margin-top: -0.2em;
+  vertical-align: middle;
+  text-transform: none;
+  line-height: 1;
+  font-family: wadizicon!important;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  content: "\e967";
+}
+
+.parkingmate-Footer-icon-apple::before{
+  display: inline-block;
+  margin-top: -0.2em;
+  vertical-align: middle;
+  text-transform: none;
+  line-height: 1;
+  font-family: wadizicon!important;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  content: "\e90f";
+}
+
+.parkingmate-Footer-externals{
+  display: none;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.parkingmate-Footer-externals-wrap >ul{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.parkingmate-Footer-externals li{
+  float: left;
+  margin-bottom: 12px;
+  line-height: 24px;
+}
+
+.parkingmate-Footer-externals-wrap >ul:first-of-type >li {
+  margin-right: 28px;
+}
+
+.parkingmate-icon-inline{
+  display: inline;
+}
+
+.parkingmate-Footer-externals-wrap ul ul{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.parkingmate-Footer-externals-wrap ul ul li{
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.parkingmate-FooterContainer-directButton svg{
+  margin-left: 8px;
+    font-size: 16px;
+}
