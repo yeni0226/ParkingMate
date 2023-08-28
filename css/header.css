@@ -1,7 +1,14 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
 /* 헤더 박스 */
 .header-wrap {
   position: relative;
-  top: 0;
+  top: 0px;
   z-index: 9998;
   background-color: #fff;
   width: 100%;
