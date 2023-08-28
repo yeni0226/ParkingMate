@@ -1,0 +1,479 @@
+body {
+  background: #f9f9f9;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+body, div, header, button, a, p, form, input, h2, span, time, ul, li, i{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+input, textarea {
+  background: none;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --scrollbar-width: 0;
+}
+
+body>#root, #page-container {
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+.black-bg-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: 10001;
+}
+
+#ParkingMate-header{
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+html.scroll-top .web-header {
+  top: 0;
+}
+
+.web-header{
+  position: sticky;
+  transition: top .25s;
+  z-index: 99;
+  width: 100%;
+}
+
+.web-header .web-header-mobile {
+  display: block;
+  position: relative;
+}
+
+.web-header .header-wrapper {
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+.web-header .header-wrapper .header-container {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+button:not(:disabled){
+  cursor: pointer;
+}
+
+.HeaderMobile_back_1QuEl{
+  left: 6px;
+}
+
+.HeaderMobile_button_fkD3P{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button{
+  background-color: transparent;
+}
+
+a, button{
+  color: inherit;
+  outline: none;
+}
+
+.Button_icon_3GWPk{
+  color: #495057;
+}
+
+.withIcon_icon_djI-9{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+}
+
+.HeaderMobile_home_27bqt{
+  right: 6px;
+}
+
+.Button_icon_3GWPk{
+  color: #495057;
+}
+
+.TitleField_container_2Mj7X{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.TitleField_container_2Mj7X .TitleField_title_2M2yO{
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.PreviewOverlay_container_3Q3h2{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ff9d9d;
+  border-bottom: 1px solid #ff9d9d;
+  background-color: #fff1f1;
+  color: #f66;
+}
+
+.PreviewOverlay_container_3Q3h2 .PreviewOverlay_title_21y5H{
+  line-height: 28px;
+  font-size: 16px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.PreviewOverlay_container_3Q3h2 .PreviewOverlay_description_2ihG6{
+  margin-left: 16px;
+}
+
+#accountWrap {
+  width: 100%;
+  padding-bottom: 160px;
+  background: #f9f9f9;
+}
+
+#accountWrap #newContainer {
+  background: #f9f9f9;
+}
+
+#newContainer{
+  min-height: 100%;
+}
+
+.account-wrap{
+  padding: 35px 20px;
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+}
+
+.account-wrap h2{
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #4a4a4a;
+  font-weight: normal;
+}
+
+.change-input-wrap{
+  padding-top: 16px;
+}
+
+.change-input-wrap span{
+  margin-top: 20px;
+}
+
+.input-text{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0 17px;
+  margin-bottom: 7px;
+  height: 46px;
+  line-height: 45px;
+  font-size: 13px;
+  color: #4a4a4a;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.input-area.disabled .input-text, .input-text:disabled {
+  background: #e7e7e7;
+}
+
+.input-btn-wrap .input {
+  width: 70%;
+}
+
+.input-btn-wrap div {
+  float: left;
+}
+
+.input-btn-wrap .btn {
+  width: 28%;
+  margin-left: 4px;
+  display: block;
+  background: #8c8881;
+  height: 46px;
+  line-height: 46px;
+  border: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+.input-btn-wrap::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.btn span {
+  line-height: 46px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.error-text{
+  margin-bottom: 12px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #e54545;
+  display: none;
+}
+
+.info-text {
+  margin-bottom: 12px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #2802D2;
+  display: none;
+}
+
+.limit_time{
+  right: 10px;
+}
+
+.social-account-wrap{
+  position: relative;
+  width: 100%;
+  padding: 22px 0 35px;
+}
+
+.social-account-wrap .title{
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+.social-account-wrap p{
+  margin: 7px 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+.social-account-wrap ul{
+  width: 100%;
+  height: 100%;
+}
+
+.social-account-wrap li{
+  float: left;
+  width: 25%;
+}
+
+.social-account-wrap li:first-child a{
+  margin-left: 0;
+}
+
+.social-account-wrap a.unlinked{
+  opacity: 0.3;
+}
+
+.social-account-wrap .facebook a, .social-account-big-wrap .facebook a {
+  background: #3b5998;
+}
+
+.social-account-wrap a{
+  position: relative;
+  cursor: pointer;
+  display: block;
+  height: 42px;
+  line-height: 38px;
+  text-align: center;
+  margin: 0 6px;
+  font-size: 22px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+li, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+i.ParkingMateicon, i.icon::before, [class*='icon-']::before{
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: none;
+  line-height: 1;
+  font-family: 'wadizicon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  speak: none;
+}
+
+i.ParkingMateicon.pm-facebook::before, i.icon.facebook::before, .icon-facebook::before {
+  content: "";
+}
+
+.social-account-wrap .naver a, .social-account-big-wrap .naver a {
+  background: #02c300;
+}
+
+i.ParkingMateicon.pm-naver::before, i.icon.naver::before, .icon-naver::before {
+  content: "";
+}
+
+.social-account-wrap .kakao a, .social-account-big-wrap .kakao a {
+  background: #fdd800;
+  color: #3f2526;
+}
+
+i.ParkingMateicon.pm-kakao::before, i.icon.kakao::before, .icon-kakao::before {
+  content: "";
+}
+
+.social-account-wrap li:last-child a {
+  margin-right: 0;
+}
+
+.social-account-wrap .google a, .social-account-big-wrap .google a {
+  background: #fff;
+  border: 1px solid #dadce0;
+  color: #7c8288;
+}
+
+.social-account-wrap .google i, .social-account-big-wrap .google i {
+  background: url(https://www.wadiz.kr/resources/static/svg/icon_google.svg) 50% no-repeat;
+}
+
+.social-account-wrap i {
+  vertical-align: middle;
+}
+
+.social-account-wrap i, .social-account-big-wrap i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -10px !important;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.social-account-wrap ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.change-input-wrap.small{
+  padding-top: 0;
+}
+
+.btn-wrap{
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.pm.button.primary{
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+.pm.button.primary, .pm.button.primary-outline{
+  border-color: #00c4c4;
+}
+
+.pm.button.block, .pm.button.fluid{
+  width: 100%;
+  text-align: center;
+}
+
+.pm.button{
+  display: inline-block;
+  padding-top: 0.07em;
+  text-decoration: none;
+}
+
+.pm.button{
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 1.4117647059em;
+  height: 48px;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 17px;
+  font-weight: 400;
+  box-sizing: border-box !important;
+}
+
+a.btn-block-mint, button.btn-block-mint{
+  background: #50e3c2;
+}

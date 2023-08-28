@@ -1,0 +1,402 @@
+:root {
+  --scrollbar-width: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body>#root, #page-container {
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+body{
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, optgroup, select, textarea {
+  color: inherit;
+}
+
+main, section, article {
+  display: block;
+}
+
+.web-header .web-header-mobile {
+  display: block;
+  position: relative;
+}
+
+.MyRewardContainer_title_2TKbM{
+  position: relative;
+  margin-bottom: 32px;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #495057;
+  right: -252px;
+  top: -61px;
+}
+
+.use_history_date{
+  display: flex;
+  margin-bottom: 32px;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #495057;
+  position: relative;
+  top: -62px;
+  left: 257px;
+}
+
+.use_history_date .ParkingMate_icon_ZX6B_{
+  display: inline-block;
+  position: relative;
+  transform: rotate(90deg);
+  animation: GNBDesktop_slide-up_x9vwA .15s forwards;
+  margin-left: 4px;
+  color: #495057;
+  font-size: 18px;
+  width: 25px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body, div, header, ul, li, a, span, p, 
+section, h2, h3, h4, button, dl, dd, dt, i, strong, span,
+input, dl, dt, em, dd, i {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html.scroll-top .MainWrapper_content_GZkTa {
+  padding-top: 0;
+}
+
+.MainWrapper_content_GZkTa{
+  transition: padding-top .25s;
+}
+
+.MyParkingMateUseListContainer_container_3Bp5s{
+  margin: 0 auto;
+  padding: 0 0 170px;
+  width: 100%;
+  color: #212529;
+}
+
+main, section, article {
+  display: block;
+}
+
+.MyParkingMateUseLsitContainer_topArea_3S18O{
+  position: relative;
+  margin: 24px auto 0;
+  padding: 16px 16px 40px;
+  width: 100%;
+}
+
+.MyParkingMateUseLsitContainer_topArea_3S18O .MyParkingMateUseListContainer_selectBox_2OOCH{
+  position: absolute;
+  top: 3px;
+  left: 16px;
+  border: 0;
+  width: 150px;
+  height: 40px;
+}
+
+.select-menu{
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.select-menu-hidden-input-box{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.select-menu-hidden-input-box input{
+  width: 100%;
+  height: 100%;
+}
+
+input, optgroup, select, textarea {
+  color: inherit;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, textarea {
+  background: none;
+}
+
+.css-2b097c-container{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.css-7pg0cj-a11yText{
+  z-index: 9999;
+  border: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+.select-menu .select-menu_control--is-focused, .select-menu .select-menu_control--menu-is-open {
+  border-color: #00c4c4!important;
+}
+
+.select-menu .select-menu_control {
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.css-yk16xz-control{
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 38px;
+  position: relative;
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  outline: 0px !important;
+}
+
+.css-1hwfws3{
+  align-items: center;
+  display: flex;
+  flex: 1 1 0%;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.css-1uccc91-singleValue{
+  color: rgb(51, 51, 51);
+  margin-left: 2px;
+  margin-right: 2px;
+  max-width: calc(100% - 8px);
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.css-62g3xt-dummyInput{
+  background: 0px center;
+  border: 0px;
+  font-size: inherit;
+  outline: 0px;
+  padding: 0px;
+  width: 1px;
+  color: transparent;
+  left: -100px;
+  opacity: 0;
+  position: relative;
+  transform: scale(0);
+}
+
+.css-1wy0on6{
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.css-tlfecz-indicatorContainer{
+  color: rgb(204, 204, 204);
+  display: flex;
+  padding: 8px;
+  transition: color 150ms ease 0s;
+  box-sizing: border-box;
+}
+
+.select-menu_indicator{
+  pointer-events: none;
+  font-size: 24px;
+}
+
+.withIcon_icon_3VTbq{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.select-menu .css-9g7j0m-menu{
+  z-index: 1110;
+  margin-top: 4px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(33,37,41,.06), 0 6px 6px -1px rgba(33,37,41,.1);
+  padding: 8px 4px;
+}
+
+.css-9g7j0m-menu{
+  top: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.css-11unzgr{
+  max-height: 300px;
+  overflow-y: auto;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.small .select-menu_option{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.css-9gakcf-option{
+  cursor: default;
+  display: block;
+  padding: 8px 12px;
+  width: 100%;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.select-menu_option--is-selected{
+  background-color: rgba(0,0,0,0)!important;
+  color: #00b2b2!important;
+}
+
+.MyParkingMateUseList_1v-gA .MyParkingMateUseList_ListItem_1H9_W{
+  margin-bottom: 16px;
+  box-shadow: 0 0 1px rgba(0,0,0,.3);
+  padding-bottom: 16px;
+}
+
+.MyParkingMateListItem_3dBPk{
+  display: block;
+  background: #fff;
+}
+
+.MyParkingMateListItem_3dBPk dt .MyParkingMateListItem_category_1YTdA{
+  padding-right: 6px;
+  color: #868e96;
+}
+
+address, cite, dfn, em, var {
+  font-weight: inherit;
+  font-style: normal;
+}
+
+.MyParkingMateListItem_3dBPk dt .MyParkingMateUseListItem_date_1fa27{
+  position: absolute;
+  right: 20px;
+  color: #868e96;
+}
+
+.MyParkingMateListItem_3dBPk dd{
+  position: relative;
+  padding: 16px 20px 0;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateUseListItem_status_4i2gz{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  padding-bottom: 4px;
+  color: #868e96;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateUseListItem_status_4i2gz .MyParkingMateUseListItem_icon_2z5eC{
+  display: inline-block;
+  margin: -1px 4px 0 0;
+  border-radius: 50%;
+  background: #00c4c4;
+  padding: 0;
+  width: 4px;
+  height: 4px;
+  vertical-align: middle;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateUseListItem_title_1pVPq{
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #495057;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateUseListItem_seller_2hjgU{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  color: #868e96;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateUseListItem_Info_3ClBM{
+  position: relative;
+  padding: 12px 0 0;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateUseListItem_Info_3ClBM .MyParkingMateUseListItem_Status_2L-0e{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4167d9;
+}
+
+.MyParkingMateListItem_3dBPk dd .MyParkingMateItem_detail_lu0wQ{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  align-items: center;
+}
