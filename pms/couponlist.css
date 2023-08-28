@@ -530,7 +530,7 @@ button:not(:disabled) {
   border-radius: 4px;
   background-color: rgba(0,0,0,0);
   padding: 9px 23px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   text-decoration: none;
   line-height: 1.75;
   white-space: nowrap;
@@ -745,7 +745,7 @@ button:not(:disabled) {
   margin: 8px 0;
   cursor: pointer;
   padding: 0;
-  width: 50%;
+  width: 49%;
   text-align: left;
   color: #495057;
 }

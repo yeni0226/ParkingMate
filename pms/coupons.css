@@ -712,7 +712,7 @@ button:not(:disabled) {
   margin: 8px 0;
   cursor: pointer;
   padding: 0;
-  width: 50%;
+  width: 49%;
   text-align: left;
   color: #495057;
 }
