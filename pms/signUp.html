@@ -68,7 +68,7 @@
                 <button class="button-kakao">
                   <span>
                     <span class="button-children">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq SNSButtonList_kakaoIcon__3y4jL" aria-hidden="true">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon SNSButtonList_kakaoIcon__3y4jL" aria-hidden="true">
                         <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path>
                       </svg>
                       카카오로 시작하기
@@ -78,7 +78,7 @@
                 <button class="button-naver">
                   <span>
                     <span class="button-children">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq SNSButtonList_naverIcon__6Y1-9" aria-hidden="true">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon SNSButtonList_naverIcon__6Y1-9" aria-hidden="true">
                         <path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path>
                       </svg>
                       네이버로 시작하기
@@ -109,7 +109,7 @@
                   <button class="sns-button-content facebook-button">
                     <span>
                       <span class="button-children">
-                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
                           <path d="M14.4 19.547h5.673v-5.256a8.559 8.559 0 0 1 2.4-6.132c2.618-2.628 6.109-2.3 11.127-1.861v5.913h-3.71a3.374 3.374 0 0 0-2.29.766 3.514 3.514 0 0 0-.655 2.3v4.27h6.437l-.873 6.57h-5.564V43.2h-6.872V26.118H14.4v-6.57z"></path>
                         </svg>
                       </span>
@@ -118,7 +118,7 @@
                   <button class="sns-button-content apple-button">
                     <span>
                       <span class="button-children">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
                           <path d="M24.96 26c-1.12 1.68-2.32 3.28-4.08 3.28s-2.32-1.04-4.4-1.04-2.64 1.04-4.4 1.12S9.04 27.6 7.92 26c-2.32-3.28-4-9.36-1.68-13.44 1.098-1.973 3.148-3.299 5.512-3.36 1.688 0 3.368 1.12 4.408 1.12s3.04-1.44 5.12-1.2a6.157 6.157 0 0 1 4.867 2.62c-1.691 1.087-2.82 2.936-2.867 5.053a5.926 5.926 0 0 0 3.562 5.352 13.472 13.472 0 0 1-1.913 3.901zm-7.6-21.36a6.072 6.072 0 0 1 3.894-1.998c.038.139.045.303.045.469 0 1.44-.521 2.759-1.386 3.777A4.871 4.871 0 0 1 16.04 8.8h-.042a6.886 6.886 0 0 1-.016-.451 5.66 5.66 0 0 1 1.384-3.716z"></path>
                         </svg>
                       </span>
@@ -146,6 +146,28 @@
                     </div>
                   </div>
                 </form>
+                <!-- 이메일 인증시 인증번호 입력하는 곳 -->
+                <form>
+                  <input type="hidden" name="second" value="180">
+                  <div class="parkingmate-EmailAuthField">
+                    <label class="parkingmate-EmailAuthField_fieldLabel"></label>
+                    <div class="parkingmate-EmailAuthField_inputFieldContainer">
+                      <div class="parkingmate-EmailAuthField_inputField">
+                        <input name="authCode" maxlength="6" placeholder="인증번호 입력" type="tel" class="parkingmate-Input_input" aria-invalid="true">
+                        <span class="parkingmate-EmailAuthField_count">3:00</span>
+                      </div>
+                      <button class="parkingmate-Button_button" type="submit" disabled="">
+                        <span>
+                          <span class="parkingmate-Button_children">확인</span>
+                        </span>
+                      </button>
+                    </div>
+                    <p class="parkingmate-EmailAuthField_helperMessage">인증번호 6자리를 입력하세요.</p> 
+                    <!-- <p class="parkingmate-EmailAuthField_helperMessage helperMessage-error">인증번호를 정확히 입력해 주세요.</p>  -->
+                    <!-- <p class="parkingmate-EmailAuthField_helperMessage helperMessage-error">인증번호 6자리를 입력하세요.</p>  -->
+                    <!-- <p class="parkingmate-EmailAuthField_helperMessage helperMessage-error">인증 유효 시간을 초과했습니다. 다시 시도해 주세요.</p>  -->
+                  </div>
+                </form>
               </div>
               <form>
                 <input type="hidden" name="userName" />
@@ -157,6 +179,7 @@
                   <div class="textfield-field">
                     <input name="nickName" placeholder="이름 입력" type="text" class="input-input input-name" aria-invalid="false"/>
                   </div>
+                  <em class="parkingmate-error-message">이름을 입력해주세요.</em>
                 </div>
                 <div class="textfield">
                   <label>비밀번호</label>
@@ -165,7 +188,7 @@
                     <button class="hide-button">
                       <span>
                         <span class="button-children">
-                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 46px; height: 46px">
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true" style="width: 46px; height: 46px">
                             <path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path>
                           </svg>
                         </span>
@@ -180,7 +203,7 @@
                     <button class="hide-button">
                       <span>
                         <span class="button-children">
-                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 46px; height: 46px">
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true" style="width: 46px; height: 46px">
                             <path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path>
                           </svg>
                         </span>
@@ -192,10 +215,10 @@
                   <label class="checkbox">
                     <input id="termsUpdateRequestCheckBox" type="checkbox" class="checkbox-input"/>
                     <span class="checkbox-icon">
-                      <!-- <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__3VTbq Checkbox_removeIcon__7dzQx" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
-                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq Checkbox_checkIcon__2qiC_" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg> -->
+                      <!-- <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg> -->
                     </span>
-                    <span class="Checkbox_content__3UZwe"></span>
+                    <span class="Checkbox_content"></span>
                   </label>
                   <label class="signup-allcheck">
                     <p class="signup-allcheck-label">전체동의</p>
@@ -207,7 +230,7 @@
                   <button class="button-text">
                     <span>
                       <span class="button-children">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
                           <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
                         </svg>
                       </span>
@@ -273,7 +296,7 @@
                 <button class="button-kakao">
                   <span>
                     <span class="button-children">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq SNSButtonList_kakaoIcon__3y4jL" aria-hidden="true">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon SNSButtonList_kakaoIcon__3y4jL" aria-hidden="true">
                         <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path>
                       </svg>
                       카카오로 시작하기
@@ -283,7 +306,7 @@
                 <button class="button-naver">
                   <span>
                     <span class="button-children">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq SNSButtonList_naverIcon__6Y1-9" -hidden="true">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon SNSButtonList_naverIcon__6Y1-9" -hidden="true">
                         <path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path>
                       </svg>
                       네이버로 시작하기
@@ -314,7 +337,7 @@
                   <button class="sns-button-content facebook-button">
                     <span>
                       <span class="button-children">
-                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
                           <path d="M14.4 19.547h5.673v-5.256a8.559 8.559 0 0 1 2.4-6.132c2.618-2.628 6.109-2.3 11.127-1.861v5.913h-3.71a3.374 3.374 0 0 0-2.29.766 3.514 3.514 0 0 0-.655 2.3v4.27h6.437l-.873 6.57h-5.564V43.2h-6.872V26.118H14.4v-6.57z"></path>
                         </svg>
                       </span>
@@ -323,7 +346,7 @@
                   <button class="sns-button-content apple-button">
                     <span>
                       <span class="button-children">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
                           <path d="M24.96 26c-1.12 1.68-2.32 3.28-4.08 3.28s-2.32-1.04-4.4-1.04-2.64 1.04-4.4 1.12S9.04 27.6 7.92 26c-2.32-3.28-4-9.36-1.68-13.44 1.098-1.973 3.148-3.299 5.512-3.36 1.688 0 3.368 1.12 4.408 1.12s3.04-1.44 5.12-1.2a6.157 6.157 0 0 1 4.867 2.62c-1.691 1.087-2.82 2.936-2.867 5.053a5.926 5.926 0 0 0 3.562 5.352 13.472 13.472 0 0 1-1.913 3.901zm-7.6-21.36a6.072 6.072 0 0 1 3.894-1.998c.038.139.045.303.045.469 0 1.44-.521 2.759-1.386 3.777A4.871 4.871 0 0 1 16.04 8.8h-.042a6.886 6.886 0 0 1-.016-.451 5.66 5.66 0 0 1 1.384-3.716z"></path>
                         </svg>
                       </span>
@@ -370,7 +393,7 @@
                     <button class="hide-button">
                       <span>
                         <span class="button-children">
-                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 46px; height: 46px">
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true" style="width: 46px; height: 46px">
                             <path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path>
                           </svg>
                         </span>
@@ -385,7 +408,7 @@
                     <button class="hide-button">
                       <span>
                         <span class="button-children">
-                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 46px; height: 46px">
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true" style="width: 46px; height: 46px">
                             <path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path>
                           </svg>
                         </span>
@@ -397,10 +420,10 @@
                   <label class="checkbox">
                     <input id="termsUpdateRequestCheckBox" type="checkbox" class="checkbox-input"/>
                     <span class="checkbox-icon">
-                      <!-- <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__3VTbq Checkbox_removeIcon__7dzQx" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
-                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq Checkbox_checkIcon__2qiC_" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg> -->
+                      <!-- <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg> -->
                     </span>
-                    <span class="Checkbox_content__3UZwe"></span>
+                    <span class="Checkbox_content"></span>
                   </label>
                   <label class="signup-allcheck">
                     <p class="signup-allcheck-label">전체동의</p>
@@ -412,7 +435,7 @@
                   <button class="button-text">
                     <span>
                       <span class="button-children">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
                           <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
                         </svg>
                       </span>
@@ -437,5 +460,126 @@
         </div>
       </main>
     </div>
+    <!-- 약관 확인 -->
+    <!-- <div class="modal-container">
+      <div class="modal-overlay">
+        <div class="modal-content">
+          <div class="confirmModal-header">
+            <div></div>
+          </div>
+          <div class="confirmModal-content">
+            <div class="app-container">
+              <article class="TermsConfirmContainer_modalInner">
+                <div class="TermsConfirmContainer_header">
+                  <header class="TermsConfirmHeader_container">
+                    <h1 class="TermsConfirmHeader_title">약관확인</h1>
+                    <p class="TermsConfirmHeader_description">약관에 동의하셔야 해당 서비스를 이용할 수 있습니다.</p>
+                  </header>
+                  <section class="FullAgreementCheckbox_container">
+                    <label class="checkbox-checkbox Checkbox_md Checkbox_labeled FullAgreementCheckbox_checkbox">
+                      <input name="fullAgreement" data-testid="full-agreement-checkbox" type="checkbox" class="Checkbox_input">
+                      <span class="Checkbox_icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg>
+                      </span>
+                      <span class="Checkbox_content">
+                        <span>
+                          <span class="FullAgreementCheckbox_text">전체 동의</span>
+                          <span class="FullAgreementCheckbox_subtext">(선택항목 포함)</span>
+                        </span>
+                      </span>
+                    </label>
+                  </section>
+                </div>
+                <div>
+                  <div class="AccordionCheckbox_accordionHeader ServiceAgreementCheckbox_container TermsConfirmBody_service">
+                    <div data-testid="service-agreement-checkbox">
+                      <label class="checkbox-checkbox Checkbox_sm Checkbox_labeled AccordionCheckbox_checkbox">
+                        <input name="funding" required="" type="checkbox" class="Checkbox_input">
+                        <span class="Checkbox_icon" aria-hidden="true">
+                          <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg>
+                        </span>
+                        <span class="Checkbox_content">
+                          <span>
+                            <div>
+                              <strong>회원·서비스</strong>  가입<span class="ServiceAgreementCheckbox_required">(필수)</span>
+                            </div>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                    <button class="AccordionCheckbox_accordionButton" aria-label="내용 보기">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+                    </button>
+                  </div>
+                  <div class="AccordionCheckbox_accordionHeader ServiceAgreementCheckbox_container TermsConfirmBody_service">
+                    <div data-testid="service-agreement-checkbox">
+                      <label class="checkbox-checkbox Checkbox_sm Checkbox_labeled AccordionCheckbox_checkbox">
+                        <input name="funding" type="checkbox" class="Checkbox_input">
+                        <span class="Checkbox_icon" aria-hidden="true">
+                          <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg>
+                        </span>
+                        <span class="Checkbox_content">
+                          <span>
+                            <div>회원·서비스 이벤트 혜택 알림(선택)</div>
+                          </span>
+                        </span>
+                      </label>
+                      <em class="HelperMessage_helperMessage Checkbox_message Checkbox_sm">펀딩·프리오더·스토어 서비스, 이벤트·할인 혜택 등에 대한 정보를 이메일, 앱 알림(앱 회원가입 시)로 받아볼 수 있습니다. (동의 철회 시까지)</em>
+                    </div>
+                  </div>
+                  <div class="AccordionCheckbox_accordionHeader ServiceAgreementCheckbox_container TermsConfirmBody_service">
+                    <div data-testid="service-agreement-checkbox">
+                      <label class="checkbox-checkbox Checkbox_sm Checkbox_labeled AccordionCheckbox_checkbox">
+                        <input name="startup" type="checkbox" class="Checkbox_input">
+                        <span class="Checkbox_icon" aria-hidden="true">
+                          <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg>
+                        </span>
+                        <span class="Checkbox_content">
+                          <span>
+                            <div><strong>스타트업 찾기</strong> 서비스 가입<span class="">(선택)</span></div>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                    <button class="AccordionCheckbox_accordionButton" aria-label="내용 보기">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+                    </button>
+                  </div>
+                  <div class="AccordionCheckbox_accordionHeader ServiceAgreementCheckbox_container TermsConfirmBody_service">
+                    <div data-testid="service-agreement-checkbox">
+                      <label class="checkbox-checkbox Checkbox_sm Checkbox_labeled AccordionCheckbox_checkbox">
+                        <input name="funding" required="" type="checkbox" class="Checkbox_input">
+                        <span class="Checkbox_icon" aria-hidden="true">
+                          <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg>
+                        </span>
+                        <span class="Checkbox_content">
+                          <span>
+                            <div>만 14세 이상입니다.<span class="ServiceAgreementCheckbox_required">(필수)</span></div>
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <p class="TermsConfirmBody_notice">·선택 동의를 거부해도 펀딩·프리오더·스토어 서비스(스타트업찾기 제외) 이용이 가능합니다.</p>
+                </div>
+                <div class="TermsConfirmFooter_container App_footer">
+                  <div class="FixedToast_toast"></div>
+                  <button aria-label="confirmation" class="Button_button2" type="button" disabled="">
+                    <span>
+                      <span class="Button_children">확인</span>
+                    </span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </body>
 </html>
