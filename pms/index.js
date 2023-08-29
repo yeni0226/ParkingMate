@@ -1,6 +1,6 @@
 let mapContainer = document.getElementById('parkingmate-map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(37.56646, 126.98121), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
@@ -16,14 +16,14 @@ let map = new kakao.maps.Map(mapContainer, mapOption);
 // 내위치로 이동시키기
 function setCenter() {            
   // 이동할 위도 경도 위치를 생성합니다 
-  let moveLatLon = new kakao.maps.LatLng(33.452613, 126.570888);
+  let moveLatLon = new kakao.maps.LatLng(37.56646, 126.98121);
   
   // 지도 중심을 이동 시킵니다
   map.setCenter(moveLatLon);
 }
 
 // 마커가 표시될 위치입니다 
-let markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+let markerPosition  = new kakao.maps.LatLng(37.56646, 126.98121); 
 
 // 마커를 생성합니다
 let marker = new kakao.maps.Marker({
