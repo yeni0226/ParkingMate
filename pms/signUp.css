@@ -564,6 +564,16 @@ button:not(:disabled) {
   color:#adb5bd;
 }
 
+.parkingmate-error-message{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  margin-top: 4px;
+  color: #e54545;
+  font-style: normal;
+}
+
 .button-primmary {
   margin-left: 8px;
   min-width: 103px;
@@ -593,6 +603,106 @@ button:not(:disabled) {
   display: inline-flex;
   align-items: center;
   vertical-align: top;
+}
+
+.parkingmate-EmailAuthField{
+  padding-bottom: 8px
+}
+
+.parkingmate-EmailAuthField_fieldLabel{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.parkingmate-EmailAuthField_inputFieldContainer{
+  display: flex;
+}
+
+.parkingmate-EmailAuthField_inputField{
+  position: relative;
+  width: 100%;
+}
+
+.parkingmate-Input_input{
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 16px;
+  width: 100%;
+  color: #212529;
+  height: 48px;
+  min-height: 48px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.parkingmate-EmailAuthField_count{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #e54545;
+}
+
+.parkingmate-Button_button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+  margin-left: 8px;
+  min-width: 103px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+.parkingmate-Button_button:disabled, .parkingmate-Button_button[disabled] {
+  opacity: .45;
+  cursor: default;
+  pointer-events: none;
+}
+
+.parkingmate-Button_button span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+
+.parkingmate-Button_children{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-EmailAuthField_helperMessage{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #868e96;
+}
+
+.helperMessage-error{
+  color: #f66;
 }
 
 .textfield {
@@ -956,4 +1066,326 @@ button {
   cursor: pointer;
   width: 100%;
   height: 100%;
+}
+
+.modal-overlay{
+  display: inline-flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-content{
+  display: inline-flex;
+  flex-direction: column;
+  outline: none;
+  box-shadow: 0 32px 40px -2px rgba(10,22,70,.12), 0 0 5px rgba(10,22,70,.06);
+  background: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: transform .3s;
+  animation: ConfirmModal_slideUp__38KyJ .5s;
+  border-radius: 16px 16px 0 0;
+  max-height: 90%;
+  overflow: visible;
+  padding: 16px 0;
+}
+
+.confirmModal-header{
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmModal-header::before{
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 3px;
+  background: #fff;
+  width: 40px;
+  height: 6px;
+  content: "";
+}
+
+.confirmModal-content{
+  display: inline-flex;
+  flex-direction: column;
+  overflow: auto;
+  color: #495057;
+}
+
+.TermsConfirmContainer_modalInner{
+  display: block;
+  position: relative;
+}
+
+.TermsConfirmContainer_header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 12px 16px 0;
+}
+
+.TermsConfirmHeader_container{
+  display: block;
+  position: relative;
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+.TermsConfirmHeader_title{
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.TermsConfirmHeader_description{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.FullAgreementCheckbox_container{
+  display: block;
+  margin-bottom: 12px;
+}
+
+.checkbox-checkbox{
+  display: block;
+  position: relative;
+}
+
+.FullAgreementCheckbox_checkbox{
+  align-items: center;
+  transition: box-shadow .2s,background-color .3s;
+  border-radius: 3px;
+  box-shadow: 0 16px 16px -1px rgba(10,22,70,.1), 0 0 5px rgba(10,22,70,.06);
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.Checkbox_labeled{
+  display: inline-flex;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Checkbox_input{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+}
+
+.Checkbox_icon{
+  display: block;
+  position: relative;
+  transition-property: opacity,border-color,background-color;
+  transition-duration: .15s;
+  opacity: 1;
+  z-index: 1;
+  border: 1px solid #cdd3d8;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 1em;
+  height: 1em;
+}
+
+.Checkbox_icon{
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.Checkbox_icon{
+  font-size: 20px;
+}
+
+.withIcon_icon{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.Checkbox_icon svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition-property: opacity,width,fill;
+  transition-duration: .15s;
+  width: 0.7791666667em;
+  height: 0.7791666667em;
+  fill: #fff;
+}
+
+.Checkbox_removeIcon{
+  width: 10px;
+  opacity: 0;
+}
+
+.Checkbox_checkIcon{
+  opacity: 0;
+}
+
+.Checkbox_content{
+  display: inline-block;
+  color: #495057;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.FullAgreementCheckbox_text{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.FullAgreementCheckbox_subtext{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.AccordionCheckbox_accordionHeader{
+  position: relative;
+}
+
+.ServiceAgreementCheckbox_container{
+  padding: 12px 0;
+}
+
+.TermsConfirmBody_service{
+  padding-right: 16px;
+  padding-left: 24px
+}
+
+.ServiceAgreementCheckbox_required{
+  color: #00b2b2;
+}
+
+.AccordionCheckbox_accordionButton{
+  position: absolute!important;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 11px 15px;
+}
+
+.HelperMessage_helperMessage{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  margin-top: 4px;
+  color: #868e96;
+  font-style: normal;
+}
+
+.Checkbox_message{
+  margin-top: 12px;
+  padding-left: 28px;
+  color: #495057;
+}
+
+.Checkbox_message .Checkbox_sm{
+  padding-left: 24px;
+}
+
+.TermsConfirmBody_notice{
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 20px 0;
+  padding-right: 16px;
+  padding-left: 24px;
+  color: #495057;
+}
+
+.TermsConfirmFooter_container{
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  background-color: #fff;
+  padding: 16px;
+  width: 100%;
+}
+
+.App_footer{
+  position: sticky;
+  bottom: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.FixedToast_toast{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: transform .15s,opacity .1s,background-color .3s,color .3s,padding .05s ease-in;
+  opacity: 0;
+  border-radius: 6px;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+  width: calc(100% - 32px);
+  text-align: center;
+  color: rgba(0,0,0,0);
+}
+
+.Button_button2{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: .45;
+  cursor: default;
+  pointer-events: none;
+  width: 100%;
+  padding: 13.5px 27px;
+  line-height: 1.5;
+  font-size: 18px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+.Button_button2 span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.Button_children{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
 }

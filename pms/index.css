@@ -283,7 +283,8 @@ button:not(:disabled) {
 
 #parkingmate-map{
   width: 100%; 
-  height: calc(100vh - 110px); 
+  /* height: calc(100vh - 110px);  */
+  height: 100vh;
   margin: auto;
   /* padding-bottom: 57px; */
 }
