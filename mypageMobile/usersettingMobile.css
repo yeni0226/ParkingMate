@@ -369,7 +369,7 @@ i.ParkingMateicon, i.icon::before, [class*='icon-']::before{
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
-  /* speak: none; */
+  speak: none;
 }
 
 i.ParkingMateicon.pm-facebook::before, i.icon.facebook::before, .icon-facebook::before {

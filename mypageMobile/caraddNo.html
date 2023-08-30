@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
-  <link rel="stylesheet" href="cardlist.css">
+  <link rel="stylesheet" href="carlist.css">
   <link rel="stylesheet" href="mypagemobile.css">
   <link rel="stylesheet" href="use_history.css">
   <link rel="mask-icon" href="/resources/static/svg/wa.svg" color="#1d2129">
@@ -42,7 +42,7 @@
     </div>
   </div>
  <!-- 전체적인 페이지 틀 -->
-  <div id="page-container">
+  <div id="papge-container">
     <main id="main-app">
       <!-- 상단 바 -->
       <div class="web-header">
@@ -83,100 +83,34 @@
         </div>
       </div>
 
-      <!-- 이용 내역 -->
       <div class="MainWrapper_content_GZkTa">
         <section class="MyParkingMateUseListContainer_container_3Bp5s">
           <div>
             <div class="MyParkingMateUseLsitContainer_topArea_3S18O">
-              <!-- 셀렉트 박스 -->
-              <div class="select-menu small MyParkingMateUseListContainer_selectBox_2OOCH">
-                <div class="select-menu-hidden-input-box">
-                  <input type="text" readonly>
-                </div>
-                <div class="css-2b097c-container">
-                  <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
-                  <div class="select-menu_control select-menu_control--menu-is-open css-yk16xz-control">
-                    <div class="select-menu_value-container select-menu_value-container--has-value css-1hwfws3">
-                      <div class="select-menu_single-value css-1uccc91-singleValue">전체</div>
-                      <input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
-                    </div>
-                    <div class="select-menu_indicators css-1wy0on6">
-                      <span class="select-menu_indicator-separator css-0"></span>
-                      <div class="select-menu_indicator select-menu_dropdown-indicator css-tlfecz-indicatorContainer" aria-hidden="true">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
-                          <path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="select-menu_menu css-9g7j0m-menu">
-                    <!-- selectbox list -->
-                    <div class="select-menu_menu-list css-11unzgr">
-                      <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-1" tabindex="-1">1월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-2" tabindex="-1">2월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-3" tabindex="-1">3월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-4" tabindex="-1">4월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-5" tabindex="-1">5월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-6" tabindex="-1">6월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-7" tabindex="-1">7월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-8" tabindex="-1">8월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-9" tabindex="-1">9월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-10" tabindex="-1">10월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-11" tabindex="-1">11월</div>
-                      <div class="select-menu__option css-yt9ioa-option" id="react-select-5-option-12" tabindex="-1">12월</div>
-                    </div>
-                  </div>
-                  <input name="filteringType" type="hidden" value>
+              <h3 class="SimpleCarInfo_title_1a9F1">차량 정보</h3>
+            </div>
+            
+            <!-- 간편 차량 등록 layer -->
+            <div class="SimplePayCard_simplecard_2wYo7 SimplePayCard_info_3rLl3 SimplePayCard_noInfo_pdX40">
+              <div class="SimplePayCard_unregisted_2uiqp">
+                <div class="SimplePayCard_addCard_2eagF">
+                  <svg class="sad" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <image href="sad.svg"/>
+                  </svg>
+
+                  <span class="SimplePayCard_title_PpPWZ"></span>
+                  <span class="SimplePayCard_description_IFa0t">이용내역이 없어요...ㅜㅜ</span>
                 </div>
               </div>
+              </div>
             </div>
-            <!-- 내용 -->
-            <div>
-              <ul class="MyParkingMateUseList_1v-gA">
-                <li class="MyParkingMateUseList_ListItem_1H9_W">
-                  <!-- 링크 이동 -->
-                  <a href="">
-                    <dl class="MyParkingMateListItem_3dBPk">
-                      <!-- 내용의 상단 -->
-                      <dt>
-                        <!-- 주차장이용 -->
-                        <em class="MyParkingMateListItem_category_1YTdA">주차장 이용</em>
-                        <!-- 이용 날짜 -->
-                        <em class="MyParkingMateUseListItem_date_1fa27">2023.08.20 이용</em>
-                      </dt>
-                      <dd>
-                        <p class="MyParkingMateUseListItem_status_4i2gz">
-                          <!-- 예약번호 -->
-                          <i class="MyParkingMateUseListItem_icon_2z5eC"></i>예약 번호 : 2023082900033456
-                        </p>
-                        <!-- 주차장 위치 -->
-                        <p class="MyParkingMateUseListItem_title_1pVPq">[신림 먹자골목]신림역 4번출구 스타벅스주차장</p>
-                        <!-- 주차장 판매자 -->
-                        <p class="MyParkingMateUseListItem_seller_2hjgU">by Cream</p>
-                        <p class="MyParkingMateUseListItem_Info_3ClBM">
-                          <em class="MyParkingMateUseListItem_Status_2L-0e">결제 완료</em>
-                        </p>
-                        <!-- 상세보기 -->
-                        <span class="MyParkingMateItem_detail_lu0wQ">
-                          상세보기
-                          <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
-                          </svg>
-                        </span>
-                      </dd>
-                    </dl>
-                  </a>
-                </li>
-              </ul>
-            </div>
+
+            <input type="hidden" name="has-simplepay-info" value="false">
           </div>
         </section>
         
       </div>
     </main>
-    <!-- 상단바를 제외한 메인 layer -->
-    </div>
   </div>
   <!-- 하단 메뉴바 -->
   <ul class="ParkingMateMobile_container_1OTMW">
@@ -227,4 +161,20 @@
     </li>
   </ul>
 </body>
+<script>
+  // 뒤로가기 버튼 클릭 이벤트
+  const backButton = document.querySelector("#main-app > div.web-header > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link = "mypageMobile.html";
+  backButton.addEventListener("click", (e) => {
+
+    location.replace(link);
+  })
+
+  // 마이페이지 아이콘 클릭 이벤트
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click", (e) => {
+    location.replace(link);
+  })
+</script>
 </html>
