@@ -75,4 +75,28 @@
   </div>
     </div>
 </body>
+<script>
+  // 확인 버튼 클릭 이벤트
+ const okButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT.Button_lg_1Dftp.BasicDialog_dialogButton_17YDz");
+ const oklink = "mypageMobile.html";
+ 
+ okButton.addEventListener("click", (e) => {
+   location.href = oklink;
+ })
+
+   // 취소 버튼 클릭 이벤트
+ const cancelButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT.Button_lg_1Dftp.BasicDialog_dialogButton_17YDz");
+ const link = history.back;
+ 
+ cancelButton.addEventListener("click", (e) => {
+   location.href = link;
+ })
+ 
+ // x버튼 클릭 시 이벤트
+ const xButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > button");
+ 
+ xButton.addEventListener("click", (e) => {
+   location.href = link;
+ })
+ </script>
 </html>

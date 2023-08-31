@@ -69,4 +69,21 @@
       </div>  
     </div>
 </body>
+<script>
+ // 다음 버튼 클릭 이벤트
+const nextButton = document.querySelector("body > div.ModalPortal > div > div > div > div.SimplePayInfoFormEditList_contents_3ck1v > div > button");
+const link = "mypageMobile.html";
+
+nextButton.addEventListener("click", (e) => {
+  location.href = link;
+})
+
+// x버튼 클릭 시 이벤트
+const xButton = document.querySelector("body > div.ModalPortal > div > div > div > div.SimplePayInfoFormNavBar_contents_MU7AO > button");
+const link2 = "cardaddCancel.html";
+
+xButton.addEventListener("click", (e) => {
+  location.href = link2;
+})
+</script>
 </html>

@@ -210,4 +210,21 @@
       </div>  
     </div>
 </body>
+<script>
+  // x버튼 클릭 시 이벤트
+const xButton = document.querySelector("body > div.ModalPortal > div > div > div > div.SimplePayInfoFormNavBar_contents_MU7AO > button");
+const link = "cardaddCancel.html";
+
+xButton.addEventListener("click", (e) => {
+  location.href = link;
+})
+
+// 다음 버튼 클릭 시 이벤트
+const nextButton = document.querySelector("body > div.ModalPortal > div > div > div > div.SimplePayInfoPasswordForm_contents_2M2Am > div.SimplePayInfoPasswordForm_buttonWrapper_2Ck18");
+const link2 = "cardadd3.html";
+
+nextButton.addEventListener("click", (e) => {
+  location.href = link2;
+})
+</script>
 </html>
