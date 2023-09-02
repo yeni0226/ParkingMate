@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="mypagemobile.css">
   <link rel="mask-icon" href="/resources/static/svg/wa.svg" color="#1d2129">
 </head>
-<body>
+<body style="overflow: auto;">
   <div id="fb-root" class="fb_rest">
     <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
       <div></div>
@@ -190,4 +190,30 @@
     </li>
   </ul>
 </body>
+<script>
+  // 뒤로가기 버튼 클릭 시
+  const backbutton = document.querySelector("#main-app > div > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link2 = 'mypageMobile.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 등록 버튼 클릭 시 이벤트
+  const regButton = document.querySelector("body > button");
+
+  regButton.addEventListener("click", (e) => {
+    const link = "caradd.html";
+
+    location.href = link;
+  })
+</script>
 </html>

@@ -471,7 +471,24 @@ ul, li {
 }
 
 .car_register{
-  position: relative;
+  transition-property: background-color, border-color, color, opacity;
+  transition-duration: 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 1.4117647059em;
+  height: 48px;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 17px;
+  font-weight: 400;
+  box-sizing: border-box !important;
+  background-color: #00c4c4;
+  color: #fff;
+  width: 100%;
+  bottom: 100px;
+  position: fixed;
+  /* position: relative;
   top:50%;
   border: 1px solid #5cdede;
   background-color: #5cdede;
@@ -482,7 +499,7 @@ ul, li {
   line-height: 48px;
   font-size: 20px;
   font-weight: 600;
-  bottom: -308px;
+  bottom: -308px; */
 }
 
 /* caraddNo.html꺼 */

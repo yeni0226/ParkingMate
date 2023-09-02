@@ -202,4 +202,40 @@
     </li>
   </ul>
 </body>
+<script>
+   // 리스트박스 클릭 시 이벤트
+// 전체 부분
+const listboxChose = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.select-menu-hidden-input-box");
+// 리스트박스 부분
+const showlist = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+// 리스트 박스 화살표
+const listarrow1 = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_indicators.css-1wy0on6");
+listboxChose.addEventListener("click", function(){
+
+  if(showlist.style.display == 'none'){
+    showlist.style.display = 'block';
+    listarrow1.style.transform = "rotate(180deg)";
+  }else{
+    showlist.style.display = 'none';
+    listarrow1.style.transform = "rotate(0deg)";
+    // transform: rotate(180deg);
+  }
+})
+
+// 뒤로가기 버튼 클릭 시
+const backbutton = document.querySelector("#main-app > div.web-header > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link2 = 'mypageMobile.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+</script>
 </html>

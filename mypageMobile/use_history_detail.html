@@ -236,4 +236,21 @@
     </li>
   </ul>
 </body>
+<script>
+  // 뒤로가기 버튼 클릭 시
+  const backbutton = document.querySelector("#main-app > div > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link2 = 'mypageMobile.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+</script>
 </html>

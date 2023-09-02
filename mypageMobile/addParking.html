@@ -14,24 +14,17 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.c30dc2b4.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.3570589c.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.c547264a.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.7d02bad7.css">
   <link rel="stylesheet" href="usersettingMobile.css">
   <link rel="stylesheet" href="mypagemobile.css">
   <link rel="stylesheet" href="addParking.css">
@@ -234,7 +227,7 @@
                   </div>
                 </div>
                 <!-- select bar list -->
-                <div class="select-menu_menu css-9g7j0m-menu">
+                <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                   <div class="select-menu_menu-list css-11unzgr">
                     <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
                     <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">강남구</div>
@@ -268,7 +261,7 @@
                   </div>
                 </div>
                 <!-- select bar list -->
-                <div class="select-menu_menu css-9g7j0m-menu">
+                <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                   <div class="select-menu_menu-list css-11unzgr">
                     <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
                     <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">역삼</div>
@@ -312,7 +305,7 @@
                 </div>
               </div>
               <!-- select bar list -->
-              <div class="select-menu_menu css-9g7j0m-menu">
+              <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                 <div class="select-menu_menu-list css-11unzgr">
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">1시간</div>
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-2" tabindex="-1">2시간</div>
@@ -354,7 +347,7 @@
                 </div>
               </div>
               <!-- select bar list -->
-              <div class="select-menu_menu css-9g7j0m-menu">
+              <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                 <div class="select-menu_menu-list css-11unzgr">
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">00분</div>
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">30분</div>
@@ -414,7 +407,7 @@ parkingNamebox.addEventListener("click", (e) => {
   const target = e.target;
   parkingResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkingNamebox.style.borderColor = "#00c4c4";
     parkingResult.innerText = "주차장이름은 필수 입니다!!";
     parkingResult.style.color = "red";
     target.focus();
@@ -422,12 +415,26 @@ parkingNamebox.addEventListener("click", (e) => {
   }
 })
 
-// 주차장 textbox안에 값 존재 시,
+// 주차장 등록 입력박스 마우스 떼었을때 시 이벤트
+parkingNamebox.addEventListener("mouseout", (e) => {
+  parkingNamebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingNamebox.style.borderColor = "#e4e4e4";
+    target.focus();
+
+    }
+  })
+
+// 주차장 이름 textbox안에 값 존재 시,
 parkingNamebox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkingResult.innerText = e.target.value;
 
   if(target.value){
+    parkingNamebox.style.borderColor = "#e4e4e4";
     parkingResult.style.display = 'none';
     target.focus();
 
@@ -436,14 +443,14 @@ parkingNamebox.addEventListener("keyup", (e) => {
 
 
 // 주차장 위치 클릭 이벤트
-const parkinglocationNamebox = document.querySelector("#saveForm > div:nth-child(15)");
+const parkinglocationNamebox = document.querySelector("#saveForm > div:nth-child(15) > input.input-text-other");
 const parkinglocationNameResult = document.querySelector("#parkinglocationName-result");
 
 parkinglocationNamebox.addEventListener("click", (e) => {
   const target = e.target;
   parkinglocationNameResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkinglocationNamebox.style.borderColor = "#00c4c4";
     parkinglocationNameResult.innerText = "주차장 위치 입력은 필수 입니다!!";
     parkinglocationNameResult.style.color = "red";
     target.focus();
@@ -451,12 +458,25 @@ parkinglocationNamebox.addEventListener("click", (e) => {
   }
 })
 
+// 주차장 위치 입력박스 마우스 떼었을때 시 이벤트
+parkinglocationNamebox.addEventListener("mouseout", (e) => {
+  parkinglocationNamebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkinglocationNamebox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
 // 주차장 위치 textbox안에 값 존재 시,
 parkinglocationNamebox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkinglocationNameResult.innerText = e.target.value;
 
   if(target.value){
+    parkinglocationNamebox.style.borderColor = "#e4e4e4";
     parkinglocationNameResult.style.display = 'none';
     target.focus();
 
@@ -465,14 +485,14 @@ parkinglocationNamebox.addEventListener("keyup", (e) => {
 
 
 // 주차장 대여 금액 입력 클릭 시
-const parkingPricebox = document.querySelector("#saveForm > div:nth-child(17)");
+const parkingPricebox = document.querySelector("#saveForm > div:nth-child(17) > input:nth-child(1)");
 const parkingPriceResult = document.querySelector("#parkingPriceName-result");
 
 parkingPricebox.addEventListener("click", (e) => {
   const target = e.target;
   parkingPriceResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkingPricebox.style.borderColor = "#00c4c4";
     parkingPriceResult.innerText = "주차장 대여금액 입력은 필수 입니다!!";
     parkingPriceResult.style.color = "red";
     target.focus();
@@ -480,12 +500,25 @@ parkingPricebox.addEventListener("click", (e) => {
   }
 })
 
+// 주차장 대여금액 입력박스 마우스 떼었을때 시 이벤트
+parkingPricebox.addEventListener("mouseout", (e) => {
+  parkingPricebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingPricebox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
 // 주차장 대여금액 textbox안에 값 존재 시,
 parkingPricebox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkingPriceResult.innerText = e.target.value;
 
   if(target.value){
+    parkingPricebox.style.borderColor = "#e4e4e4";
     parkingPriceResult.style.display = 'none';
     target.focus();
 
@@ -493,14 +526,14 @@ parkingPricebox.addEventListener("keyup", (e) => {
 })
 
 // 주차장 부가 시설 입력 클릭 시
-const parkingOtherbox = document.querySelector("#saveForm > div:nth-child(18)");
+const parkingOtherbox = document.querySelector("#saveForm > div:nth-child(18) > input:nth-child(1)");
 const parkingOtherResult = document.querySelector("#parkingOtherName-result");
 
 parkingOtherbox.addEventListener("click", (e) => {
   const target = e.target;
   parkingOtherResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkingOtherbox.style.borderColor = "#00c4c4";
     parkingOtherResult.innerText = "주차장 부가시설 정보를 입력해주세요!!";
     parkingOtherResult.style.color = "red";
     target.focus();
@@ -508,12 +541,25 @@ parkingOtherbox.addEventListener("click", (e) => {
   }
 })
 
+// 주차장 부가 시설 입력박스 마우스 떼었을때 시 이벤트
+parkingOtherbox.addEventListener("mouseout", (e) => {
+  parkingOtherbox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingOtherbox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
 // 주차장 부가 시설 textbox안에 값 존재 시,
 parkingOtherbox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkingOtherResult.innerText = e.target.value;
 
   if(target.value){
+    parkingOtherbox.style.borderColor = "#e4e4e4";
     parkingOtherResult.style.display = 'none';
     target.focus();
 
@@ -605,5 +651,7 @@ minlistbox.addEventListener("click", function(){
 
   location.replace(link);
   })
+
+ 
 </script>
 </html>
