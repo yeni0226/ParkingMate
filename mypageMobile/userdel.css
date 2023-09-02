@@ -379,6 +379,7 @@ button:not(:disabled) {
   border-color: #00c4c4;
   background-color: #00c4c4;
   color: #fff;
+  width: 100%;
 }
 
 .Button_button_2FuOU.Button_lg_1Dftp {

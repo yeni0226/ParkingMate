@@ -477,3 +477,170 @@ i.ParkingMateicon.pm-kakao::before, i.icon.kakao::before, .icon-kakao::before {
 a.btn-block-mint, button.btn-block-mint{
   background: #50e3c2;
 }
+
+/* Modal창 */
+.ConfirmModal_overlay_9xcDs {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  overflow: hidden;
+}
+
+.ConfirmModal_confirmModal_1x2Tw {
+  display: inline-flex;
+  flex-direction: column;
+  outline: none;
+  border-radius: 16px;
+  box-shadow: 0 32px 40px -2px rgba(10,22,70,.12), 0 0 5px rgba(10,22,70,.06);
+  background: #fff;
+  padding: 24px;
+  max-height: calc(100vh - 160px);
+  overflow: hidden;
+}
+
+.ConfirmModal_sizeMobile_1JFlG {
+  width: calc(100% - 48px);
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_header_gkXhb {
+  display: flex;
+  flex-direction: column;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_closeIconRoot_1WImH {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 8px;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_closeIconRoot_1WImH .ConfirmModal_closeIconWrapper_1ON9Q {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(6px,-6px);
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_closeIconRoot_1WImH .ConfirmModal_closeIconWrapper_1ON9Q .ConfirmModal_closeIcon_23VbM {
+  width: 24px;
+  height: 24px;
+}
+
+.withIcon_icon_3VTbq {
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_title_ubaBW.ConfirmModal_showCloseButton_50czX {
+  margin-right: 48px;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_title_ubaBW {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+div[title] {
+  color: #212529;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_title_ubaBW {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_content_3KM88.ConfirmModal_hasTitle_3rvSc {
+  margin-top: 12px;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_content_3KM88 {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: auto;
+  color: #495057;
+}
+
+.ConfirmModal_confirmModal_1x2Tw.ConfirmModal_content_3KM88.ConfirmModal_message_Mi2Ur {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 0;
+  width: 100%;
+  resize: none;
+}
+
+[class*=ConfirmModal_message] {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_footer_gfGBl {
+  position: relative;
+  margin-top: 24px;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_footer_gfGBl .ConfirmModal_buttonGroup_3YCl5 {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_footer_gfGBl .ConfirmModal_buttonGroup_3YCl5 .ConfirmModal_negativeButton_3VxAF {
+  margin-right: 8px;
+}
+
+.Button_button_2FuOU {
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #495057;
+  font-weight: 500;
+}
+
+.Button_button_2FuOU.Button_lg_1Dftp {
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.Button_button_2FuOU span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.ConfirmModal_confirmModal_1x2Tw .ConfirmModal_footer_gfGBl .ConfirmModal_buttonGroup_3YCl5 .ConfirmModal_positiveButton_Fafi9 {
+  margin-right: 0;
+}
+
+.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT {
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}

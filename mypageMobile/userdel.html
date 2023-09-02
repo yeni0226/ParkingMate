@@ -40,11 +40,11 @@
         <div class="DialogModal_dialogContent_F81a7 DialogModal_dialogContentAfterOpen_3iQTA" tabindex="-1" role="dialog" aria-modal="true">
           <div class="BasicDialog_modalWrap_3bCH_">
             <div class="BasicDialog_modalWrapBox_2sdut">
-              <!-- 결제 정보 등록 취소 layer -->
+              <!-- 회원 탈퇴 layer -->
               <div class="BasicDialog_dialogBox_2Mi92">
-                <div class="BasicDialog_dialogTitle_MXCow">회원탈퇴를 하시겠습니까?</div>
+                <div class="BasicDialog_dialogTitle_MXCow">회원탈퇴가 성공적으로 되었습니다.</div>
                 <div class="BasicDialog_dialogMessage_12xfB">
-                  <p>회원탈퇴 시, 모든 정보가 삭제되며 30일간 회원 가입이 불가합니다.</p>
+                  <p>이용해주셔서 감사합니다.</p>
                 </div>
                 <div class="BasicDialog_dialogButtonArea_3hd7n BasicDialog_reverse_3eMW_">
                   <button class="Button_button_2FuOU Button_primary_2mZni Button_contained_2SIAT Button_lg_1Dftp BasicDialog_dialogButton_17YDz" type="button">
@@ -52,18 +52,9 @@
                       <span class="Button_children_ilFun">확인</span>
                     </span>
                   </button>
-                  <button class="Button_button_2FuOU BasicDialog_dialogButton_17YDz" type="button">
-                    <span><span class="Button_children_ilFun">취소</span>
-                  </span>
-                </button>
               </div>
             </div>
-            <button type="button" class="BasicDialog_modalClose_1o3rb" title="닫기">
-              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
-                <path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z"></path>
-              </svg>
-            </button>
-          </div>
+            
         </div>
       </div>
     </div>
@@ -73,25 +64,25 @@
 <script>
   // 확인 버튼 클릭 이벤트
  const okButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT.Button_lg_1Dftp.BasicDialog_dialogButton_17YDz");
- const oklink = "mypageMobile.html";
+ 
  
  okButton.addEventListener("click", (e) => {
    location.href = oklink;
  })
 
    // 취소 버튼 클릭 이벤트
- const cancelButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT.Button_lg_1Dftp.BasicDialog_dialogButton_17YDz");
+ const cancelButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button:nth-child(2)");
  const link = 'usersettingsMobile.html';
  
  cancelButton.addEventListener("click", (e) => {
    location.href = link;
  })
  
- // x버튼 클릭 시 이벤트
- const xButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > button");
+//  // x버튼 클릭 시 이벤트
+//  const xButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > button");
  
- xButton.addEventListener("click", (e) => {
-   location.href = link;
- })
+//  xButton.addEventListener("click", (e) => {
+//    location.href = link;
+//  })
  </script>
 </html>
