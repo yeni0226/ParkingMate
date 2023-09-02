@@ -283,6 +283,12 @@
             <!-- ::after -->
           </ul>
         </div>
+        <!-- 회원탈퇴 버튼 -->
+        <button class="Button_button_2FuOU Button_md_46Ai- Button_block_1-g8w" type="button">
+          <span>
+            <span class="Button_children_ilFun">회원 탈퇴</span>
+          </span>
+        </button>
         <div class="change-input-wrap small">
           <div class="btn-wrap">
             <button type="button" id="saveBtn" class="pm button primary block btn-block-mint">확인</button>
@@ -312,7 +318,48 @@ const backbutton = document.querySelector("#ParkingMate-header > div > div > hea
 
   location.replace(link2);
   })
+  // ======================================================
+  // 닉네임 박스 입력 클릭 시
+const nickNameBox = document.querySelector("#saveForm > div:nth-child(1) > input:nth-child(1)");
+// const parkingOtherResult = document.querySelector("#parkingOtherName-result");
 
+nickNameBox.addEventListener("click", (e) => {
+  const target = e.target;
+  // parkingOtherResult.innerText = e.target.value;
+  if(!target.value){
+    nickNameBox.style.borderColor = "#00c4c4";
+    // parkingOtherResult.innerText = "주차장 부가시설 정보를 입력해주세요!!";
+    // parkingOtherResult.style.color = "red";
+    target.focus();
+    return;
+  }
+})
+
+// 닉네임 박스 입력박스 마우스 떼었을때 시 이벤트
+nickNameBox.addEventListener("mouseout", (e) => {
+  nickNameBox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      nickNameBox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
+// 닉네임 박스 textbox안에 값 존재 시,
+nickNameBox.addEventListener("keyup", (e) => {
+  const target = e.target;
+  // parkingOtherResult.innerText = e.target.value;
+
+  if(target.value){
+    nickNameBox.style.borderColor = "#e4e4e4";
+    // parkingOtherResult.style.display = 'none';
+    target.focus();
+
+  }
+})
+  // =======================================================
   // 이메일 변경 버튼 클릭 시
   const ChangeEmail = document.querySelector("#emailChangeBtn");
   const linkChangeEmailOk = 'usersetting_emailChange.html';
