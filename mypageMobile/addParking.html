@@ -142,7 +142,7 @@
           <div class="input-btn-wrap">
             <div class="input">
               <!-- 아이디 입력 -->
-              <input type="text" id="userName" name="userName" class="disable input-text" placeholder="계정을 입력하세요" value="" disabled="">
+              <input type="text" id="userName" name="userName" class="disable input-text" placeholder="계정을 입력하세요" value="">
               <p id="id-result"></p>
             </div>
             <div id="idChangeBtn" class="idAuthBtn btn" data-status="check">
@@ -260,13 +260,41 @@
                     </div>
                   </div>
                 </div>
-                <!-- select bar list -->
-                <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
-                  <div class="select-menu_menu-list css-11unzgr">
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">역삼</div>
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-2" tabindex="-1">선릉</div>
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-3" tabindex="-1">삼성</div>
+                <!-- select bar list 강남구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Gangnam" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Gangnam">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-1" tabindex="-1">역삼동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-2" tabindex="-1">대치동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-3" tabindex="-1">논현동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-4" tabindex="-1">삼성동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-5" tabindex="-1">신사동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-6" tabindex="-1">청담동</div>
+                  </div>
+                </div>
+                <!-- select bar list 서초구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Seocho" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Seocho">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-1" tabindex="-1">서초동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-2" tabindex="-1">잠원동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-3" tabindex="-1">반포동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-4" tabindex="-1">방배동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-5" tabindex="-1">양재동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-6" tabindex="-1">내곡동</div>
+                  </div>
+                </div>
+
+                <!-- select bar list 송파구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Songpa" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Songpa">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-1" tabindex="-1">잠실동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-2" tabindex="-1">석촌동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-3" tabindex="-1">가락동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-4" tabindex="-1">문정동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-5" tabindex="-1">송파동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-6" tabindex="-1">방이동</div>
                   </div>
                 </div>
               </div>
@@ -652,6 +680,98 @@ minlistbox.addEventListener("click", function(){
   location.replace(link);
   })
 
- 
+  //  셀렉트박스(구) 선택 시 선택창에 나타내기
+  const choseselectval = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+  // 선택 글자가 있는 selectbox(구)
+  const selectboxchose = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  // 강남구 셀렉트 박스(동)
+  const selectboxGangnam = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Gangnam");
+  // 서초구 셀렉트 박스(동)
+  const selectboxtSeocho = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Seocho");
+  // 송파구 셀렉트 박스(동)
+  const selectboxSongpa = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Songpa");
+  // 선택 글자가 있는 selectbox(동)
+  const selectboxchosegu = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  
+  //  셀렉트박스(동) 선택 시 선택창에 나타내기
+
+  // (구) 셀렉트 박스 선택 시, 그에 맞는 (동) 셀렉트 박스 활성화
+  choseselectval.addEventListener("click", (e) =>{
+    const targetText = e.target.innerText;
+    // 선택 박스 초기화 진행
+    selectboxchosegu.innerText = "선택";
+
+    if(targetText == '강남구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxGangnam.style.display = 'block'; //강남구 셀렉트 박스 활성화
+      // 강남구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxGangnam.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+      
+    }else if(targetText == '서초구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxtSeocho.style.display = 'block'; //서초구 셀렉트 박스 활성화
+
+      // 서초구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxtSeocho.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+
+    }else if(targetText == '송파구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxSongpa.style.display = 'block'; //서초구 셀렉트 박스 활성화
+
+      // 송파구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxSongpa.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+    }
+  })
+
+  // 시간 선택 시 이벤트
+  // 시간 셀렉트 박스 선택 글자
+  const hourSelectBoxChose = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  // 분 셀렉트 박스 선택 글자
+  const minSelectBoxChose = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  
+  hourchoselist.addEventListener("click", (e) => {
+    const hourTargeText = e.target.innerText;
+
+    // 선택 박스 초기화 진행
+    minSelectBoxChose.innerText = "선택";
+
+    hourSelectBoxChose.innerText = hourTargeText;
+    hourchoselist.style.display = 'none';
+    minchoselist.style.display = 'block';
+    // 분 선택 이벤트
+    minchoselist.addEventListener("click", (e1) => {
+      const minTargetText = e1.target.innerText;
+
+      minSelectBoxChose.innerText = minTargetText;
+      minchoselist.style.display = 'none';
+    })
+
+  })
+
 </script>
 </html>

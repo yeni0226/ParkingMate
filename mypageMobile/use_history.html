@@ -264,5 +264,15 @@ const backbutton = document.querySelector("#main-app > div > div > header > div 
 
   location.replace(link2);
   })
+
+  // 선택 박스 클릭 시 선택박스에 선택된 값 나타내기
+  // 전체 text 값
+  const selectBoxVal = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value-container--has-value.css-1hwfws3 > div");
+  showlist.addEventListener("click", (e) => {
+    const targetText = e.target.innerText;
+
+    selectBoxVal.innerText = targetText;
+    showlist.style.display = 'none';
+  })
 </script>
 </html>
