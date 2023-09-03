@@ -61,114 +61,17 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 }
 
-/* .sidelayout{
-  display: flex;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    flex-flow: column;
-    transition: transform .2s,-webkit-transform .2s;
-    z-index: 1500;
-    background-color: #fff;
-}
-
-.sidelayout-container{
-  overflow-x: hidden;
-  overflow-y: auto;
-} */
-/* 
-.reward{
-  display: block;
-  position: relative;
-  cursor: pointer;
-  padding: 24px 24px 16px;
-  overflow: hidden;
-  color: #fff;
-
-}
-
-.reward, .reward-project{
-  background-image: linear-gradient(118deg,#75d184,#65bfce);
-}
-
-.reward, .reward-flag{
-  display: flex;
-}
-
-.reward, .reward-flag .one{
-  font-size: 10px;
-    font-weight: 400;
-    margin-right: 8px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    padding: 2px 4px;
-    overflow: hidden;
-    line-height: normal;
-} */
-
 span{
   font-family: inherit;
 }
-
-/* .reward, .reward-flag-name{
-  line-height: 28px;
-  font-size: 18px;
-  font-weight: 700;
-  display: block;
-  margin: 8px 0;
-  cursor: pointer;
-  color: #fff;
-} */
 
 a{
   text-decoration: none;
   outline: none;
   border: 0;
-  /* -webkit-appearance: none; */
   padding: 0;
   vertical-align: baseline;
 }
-
-/* .Button, .button-four, .button-five{
-  padding-right: 10px;
-}
-
-.Button, .button-one, .button-two{
-  border-color: transparent;
-}
-
-.Button, .button-four{
-  line-height: 1.45;
-  font-size: 14px;
-}
-
-.reward, .button-five{
-  position: relative;
-  padding: 0;
-  width: 192px;
-  height: 20px;
-  overflow: hidden;
-  text-align: left;
-  color: #fff;
-  line-height: 1.45;
-  font-size: 14px;
-} */
-/* 
-.Button{
-  transition-property: background-color,border-color,color,opacity;
-    transition-duration: .15s;
-    border: 1px solid #cdd3d8;
-    border-radius: 4px;
-    background-color: transparent;
-    cursor: pointer;
-    vertical-align: middle;
-    text-decoration: none;
-    white-space: nowrap;
-    -webkit-appearance: none;
-    font-weight: 500;
-} */
-
 
 button{
   font-family: inherit;
@@ -182,45 +85,16 @@ button{
   display: inline-block;
 }
 
-/* .reward, .button-five span{
-  display: inline-block;
-  width: 158px;
-  overflow: hidden;
-} */
-
-/* .Button span{
-  vertical-align: top;
-} */
-
 span{
   margin: 0;
   border: 0;
   padding: 0;
 }
 
-/* .Button, .button-child{
-  vertical-align: top;
-} */
-
-/* .with-icon{
-  fill: currentColor;
-}
-
-.reward, .button-five{
-  display: block;
-  position: absolute;
-  top: 6%;
-  right: 0;
-} */
-
 svg:not(:root) {
   overflow-clip-margin: content-box;
   overflow: hidden;
 }
-
-/* {
-  d: path("M 16 22.4 L 5.6 12 l 1.12 -1.12 L 16 20.16 l 9.28 -9.28 L 26.4 12 L 16 22.4 Z");
-} */
 
 :not(svg) {
   transform-origin: 0px 0px;
@@ -237,10 +111,6 @@ svg:not(:root) {
   background-color: rgba(0,0,0,.54);
 }
 
-/* .sidemenu{
-  padding-bottom: 120px;
-} */
-
 nav{
   display: block;
   margin: 0;
@@ -252,97 +122,12 @@ nav{
   vertical-align: baseline;
 }
 
-/* .sidemenu-container{
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding: 16px 24px;
-}
-
-.sidemenu-container .avatar-one{
-  margin-right: 12px;
-  border-radius: 50%;
-  background: url(https://static.wadiz.kr/studio/funding/static/media/company.98277ef1.svg) no-repeat 50%/cover;
-  cursor: default;
-  min-width: 36px;
-  min-height: 36px;
-}
-
-.avatar .avatar-one{
-  width: 36px;
-  height: 36px;
-}
-
-.avatar{
-  display: inline-flex;
-  position: relative;
-  outline: none;
-  border: none;
-  padding: 0;
-  vertical-align: middle;
-}
-
-.sidemenu-container .sidemenu-default{
-  line-height: 18px;
-  font-size: 12px;
-  font-weight: 700;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-} */
-
 h3{
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-
-/* ul{
-  list-style: none;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
-
-li{
-  list-style: none;
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-
-.backdrop{
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: rgba(0,0,0,.6);
-}
-
-@media (min-width: 321px){
-.sidebutton-container{
-    left: 256px;
-}
-}
-
-.sidebutton-container{
-  position: fixed;
-  bottom: 10px;  
-  opacity: 0;
-  z-index: 1100;
-  width: 100px;
-  pointer-events: none;
-} */
-
-/* .question{
-  margin-bottom: 16px;
-} */
 
 .page-container{
   position: relative;
@@ -422,7 +207,6 @@ section{
   position: relative;
   transition-property: background-color, border-color,color,opacity;
   transition-duration: .15s;
-  /* border: 1px solid #cdd3d8; */
   border-radius: 4px;
   background-color: transparent;
   cursor: pointer;
@@ -430,7 +214,6 @@ section{
   text-decoration: none;
   white-space: nowrap;
   font-weight: 500;
-  /* -webkit-appearance: none; */
 }
 
 .button-top span{
@@ -492,15 +275,6 @@ h2{
   margin-inline-end: 0px;
 }
 
-/* .section-container, .section-head, .section-title, .title-required, ::after{
-  line-height: 28px;
-  font-size: 16px;
-  font-weight: 400;
-  margin-left: 4px;
-  color: #f66;
-  content: "*";
-} */
-
 .section-container .section-head .section-guide{
   display: flex;
   align-items: center;
@@ -517,10 +291,6 @@ h2{
   margin-top: 8px;
   margin-bottom: 24px;
   color: #868e96;
-}
-
-.section-container, .section-content{
-  position: relative;
 }
 
 .textfield{
@@ -558,19 +328,18 @@ input[type=text] {
 
 .pudding{
   display: block;
-    transition-property: border-color,background-color,color;
-    transition-duration: .15s;
-    outline: none;
-    border: 1px solid #dde2e6;
-    border-radius: 3px;
-    background-color: #fff;
-    padding: 10px;
-    width: 100%;
-    color: #212529;
-    line-height: 28px;
-    font-size: 16px;
-    font-weight: 400;
-    /* -webkit-appearance: none; */
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 10px;
+  width: 100%;
+  color: #212529;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 input{
@@ -638,6 +407,19 @@ input:not([type="range"]):not([type="color"]) {
   margin-top: 40px;
 }
 
+.hit{
+  position: relative;
+    transition-property: background-color,border-color,color,opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  
 .hit, .man, .bang{
   border-color: #00c4c4;
   background-color: #00c4c4;
@@ -654,18 +436,22 @@ input:not([type="range"]):not([type="color"]) {
   vertical-align: top;
 }
 
-.field{
+.section-container .section-content{
   position: relative;
 }
 
-.field, .image-button-wrapper{
-  display: inline-block;
-    margin-top: 8px;
+.fiell{
+  position: relative;
 }
 
-.wond, .button-label{
+.fiell .image-button-wrapper{
+  display: inline-block;
+  margin-top: 8px;
+}
+
+label.button-label{
   display: inline-block!important;
-    position: relative;
+  position: relative;
 }
 
 .roll-roll{
@@ -673,35 +459,31 @@ input:not([type="range"]):not([type="color"]) {
   font-size: 16px;
   font-weight: 400;
   cursor: default;
-    padding-bottom: 4px;
+  padding-bottom: 4px;
 }
 
-.wizard, .botton, .gray-bar{
+.wizard.botton.gray-bar{
   background-color: #90949c;
   color: #fff;
-}
-
-.wizard, .botton, .gray-bar{
   border-color: #90949c;
 }
 
-
-.wizard, .botton{
+.wizard.botton{
   transition-property: background-color,border-color,color,opacity;
-    transition-duration: .2s;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 0 1.41176em;
-    height: 48px;
-    vertical-align: middle;
-    line-height: 1;
-    font-size: 17px;
-    font-weight: 400;
-    box-sizing: border-box!important;
-    display: inline-block;
-    padding-top: 0.07em;
-    text-decoration: none;
+  transition-duration: .2s;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 1.41176em;
+  height: 48px;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 17px;
+  font-weight: 400;
+  box-sizing: border-box!important;
+  display: inline-block;
+  padding-top: 0.07em;
+  text-decoration: none;
 }
 
 button{
@@ -709,7 +491,7 @@ button{
   outline: none;
 }
 
-.wond, .button-label, .image-file-button>i{
+label.button-label .image-file-button>i{
   margin-right: 4px;
 }
 
@@ -721,14 +503,14 @@ i{
   vertical-align: baseline;
 }
 
-.wizard, .botton{
+.wizard.botton{
   cursor: pointer;
   line-height: 1;
   font-size: 17px;
   font-weight: 400;
 }
 
-.icon-camera ::before{
+.icon-camera::before{
   display: inline-block;
   margin-top: -0.2em;
   vertical-align: middle;
@@ -742,74 +524,73 @@ i{
   content: "";
 }
 
-  ::before {
+::before{
   box-sizing: border-box;
 }
 
-label .button-label, .image-file-input{
+label.button-label .image-file-input{
   position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 
-.wizard, .in-in{
+.wizard.in-in{
   display: block;
   font-size: 17px;
 }
 
-.roll-roll {
+.roll-roll{
   line-height: 28px;
   font-weight: 400;
 }
-/* speak: none; */
 
-
-/* .wizard, .in-in ::after{
+.wizard.in-in::after{
+  display: inline-block;
   vertical-align: middle;
-    text-transform: none;
-    line-height: 1;
-    font-family: "wadizicon"!important;
-    font-weight: 400;
-    font-style: normal;
-    font-feature-settings: normal;
-    font-variant: normal;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: scale(0);
-    display: inline-block;
-    transition-property: transform,opacity,-webkit-transform;
-    transition-duration: .2s;
-    opacity: 0;
-    margin-top: 0;
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
-    pointer-events: none;
-    color: #00c4c4;
-    font-size: 1.41176em;
-} */
+  text-transform: none;
+  line-height: 1;
+  font-family: "wadizicon"!important;
+  font-weight: 400;
+  font-style: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  display: inline-block;
+  transition-property: transform,opacity,-webkit-transform;
+  transition-duration: .2s;
+  opacity: 0;
+  margin-top: 0;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  pointer-events: none;
+  color: #00c4c4;
+  font-size: 1.41176em;
+}
 
-.wizard, .in-in>in-in{
+.wizard.in-in>input{
   height: 48px;
-    line-height: 1.2em;
-    font-size: 17px;
-    transition-property: border-color,height,padding-right,color;
-    transition-duration: .2s,0s;
-    outline: none;
-    border: 1px solid rgba(0,0,0,.15);
-    background: #fff;
-    padding: 0 0.94118em;
-    width: 100%;
-    vertical-align: middle;
-    color: rgba(0,0,0,.84);
-    font-weight: 400;
-    box-sizing: border-box;
+  line-height: 1.2em;
+  font-size: 17px;
+  transition-property: border-color, height, padding-right, color;
+  transition-duration: .2s,0s;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.15);
+  background: #fff;
+  padding: 0 0.94118em;
+  width: 100%;
+  vertical-align: middle;
+  color: rgba(0,0,0,.84);
+  font-weight: 400;
+  box-sizing: border-box;
 }
 
 input{
@@ -824,8 +605,6 @@ input:not([type="range"]):not([type="color"]) {
   writing-mode: horizontal-tb !important;
 }
 
-/* white-space-collapse: preserve;
-text-wrap: nowrap; */
 input[type="file" i] {
   appearance: none;
   cursor: default;
@@ -837,10 +616,10 @@ input[type="file" i] {
 
 .profile-container, .take em{
   display: block;
-    margin-top: 4px;
-    line-height: 18px;
-    font-size: 13px;
-    font-weight: 400;
+  margin-top: 4px;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 em{
@@ -849,4 +628,3 @@ em{
 .fiell, .helper-three{
   color: red;
 }
-

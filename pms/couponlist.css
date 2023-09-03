@@ -464,7 +464,7 @@ button:not(:disabled) {
   font-weight: 400;
 }
 
-.close{
+.parkingmate-downloadItem-more-svg{
   transform: scale(1);
   transition: transform .3s ease-out;
   width: 1em;
@@ -474,14 +474,7 @@ button:not(:disabled) {
   font-size: 16px;
 }
 
-.open{
-  transform: scale(1);
-  transition: transform .3s ease-out;
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  display: inline;
-  font-size: 16px;
+.close{
   display: none;
 }
 

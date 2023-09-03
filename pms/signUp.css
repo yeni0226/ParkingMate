@@ -1082,6 +1082,10 @@ button {
   overflow: hidden;
 }
 
+.modal-container{
+  display:none;
+}
+
 .modal-content{
   display: inline-flex;
   flex-direction: column;

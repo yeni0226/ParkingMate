@@ -301,12 +301,14 @@ button:not(:disabled) {
 
 .parkingmate-modal-area{
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
 
   width: 80%;
   min-width: 370px;
-  height: 600px;
+  max-width: 600px;
+  height: 85vh;
+  min-height:550px;
 
   padding: 40px;
 
