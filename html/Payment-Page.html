@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결제페이지</title>
+
+  <!-- 로고 -->
+  <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+  <!-- 전체 스타일 -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- 헤더 스타일CSS -->
+  <link rel="stylesheet" href="../css/payment-page-header.css">
+
+  <!-- 메인 스타일CSS -->
+  <link rel="stylesheet" href="../css/payment-page-main.css">
+
+</head>
+<body>
+
+  <!-- 전체 다 감싸는 박스 -->
+  <div class="page-container">
+
+    <!-- 헤더 전체박스 -->
+    <div class="web-header">
+
+      <!-- 헤더 포지션박스 -->
+      <header class="header-wrapper">
+
+        <!-- 헤더 양옆 마진박스 -->
+        <div class="header-container">
+
+          <!-- 뒤로가기 버튼박스 -->
+          <button class="back-btn">
+            
+            <!-- 뒤로가기 이미지 -->
+            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true" style="width: 24px; height: 24px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path></svg>
+
+          </button>
+
+        </div>
+
+      </header>
+
+    </div>
+
+    <!-- 메인박스 -->
+    <div>
+
+      <!-- 메인박스 레이아웃 -->
+      <div class="payment-layout">
+
+          <!-- 메인 상단 서포터정보 박스 -->
+          <section class="main-header-container">
+
+            <!-- 메인 상단 서포터정보 인박스 -->
+            <div class="main-header-container-ibx">
+
+              <!-- 서포터 정보 텍스트 -->
+              <h3 class="main-header-container-text-bx">서포터 정보</h3>
+
+              <!-- 사용자 정보 박스 -->
+              <div class="guest-info-bx">
+
+                <!-- 사용자 이름, 전화번호 텍스트 -->
+                <p>홍길동 010-1234-5678</p>
+
+                <!-- 펼쳐보기 버튼 -->
+                <button class="expand-button">
+
+                  <span>
+
+                    <!-- 펼쳐보기 이미지 -->
+                    <svg style="width: 16px; height: 16px" viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- 메인 상단 서포터정보 펼쳐보기 박스 -->
+            <div class="main-header-container-expand-bx expand-bx-open">
+
+              <!-- 메인 상단 서포터정보 펼쳐보기 인박스 -->
+              <div>
+
+                <!-- 이름 -->
+                <div class="guest-name-bx">
+                  <span>홍길동</span>
+                </div>
+
+                <!-- 전화번호 -->
+                <div class="guest-phone-number-bx">
+                  <span>010-1234-5678</span>
+                </div>
+
+                <!-- 이메일 -->
+                <div class="guest-email-bx">
+                  <span>naver@gmail.com</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+          <!-- 메인 상단 서포터정보 박스 밑 여백박스 -->
+          <div class="main-header-container-under-margin-bx">
+            <hr class="Divider_divider__ToZaf Divider_thick__1Weqv Divider_lightBG__3bAAk Divider_caption2__3b6Dr" style="height: 8px;">
+          </div>
+
+          <!-- 배송정보, 상품정보, 쿠폰, 결제수단, 결제금액, 결제하기 전체박스 -->
+          <form id="payment-submit">
+
+            <!-- 배송 정보 인박스 -->
+            <section class="payment-ibx">
+
+              <!-- 배송정보 전체박스 -->
+              <div class="delivery-info-bx">
+
+                <!-- 배송정보 텍스트 -->
+                <h3 class="delivery-info-text3">배송 정보</h3>
+
+                <!-- 펼쳐보기 버튼 -->
+                <button class="expand-button">
+
+                  <span>
+
+                    <!-- 펼쳐보기 이미지 -->
+                    <svg style="width: 16px; height: 16px" viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+
+                  </span>
+
+                </button>
+
+              </div>
+
+              <!-- 받는사람 정보 전체박스 -->
+              <div class="shipping-receiver-box">
+
+                <div>
+
+                  <!-- 신규 배송지 입력 div -->
+                  <div class="new-delivery-address">
+
+                    <!-- 신규 배송지 입력 버튼 -->
+                    <button class="new-delivery-address-btn">
+
+                      <!-- 신규 배송지 입력 텍스트 -->
+                      <span style="font-size: 12px;">신규 배송지 입력</span>
+
+                    </button>
+
+                  </div>
+
+                  <!-- 받으실 분, 휴대폰 번호, 배송지 전체박스 -->
+                  <div>
+
+                    <!-- 받으실 분 텍스트 -->
+                    <p class="recipient-info">받으실 분</p>
+
+                    <!-- 받으실 분 이름 입력 칸 -->
+                    <input type="text" placeholder="이름을 입력해주세요" class="recipient-input">
+
+                    <!-- 휴대폰 -->
+                    <p class="recipient-info">휴대폰</p>
+
+                    <!-- 받으실 분 번호 입력 칸 -->
+                    <input type="text" placeholder="번호를 입력해주세요" class="recipient-input">
+
+                    <!-- 안심번호 사용 전체박스 -->
+                    <div class="secure-call-box">
+
+                      <div>
+
+                        <!-- ? 버튼 -->
+                        <button class="help-button">
+
+                          <!-- 더보기 박스 -->
+                          <span class="help-content-bx">
+
+                          </span>
+
+                          <!-- ? 모양 박스 -->
+                          <span class="help-shape-bx">
+
+                            <!-- ? 이미지 -->
+                            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq Tooltip_helpOutlineIcon__JkkNy" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path d="M20 39a19 19 0 1 1 19-19 19.06 19.06 0 0 1-19 19zm0-36a17 17 0 1 0 17 17A17 17 0 0 0 20 3z"></path><path d="M24.34 10A5.75 5.75 0 0 0 20 8.33a5.7 5.7 0 0 0-6 6h2a3.7 3.7 0 0 1 4-4 3.7 3.7 0 0 1 4 4A4.29 4.29 0 0 1 22 18l-.7.6a6.51 6.51 0 0 0-2.3 5.7h2c0-1.9 0-2.6 1.7-4.3l.6-.5a6.28 6.28 0 0 0 2.7-5.2 5.73 5.73 0 0 0-1.66-4.3zM20 26.87a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 1 0 0-3.6z"></path></svg>
+
+                          </span>
+
+                        </button>
+
+                      </div>
+
+                      <span>와디즈에서는 서포터님의 개인정보 보호를 위해 안심번호를 사용해요.</span>
+
+                    </div>
+
+                    <!-- 배송지 텍스트 -->
+                    <p class="recipient-info">배송지</p>
+
+                    <!-- 우편번호 div -->
+                    <div class="postal-code-container">
+
+                      <!-- 우편번호 확인칸 -->
+                      <input type="text" placeholder="우편번호" class="postal-code-input postal-shape no-select">
+
+                      <!-- 주소찾기 버튼 -->
+                      <button class="find-address find-address-shape">
+                        <span>
+                          <span class="find-address-text">주소찾기</span>
+                        </span>
+                      </button>
+
+                    </div>
+
+                    <!-- 주소 확인칸 -->
+                    <input type="text" placeholder="주소" class="postal-code-input postal-shape no-select mt">
+
+                  </div>
+
+                </div>
+
+                <!-- 배송 요청 사항(선택) 전체박스 -->
+                <div class="delivery-notes">
+
+                  <!-- 배송 요청 사항 텍스트 -->
+                  <label class="delivery-text" for="">배송 요청 사항(선택)</label>
+
+                  <!-- 배송 요청 사항 입력칸 -->
+                  <div class="delivery-notes-input">
+
+                    <div class="select-menu-hidden-input-box">
+                      <input type="text" readonly="">
+                    </div>
+
+                    <!-- 배송 요청 사항 선택칸 -->
+                    <div class="delivery-notes-select">
+
+                      <span class="delivery-notes-content"></span>
+
+                      <div class="select-menu-bx">
+
+                        <!-- 배송 시 요청사항을 선택해주세요 텍스트 박스 -->
+                        <div class="select-menu-text-bx">
+
+                          <!-- 배송 시 요청사항을 선택해주세요 텍스트 -->
+                          <div class="select-menu-text">배송 시 요청사항을 선택해주세요</div>
+
+                          <!-- 직접 입력칸 -->
+                          <input class="self-input" type="text">
+
+                        </div>
+
+                        <!-- 펼쳐보기 전체박스 -->
+                        <div class="delivery-notes-expand-container">
+
+                          <span></span>
+
+                          <!-- 펼쳐보기 인박스 -->
+                          <div class="delivery-notes-expand-container-ibx">
+
+                            <!-- 펼쳐보기 이미지 -->
+                            <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- 여백박스 -->
+            <div class="main-header-container-under-margin-bx">
+              <hr class="Divider_divider__ToZaf Divider_thick__1Weqv Divider_lightBG__3bAAk Divider_caption2__3b6Dr" style="height: 8px;">
+            </div>
+
+            <!-- 상품정보 인박스 -->
+            <section class="payment-ibx">
+
+              <!-- 상품 정보 div -->
+              <div class="product-bx">
+
+                <!-- 상품정보 텍스트 -->
+                <h3 class="product-bx-text">상품 정보</h3>
+
+                <!-- 펼쳐보기 div -->
+                <div class="expand-bx2">
+
+                  <!-- 펼쳐보기 버튼 -->
+                  <button class="expand-button">
+
+                    <span>
+
+                      <!-- 펼쳐보기 이미지 -->
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path></svg>
+
+                    </span>
+
+                  </button>
+
+                </div>
+
+              </div>
+
+              <!-- 상품 이미지, 요청사항, 배송 안내 전체박스 -->
+              <div class="product-info">
+
+                <!-- 상품 정보 인박스 -->
+                <div class="product-info-ibx">
+
+                  <!-- 상품 이미지, 이름, 갯수, 가격 -->
+                  <div class="product-item">
+
+                    <!-- 상품 이미지박스 -->
+                    <div class="product-image-bx">
+
+                      <!-- 상품 이미지 -->
+                      <div class="product-image"></div>
+
+                    </div>
+
+                    <!-- 상품 이름, 갯수, 가격 -->
+                    <div class="product-details">
+
+                      <!-- 상품 이름 -->
+                      <p class="product-name">상품 이름</p>
+
+                      <!-- 여백 -->
+                      <span class="margin-bx"></span>
+
+                      <!-- 상품 갯수 -->
+                      <span class="margin-bx">1칸</span>
+
+                      <!-- 상품 가격 -->
+                      <span class="product-price">
+                        49,000
+                        원
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                  <!-- 주문요청사항 -->
+                  <input type="text" class="order-request" placeholder="주문 요청 사항을 입력하세요(선택)">
+
+                  <!-- 배송안내 -->
+                  <div class="delivery-info">
+
+                    <!-- 배송안내 인박스 -->
+                    <div class="delivery-info-ibx">
+
+                      <!-- ? 이미지 -->
+                      <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq MessageBox_icon__1NYKB" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path d="M20 1a19 19 0 1 0 19 19A19.06 19.06 0 0 0 20 1zm1 28.6h-2v-13h2zm-1-15.84A1.8 1.8 0 1 1 21.8 12a1.8 1.8 0 0 1-1.8 1.76z"></path></svg>
+
+                      <div>
+
+                        <!-- 배송안내 텍스트 -->
+                        <p class="delivery-info-text">
+                          배송 안내
+                        </p>
+
+                        <!-- 부가설명 -->
+                        <div class="delivery-info-text2">
+                          코로나로 인한 택배 배송(간선하차) 불가로 일부 지역은 배송이 제한될 수 있습니다.
+                          자세한 내용은 공지사항을 참고 부탁드립니다.
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- 여백박스 -->
+            <div class="main-header-container-under-margin-bx">
+              <hr class="Divider_divider__ToZaf Divider_thick__1Weqv Divider_lightBG__3bAAk Divider_caption2__3b6Dr" style="height: 8px;">
+            </div>
+
+            <!-- 쿠폰박스 -->
+            <section class="coupon-box">
+
+              <!-- 쿠폰 div -->
+              <div class="coupon-container">
+
+                <!-- 쿠폰 텍스트 -->
+                <h3 class="coupon-text">쿠폰</h3>
+
+                <!-- 뭔지모름 -->
+                <div class="www"></div>
+
+              </div>
+
+              <!-- 사용가능 쿠폰 선택칸 -->
+              <div class="coupon-options">
+
+                <!-- 사용가능 쿠폰 인박스 -->
+                <div class="coupon-options-ibx">
+
+                  <!-- 뭔지모름2 -->
+                  <div class="wwww">
+                    <input type="text">
+                  </div>
+
+                  <!-- 쿠폰 리스트 박스 -->
+                  <div class="coupon-list-bx">
+
+                    <!-- 뭔지모름3 -->
+                    <span class="wwwww"></span>
+
+                    <!-- 쿠폰 리스트 -->
+                    <div class="coupon-list">
+
+                      <!-- 사용 가능한 쿠폰 n장 박스 -->
+                      <div class="available-coupon-bx">
+
+                        <!-- 사용 가능한 쿠폰 n장 텍스트 -->
+                        <div class="available-coupon-text">
+                          사용 가능한 쿠폰 0장
+                        </div>
+
+                        <input class="" type="text">
+
+                      </div>
+
+                      <!-- 펼쳐보기 버튼 -->
+                      <div class="delivery-notes-expand-container">
+
+                        <span></span>
+
+                        <!-- 펼쳐보기 인박스 -->
+                        <div class="delivery-notes-expand-container-ibx">
+
+                          <!-- 펼쳐보기 이미지 -->
+                          <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </section>
+
+            <!-- 여백박스 -->
+            <div class="main-header-container-under-margin-bx">
+              <hr class="Divider_divider__ToZaf Divider_thick__1Weqv Divider_lightBG__3bAAk Divider_caption2__3b6Dr" style="height: 8px;">
+            </div>
+
+            <!-- 결제수단 박스 -->
+            <section class="payment-options-bx">
+
+              <!-- 결제수단 컨테이너 -->
+              <div class="payment-option-container">
+
+                <!-- 결제수단 텍스트 -->
+                <h3 class="payment-option-text">결제 수단</h3>
+
+                <!-- 뭔지모름4 -->
+                <div class="wwwwww"></div>
+
+              </div>
+
+              <!-- 결제수단 고르는 칸 -->
+              <div class="payment-method-select">
+
+                <!-- 결제수단 고르는 칸 인박스 -->
+                <div class="payment-method-select-ibx">
+
+                  <!-- 네이버 -->
+                  <div>
+
+                    <!-- 네이버 결제수단 박스 -->
+                    <p class="naver-payment-bx">
+
+                      <label class="naver-payment" for="">
+
+                        <input type="text">
+                        <span></span>
+                        <span></span>
+
+                      </label>
+
+                      <!-- new 이미지 박스 -->
+                      <span class="new-img-bx">
+
+                        <!-- new 이미지 -->
+                        <span class="new-img">NEW</span>
+
+                      </span>
+
+                    </p>
+
+                  </div>
+
+                  <!-- 카카오 -->
+                  <p></p>
+
+                  <!-- 그외 -->
+                  <p></p>
+
+                </div>
+
+              </div>
+
+            </section>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 하단박스 -->
+
+  </div>
+  
+</body>
+</html>

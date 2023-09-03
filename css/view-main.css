@@ -9,11 +9,38 @@ body {
 
 /* 이미지 전체박스 */
 .img-bx {
+  position: relative;
   margin: 0 -16px;
   text-align: center;
 
-  width: 390px;
-  height: 390px;
+  width: 100vw;
+  height: 410px;
+  overflow: hidden;
+}
+
+/* 슬라이드 버튼 공통 */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 55px;
+  margin-top: -27px;
+
+  background-size: cover!important;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 왼쪽 슬라이드 버튼 */
+.lbtn {
+  left: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABuCAYAAAB7unCOAAAABGdBTUEAALGPC/xhBQAAAjlJREFUeAHt2jFqAlEQxvGY1cbY2CRNQBTEdLmCta2F18lpPIK1lzCk22bBRoiEVIHFuAGbTFLs7rz3vhk/Ic3THd5v/qnEzmKxeLm5otftFVl/qAR7L87CLOxsA/yXdhZUcFhYrMTZAQs7Cyo4LCxW4uyAhZ0FFRwWFitxdsDCzoIKDguLlTg7YGFnQQWHhcVKnB2wsLOggsPCYiXODljYWVDBgSg8Ho8Hq9XqKcuyjrih8kFycIVdLpfPk8nkYT6fPyr7xLik4Au21+t1i6I4bLfbQtxQ+SAZ+Dd2vV6/lmV5UvaJcUnAqbCVPjo4JTY6ODU2KhgBGw2Mgo0CRsIGB6Nhg4IRscHAqNggYGSsOhgdqwq2gFUDW8GqgC1hW4OtYVuBLWIbg61iG4EtYxuBq4csv7LpdDqvAzgej1/7/f59NpvdD4fDwWg0utvtdofTKfjXUXWu+e9na4OrSZbRjcCW0Y3BVtGtwBbRrcHW0CpgS2g1sBW0KtgCWh2Mjg4CRkYHA6Oig4IR0cHBaOgoYCR0NDAKOioYAR0dnBqdBJwSnQz8F/r8e60yz/OP6r1Qr6TgCnX5uqjf72ebzSYP/d1YN9Qm68w9V/08/73VeabpZ6P/TqvpRbWeI1hrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzrq7wNxNqQMRLNUFBAAAAAElFTkSuQmCC);
+}
+
+/* 오른쪽 슬라이드 버튼 */
+.rbtn {
+  right: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABuCAYAAAB7unCOAAAABGdBTUEAALGPC/xhBQAAAilJREFUeAHt2rFqAkEQxnHNpdNGkKQ5EAUxpMkrWNtaCD5NXsfCd7C2SyGkE0SwCURIqhi5cAGb2dLZmY/xu0Z2i/V+87dabE4mk9fGDT13N2T9pxIcvTgLs3CwCfAnHSxowmHhZCTBNlg4WNCEw8LJSIJtsHCwoAmHhZORBNtg4WBBEw4LJyMJtsHCwYImHBZORhJsg4WDBU04LJyMJNgGCwcLmnDUCxdF0ZzNZk/9fr+dfBvAhjp4PB6Xg8HgcTqdviCii+FwONYc/G63++r1eq1Op9MejUYPh8Ph83g8/mh+xzVnqYOrqmpsNpsPVLQ6uJ4+MjoLGBmdDYyKzgpGRGcHo6FNwEhoMzAK2hSMgDYHe6NdwJ5oN7AX2hXsgXYHW6MhwJZoGLAVGgpsgYYD50ZDgnOi1S/x6pdFfmDB9XXvfD5/LsuyezqdfpfL5dt2u/2+dpiQ4FzYelhw4JxYOHBuLBTYAgsDtsJCgC2x7mBrrCvYA+sG9sK6gD2x5mBvrCkYAWsGRsGagJGw2cFo2KxgRGw2MCo2CxgZmwVc/zFN+1qmflGt517roMs5q9Vq3+12W+v1eq9xB3U5V+tTHXw+n6vFYvGu9YLa58DdaWkD5XkEy4lEW7NwtKLSw8JyItHWLBytqPSwsJxItDULRysqPSwsJxJtzcLRikoPC8uJRFuzcLSi0sPCciLR1iwcraj0sLCcSLQ1C0crKj0sLCcSbX1zhf8AAKU/JNEM0C8AAAAASUVORK5CYII=);
 }
 
 /* 슬라이드 박스 */
@@ -21,24 +48,18 @@ body {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  overflow: hidden;
+  /* overflow-y: hidden; */
+  width: 1230px;
+  height: 410px;
+
+  right: 0;
+
+  /* transition: transform 0.4s; */
 }
 
 /* 슬라이드 이미지 전체 */
-.slide-img-1,
-.slide-img-2,
-.slide-img-3 {
-  background-position: center 0;
-  background-size: cover;
-  padding-bottom: 100%;
-  width: 100vw;
-  height: 0;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-  transition: left 0.15s;
+.slide-bx>li>img {
+  height: 100%;
 }
 
 /* 슬라이드 이미지1 */
@@ -697,12 +718,12 @@ hr {
 .allocation {
   line-height: 28px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 700 !important;
   border-bottom: 2px solid #212529;
-  color: #212529;
+  color: #212529 !important;
 }
 
-.active>span {
+.info-content {
   display: inline-block;
   padding: 14px 4px;
   color: #495057;
@@ -1024,6 +1045,11 @@ hr {
   position: relative;
   width: 48px;
   height: 48px;
+}
+
+/* 즐겨찾기 할당시 */
+.favorite-select {
+  fill: #f66;;
 }
 
 /* 예약하기 버튼 */
