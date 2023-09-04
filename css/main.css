@@ -6,7 +6,7 @@
 /* 내 위치 버튼 */
 .my-location-button {
   position: absolute;
-  z-index: 10000;
+  z-index: 1;
 
   width: 52px;
   height: 52px;
@@ -41,6 +41,23 @@
   outline: 2px solid #868e96;
 }
 
+/* 페이지 닫는 버튼 */
+.close-page-btn {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  color: #60656a;
+  font-size: 16px;
+}
+
+/* 닫는 버튼 이미지 */
+.withIcon_icon__3VTbq {
+  width: 1.2em;
+  height: 1.2em;
+}
+
 /* 하단에서 위로 올라오는 페이지 클릭 이벤트 */
 .open {
   top: 30%;
@@ -52,7 +69,7 @@
   top: 40px;
   width: 350px;
   height: 200px;
-  left: 20px;
+  left: 32px;
 
   border-radius: 20px;
   overflow: hidden;
@@ -76,12 +93,12 @@
   position: absolute;
 
   width: 350px;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   padding: 0;
 
   top: 252px;
-  left: 20px;
+  left: 32px;
 }
 
 /* 주차장 이름, 공유버튼 박스 */
@@ -216,4 +233,15 @@
   color: #fff;
   font-size: 18px;
   font-weight: 800;
+}
+
+/* 하단 배너 할당시 */
+.GNBMobile_active__3WNf8 {
+  color: #212529;
+}
+
+/* 하단 배너 할당시 폰트 */
+.GNBMobile_icon__3OOAF.GNBMobile_active__3WNf8+.gnb-text {
+  color: #212529;
+  font-weight: 700;
 }
