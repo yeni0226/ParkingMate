@@ -1,0 +1,1023 @@
+@charset "utf-8";
+
+body, button, html, input, textarea {
+  font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a, input, optgroup, select, textarea {
+  color: inherit;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, textarea {
+  background: none;
+}
+
+a, button {
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: inherit;
+  display: block;
+}
+button {
+  background-color: transparent;
+}
+
+.parkingmate-page-container{
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+.parkingmate-web-header{
+  position: sticky;
+  top: 0;
+  transition: top .25s;
+  z-index: 1201;
+  width: 100%;
+}
+
+.parkingmate-web-header-mobile{
+  display: block;
+  position: relative;
+}
+
+.parkingmate-header-wrapper{
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+.parkingmate-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+.parkingmate-back-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  left: 6px;
+  cursor: pointer;
+}
+
+.parkingmate-back-button-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  color: #495057;
+  width: 24px;
+  height: 24px;
+}
+
+.parkingmate-home-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  right: 6px;
+  cursor: pointer;
+}
+
+.parkingmate-home-button-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  color: #495057;
+  width: 24px;
+  height: 24px;
+}
+
+.parkingmate-mainWrapper{
+  transition: padding-top .25s;
+  padding-top: 0;
+}
+
+.parkingmate-account-container{
+  position: relative;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 390px;
+  overflow: hidden;
+}
+
+.parkingmate-account-title{
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.parkingmate-firstBenefit{
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 32px auto 8px;
+  border: solid 1px #e9ecef;
+  border-radius: 19.5px;
+  box-shadow: 1px 3px 4px #dde2e6;
+  background-color: #fff;
+  padding: 10px 17px;
+  width: 251px;
+  height: 38px;
+}
+
+.parkingmate-firstBenefit::before{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+  background-color: #fff;
+  width: 40px;
+  height: 12px;
+  content: "";
+}
+
+.parkingmate-firstBenefit::after{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%) rotate(65deg) skew(35deg);
+  margin-top: -9px;
+  border-top: 0;
+  border-left: 0;
+  box-shadow: 1px 3px 4px #dde2e6;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  content: "";
+}
+
+.parkingmate-firstBenefit-content{
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  z-index: 3;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.parkingmate-firstBenefit-giftIcon{
+  display: inline-block;
+  margin-right: 6px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAFZUExURf///+irGP78/OmnGLuCD8iKErN6C6UaIbh/Df7+/61FErZWFPn17+4/QageHqdIFffx6bqACPHo3tyeFrwwM9MZKtspL69SF7h7AsCGFOafG/v59clfG9pPHK4aIO63GefHh5kgHPLmyu7l1uWLGNx3G+Q1O94tL59AFcelYeStrbo8P+TXwc2YEeOlFOqhC6tBGeqvmOrYuHAzDPKIGsGCBvS5vP3u79uUE/BSS+aEJOCDF+O8W8gtNePIoeSYDv1OUHoYG+M+P+XBaNe3eshxGf9aWfR+gfjKyttESMKEW+DRrKQQGPLf4t/Bs8eEBNOvcdZtONgTIZ0dJLCLSHpcB81FHmhFAMubjeS9c9JgLJ8YFH8TG8eQI/HMGsedTq9BHMupbV4JEdcxOrQiGd05KNxCJu25A+O2R+nKdtqqNuRHSOopMZ0sJfKYm8hzEtFrSPBGTudlOICaUfMAAAEiSURBVBjTPdBFd8JQFATgSwh570VoSEKwosW1uLvX3d3d/v+iCfR0lt+5s5gLAEAm44mYG7RKH2WYh5THb9Ov4edPR4hTM+AD2Wo4LAi90UhIHEkEINA4D1Vvlel387Uj5A/3WiI8P8onytlN973rV5T8frEyAF+61mue+lmOvfP4dzlT8RICcigSrlWChUL9wOO5wvZr4F9CasR54XXKKQ6hZYZJAv9UV9Wg15uiaZtOeAlcjWDEOjQYTTReQIjFtEb99r2Vk9MOhokiZLNoRPXbD9ZFQ9qBcRSZbRaHBJQv49bIMCtqhCUg4rF7RyesE4djvLbSlVXdRqNOa+aVVXE2nCptZzSys4m4SP6+QySfc5OJbaxT8B9C5baSLjI/+QVcrCl+ShqYCwAAAABJRU5ErkJggg==);
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.parkingmate-firstBenefit-text{
+  vertical-align: middle;
+  letter-spacing: -0.5px;
+}
+
+.parkingmate-firstBenefit-text strong{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.parkingmate-kakao-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #495057;
+  font-weight: 500;
+  border-color: #fee500;
+  background-color: #fee500;
+  margin-top: 12px;
+  cursor: pointer;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.parkingmate-kakao-button span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-button-children{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-kakao-button svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.parkingmate-google-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #495057;
+  font-weight: 500;
+  border-color: #ced4da;
+  background-color: #fff;
+  margin-top: 12px;
+  cursor: pointer;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.parkingmate-google-button-svg{
+  position: absolute;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.parkingmate-SNSButtonList{
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.parkingmate-SNSButtonList span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: text-top;
+}
+
+.parkingmate-naver-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  border-color: #00d337;
+  background-color: #00d337;
+  color: #fff;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 999em;
+  margin-left: 0;
+}
+
+.parkingmate-naver-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.parkingmate-facebook-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  border-color: #1877f2;
+  background-color: #1877f2;
+  color: #fff;
+  margin-left: 12px;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 999em;
+}
+
+.parkingmate-facebook-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.parkingmate-apple-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+  margin-left: 12px;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 999em;
+}
+
+.parkingmate-apple-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.parkingmate-SignUpIntro-diivider{
+  margin-top: 55px;
+  background-color: #f2f4f6;
+  width: 100%;
+  height: 1px;
+}
+
+.parkingmate-SignUpIntro-email-container{
+  position: relative;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 390px;
+  overflow: hidden;
+  margin-top: 49px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.parkingmate-simpleSignUpTitle{
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.parkingmate-email-formField{
+  margin-top: 24px;
+}
+
+.parkingmate-EmailAuthField{
+  padding-bottom: 8px;
+}
+
+.parkingmate-email-formField-fieldLabel{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.parkingmate-EmailAuthField-input-container{
+  display: flex;
+}
+
+.parkingmate-EmailAuthField-input-field{
+  position: relative;
+  width: 100%;
+}
+
+.parkingmate-email-input{
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 16px;
+  width: 100%;
+  vertical-align: middle;
+  color: #212529;
+  height: 48px;
+  min-height: 48px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.parkingmate-email-submit-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: .45;
+  cursor: default;
+  pointer-events: none;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+  margin-left: 8px;
+  min-width: 103px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+.parkingmate-email-submit-button span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-name-container{
+  display: block;
+  position: relative;
+  margin-top: 24px;
+}
+
+.parkingmate-name-container>label{
+  display: block;
+  padding-bottom: 4px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.parkingmate-name-input{
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 16px;
+  width: 100%;
+  vertical-align: middle;
+  color: #212529;
+  height: 48px;
+  min-height: 48px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.parkingmmate-password-container{
+  display: block;
+  position: relative;
+  margin-top: 24px;
+}
+
+.parkingmmate-password-container>label{
+  display: block;
+  padding-bottom: 4px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.parkingmate-password-field{
+  position: relative;
+}
+
+.parkingmate-password-input{
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  padding: 0 16px;
+  width: 100%;
+  vertical-align: middle;
+  border-color: #f2f4f6;
+  background-color: #f9fafb;
+  cursor: default;
+  pointer-events: none;
+  color: #adb5bd;
+  height: 48px;
+  min-height: 48px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 46px;
+}
+
+.parkingmate-password-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  outline: none;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 0;
+  pointer-events: auto;
+  box-sizing: content-box!important;
+  width: 48px;
+  height: 48px;
+  right: 0;
+  text-align: left;
+}
+
+.parkingmate-password-button span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-password-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  display: inline-block;
+  fill: #adb5bd;
+  padding-right: 16px;
+  padding-left: 10px;
+  width: 46px;
+  height: 46px;
+}
+
+.parkingmate-password-check-container{
+  display: block;
+  position: relative;
+}
+
+.parkingmate-password-check-container>label{
+  display: block;
+  padding-bottom: 4px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.parkingmate-password-check-field{
+  position: relative;
+}
+
+.parkingmate-password-check-input{
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  padding: 0 16px;
+  width: 100%;
+  vertical-align: middle;
+  border-color: #f2f4f6;
+  background-color: #f9fafb;
+  cursor: default;
+  pointer-events: none;
+  color: #adb5bd;
+  height: 48px;
+  min-height: 48px;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 46px;
+}
+
+.parkingmate-password-check-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  outline: none;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 0;
+  pointer-events: auto;
+  box-sizing: content-box!important;
+  width: 48px;
+  height: 48px;
+  right: 0;
+  text-align: left;
+}
+
+.parkingmate-password-check-button span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-button-children{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-password-check-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  display: inline-block;
+  fill: #adb5bd;
+  padding-right: 16px;
+  padding-left: 10px;
+}
+
+
+/* 이용약관 */
+.modal-overlay{
+  display: inline-flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-container{
+  display:none;
+}
+
+.modal-content{
+  display: inline-flex;
+  flex-direction: column;
+  outline: none;
+  box-shadow: 0 32px 40px -2px rgba(10,22,70,.12), 0 0 5px rgba(10,22,70,.06);
+  background: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: transform .3s;
+  animation: ConfirmModal_slideUp__38KyJ .5s;
+  border-radius: 16px 16px 0 0;
+  max-height: 90%;
+  overflow: visible;
+  padding: 16px 0;
+}
+
+.confirmModal-header{
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmModal-header::before{
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 3px;
+  background: #fff;
+  width: 40px;
+  height: 6px;
+  content: "";
+}
+
+.confirmModal-content{
+  display: inline-flex;
+  flex-direction: column;
+  overflow: auto;
+  color: #495057;
+}
+
+.TermsConfirmContainer_modalInner{
+  display: block;
+  position: relative;
+}
+
+.TermsConfirmContainer_header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 12px 16px 0;
+}
+
+.TermsConfirmHeader_container{
+  display: block;
+  position: relative;
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+.TermsConfirmHeader_title{
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.TermsConfirmHeader_description{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.FullAgreementCheckbox_container{
+  display: block;
+  margin-bottom: 12px;
+}
+
+.checkbox-checkbox{
+  display: block;
+  position: relative;
+}
+
+.FullAgreementCheckbox_checkbox{
+  align-items: center;
+  transition: box-shadow .2s,background-color .3s;
+  border-radius: 3px;
+  box-shadow: 0 16px 16px -1px rgba(10,22,70,.1), 0 0 5px rgba(10,22,70,.06);
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.Checkbox_labeled{
+  display: inline-flex;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Checkbox_input{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+}
+
+.Checkbox_icon{
+  display: block;
+  position: relative;
+  transition-property: opacity,border-color,background-color;
+  transition-duration: .15s;
+  opacity: 1;
+  z-index: 1;
+  border: 1px solid #cdd3d8;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 1em;
+  height: 1em;
+}
+
+.Checkbox_icon{
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.Checkbox_icon{
+  font-size: 20px;
+}
+
+.withIcon_icon{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.Checkbox_icon svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition-property: opacity,width,fill;
+  transition-duration: .15s;
+  width: 0.7791666667em;
+  height: 0.7791666667em;
+  fill: #fff;
+}
+
+.Checkbox_removeIcon{
+  width: 10px;
+  opacity: 0;
+}
+
+.Checkbox_checkIcon{
+  opacity: 0;
+}
+
+.Checkbox_content{
+  display: inline-block;
+  color: #495057;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.FullAgreementCheckbox_text{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.FullAgreementCheckbox_subtext{
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.AccordionCheckbox_accordionHeader{
+  position: relative;
+}
+
+.ServiceAgreementCheckbox_container{
+  padding: 12px 0;
+}
+
+.TermsConfirmBody_service{
+  padding-right: 16px;
+  padding-left: 24px
+}
+
+.ServiceAgreementCheckbox_required{
+  color: #00b2b2;
+}
+
+.AccordionCheckbox_accordionButton{
+  position: absolute!important;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 11px 15px;
+}
+
+.HelperMessage_helperMessage{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  margin-top: 4px;
+  color: #868e96;
+  font-style: normal;
+}
+
+.Checkbox_message{
+  margin-top: 12px;
+  padding-left: 28px;
+  color: #495057;
+}
+
+.Checkbox_message .Checkbox_sm{
+  padding-left: 24px;
+}
+
+.TermsConfirmBody_notice{
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 20px 0;
+  padding-right: 16px;
+  padding-left: 24px;
+  color: #495057;
+}
+
+.TermsConfirmFooter_container{
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  background-color: #fff;
+  padding: 16px;
+  width: 100%;
+}
+
+.App_footer{
+  position: sticky;
+  bottom: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.FixedToast_toast{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: transform .15s,opacity .1s,background-color .3s,color .3s,padding .05s ease-in;
+  opacity: 0;
+  border-radius: 6px;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+  width: calc(100% - 32px);
+  text-align: center;
+  color: rgba(0,0,0,0);
+}
+
+.Button_button2{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: .45;
+  cursor: default;
+  pointer-events: none;
+  width: 100%;
+  padding: 13.5px 27px;
+  line-height: 1.5;
+  font-size: 18px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+.Button_button2 span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.Button_children{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}

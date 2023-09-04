@@ -7,7 +7,7 @@
     <meta property="og:logo" content="" size="150x150" />
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title>회원가입</title>
-    <link rel="stylesheet" href="signUp.css" />
+    <link rel="stylesheet" href="signUp copy.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
     <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
@@ -24,120 +24,92 @@
     </style>
   </head>
   <body>
-    <div id="container-mobile">
-      <main id="main-mobile">
-        <div class="mobile-header">
-          <div class="mobile-web-header">
-            <header class="mobile-header-wrapper">
-              <div class="mobile-header-container">
-                <button class="mobile-header-button back-button">
-                  <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="mobile-header-button-icon" aria-hidden="true" style="width: 24px; height: 24px">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path>
-                  </svg>
+    <div class="parkingmate-page-container">
+      <main id="parkingmate-main">
+        <div class="parkingmate-web-header">
+          <div class="parkingmate-web-header-mobile">
+            <header class="parkingmate-header-wrapper">
+              <div class="parkingmate-header-container">
+                <button class="parkingmate-back-button">
+                  <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-back-button-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path></svg>
                 </button>
-                <button class="mobile-header-button home-button">
+                <button class="parkingmate-home-button">
                   <a href="">
-                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="mobile-header-button-icon" aria-hidden="true" style="width: 24px; height: 24px">
-                      <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
-                      <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
-                      <path fill="none" d="M0 0h40v40H0z"></path>
-                    </svg>
+                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-home-button-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path><path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path><path fill="none" d="M0 0h40v40H0z"></path></svg>
                   </a>
                 </button>
               </div>
             </header>
           </div>
         </div>
-        <div class="mainwrapper">
-          <div class="signupintro">
-            <div class="account-container">
-              <h2 class="account-title">간편가입</h2>
-              <div class="firstbenefit">
-                <div class="firstbenefit-content">
-                  <span class="gift-icon"></span
-                  ><span class="text"
-                    >주차메이트가 처음이라면?
-                    <strong>최대 2만원 혜택</strong>
+        <div class="parkingmate-mainWrapper">
+          <div class="parkingmate-SignUpIntro">
+            <div class="parkingmate-account-container">
+              <h2 class="parkingmate-account-title">간편가입</h2>
+              <div class="parkingmate-firstBenefit">
+                <div class="parkingmate-firstBenefit-content">
+                  <span class="parkingmate-firstBenefit-giftIcon"></span>
+                  <span class="parkingmate-firstBenefit-text">
+                    주차메이트가 처음이라면?<strong>최대 2만원 혜택</strong>
                   </span>
                 </div>
               </div>
               <div>
-                <button class="button-kakao">
+                <button class="parkingmate-kakao-button">
                   <span>
-                    <span class="button-children">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon SNSButtonList_kakaoIcon__3y4jL" aria-hidden="true">
-                        <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path>
-                      </svg>
+                    <span class="parkingmate-button-children">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-kakao-button-svg" aria-hidden="true"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path></svg>
                       카카오로 시작하기
                     </span>
                   </span>
                 </button>
-                <button class="button-naver">
+                <button class="parkingmate-google-button">
                   <span>
-                    <span class="button-children">
-                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon SNSButtonList_naverIcon__6Y1-9" -hidden="true">
-                        <path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path>
-                      </svg>
-                      네이버로 시작하기
+                    <span class="parkingmate-button-children">
+                      <svg class="parkingmate-google-button-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><defs><path id="a" d="M0 0h348v46H0z"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(-16 -13)"><use></use><path stroke="#DADCE0" d="M-.5-.5h349v47H-.5z"></path></g><path fill="#4285F4" d="M18.64 10.205c0-.639-.057-1.252-.164-1.841H10v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"></path><path fill="#34A853" d="M10 19c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H1.957v2.332A8.997 8.997 0 0 0 10 19z"></path><path fill="#FBBC05" d="M4.964 11.71A5.41 5.41 0 0 1 4.682 10c0-.593.102-1.17.282-1.71V5.958H1.957A8.996 8.996 0 0 0 1 10c0 1.452.348 2.827.957 4.042l3.007-2.332z"></path><path fill="#EA4335" d="M10 4.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C14.463 1.891 12.426 1 10 1a8.997 8.997 0 0 0-8.043 4.958L4.964 8.29C5.672 6.163 7.656 4.58 10 4.58z"></path><path d="M0 0h20v20H0z"></path></g></svg>
+                      Google로 계속하기
                     </span>
                   </span>
                 </button>
-                <div class="snsbutton">
-                  <button class="sns-button-content google-button">
+                <div class="parkingmate-SNSButtonList">
+                  <button class="parkingmate-naver-button">
                     <span>
-                      <span class="button-children">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                          <defs><path id="a" d="M0 0h348v46H0z"></path></defs>
-                          <g fill="none" fill-rule="evenodd">
-                            <g transform="translate(-16 -13)">
-                              <use></use>
-                              <path stroke="#DADCE0" d="M-.5-.5h349v47H-.5z"></path>
-                            </g>
-                            <path fill="#4285F4" d="M18.64 10.205c0-.639-.057-1.252-.164-1.841H10v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"></path>
-                            <path fill="#34A853" d="M10 19c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H1.957v2.332A8.997 8.997 0 0 0 10 19z"></path>
-                            <path fill="#FBBC05" d="M4.964 11.71A5.41 5.41 0 0 1 4.682 10c0-.593.102-1.17.282-1.71V5.958H1.957A8.996 8.996 0 0 0 1 10c0 1.452.348 2.827.957 4.042l3.007-2.332z"></path>
-                            <path fill="#EA4335" d="M10 4.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C14.463 1.891 12.426 1 10 1a8.997 8.997 0 0 0-8.043 4.958L4.964 8.29C5.672 6.163 7.656 4.58 10 4.58z"></path>
-                            <path d="M0 0h20v20H0z"></path>
-                          </g>
-                        </svg>
+                      <span class="parkingmate-button-children">
+                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-naver-button-svg" aria-hidden="true"><path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path></svg>
                       </span>
                     </span>
                   </button>
-                  <button class="sns-button-content facebook-button">
+                  <button class="parkingmate-facebook-button">
                     <span>
-                      <span class="button-children">
-                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
-                          <path d="M14.4 19.547h5.673v-5.256a8.559 8.559 0 0 1 2.4-6.132c2.618-2.628 6.109-2.3 11.127-1.861v5.913h-3.71a3.374 3.374 0 0 0-2.29.766 3.514 3.514 0 0 0-.655 2.3v4.27h6.437l-.873 6.57h-5.564V43.2h-6.872V26.118H14.4v-6.57z"></path>
-                        </svg>
+                      <span class="parkingmate-button-children">
+                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="parkingmate-facebook-button-svg" aria-hidden="true"><path d="M14.4 19.547h5.673v-5.256a8.559 8.559 0 0 1 2.4-6.132c2.618-2.628 6.109-2.3 11.127-1.861v5.913h-3.71a3.374 3.374 0 0 0-2.29.766 3.514 3.514 0 0 0-.655 2.3v4.27h6.437l-.873 6.57h-5.564V43.2h-6.872V26.118H14.4v-6.57z"></path></svg>
                       </span>
                     </span>
                   </button>
-                  <button class="sns-button-content apple-button">
+                  <button class="parkingmate-apple-button">
                     <span>
-                      <span class="button-children">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
-                          <path d="M24.96 26c-1.12 1.68-2.32 3.28-4.08 3.28s-2.32-1.04-4.4-1.04-2.64 1.04-4.4 1.12S9.04 27.6 7.92 26c-2.32-3.28-4-9.36-1.68-13.44 1.098-1.973 3.148-3.299 5.512-3.36 1.688 0 3.368 1.12 4.408 1.12s3.04-1.44 5.12-1.2a6.157 6.157 0 0 1 4.867 2.62c-1.691 1.087-2.82 2.936-2.867 5.053a5.926 5.926 0 0 0 3.562 5.352 13.472 13.472 0 0 1-1.913 3.901zm-7.6-21.36a6.072 6.072 0 0 1 3.894-1.998c.038.139.045.303.045.469 0 1.44-.521 2.759-1.386 3.777A4.871 4.871 0 0 1 16.04 8.8h-.042a6.886 6.886 0 0 1-.016-.451 5.66 5.66 0 0 1 1.384-3.716z"></path>
-                        </svg>
+                      <span class="parkingmate-button-children">
+                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-apple-button-svg" aria-hidden="true"><path d="M24.96 26c-1.12 1.68-2.32 3.28-4.08 3.28s-2.32-1.04-4.4-1.04-2.64 1.04-4.4 1.12S9.04 27.6 7.92 26c-2.32-3.28-4-9.36-1.68-13.44 1.098-1.973 3.148-3.299 5.512-3.36 1.688 0 3.368 1.12 4.408 1.12s3.04-1.44 5.12-1.2a6.157 6.157 0 0 1 4.867 2.62c-1.691 1.087-2.82 2.936-2.867 5.053a5.926 5.926 0 0 0 3.562 5.352 13.472 13.472 0 0 1-1.913 3.901zm-7.6-21.36a6.072 6.072 0 0 1 3.894-1.998c.038.139.045.303.045.469 0 1.44-.521 2.759-1.386 3.777A4.871 4.871 0 0 1 16.04 8.8h-.042a6.886 6.886 0 0 1-.016-.451 5.66 5.66 0 0 1 1.384-3.716z"></path></svg>
                       </span>
                     </span>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="form-change"></div>
-            <div class="account-container login-form">
-              <h3 class="signup-title">이메일 간편가입</h3>
-              <div class="email-container">
+            <div class="parkingmate-SignUpIntro-diivider"></div>
+            <div class="parkingmate-SignUpIntro-email-container">
+              <h3 class="parkingmate-simpleSignUpTitle">이메일 간편가입</h3>
+              <div class="parkingmate-email-formField">
                 <form>
-                  <div class="email-field">
-                    <label class="email-field-label">이메일</label>
-                    <div class="email-input">
-                      <div class="email-input-field">
-                        <input type="email" placeholder="이메일 계정" class="input-input input-em" aria-invalid="false"/>
+                  <div class="parkingmate-EmailAuthField">
+                    <label class="parkingmate-email-formField-fieldLabel">이메일</label>
+                    <div class="parkingmate-EmailAuthField-input-container">
+                      <div class="parkingmate-EmailAuthField-input-field">
+                        <input type="email" placeholder="이메일 계정" class="parkingmate-email-input">
                       </div>
-                      <button class="button-primmary">
+                      <button class="parkingmate-email-submit-button" type="submit" disabled>
                         <span>
-                          <span class="button-children">인증하기</span>
+                          <span class="parkingmate-button-children">인증하기</span>
                         </span>
                       </button>
                     </div>
@@ -145,74 +117,39 @@
                 </form>
               </div>
               <form>
-                <div class="textfield">
+                <div class="parkingmate-name-container">
                   <label>이름</label>
-                  <div class="textfield-field">
-                    <input placeholder="이름 입력" type="text" class="input-input input-name" aria-invalid="false"/>
+                  <div class="parkingmate-name-field">
+                    <input type="text" placeholder="이름 이력" class="parkingmate-name-input">
                   </div>
                 </div>
-                <div class="textfield">
+                <div class="parkingmmate-password-container">
                   <label>비밀번호</label>
-                  <div class="textfield-field">
-                    <input name="password" disabled="" placeholder="비밀번호 입력" type="password" class="input-input input-password" aria-invalid="false"/>
-                    <button class="hide-button" type="button">
+                  <div class="parkingmate-password-field">
+                    <input type="password" placeholder="비밀번호 입력" class="parkingmate-password-input">
+                    <button class="parkingmate-password-button">
                       <span>
-                        <span class="button-children">
-                          <svg viewBox="0 0 48 48" class="withIcon_icon" aria-hidden="true" style="width: 46px; height: 46px">
-                            <path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path>
-                          </svg>
+                        <span class="parkingmate-button-children">
+                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="parkingmate-password-button-svg" aria-hidden="true" style="width: 46px; height: 46px;"><path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path></svg>
                         </span>
                       </span>
                     </button>
                   </div>
                 </div>
-                <div class="textfield2">
+                <div class="parkingmate-password-check-container">
                   <label></label>
-                  <div class="textfield-field">
-                    <input name="verifyPassword" disabled="" placeholder="비밀번호 확인" type="password" class="input-input input-password" aria-invalid="false"/>
-                    <button class="hide-button" type="button">
+                  <div class="parkingmate-password-check-field">
+                    <input type="password" placeholder="비밀번호 확인" class="parkingmate-password-check-input">
+                    <button class="parkingmate-password-check-button">
                       <span>
-                        <span class="button-children">
-                          <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true" style="width: 46px; height: 46px">
-                            <path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path>
-                          </svg>
+                        <span class="parkingmate-button-children">
+                          <svg viewBox="0 0 48 48" role="presentation" class="parkingmate-password-check-button-svg" style="width: 46px; height: 46px;"><path d="M23.589 7.895l.411.001c10.56 0 20.16 6.504 23.34 15.78l.132.432-.144.396c-3.216 9.168-12.816 15.6-23.328 15.6A24.84 24.84 0 0 1 .684 24.492l-.168-.432.156-.42A24.804 24.804 0 0 1 24 7.896zM24 14.46a9.6 9.6 0 1 0 0 19.2 9.6 9.6 0 0 0 0-19.2zm0 4.14a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8z"></path></svg>
                         </span>
                       </span>
                     </button>
                   </div>
-                </div>
-                <div class="checkbox-container">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox-input"/>
-                    <span class="checkbox-icon">
-                      <!-- <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon Checkbox_removeIcon" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg>
-                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon Checkbox_checkIcon" aria-hidden="true"><path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path></svg> -->
-                    </span>
-                    <span class="Checkbox_content"></span>
-                  </label>
-                  <label class="signup-allcheck">
-                    <p class="signup-allcheck-label">전체동의</p>
-                    <p class="signup-allcheck-text">
-                      회원·서비스(필수), 스타트업찾기 서비스 (선택),
-                      이벤트·혜택알림 동의(선택), 만 14세 이상(필수)
-                    </p>
-                  </label>
-                  <button class="button-text" type="button">
-                    <span>
-                      <span class="button-children">
-                        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon" aria-hidden="true">
-                          <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
-                        </svg>
-                      </span>
-                    </span>
-                  </button>
                 </div>
                 <div></div>
-                <button class="last-button">
-                  <span>
-                    <span class="button-children">완료</span>
-                  </span>
-                </button>
               </form>
             </div>
           </div>
@@ -222,7 +159,6 @@
     <!-- 약관 확인 -->
     <div class="modal-container">
       <div class="modal-overlay">
-        <div class="modal-close"></div>
         <div class="modal-content">
           <div class="confirmModal-header">
             <div></div>

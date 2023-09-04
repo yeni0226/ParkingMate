@@ -1,14 +1,15 @@
-let button = document.querySelector('.parkingmate-downloadItem-more');
-// let hidden = document.querySelector('.hidden');
-let target = document.querySelector('parkingmate-couponDownloadItem-expand');
-let opne = document.querySelector('oepn');
-let close = document.querySelector('close');
+let $button = $('.parkingmate-downloadItem-more');
 
-
-button.addEventListener('click',() =>{
-  console.log("ㅁㄴㅇㄹ");
-  target.classList.toggle('hidden');
-
-})
-
-.toggleClass();
+$button.on("click", (e) =>{
+  let $open = $(e.target).find("svg").first();
+  let $close = $(e.target).find("svg").last();
+  let $target = $(e.target).next();
+  $target.toggleClass("hidden");
+  if($open.css("display") == "inline"){
+    $open.css('display' , 'none');
+    $close.css('display' , 'inline');
+  }else if ($open.css("display") == "none"){
+    $open.css('display' , 'inline');
+    $close.css('display' , 'none');
+  }
+}).toggleClass();
