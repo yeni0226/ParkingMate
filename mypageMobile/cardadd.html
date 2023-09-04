@@ -98,8 +98,10 @@
                     <div class="VirtualKeyboardInput_contents_CDJHV">
                       <div class="VirtualKeyboardInput_inputWrapper_2mhTE inline-block CardNumberFormGroup_inputBox_1R0h_ CardNumberFormGroup_virtualKeyboardInput_31c5Z VirtualKeyboardInput_inModal_2Vm8C" role="presentation">
                         <div class="VirtualKeyboardInput_placeholder_3H2BJ"></div>
-                        <div class="VirtualKeyboardInput_value_2dL6t"></div>
-                        <input type="hidden" name="cardNum2" readonly="" value="">
+                        <div class="VirtualKeyboardInput_value_2dL6t">
+                          <input type="hidden" label="password" name="cardNum2" readonly="" value="">
+                        </div>
+                        
                       </div>
                       <!-- 가상키보드 -->
                       <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C" style="display: none;">
@@ -436,7 +438,16 @@
   // 카드번호 입력박스 2 마우스 떼었을때 시 이벤트
   cardInputBox2.addEventListener("mouseout", (e) => {
     cardInputBox2.style.borderColor = "#cdd3d8";
-    virtualKeyboxShow.style.display = "none";
+    // virtualKeyboxShow.style.display = "none";
+  })
+
+  const card2inputbox = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(2) > div.VirtualKeyboardInput_inputWrapper_2mhTE.inline-block.CardNumberFormGroup_inputBox_1R0h_.CardNumberFormGroup_virtualKeyboardInput_31c5Z.VirtualKeyboardInput_inModal_2Vm8C > div.VirtualKeyboardInput_value_2dL6t");
+  // 카드 번호 입력박스 2 가상키보드 클릭 시 이벤트
+  virtualKeyboxShow.addEventListener("click", (e) => {
+    const targetkey = e.target.innerText;
+    // console.log(targetkey);
+    card2inputbox.innerText += targetkey;
+
   })
 
   const virtualKeyboxShow2 = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(3) > div > div.VirtualKeyboardInput_virtualKeyboard_HRepk.VirtualKeyboardInput_inModal_2Vm8C");
@@ -445,6 +456,15 @@
     cardInputBox3.style.borderColor = "#00c4c4";
     virtualKeyboxShow2.style.display = "block";
   })
+
+  // const card3inputbox = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(3) > div");
+  // // 카드 번호 입력박스 2 가상키보드 클릭 시 이벤트
+  // virtualKeyboxShow2.addEventListener("click", (e) => {
+  //   const targetkey = e.target.innerText;
+  //   // console.log(targetkey);
+  //   card3inputbox.innerText += targetkey;
+
+  // })
 
   // 카드번호 입력박스 3 마우스 떼었을때 시 이벤트
   cardInputBox3.addEventListener("mouseout", (e) => {
