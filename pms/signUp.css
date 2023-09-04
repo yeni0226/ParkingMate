@@ -75,10 +75,6 @@ body {
   }
 }
 
-/* .header-large {
-
-} */
-
 .header-wrapper {
   top: 0;
   z-index: 9998;
@@ -950,22 +946,13 @@ button {
 }
 
 #container-mobile{
-  display:none;
+  display:block;
   transform-origin: 50% 0;
   transition-property: opacity,transform;
   transition-duration: 80ms;
   transition-timing-function: ease-out;
 }
 
-@media screen and (max-width: 1096px){
-  #container-web {
-    display:none;
-  }
-
-  #container-mobile{
-    display:block;
-  }
-}
 
 .mobile-header {
   z-index: 1201;
@@ -1068,6 +1055,10 @@ button {
   height: 100%;
 }
 
+.modal-container{
+  display:none;
+}
+
 .modal-overlay{
   display: inline-flex;
   position: fixed;
@@ -1082,8 +1073,12 @@ button {
   overflow: hidden;
 }
 
-.modal-container{
-  display:none;
+.modal-close{
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top:0;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-content{

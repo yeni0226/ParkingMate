@@ -91,6 +91,7 @@
             <header class="parkingmate-header-wrapper">
               <div class="parkingmate-header-container">
                 <ul class="parkingmate-footer-button">
+                  <!-- 홈버튼 -->
                   <li class="parkingmate-footer-button-item">
                     <a href="index.html" class="parkingmate-footer-button-item-in item-active">
                       <object data="/logo.svg" class="parkingmate-footer-button-item-svg"></object>
@@ -146,8 +147,18 @@
         <!-- 지도부분 -->
         <div id="parkingmate-map"></div>
         <!-- 지도부분 -->
+        <!-- 내 위치 버튼 -->
+        <button type="button" class="my-location-button" id="getMyPositionBtn" onclick="getCurrentPosBtn()" >
+
+          <!-- 내 위치 이미지 -->
+          <img src="../images/location-black.png" class="my-location-image">
+
+        </button>
+
       </main>
     </div>
   </body>
   <script type="text/javascript" src="index.js"></script>
+  <!-- 내 위치 찍기 API QUERY -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </html>
