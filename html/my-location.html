@@ -23,8 +23,13 @@
   <!-- 하단 배너 선택 JS -->
   <script src="../js/my-location-footer.js"></script>
 
+  <!-- 카카오 공유 API -->
+  <!-- <script src="../js/kakao-share.js"></script> -->
+
+  <!-- <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> -->
 </head>
 <body>
+
   <!-- 바디 전체박스 -->
   <div class="wrap">
 
@@ -224,11 +229,8 @@
 
               <!-- 주차장 공유 -->
               <p class="parking-share-p">
-                
-                <!-- // onclick으로 연결 -->
-<button onclick="shareKakao()">
-  <img src="/img/icon_kakao.png" alt="카카오톡 공유" />
-</button>
+
+                주차장 공유
               </p>
 
             </div>
@@ -325,9 +327,9 @@
 <script>
   // 카카오 공유하기 api
   // init 체크
-  if (!Kakao.isInitialized()) {
-    Kakao.init('2ae38faa102a6f6c2867b0e8cbd5df73');
-  }
+  // if (!Kakao.isInitialized()) {
+  //   Kakao.init('2ae38faa102a6f6c2867b0e8cbd5df73');
+  // }
 
   // 카카오 지도 API
   // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
@@ -421,6 +423,13 @@ function displayMarker(place) {
 </script>
 
   
+<script type="text/javascript">
+  function sendLinkCustom() {
+      Kakao.init("2ae38faa102a6f6c2867b0e8cbd5df73");
+      Kakao.Link.sendCustom({
+          templateId: [97994]
+      });
+  }
 </script>
 
 <!-- 내 위치 찍기 API QUERY -->

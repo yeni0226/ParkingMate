@@ -836,3 +836,288 @@ body {
   font-style: normal;
   box-sizing: border-box;
 }
+
+/* 체크 아이콘 */
+.paymentMode {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* 옆 마진 */
+.payment-icon {
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  line-height: 20px;
+  font-weight: 400;
+  position: relative;
+  transition-property: opacity,border-color,background-color;
+  transition-duration: .15s;
+  opacity: 1;
+  z-index: 1;
+  border: 1px solid #cdd3d8;
+  border-radius: 999em;
+  background-color: #fff;
+  width: 1em;
+  height: 1em;
+}
+
+.payment-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition-property: background-color;
+  transition-duration: .15s;
+  border-radius: 999em;
+  background-color: #fff;
+  width: 0.5em;
+  height: 0.5em;
+  content: "";
+}
+
+/* 네이버 아이콘 */
+.payment-label {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  vertical-align: -1px;
+  color: #495057;
+}
+
+.naver-icon {
+  display: block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCA0OCAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY3N18zMzM1OSkiPgo8cGF0aCBkPSJNMjQuMjU2MyA0LjA0MjcySDI4LjEwNjVDMjguNzEyOSA0LjA0MjcyIDI5LjI0MDQgNC4xMTk3MyAyOS42ODg5IDQuMjczNzNDMzAuMTM1NiA0LjQyNzc0IDMwLjUwNzEgNC42NDMzNSAzMC43OTk3IDQuOTE2NzFDMzEuMDkyMyA1LjE5MDA3IDMxLjMxMTggNS41MTczNCAzMS40NTYyIDUuODk2NThDMzEuNjAwNSA2LjI3NTgyIDMxLjY3MTggNi42ODM5NCAzMS42NzE4IDcuMTIyODZWNy40MzY2NUMzMS42NzE4IDcuODc1NTcgMzEuNTk0OCA4LjI4NzUzIDMxLjQ0MDggOC42NzA2M0MzMS4yODY4IDkuMDUzNzIgMzEuMDU5NiA5LjM5MDYxIDMwLjc2MzEgOS42NzkzN0MzMC40NjQ3IDkuOTY4MTMgMzAuMDk1MSAxMC4xOTcyIDI5LjY1MjQgMTAuMzY2NkMyOS4yMDk2IDEwLjUzNiAyOC42OTU2IDEwLjYyMDcgMjguMTA4NCAxMC42MjA3SDI1LjczNjdWMTQuODIzMkgyNC4yNTYzVjQuMDQyNzJaTTI1LjczNjcgNS4zMjg2OFY5LjMzNjdIMjcuODYwMUMyOS40MTU2IDkuMzM2NyAzMC4xOTMzIDguNjkzNzMgMzAuMTkzMyA3LjQwNzc3VjcuMTM4MjZDMzAuMTkzMyA2LjUyMDMxIDMwLjAwNjYgNi4wNjQwNiAyOS42MzMxIDUuNzY5NTJDMjkuMjU5NiA1LjQ3NDk5IDI4LjcyMjUgNS4zMjg2OCAyOC4wMjU3IDUuMzI4NjhIMjUuNzM4N0gyNS43MzY3WiIgZmlsbD0iIzMzMzMzMyIvPgo8cGF0aCBkPSJNMzUuNDcwMSAxNC45NDIxQzM0LjY0MjMgMTQuOTQyMSAzMy45ODc4IDE0LjczODEgMzMuNTA0NiAxNC4zM0MzMy4wMjE0IDEzLjkyMTggMzIuNzc4OCAxMy4zNTc4IDMyLjc3ODggMTIuNjM5N1YxMi4yMzU1QzMyLjc3ODggMTEuNTM4NiAzMy4wMTM3IDEwLjk2ODggMzMuNDgxNSAxMC41MzE4QzMzLjk0OTMgMTAuMDkyOSAzNC43MDc3IDkuODczMzkgMzUuNzU1IDkuODczMzlIMzcuODM0MVY5LjM5NDA1QzM3LjgzNDEgOC44NDU0IDM3LjcwMTIgOC40MzkyMSAzNy40Mzc1IDguMTc1NDdDMzcuMTczOCA3LjkxMTczIDM2Ljc0MjYgNy43Nzg5IDM2LjE0MzkgNy43Nzg5QzM1LjY2NDUgNy43Nzg5IDM1LjI0ODcgNy44NTM5OCAzNC44OTQ1IDguMDA0MTRDMzQuNTQwMyA4LjE1NDMgMzQuMTc0NSA4LjM1MjU4IDMzLjc5NTMgOC42MDI4NEwzMy4wNzcyIDcuNTI2NzJDMzMuNDc1NyA3LjI0NzU4IDMzLjkyNDIgNy4wMDUwMiAzNC40MjI4IDYuODAwOTZDMzQuOTIxNCA2LjU5NjkgMzUuNDk5IDYuNDk0ODcgMzYuMTU3MyA2LjQ5NDg3QzM2LjYxNTUgNi40OTQ4NyAzNy4wMzUyIDYuNTUyNjMgMzcuNDEyNSA2LjY2NjIxQzM3Ljc5MTcgNi43ODE3MSAzOC4xMTcxIDYuOTUxMTIgMzguMzkyMyA3LjE3NDQzQzM4LjY2NTcgNy4zOTk2NiAzOC44ODEzIDcuNjczMDIgMzkuMDM1MyA3Ljk5NjQ0QzM5LjE4OTMgOC4zMTk4NSAzOS4yNjYzIDguNjg3NTQgMzkuMjY2MyA5LjA5NTY2VjE0LjgyMjhIMzcuODc2NFYxMy44MzUySDM3Ljg2MUMzNy43ODAyIDEzLjk4NTQgMzcuNjc0MyAxNC4xMjIxIDM3LjUzOTUgMTQuMjQ3MkMzNy40MDQ4IDE0LjM3MjMgMzcuMjU4NSAxNC40NzgyIDM3LjA5ODcgMTQuNTY4N0MzNi44NzkyIDE0LjY4OCAzNi42NDI1IDE0Ljc4MDQgMzYuMzg4MyAxNC44NDU5QzM2LjEzNDIgMTQuOTExMyAzNS44MjgxIDE0Ljk0MjEgMzUuNDY4MiAxNC45NDIxSDM1LjQ3MDFaTTM3LjgzMjIgMTEuMDk5N0gzNS43ODM5QzM1LjIxNiAxMS4wOTk3IDM0LjgwOTggMTEuMjA5NCAzNC41NjUzIDExLjQyODlDMzQuMzIwOCAxMS42NDgzIDM0LjE5OTUgMTEuOTUyNSAzNC4xOTk1IDEyLjM0MTRWMTIuNTUxMkMzNC4xOTk1IDEyLjk0OTcgMzQuMzM4MSAxMy4yMzg0IDM0LjYxNzMgMTMuNDE3NUMzNC44OTY0IDEzLjU5NjUgMzUuMjI5NCAxMy42ODcgMzUuNjE4MyAxMy42ODdDMzUuOTc2NCAxMy42ODcgMzYuMjg4MiAxMy42NDQ2IDM2LjU1MiAxMy41NTk5QzM2LjgxNTcgMTMuNDc1MiAzNy4wNTgzIDEzLjM0ODIgMzcuMjc3NyAxMy4xNzg4QzM3LjQ3NzkgMTMuMDI4NiAzNy42MTg1IDEyLjg1NzMgMzcuNzAzMiAxMi42NjI4QzM3Ljc4NzkgMTIuNDY4NCAzNy44MzAyIDEyLjIxNjIgMzcuODMwMiAxMS45MDgyVjExLjEwMTZMMzcuODMyMiAxMS4wOTk3WiIgZmlsbD0iIzMzMzMzMyIvPgo8cGF0aCBkPSJNNDQuMzIxMSAxMy4xNzkyTDQ2LjQ3MzQgNi42NDU1MUg0Ny45OThMNDMuNzUxMyAxOC4yMDM3TDQyLjQzNjUgMTcuNzM5OEw0My40OTcyIDE0Ljk0NDVMNDAuNTIxIDYuNjQ1NTFINDIuMDkxOUw0NC4yNTk1IDEzLjE3OTJINDQuMzE5Mkg0NC4zMjExWiIgZmlsbD0iIzMzMzMzMyIvPgo8cGF0aCBkPSJNMTguODY1OCAwSDBWMTguODY1OEgxOC44NjU4VjBaIiBmaWxsPSIjMDBDNzNDIi8+CjxwYXRoIGQ9Ik0xMC45MzE5IDEzLjc1MDlMNy44ODgzNiA5LjI4MDg3VjEzLjc1MDlINC43MTU4MlY1LjExNDk5SDcuOTMyNjNMMTAuOTc2MiA5LjU4NTAzVjUuMTE0OTlIMTQuMTQ4N1YxMy43NTA5SDEwLjkzMTlaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzY3N18zMzM1OSI+CjxyZWN0IHdpZHRoPSI0OCIgaGVpZ2h0PSIxOC44NjU4IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=);
+  width: 48px;
+  height: 19px;
+}
+
+.kakao-payment {
+  border-top: 1px solid #f2f4f6;
+  padding: 16px 0;
+}
+
+/* 결제수단 고르는 칸 인박스 */
+.payment-method-select-ibx>div {
+  padding: 16px 0;
+}
+
+.kakao-icon {
+  display: block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA0OCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zNy45OTY5IDE5LjkyNDVIMTAuMDAzMUM0LjQ3OSAxOS45MjQ1IDAgMTUuNDYzOCAwIDkuOTYyMjZDMCA0LjQ2MDcyIDQuNDc5IDAgMTAuMDAzMSAwSDM4LjAyMThDNDMuNTQ1OSAwIDQ4LjAyNDkgNC40NjA3MiA0OC4wMjQ5IDkuOTYyMjZDNDguMDI0OSAxNS40NjM4IDQzLjUyMSAxOS45MjQ1IDM3Ljk5NjkgMTkuOTI0NVoiIGZpbGw9IiNGRkVCMDAiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS4yMjE5IDQuNzgyNzFDOC4yMTEwMyA0Ljc4MjcxIDUuNzcyNDYgNi42OTA5MSA1Ljc3MjQ2IDkuMDY5OTZDNS43NzI0NiAxMC41ODE2IDYuNzkyNjggMTEuOTE5OSA4LjMxMDU2IDEyLjY4ODFMNy43ODgwMSAxNC42MjExQzcuNzYzMTMgMTQuNjcwNiA3Ljc4ODAxIDE0Ljc0NSA3LjgzNzc4IDE0Ljc5NDVDNy44NjI2NiAxNC44MTkzIDcuOTEyNDMgMTQuODQ0MSA3LjkzNzMxIDE0Ljg0NDFDNy45NjIyIDE0Ljg0NDEgOC4wMTE5NiAxNC44MTkzIDguMDM2ODUgMTQuODE5M0wxMC4yNTE1IDEzLjMzMjRDMTAuNTc0OSAxMy4zODIgMTAuODk4NCAxMy40MDY4IDExLjI0NjggMTMuNDA2OEMxNC4yNTc3IDEzLjQwNjggMTYuNjk2MyAxMS40NzM4IDE2LjY5NjMgOS4xMTk1MkMxNi42OTYzIDYuNjkwOTEgMTQuMjU3NyA0Ljc4MjcxIDExLjIyMTkgNC43ODI3MVoiIGZpbGw9IiMyMTI1MjkiLz4KPHBhdGggZD0iTTIxLjMwMDIgMTIuNjM4NFYxNS40MTRIMTkuMzA5NlY1LjE3OTA5SDIwLjcwM0wyMC45NTE5IDUuODIzNDJDMjEuMzc0OSA1LjQwMjEzIDIyLjAyMTkgNC45NTYwNSAyMy4wNDIxIDQuOTU2MDVDMjQuOTgzIDQuOTU2MDUgMjUuOTAzNyA2LjM5MzQgMjUuOTAzNyA4Ljc0NzY2QzI1LjkwMzcgMTEuMjAxMSAyNC40ODUzIDEyLjc2MjMgMjIuNDQ0OSAxMi43NjIzQzIyLjA0NjcgMTIuNzg3MSAyMS43NDgxIDEyLjc2MjMgMjEuMzAwMiAxMi42Mzg0Wk0yMS4zMDAyIDYuODM5NDdWMTEuMjUwNkMyMS4zOTk4IDExLjI3NTQgMjEuNjczNSAxMS4zMDAyIDIxLjk0NzIgMTEuMzAwMkMyMy4zNjU2IDExLjMwMDIgMjMuOTEzIDEwLjMwODkgMjMuOTEzIDguNzQ3NjZDMjMuOTEzIDcuMzg0NjcgMjMuNTM5NyA2LjU2Njg3IDIyLjQyIDYuNTY2ODdDMjIuMDIxOSA2LjU2Njg3IDIxLjYyMzcgNi42NjYgMjEuMzAwMiA2LjgzOTQ3WiIgZmlsbD0iIzIxMjUyOSIvPgo8cGF0aCBkPSJNMzAuMjA4MSA4LjA3ODhIMzEuMzI3OFY3LjgzMDk4QzMxLjMyNzggNy4wMTMxOCAzMC44NTUxIDYuNjQxNDUgMzAuMDU4OCA2LjY0MTQ1QzI5LjQzNjcgNi42NDE0NSAyOC42NjUzIDYuODE0OTMgMjguMDE4NCA3LjEzNzA5TDI3LjQ3MDkgNS44MjM2NkMyOC4xNjc3IDUuMzI4MDIgMjkuMjYyNSA1LjAwNTg2IDMwLjIzMyA1LjAwNTg2QzMyLjEyNDEgNS4wMDU4NiAzMy4xNjkyIDUuOTk3MTMgMzMuMTY5MiA3LjkwNTMyVjEyLjU4OTFIMzEuNzc1N0wzMS41NzY3IDExLjk2OTVDMzAuNzgwNCAxMi41Mzk1IDMwLjAzMzkgMTIuNzg3MyAyOS4zODY5IDEyLjc4NzNDMjcuOTQzNyAxMi43ODczIDI3LjEyMjYgMTEuOTIgMjcuMTIyNiAxMC40NTc4QzI3LjEyMjYgOC44OTY1OSAyOC4xOTI1IDguMDc4OCAzMC4yMDgxIDguMDc4OFpNMzEuMzUyNyAxMC42ODA5VjkuMzE3ODhIMzAuNDMyQzI5LjQxMTggOS4zMTc4OCAyOC44ODkzIDkuNjg5NjEgMjguODg5MyAxMC40MDgzQzI4Ljg4OTMgMTAuOTUzNSAyOS4xNjMgMTEuMjI2MSAyOS43NjAyIDExLjIyNjFDMzAuMzA3NiAxMS4yNTA5IDMxLjAwNDQgMTAuOTc4MyAzMS4zNTI3IDEwLjY4MDlaIiBmaWxsPSIjMjEyNTI5Ii8+CjxwYXRoIGQ9Ik0zOS4xOTEgMTEuODIwOEMzOC40OTQzIDEzLjY1NDcgMzcuNjczMiAxNC45OTI5IDM2LjQ1MzkgMTUuNzM2NEwzNS4yMzQ2IDE0LjYyMTJDMzUuOTMxMyAxNC4wMDE2IDM2LjQ1MzkgMTMuNDA2OSAzNi44NzY5IDEyLjYxMzlMMzQuMjM5MyA1LjQ1MTk0TDM2LjIwNSA0LjkzMTUyTDM3Ljg5NzEgMTAuNzMwNUwzOS41NjQzIDQuOTA2NzRMNDEuNTA1MiA1LjQ1MTk0TDM5LjE5MSAxMS44MjA4WiIgZmlsbD0iIzIxMjUyOSIvPgo8L3N2Zz4K);
+  width: 48px;
+  height: 20px;
+}
+
+/* 그 외 결제수단 */
+.more-payment {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  vertical-align: -1px;
+  color: #495057;
+}
+
+/* 결제금액 */
+.checkout-total-bx {
+  background-color: #fff;
+  padding: 24px 16px;
+}
+
+/* 결제금액 div */
+.checkout-total-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+/* 결제금액 내용 */
+.checkout-total-content {
+  margin-top: 16px;
+  height: auto;
+  overflow: visible;
+  word-break: break-all;
+  width: 100%;
+}
+
+/* 결제금액 텍스트 */
+.cehckout-total-text {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 결제금액 내용 인박스 */
+.checkout-total-content-ibx {
+
+}
+
+/* 결제금액 내용 */
+.checkout-total-content-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 마진 */
+.mg-bx2 {
+  margin: 16px 0;
+  background-color: #f2f4f6;
+  opacity: 1;
+  height: 1px;
+}
+
+/* 결제금액 내용 디테일 인박스 */
+.checkout-total-content-details-ibx {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상품 금액 설명 */
+.total-payment {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.mt-bx {
+  margin-top: 8px;
+}
+
+/* 총 결제 금액 */
+.total-payment-last {
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 24px;
+  color: #212529;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-payment dl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #868e96;
+}
+
+.total-payment dt, 
+.total-payment dd {
+  display: flex;
+  align-items: center;
+}
+
+.payment-price {
+  color: #212529;
+}
+
+.price-em {
+  margin-right: 4px;
+}
+
+.total-payment-last-text {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.margin-bx2 {
+  height: calc(92px + env(safe-area-inset-bottom));
+  background-color: #fff;
+}
+
+/* 결제하기 박스 */
+.payment-button-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1100;
+  background-color: #fff;
+  padding: 0 0 16px;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+}
+
+/* 위 선 */
+.mg-bx3 {
+  margin: 0px;
+  background-color: #f2f4f6;
+  opacity: 1;
+  height: 1px;
+}
+
+/* 결제하기 버튼 마진 박스 */
+.payment-btn-mg-bx {
+  padding: 0 16px;
+}
+
+/* 펼쳐보기 div */
+.payment-btn-expand-content {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+}
+
+/* 간격박스 */
+.mg-bx4 {
+  transition: height .25s;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #495057;
+}
+
+/* 결제하기 버튼 */
+.payment-btn {
+  margin-top: 8px;
+  background-color: #00c4c4;
+  border-color: #00c4c4;
+  color: #fff;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 15px;
+  width: 100%;
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.payment-btn span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.payment-btn-text {
+  vertical-align: top;
+}
+
+/* 펼쳐보기 img */
+#payment-btn-img {
+  transform: rotate(90deg);
+  transition: transform .15s;
+  margin-top: 8px;
+}
+
+/* 뭔지 모름 */
+.rewQ {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 8px);
+  top: 0;
+}
