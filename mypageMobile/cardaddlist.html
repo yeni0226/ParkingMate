@@ -15,21 +15,16 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.c30dc2b4.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.3570589c.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" href="cardaddlist.css">
   <link rel="stylesheet" href="mypagemobile.css">
@@ -167,7 +162,7 @@
   <!-- 결제 정보 재등록 POPUPPage -->
   <div class="ModalPortal">
     <!-- 결제등록 취소 및 재등록 팝업 -->
-    <!-- <div class="Modal_Overlay Modal_Overlay--after-open ConfirmModal_overlay_9xcDs waffle_modal_overlay" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="Modal_Overlay Modal_Overlay--after-open ConfirmModal_overlay_9xcDs waffle_modal_overlay" style="background-color: rgba(0, 0, 0, 0.2); display: none;">
       <div class="Modal_Content Modal_Content--after-open ConfirmModal_confirmModal_1x2Tw ConfirmModal_sizeMobile_1JFlG" tabindex="-1" role="dialog" aria-modal="true">
         <div class="ConfirmModal_header_gkXhb">
           <div class="ConfirmModal_closeIconRoot_1WImH">
@@ -177,32 +172,38 @@
               </svg>
             </button>
           </div>
-          <!-- 차량 정보 삭제 -->
-          <!-- <div title="차량 정보를 삭제하시겠어요?" class="ConfirmModal_title_ubaBW ConfirmModal_showCloseButton_50czX">차량 정보를 삭제하시겠어요?</div>
-          </div>
+          <!-- 카드 정보 삭제 -->
+          <div title="카드 정보를 삭제하시겠어요?" class="ConfirmModal_title_ubaBW ConfirmModal_showCloseButton_50czX">카드 정보를 삭제하시겠어요?</div>
+          <!-- 카드 정보 재등록 -->
+          <div title="등록된 카드 정보를 삭제하고 재등록하겠습니까?" class="ConfirmModal_title_ubaBW ConfirmModal_showCloseButton_50czX">등록된 카드 정보를 삭제하고 재등록하겠습니까?</div> 
+        </div>  
+          <!-- 카드 정보 삭제 -->
           <div class="ConfirmModal_content_3KM88 ConfirmModal_hasTitle_3rvSc">
-            <div class="ConfirmModal_message_Mi2Ur">차량 정보를 삭제해도 주차장 결제 중인 차량 정보는 유지돼요.<br>변경 및 삭제를 원하다면 차량 정보에서 변경해 주세요.</div>
-        </div> -->
-          <!-- 차량 정보 재등록 -->
-          <!-- <div title="등록된 차량 정보를 삭제하고 재등록하겠습니까?" class="ConfirmModal_title_ubaBW ConfirmModal_showCloseButton_50czX">등록된 차량 정보를 삭제하고 재등록하겠습니까?</div>
+            <div class="ConfirmModal_message_Mi2Ur">카드 정보를 삭제해도 주차장 결제 중인 카드 정보는 유지돼요.<br>변경 및 삭제를 원하다면 간편결제 정보에서 변경해 주세요.</div>
+          </div> 
+          <!-- 카드 정보 재등록 -->
+          <div class="ConfirmModal_content_3KM88 ConfirmModal_hasTitle_3rvSc">
+            <div class="ConfirmModal_message_Mi2Ur">안전한 카드 정보 보호를 위해 등록된 카드 정보를 삭제하고 다시 등록할 수 있습니다.</div>
+          </div>
+          
+          <div class="ConfirmModal_footer_gfGBl">
+            <div class="ConfirmModal_buttonGroup_3YCl5">
+              <button class="Button_button_2FuOU Button_lg_1Dftp ConfirmModal_negativeButton_3VxAF" type="button">
+                <span>
+                  <span class="Button_children_ilFun">취소</span>
+                </span>
+              </button>
+              <button class="Button_button_2FuOU Button_primary_2mZni Button_contained_2SIAT Button_lg_1Dftp ConfirmModal_positiveButton_Fafi9" type="button">
+                <span>
+                  <span class="Button_children_ilFun">확인</span>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="ConfirmModal_content_3KM88 ConfirmModal_hasTitle_3rvSc">
-          <div class="ConfirmModal_message_Mi2Ur">안전한 차량 정보 보호를 위해 등록된 차량 정보를 삭제하고 다시 등록할 수 있습니다.</div>
-        </div>
-        <div class="ConfirmModal_footer_gfGBl">
-          <div class="ConfirmModal_buttonGroup_3YCl5">
-            <button class="Button_button_2FuOU Button_lg_1Dftp ConfirmModal_negativeButton_3VxAF" type="button">
-              <span><span class="Button_children_ilFun">취소</span>
-            </span>
-          </button>
-          <button class="Button_button_2FuOU Button_primary_2mZni Button_contained_2SIAT Button_lg_1Dftp ConfirmModal_positiveButton_Fafi9" type="button">
-            <span><span class="Button_children_ilFun">확인</span>
-          </span>
-        </button>
+
       </div>
     </div>
-  </div>
-  </div> -->
   </div>
   <!-- 하단 메뉴바 -->
   <ul class="ParkingMateMobile_container_1OTMW">
@@ -253,4 +254,83 @@
     </li>
   </ul>
 </body>
+<script>
+  // 뒤로가기 버튼 클릭 시
+  const backbutton = document.querySelector("#main-app > div > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link = 'mypageMobile.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link);
+  })
+
+  // 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link);
+  })
+
+  // 삭제 아이콘
+  const delIcon = document.querySelector("#registCardInfo > div > div.SimplePayCard_registed_2yAC4 > div.SimplePayCard_creditCard_2nvHf > button");
+  // 차량 정보 변경 버튼
+  const ChangeCarInfoButton3 = document.querySelector("#registCardInfo > button");
+  // 팝업 박스 틀
+  const popUpBoxfream = document.querySelector("body > div.ModalPortal > div");
+  // 팝업 박스
+  const popUpBox1 = document.querySelector("body > div.ModalPortal > div > div.Modal_Content.Modal_Content--after-open.ConfirmModal_confirmModal_1x2Tw.ConfirmModal_sizeMobile_1JFlG");
+  // 카드 정보 삭제 메시지1
+  const cardInfoMsg1 = document.querySelector("body > div.ModalPortal > div > div.Modal_Content.Modal_Content--after-open.ConfirmModal_confirmModal_1x2Tw.ConfirmModal_sizeMobile_1JFlG > div.ConfirmModal_header_gkXhb > div:nth-child(2)");
+  // 카드 정보 삭제 메시지 2
+  const cardInfoMsg2 = document.querySelector("body > div.ModalPortal > div > div.Modal_Content.Modal_Content--after-open.ConfirmModal_confirmModal_1x2Tw.ConfirmModal_sizeMobile_1JFlG > div:nth-child(2)");
+  // 카드 정보 재등록 메시지1
+  const cardReRegMsg = document.querySelector("body > div.ModalPortal > div > div.Modal_Content.Modal_Content--after-open.ConfirmModal_confirmModal_1x2Tw.ConfirmModal_sizeMobile_1JFlG > div.ConfirmModal_header_gkXhb > div:nth-child(3)");
+  // 카드 정보 재등록 메시지2
+  const cardReRegMsg2 = document.querySelector("body > div.ModalPortal > div > div.Modal_Content.Modal_Content--after-open.ConfirmModal_confirmModal_1x2Tw.ConfirmModal_sizeMobile_1JFlG > div:nth-child(3)");
+  
+  // 카드 삭제 클릭 이벤트
+  delIcon.addEventListener("click", (e) => {
+
+    if(cardInfoMsg1.style.display == "none" && cardInfoMsg2.style.display == "none"){
+      cardInfoMsg1.style.display = "block";
+      cardInfoMsg2.style.display = "block";
+    }
+
+    popUpBoxfream.style.display = "inline-flex";
+    cardReRegMsg.style.display = "none";
+    cardReRegMsg2.style.display = "none";
+  })
+
+  // popup x버튼
+  const xButtonpopUp = document.querySelector("body > div.ModalPortal > div > div > div.ConfirmModal_header_gkXhb > div.ConfirmModal_closeIconRoot_1WImH > button");
+
+  xButtonpopUp.addEventListener("click", (e) => {
+    popUpBoxfream.style.display = "none";
+  })
+  // popup  취소 버튼
+  const CancelButton = document.querySelector("body > div.ModalPortal > div > div > div.ConfirmModal_footer_gfGBl > div > button.Button_button_2FuOU.Button_lg_1Dftp.ConfirmModal_negativeButton_3VxAF");
+
+  CancelButton.addEventListener("click", (e) => {
+    popUpBoxfream.style.display = "none";
+  })
+  // popup  확인 버튼
+  const OkButton = document.querySelector("body > div.ModalPortal > div > div > div.ConfirmModal_footer_gfGBl > div > button.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT.Button_lg_1Dftp.ConfirmModal_positiveButton_Fafi9");
+  const link2 = "cardadddel.html"; 
+  OkButton.addEventListener("click", (e) => {
+    location.href = link2;
+  })
+  // 카드 변경 버튼 클릭 이벤트
+  ChangeCarInfoButton3.addEventListener("click", (e) => {
+
+    if(cardReRegMsg.style.display == "none" && cardReRegMsg2.style.display == "none"){
+      cardReRegMsg.style.display = "block";
+      cardReRegMsg2.style.display = "block";
+    }
+
+    popUpBoxfream.style.display = "inline-flex";
+    cardInfoMsg1.style.display = "none";
+    cardInfoMsg2.style.display = "none";
+  })
+
+</script>
 </html>

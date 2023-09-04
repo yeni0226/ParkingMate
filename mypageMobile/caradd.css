@@ -603,7 +603,7 @@ button:not(:disabled) {
 }
 
 .Button_button_2FuOU.Button_disabled_I7x9M, .Button_button_2FuOU:disabled, .Button_button_2FuOU[disabled] {
-  opacity: .45;
+  opacity: 1;
   cursor: default;
   pointer-events: none;
 }

@@ -15,21 +15,19 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.c30dc2b4.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.3570589c.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
+  <!-- <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css"> -->
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
+  <!-- <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css"> -->
+  <!-- <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css"> -->
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" href="cardadd.css">
   <link rel="stylesheet" href="mypagemobile.css">
@@ -100,11 +98,13 @@
                     <div class="VirtualKeyboardInput_contents_CDJHV">
                       <div class="VirtualKeyboardInput_inputWrapper_2mhTE inline-block CardNumberFormGroup_inputBox_1R0h_ CardNumberFormGroup_virtualKeyboardInput_31c5Z VirtualKeyboardInput_inModal_2Vm8C" role="presentation">
                         <div class="VirtualKeyboardInput_placeholder_3H2BJ"></div>
-                        <div class="VirtualKeyboardInput_value_2dL6t"></div>
-                        <input type="hidden" name="cardNum2" readonly="" value="">
+                        <div class="VirtualKeyboardInput_value_2dL6t">
+                          <input type="hidden" label="password" name="cardNum2" readonly="" value="">
+                        </div>
+                        
                       </div>
                       <!-- 가상키보드 -->
-                      <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C">
+                      <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C" style="display: none;">
                         <ul class="VirtualKeyboard_contents_2Il1N">
                           <li class="VirtualKeyboard_subContents_w7PWz">
                             <span class="VirtualKeyboard_buttonKey_1WLb2">
@@ -182,7 +182,7 @@
                           <div class="VirtualKeyboardInput_placeholder_3H2BJ"></div>
                           <div class="VirtualKeyboardInput_value_2dL6t"></div>
                           <!-- 가상키보드 -->
-                          <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C">
+                          <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C" style="display: none";>
                             <ul class="VirtualKeyboard_contents_2Il1N">
                               <li class="VirtualKeyboard_subContents_w7PWz">
                                 <span class="VirtualKeyboard_buttonKey_1WLb2"></span>
@@ -266,11 +266,12 @@
                       <div class="ExpirationDateFormGroup_contents_2muEH">
                         <label for="payment-info-form-vaild-date">
                           유효기간
-                          <div class="ExpirationDateFormGroup_inputWrapper_OykNL">
+                          <div class="ExpirationDateFormGroup_inputWrapper_OykNL ExpirationDateFormGroup_error_tQdD5">
                             <div class="ExpirationDateFormGroup_placeHolder_2aquN">MM/YY</div>
                             <div></div>
                             <input id="payment-info-form-valid-date" pattern="[0-9]*" type="number" class="Input_input_3VoZt Input_sm_3KLFX ExpirationDateFormGroup_input_1n6vh" aria-invalid="false" value="">
                           </div>
+                          <p id="ExpirationDate-result"></p>
                         </label>
                         <input type="hidden" name="cardExpMM" value="">
                         <input type="hidden" name="cardExpYY" value="">
@@ -285,7 +286,7 @@
                             <input type="hidden" name="cardPwd" readonly="" value="">
                           </div>
                           <!-- 가상 키보드 -->
-                        <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C">
+                        <div class="VirtualKeyboardInput_virtualKeyboard_HRepk VirtualKeyboardInput_inModal_2Vm8C" style="display: none";>
                           <ul class="VirtualKeyboard_contents_2Il1N">
                             <li class="VirtualKeyboard_subContents_w7PWz">
                               <span class="VirtualKeyboard_buttonKey_1WLb2">
@@ -358,7 +359,7 @@
                           </ul>
                         </div>
                       </div>
-                        <em class="PasswordFormGroup_inputHelper_aHM4C PasswordFormGroup_error_VfB2O">다시 확인해주세요.</em>
+                        <em class="PasswordFormGroup_inputHelper_aHM4C PasswordFormGroup_error_VfB2O" style="display: none;">다시 확인해주세요.</em>
                         </div>
                       </div>
                     </div>
@@ -369,6 +370,7 @@
                         <p class="BirthDayFormGroup_info_38uaK">무기명 법인카드는 사업자등록번호 10자리를 입력하세요.</p>
                         <input id="payment-info-form-birthday" pattern="[0-9]*" name="buyerAuthNum" type="number" class="Input_input_3VoZt Input_md_3OkuQ" aria-invalid="false" value="">
                       </label>
+                      <p id="Birthday-result"></p>
                     </div>
                     <input type="hidden" name="isValidForm" value="false">
                     <!-- 경고 -->
@@ -400,4 +402,199 @@
     </div>
   </div>
 </body>
+<script>
+  // 카드번호 입력 박스 첫번째
+  const cardInputBox1 = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(1) > input");
+  // 카드번호 입력 박스 두번째
+  const cardInputBox2 = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(2) > div.VirtualKeyboardInput_inputWrapper_2mhTE.inline-block.CardNumberFormGroup_inputBox_1R0h_.CardNumberFormGroup_virtualKeyboardInput_31c5Z.VirtualKeyboardInput_inModal_2Vm8C");
+  // 카드번호 입력 박스 세번째
+  const cardInputBox3 = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(3) > div");
+  // 카드번호 입력 박스 네번째
+  const cardInputBox4 = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(4) > input");
+  // 유효기간 입력 박스
+  const cardExpirationDate = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardInfoForm_twoColumn_ALZlH > div.ExpirationDateFormGroup_contents_2muEH > label > div");
+  // 카드비밀번호 입력 박스
+  const cardPassword = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardInfoForm_twoColumn_ALZlH > div.PasswordFormGroup_contents_1mA8c > div > div.VirtualKeyboardInput_inputWrapper_2mhTE.PasswordFormGroup_inputBox_28zsV.PasswordFormGroup_inModal_NgVG2.VirtualKeyboardInput_inModal_2Vm8C");
+  // 생년월일 입력 박스
+  const BirthdayBox = document.querySelector("#payment-info-form-birthday");
+  // 카드번호 입력박스 1 클릭 시 이벤트
+  cardInputBox1.addEventListener("click", (e) => {
+    cardInputBox1.style.borderColor = "#00c4c4";
+  })
+
+  // 카드번호 입력박스 1 마우스 떼었을때 시 이벤트
+  cardInputBox1.addEventListener("mouseout", (e) => {
+    cardInputBox1.style.borderColor = "#cdd3d8";
+  })
+
+  const virtualKeyboxShow = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardInfoForm_twoColumn_ALZlH > div.PasswordFormGroup_contents_1mA8c > div > div.VirtualKeyboardInput_virtualKeyboard_HRepk.VirtualKeyboardInput_inModal_2Vm8C");
+  // 카드번호 입력박스 2 클릭 시 이벤트
+  cardInputBox2.addEventListener("click", (e) => {
+    cardInputBox2.style.borderColor = "#00c4c4";
+    virtualKeyboxShow.style.display = "block";
+
+  })
+
+  // 카드번호 입력박스 2 마우스 떼었을때 시 이벤트
+  cardInputBox2.addEventListener("mouseout", (e) => {
+    cardInputBox2.style.borderColor = "#cdd3d8";
+    // virtualKeyboxShow.style.display = "none";
+  })
+
+  const card2inputbox = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(2) > div.VirtualKeyboardInput_inputWrapper_2mhTE.inline-block.CardNumberFormGroup_inputBox_1R0h_.CardNumberFormGroup_virtualKeyboardInput_31c5Z.VirtualKeyboardInput_inModal_2Vm8C > div.VirtualKeyboardInput_value_2dL6t");
+  // 카드 번호 입력박스 2 가상키보드 클릭 시 이벤트
+  virtualKeyboxShow.addEventListener("click", (e) => {
+    const targetkey = e.target.innerText;
+    // console.log(targetkey);
+    card2inputbox.innerText += targetkey;
+
+  })
+
+  const virtualKeyboxShow2 = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(3) > div > div.VirtualKeyboardInput_virtualKeyboard_HRepk.VirtualKeyboardInput_inModal_2Vm8C");
+  // 카드번호 입력박스 3 클릭 시 이벤트
+  cardInputBox3.addEventListener("click", (e) => {
+    cardInputBox3.style.borderColor = "#00c4c4";
+    virtualKeyboxShow2.style.display = "block";
+  })
+
+  // const card3inputbox = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardNumberFormGroup_contents_1MoYv > div.CardNumberFormGroup_cardNumber_3MThX > div:nth-child(3) > div");
+  // // 카드 번호 입력박스 2 가상키보드 클릭 시 이벤트
+  // virtualKeyboxShow2.addEventListener("click", (e) => {
+  //   const targetkey = e.target.innerText;
+  //   // console.log(targetkey);
+  //   card3inputbox.innerText += targetkey;
+
+  // })
+
+  // 카드번호 입력박스 3 마우스 떼었을때 시 이벤트
+  cardInputBox3.addEventListener("mouseout", (e) => {
+    cardInputBox3.style.borderColor = "#cdd3d8";
+    virtualKeyboxShow2.style.display = "none";
+  })
+
+  // 카드번호 입력박스 4 클릭 시 이벤트
+  cardInputBox4.addEventListener("click", (e) => {
+    cardInputBox4.style.borderColor = "#00c4c4";
+  })
+
+  // 카드번호 입력박스 4 마우스 떼었을때 시 이벤트
+  cardInputBox4.addEventListener("mouseout", (e) => {
+    cardInputBox4.style.borderColor = "#cdd3d8";
+  })
+
+  // 유효기간 입력박스 클릭 시 이벤트
+  cardExpirationDate.addEventListener("click", (e) => {
+    cardExpirationDate.style.borderColor = "#00c4c4";
+  })
+
+  const ExpirationDateResult = document.querySelector("#ExpirationDate-result")
+  // 유효기간 입력박스 마우스 떼었을때 시 이벤트
+  cardExpirationDate.addEventListener("mouseout", (e) => {
+    cardExpirationDate.style.borderColor = "#f66";
+    const target = e.target;
+  if(!target.value){
+    ExpirationDateResult.innerText = "입력해주세요";
+    ExpirationDateResult.style.color = "#f66";
+    ExpirationDateResult.style.lineHeight = "20px";
+    ExpirationDateResult.style.fontSize = "12px";
+    ExpirationDateResult.style.fontWeight = "400";
+    target.focus();
+    return;
+  }
+  })
+
+  // 카드 유효기간 textbox안에 값 존재 시,
+  cardExpirationDate.addEventListener("keyup", (e) => {
+  const target = e.target;
+  // parkingOtherResult.innerText = e.target.value;
+
+  if(target.value){
+    ExpirationDateResult.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+// ======================================================
+  const VirtualKeyboardCardPassword = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardInfoForm_twoColumn_ALZlH > div.PasswordFormGroup_contents_1mA8c > div > div.VirtualKeyboardInput_virtualKeyboard_HRepk.VirtualKeyboardInput_inModal_2Vm8C");
+  // 카드 비밀번호 입력박스 클릭 시 이벤트
+  cardPassword.addEventListener("click", (e) => {
+    cardPassword.style.borderColor = "#00c4c4";
+    VirtualKeyboardCardPassword.style.display = "block";
+  })
+
+  const retrayCardPassword = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.CardInfoForm_form_2GhgC > div.CardInfoForm_twoColumn_ALZlH > div.PasswordFormGroup_contents_1mA8c > em")
+  // 카드 비밀번호 입력박스 마우스 떼었을때 시 이벤트
+  cardPassword.addEventListener("mouseout", (e) => {
+    cardPassword.style.borderColor = "#f66";
+    const target = e.target;
+  if(!target.value){
+    retrayCardPassword.style.display = "block";
+    target.focus();
+    return;
+  }
+  })
+
+  // 카드 비밀번호 textbox안에 값 존재 시,
+  cardPassword.addEventListener("keyup", (e) => {
+  const target = e.target;
+
+  if(target.value){
+    retrayCardPassword.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+// =================================================
+  // 생년월일 입력박스 클릭 시 이벤트
+  BirthdayBox.addEventListener("click", (e) => {
+    BirthdayBox.style.borderColor = "#00c4c4";
+  })
+
+  const BirthdayBox1 = document.querySelector("#Birthday-result")
+  // 생년월일 입력박스 마우스 떼었을때 시 이벤트
+  BirthdayBox.addEventListener("mouseout", (e) => {
+    BirthdayBox.style.borderColor = "#f66";
+    const target = e.target;
+  if(!target.value){
+    BirthdayBox1.innerText = "입력해주세요";
+    BirthdayBox1.style.color = "#f66";
+    BirthdayBox1.style.lineHeight = "20px";
+    BirthdayBox1.style.fontSize = "12px";
+    BirthdayBox1.style.fontWeight = "400";
+    target.focus();
+    return;
+  }
+  })
+
+  // 생년월일 textbox안에 값 존재 시,
+  BirthdayBox.addEventListener("keyup", (e) => {
+  const target = e.target;
+
+  if(target.value){
+    BirthdayBox1.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+// ==========================================
+// 다음 버튼 클릭 이벤트
+const nextButton = document.querySelector("#papge-container > div > div > div > div > div.SimplePayCardInfoForm_contents_2G87A > div.SimplePayCardInfoForm_buttonWrapper_M5Frv");
+const link = "cardadd2.html";
+
+nextButton.addEventListener("click", (e) => {
+  location.href = link;
+})
+
+// x버튼 클릭 시 이벤트
+const xButton = document.querySelector("#papge-container > div > div > div > div > div.SimplePayInfoFormNavBar_contents_MU7AO > button");
+const link2 = "cardaddCancel.html";
+
+xButton.addEventListener("click", (e) => {
+  location.href = link2;
+})
+
+</script>
 </html>

@@ -26,7 +26,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
-  <link rel="stylesheet" href="cardaddCancel.css">
+  <link rel="stylesheet" href="cardadddel.css">
   <link rel="stylesheet" href="mypagemobile.css">
   <link rel="mask-icon" href="/resources/static/svg/wa.svg" color="#1d2129">
 </head>
@@ -40,11 +40,11 @@
         <div class="DialogModal_dialogContent_F81a7 DialogModal_dialogContentAfterOpen_3iQTA" tabindex="-1" role="dialog" aria-modal="true">
           <div class="BasicDialog_modalWrap_3bCH_">
             <div class="BasicDialog_modalWrapBox_2sdut">
-              <!-- 결제 정보 등록 취소 layer -->
+              <!-- 결제 정보 등록 삭제 layer -->
               <div class="BasicDialog_dialogBox_2Mi92">
-                <div class="BasicDialog_dialogTitle_MXCow">결제 정보 등록을 취소하겠습니까?</div>
+                <div class="BasicDialog_dialogTitle_MXCow">결제 정보 등록을 삭제하겠습니까?</div>
                 <div class="BasicDialog_dialogMessage_12xfB">
-                  <p>간편결제를 이용하려면 다시 처음부터 결제 정보를 등록해야 합니다.</p>
+                  <p>삭제 후에는 다시 처음부터 결제 정보를 등록해야 합니다.</p>
                 </div>
                 <div class="BasicDialog_dialogButtonArea_3hd7n BasicDialog_reverse_3eMW_">
                   <button class="Button_button_2FuOU Button_primary_2mZni Button_contained_2SIAT Button_lg_1Dftp BasicDialog_dialogButton_17YDz" type="button">
@@ -81,7 +81,7 @@
 
    // 취소 버튼 클릭 이벤트
  const cancelButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button:nth-child(2)");
- const link = history.back;
+ const link = "cardaddlist.html";
  
  cancelButton.addEventListener("click", (e) => {
    location.href = link;

@@ -326,6 +326,9 @@ input, textarea {
 .MyParkingMateListItem_3dBPk dt .MyParkingMateListItem_category_1YTdA{
   padding-right: 6px;
   color: #868e96;
+  position: relative;
+  right: -19px;
+  top: 8px;
 }
 
 address, cite, dfn, em, var {
@@ -337,6 +340,7 @@ address, cite, dfn, em, var {
   position: absolute;
   right: 20px;
   color: #868e96;
+  top: 141px;
 }
 
 .MyParkingMateListItem_3dBPk dd{

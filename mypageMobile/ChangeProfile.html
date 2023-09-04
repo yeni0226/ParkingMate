@@ -26,72 +26,217 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
-  <link rel="stylesheet" href="cardaddCancel.css">
+  <link rel="stylesheet" href="ChangeProfile.css">
   <link rel="stylesheet" href="mypagemobile.css">
   <link rel="mask-icon" href="/resources/static/svg/wa.svg" color="#1d2129">
 </head>
-<body class="Moeal_Body--open modalOpen" aria-hidden="true">
-  <div data-react-modal-body-trap="" tabindex="0" style="position: absolute; opacity: 0;"></div>
-  <!-- 상단바를 제외한 메인 layer -->
-  <div class="ModalPortal">
-    <div data-react-modal-body-trap="" tabindex="0" style="position: absolute; opacity: 0;"></div>
-    <div class="DialogModal_dialogPortal_tWJEr">
-      <div class="DialogModal_dialogOverlay_1IIAi DialogModal_basic_LYr1j DialogModal_dialogOverlayAfterOpen_1ul6O">
-        <div class="DialogModal_dialogContent_F81a7 DialogModal_dialogContentAfterOpen_3iQTA" tabindex="-1" role="dialog" aria-modal="true">
-          <div class="BasicDialog_modalWrap_3bCH_">
-            <div class="BasicDialog_modalWrapBox_2sdut">
-              <!-- 결제 정보 등록 취소 layer -->
-              <div class="BasicDialog_dialogBox_2Mi92">
-                <div class="BasicDialog_dialogTitle_MXCow">결제 정보 등록을 취소하겠습니까?</div>
-                <div class="BasicDialog_dialogMessage_12xfB">
-                  <p>간편결제를 이용하려면 다시 처음부터 결제 정보를 등록해야 합니다.</p>
-                </div>
-                <div class="BasicDialog_dialogButtonArea_3hd7n BasicDialog_reverse_3eMW_">
-                  <button class="Button_button_2FuOU Button_primary_2mZni Button_contained_2SIAT Button_lg_1Dftp BasicDialog_dialogButton_17YDz" type="button">
-                    <span>
-                      <span class="Button_children_ilFun">확인</span>
-                    </span>
-                  </button>
-                  <button class="Button_button_2FuOU BasicDialog_dialogButton_17YDz" type="button">
-                    <span><span class="Button_children_ilFun">취소</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-            <button type="button" class="BasicDialog_modalClose_1o3rb" title="닫기">
-              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
-                <path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z"></path>
+<body>
+  <div id="fb-root" class="fb_rest">
+    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+      <div></div>
+    </div>
+  </div>
+ <!-- 전체적인 페이지 틀 -->
+  <div id="papge-container">
+    <main id="main-app">
+      <!-- 상단 바 -->
+      <div class="web-header">
+        <div class="web-header-mobile">
+          <header class="header-wrapper">
+            <div class="header-container" style="display: flex;">
+            <!-- 뒤로가기 아이콘 -->
+            <button class="HeaderMobile_button_3V4yt HeaderMobile_back_mSo62">
+              <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon_3VTbq Button_icon_2Lds2" aria-hidden="true" style="width: 24px; height: 24px;">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path>
               </svg>
             </button>
+            <button class="HeaderMobile_button_3V4yt HeaderMobile_home_1oUFL">
+              <!-- 홈으로 돌아가는 버튼 및 링크 -->
+              <a class href="">
+                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq Button_icon_2Lds2" aria-hidden="true" style="width: 24px; height: 24px;">
+                  <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
+                  <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
+                  <path fill="none" d="M0 0h40v40H0z"></path>
+                </svg>
+              </a>
+            </button>
+            <!-- 프로파일 이미지 변경 상단 바 -->
+            <div class="TitleField_container_KPCmF">
+              <p class="TitleField_title_3MvYO">Profile 이미지 변경</p>
+            </div>
+            <div class="PreviewOverlay_container_W6b-E">
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true" style="width: 24px; height: 24px;">
+                <path fill="none" d="M0 0h40v40H0z"></path>
+                <path d="M29.12 2.23H10.88a1 1 0 0 0-1 1v33.88a1 1 0 0 0 1 1h18.24a1 1 0 0 0 1-1V3.28a1 1 0 0 0-1-1.05zm-7.3 30.61A1.82 1.82 0 1 1 20 31a1.83 1.83 0 0 1 1.82 1.84zm6.26 3.23H11.92V4.32h16.16z"></path>
+                <path d="M18.18 6.89h3.65v2.08h-3.65z"></path>
+              </svg>
+              <p class="PreviewOverlay_title_1p_pc">미리보기 모드</p>
+              <p class="PreviewOverlay_description_3Cqx5">저장한 내용을 미리볼 수 있어요</p>
+            </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </main>
+    <!-- 상단바를 제외한 메인 layer -->
+    <div class="MainWrapper_content_GZkTa">
+      <div class="MyRewardContainer_container_2qXDp">
+        <h2 class="MyRewardContainer_title_2TKbO">Profile 이미지 변경</h2>
+        <!-- 이미지 미리보기 layer -->
+        <div class="MyRewardContainer_column_1d06O">
+          <div class="SimplePayInfo_simplePayInfo_ejCel" id="registCardInfo">
+            <h3 class="SimplePayInfo_title_1a9F1">Profile 이미지 미리보기</h3>
+            <!-- 이미지 미리보기 및 이미지 등록 layer -->
+            <div class="SimplePayCard_simplecard_2wYo7 SimplePayCard_info_3rLl3 SimplePayCard_noInfo_pdX40">
+              <div class="SimplePayCard_unregisted_2uiqp">
+                <div class="SimplePayCard_addCard_2eagF">
+                  <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq SimplePayCard_addIcon_2DOov" aria-hidden="true">
+                    <path d="M30.4 15.2H16.8V1.6h-1.6v13.6H1.6v1.6h13.6v13.6h1.6V16.8h13.6v-1.6z"></path>
+                  </svg>
+                  <span class="SimplePayCard_title_PpPWZ">이미지 등록</span>
+                  <span class="SimplePayCard_description_IFa0t">변경할 Profile 이미지를 등록하세요</span>
+                </div>
+                <div class="SimplePayCard_notice_3PRPU">
+                  <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq withIcon_inline_1lwwX" aria-hidden="true">
+                    <path fill="none" d="M0 0h40v40H0z"></path>
+                    <path d="M20 39a19 19 0 1 1 19-19 19.06 19.06 0 0 1-19 19zm0-36a17 17 0 1 0 17 17A17 17 0 0 0 20 3z"></path>
+                    <path d="M20 26a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 1 0 0-3.6zm-1.04-15.83h2.08v13h-2.08z"></path>
+                  </svg>
+                  <em>ParkingMate에서 카드번호를 저장하지 않습니다!</em>
+                  <p>카드사에서 제공하는 암호화된 정보만을 저장하기 때문에 안심하셔도 됩니다.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
+  <!-- 하단 메뉴바 -->
+  <ul class="ParkingMateMobile_container_1OTMW">
+    <!-- 하단 메뉴 첫번째 -->
+    <li class="ParkingMateMobile_item_1b4ZL">
+      <a class="ParkingMateMobile_link_t1Y9t" href="" >
+        <!-- 하단 메뉴 첫번째 아이콘 -->
+        <span class="MyParkingMateMenu_icon_Home_pwW81" aria-hidden="true">
+          <i class="MyParkingMateSupporterProjectHome_icon_32Rsj" aria-hidden="true"></i>
+        </span>
+        <span class="ParkingMateMobile_text_2-voS">홈</span>
+      </a>
+    </li>
+    <!-- 하단 메뉴 두번째 -->
+    <li class="ParkingMateMobile_item_1b4ZL">
+      <a class="ParkingMateMobile_link_t1Y9t" href="" >
+        <span class="MyParkingMateMenu_icon_registor_pwW81" aria-hidden="true">
+          <i class="MyParkingMateSupporterProjectregistor_icon_32Rsj" aria-hidden="true"></i>
+        </span>
+        <span class="ParkingMateMobile_text_2-voS">예약하기</span>
+      </a>
+    </li>
+    <!-- 하단 메뉴 세번째 -->
+    <li class="ParkingMateMobile_item_1b4ZL">
+      <a class="ParkingMateMobile_link_t1Y9t" href="" >
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icjRzeW8za3R4YSIgZD0iTTAgMGg0MHY0MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9Im1kajRrdnh3amIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcjRzeW8za3R4YSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCAwQzguOTU0IDAgMCA4Ljk1NSAwIDIwYzAgMTEuMDQ2IDguOTU0IDIwIDIwIDIwczIwLTguOTU0IDIwLTIwQzQwIDguOTU1IDMxLjA0NiAwIDIwIDBtMCAxYzEwLjQ3NyAwIDE5IDguNTIzIDE5IDE5cy04LjUyMyAxOS0xOSAxOVMxIDMwLjQ3NyAxIDIwIDkuNTIzIDEgMjAgMSIgZmlsbD0iIzg2OEU5NiIgbWFzaz0idXJsKCNtZGo0a3Z4d2piKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBzdHJva2U9IiM4NjhFOTYiIGQ9Ik0yMCAxMXYxOE0yOSAyMEgxMSIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">
+      </a>
+    </li>
+    <!-- 하단 메뉴 네번째 -->
+    <li class="ParkingMateMobile_item_1b4ZL">
+      <a class="ParkingMateMobile_link_t1Y9t" href="" >
+        <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq ParkingMateMobile_icon_3OOAF" aria-hidden="true" style="width: 24px; height: 24px;">
+          <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z"></path>
+        </svg>
+        <span class="ParkingMateMobile_text_2-voS">이벤트</span>
+      </a>
+    </li>
+
+    <!-- 하단 메뉴 다섯번째 -->
+    <li class="ParkingMateMobile_item_1b4ZL">
+      <a class="ParkingMateMobile_link_t1Y9t ParkingMateMobile_active_3WNf8" href="#" >
+        <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq ParkingMateMobile_icon_3OOAF ParkingMateMobile_active_3WNf8" aria-hidden="true" style="width: 24px; height: 24px;">
+          <path d="M20.27 3.46a9.42 9.42 0 1 0 0 18.84 9.42 9.42 0 1 0 0-18.84zm0 22.13c-6.52 0-15.19 1.09-15.19 10.57h30.38c0-9.48-8.67-10.57-15.19-10.57z"></path>
+          <path fill="none" d="M0 0h40v40H0z"></path>
+        </svg>
+        <span class="ParkingMateMobile_text_2-voS">마이페이지</span>
+      </a>
+    </li>
+  </ul>
 </body>
 <script>
-  // 확인 버튼 클릭 이벤트
- const okButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT.Button_lg_1Dftp.BasicDialog_dialogButton_17YDz");
- const oklink = "cardlist.html";
- 
- okButton.addEventListener("click", (e) => {
-   location.href = oklink;
- })
+  // 크롬에서 실행안됨... 
+  const input = document.querySelector('#registCardInfo > div > div');
+  const preview = document.querySelector('.preview');
 
-   // 취소 버튼 클릭 이벤트
- const cancelButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > div > div.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ > button:nth-child(2)");
- const link = history.back;
- 
- cancelButton.addEventListener("click", (e) => {
-   location.href = link;
- })
- 
- // x버튼 클릭 시 이벤트
- const xButton = document.querySelector("body > div.ModalPortal > div.DialogModal_dialogPortal_tWJEr > div > div > div > div > button");
- 
- xButton.addEventListener("click", (e) => {
-   location.href = link;
- })
- </script>
+  input.addEventListener('change', showTextFile);
+
+  function showTextFile() {
+    const selectedFiles = input.files;
+    const list = document.createElement('ul');
+    preview.appendChild(list);
+    
+    for(const file of selectedFiles) {
+      const listItem = document.createElement('li');
+
+      if(validFileType(file)) {
+        const summary = document.createElement('div');
+        summary.textContent = `파일명 : ${file.name}, 파일 크기 : ${returnFileSize(file.size)}.`;
+        const textContents = document.createElement('div');
+        
+        let reader = new FileReader();
+        reader.onload = function () {
+          textContents.innerText = reader.result;
+        };
+        reader.readAsText(file, "UTF-8");
+        
+        listItem.appendChild(summary);
+        listItem.appendChild(textContents);
+      } else {
+        const message = document.createElement('div');
+        message.textContent = `파일명 ${file.name}: .txt 파일을 선택하세요`;
+        listItem.appendChild(message);
+      }
+
+      list.appendChild(listItem);
+    }
+  }
+
+  const fileTypes = [
+    'text/plain',
+  ];
+
+  function validFileType(file) {
+    return fileTypes.includes(file.type);
+  }
+
+  function returnFileSize(number) {
+    if(number < 1024) {
+      return number + 'bytes';
+    } else if(number > 1024 && number < 1048576) {
+      return (number/1024).toFixed(1) + 'KB';
+    } else if(number > 1048576) {
+      return (number/1048576).toFixed(1) + 'MB';
+    }
+  }
+  // 이미지 등록 버튼 클릭 이벤트
+  const addCard = document.querySelector("#registCardInfo > div");
+
+  addCard.addEventListener("click", (e) => {
+    showTextFile();
+  })
+
+  // 뒤로가기 버튼 클릭 시
+  const backbutton = document.querySelector("#main-app > div > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link2 = 'mypageMobile.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+</script>
 </html>
