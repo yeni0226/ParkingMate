@@ -14,24 +14,17 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.c30dc2b4.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.3570589c.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.c547264a.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.7d02bad7.css">
   <link rel="stylesheet" href="usersettingMobile.css">
   <link rel="stylesheet" href="mypagemobile.css">
   <link rel="stylesheet" href="addParking.css">
@@ -149,7 +142,7 @@
           <div class="input-btn-wrap">
             <div class="input">
               <!-- 아이디 입력 -->
-              <input type="text" id="userName" name="userName" class="disable input-text" placeholder="계정을 입력하세요" value="" disabled="">
+              <input type="text" id="userName" name="userName" class="disable input-text" placeholder="계정을 입력하세요" value="">
               <p id="id-result"></p>
             </div>
             <div id="idChangeBtn" class="idAuthBtn btn" data-status="check">
@@ -234,7 +227,7 @@
                   </div>
                 </div>
                 <!-- select bar list -->
-                <div class="select-menu_menu css-9g7j0m-menu">
+                <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                   <div class="select-menu_menu-list css-11unzgr">
                     <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
                     <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">강남구</div>
@@ -267,13 +260,41 @@
                     </div>
                   </div>
                 </div>
-                <!-- select bar list -->
-                <div class="select-menu_menu css-9g7j0m-menu">
-                  <div class="select-menu_menu-list css-11unzgr">
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">역삼</div>
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-2" tabindex="-1">선릉</div>
-                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-3" tabindex="-1">삼성</div>
+                <!-- select bar list 강남구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Gangnam" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Gangnam">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-1" tabindex="-1">역삼동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-2" tabindex="-1">대치동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-3" tabindex="-1">논현동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-4" tabindex="-1">삼성동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-5" tabindex="-1">신사동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-6" tabindex="-1">청담동</div>
+                  </div>
+                </div>
+                <!-- select bar list 서초구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Seocho" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Seocho">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-1" tabindex="-1">서초동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-2" tabindex="-1">잠원동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-3" tabindex="-1">반포동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-4" tabindex="-1">방배동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-5" tabindex="-1">양재동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-6" tabindex="-1">내곡동</div>
+                  </div>
+                </div>
+
+                <!-- select bar list 송파구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Songpa" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Songpa">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-1" tabindex="-1">잠실동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-2" tabindex="-1">석촌동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-3" tabindex="-1">가락동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-4" tabindex="-1">문정동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-5" tabindex="-1">송파동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-6" tabindex="-1">방이동</div>
                   </div>
                 </div>
               </div>
@@ -312,7 +333,7 @@
                 </div>
               </div>
               <!-- select bar list -->
-              <div class="select-menu_menu css-9g7j0m-menu">
+              <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                 <div class="select-menu_menu-list css-11unzgr">
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">1시간</div>
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-2" tabindex="-1">2시간</div>
@@ -354,7 +375,7 @@
                 </div>
               </div>
               <!-- select bar list -->
-              <div class="select-menu_menu css-9g7j0m-menu">
+              <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                 <div class="select-menu_menu-list css-11unzgr">
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">00분</div>
                   <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">30분</div>
@@ -414,7 +435,7 @@ parkingNamebox.addEventListener("click", (e) => {
   const target = e.target;
   parkingResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkingNamebox.style.borderColor = "#00c4c4";
     parkingResult.innerText = "주차장이름은 필수 입니다!!";
     parkingResult.style.color = "red";
     target.focus();
@@ -422,12 +443,26 @@ parkingNamebox.addEventListener("click", (e) => {
   }
 })
 
-// 주차장 textbox안에 값 존재 시,
+// 주차장 등록 입력박스 마우스 떼었을때 시 이벤트
+parkingNamebox.addEventListener("mouseout", (e) => {
+  parkingNamebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingNamebox.style.borderColor = "#e4e4e4";
+    target.focus();
+
+    }
+  })
+
+// 주차장 이름 textbox안에 값 존재 시,
 parkingNamebox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkingResult.innerText = e.target.value;
 
   if(target.value){
+    parkingNamebox.style.borderColor = "#e4e4e4";
     parkingResult.style.display = 'none';
     target.focus();
 
@@ -436,14 +471,14 @@ parkingNamebox.addEventListener("keyup", (e) => {
 
 
 // 주차장 위치 클릭 이벤트
-const parkinglocationNamebox = document.querySelector("#saveForm > div:nth-child(15)");
+const parkinglocationNamebox = document.querySelector("#saveForm > div:nth-child(15) > input.input-text-other");
 const parkinglocationNameResult = document.querySelector("#parkinglocationName-result");
 
 parkinglocationNamebox.addEventListener("click", (e) => {
   const target = e.target;
   parkinglocationNameResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkinglocationNamebox.style.borderColor = "#00c4c4";
     parkinglocationNameResult.innerText = "주차장 위치 입력은 필수 입니다!!";
     parkinglocationNameResult.style.color = "red";
     target.focus();
@@ -451,12 +486,25 @@ parkinglocationNamebox.addEventListener("click", (e) => {
   }
 })
 
+// 주차장 위치 입력박스 마우스 떼었을때 시 이벤트
+parkinglocationNamebox.addEventListener("mouseout", (e) => {
+  parkinglocationNamebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkinglocationNamebox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
 // 주차장 위치 textbox안에 값 존재 시,
 parkinglocationNamebox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkinglocationNameResult.innerText = e.target.value;
 
   if(target.value){
+    parkinglocationNamebox.style.borderColor = "#e4e4e4";
     parkinglocationNameResult.style.display = 'none';
     target.focus();
 
@@ -465,14 +513,14 @@ parkinglocationNamebox.addEventListener("keyup", (e) => {
 
 
 // 주차장 대여 금액 입력 클릭 시
-const parkingPricebox = document.querySelector("#saveForm > div:nth-child(17)");
+const parkingPricebox = document.querySelector("#saveForm > div:nth-child(17) > input:nth-child(1)");
 const parkingPriceResult = document.querySelector("#parkingPriceName-result");
 
 parkingPricebox.addEventListener("click", (e) => {
   const target = e.target;
   parkingPriceResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkingPricebox.style.borderColor = "#00c4c4";
     parkingPriceResult.innerText = "주차장 대여금액 입력은 필수 입니다!!";
     parkingPriceResult.style.color = "red";
     target.focus();
@@ -480,12 +528,25 @@ parkingPricebox.addEventListener("click", (e) => {
   }
 })
 
+// 주차장 대여금액 입력박스 마우스 떼었을때 시 이벤트
+parkingPricebox.addEventListener("mouseout", (e) => {
+  parkingPricebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingPricebox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
 // 주차장 대여금액 textbox안에 값 존재 시,
 parkingPricebox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkingPriceResult.innerText = e.target.value;
 
   if(target.value){
+    parkingPricebox.style.borderColor = "#e4e4e4";
     parkingPriceResult.style.display = 'none';
     target.focus();
 
@@ -493,14 +554,14 @@ parkingPricebox.addEventListener("keyup", (e) => {
 })
 
 // 주차장 부가 시설 입력 클릭 시
-const parkingOtherbox = document.querySelector("#saveForm > div:nth-child(18)");
+const parkingOtherbox = document.querySelector("#saveForm > div:nth-child(18) > input:nth-child(1)");
 const parkingOtherResult = document.querySelector("#parkingOtherName-result");
 
 parkingOtherbox.addEventListener("click", (e) => {
   const target = e.target;
   parkingOtherResult.innerText = e.target.value;
   if(!target.value){
-    console.log(target);
+    parkingOtherbox.style.borderColor = "#00c4c4";
     parkingOtherResult.innerText = "주차장 부가시설 정보를 입력해주세요!!";
     parkingOtherResult.style.color = "red";
     target.focus();
@@ -508,12 +569,25 @@ parkingOtherbox.addEventListener("click", (e) => {
   }
 })
 
+// 주차장 부가 시설 입력박스 마우스 떼었을때 시 이벤트
+parkingOtherbox.addEventListener("mouseout", (e) => {
+  parkingOtherbox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingOtherbox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
 // 주차장 부가 시설 textbox안에 값 존재 시,
 parkingOtherbox.addEventListener("keyup", (e) => {
   const target = e.target;
   parkingOtherResult.innerText = e.target.value;
 
   if(target.value){
+    parkingOtherbox.style.borderColor = "#e4e4e4";
     parkingOtherResult.style.display = 'none';
     target.focus();
 
@@ -605,5 +679,99 @@ minlistbox.addEventListener("click", function(){
 
   location.replace(link);
   })
+
+  //  셀렉트박스(구) 선택 시 선택창에 나타내기
+  const choseselectval = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+  // 선택 글자가 있는 selectbox(구)
+  const selectboxchose = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  // 강남구 셀렉트 박스(동)
+  const selectboxGangnam = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Gangnam");
+  // 서초구 셀렉트 박스(동)
+  const selectboxtSeocho = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Seocho");
+  // 송파구 셀렉트 박스(동)
+  const selectboxSongpa = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Songpa");
+  // 선택 글자가 있는 selectbox(동)
+  const selectboxchosegu = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  
+  //  셀렉트박스(동) 선택 시 선택창에 나타내기
+
+  // (구) 셀렉트 박스 선택 시, 그에 맞는 (동) 셀렉트 박스 활성화
+  choseselectval.addEventListener("click", (e) =>{
+    const targetText = e.target.innerText;
+    // 선택 박스 초기화 진행
+    selectboxchosegu.innerText = "선택";
+
+    if(targetText == '강남구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxGangnam.style.display = 'block'; //강남구 셀렉트 박스 활성화
+      // 강남구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxGangnam.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+      
+    }else if(targetText == '서초구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxtSeocho.style.display = 'block'; //서초구 셀렉트 박스 활성화
+
+      // 서초구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxtSeocho.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+
+    }else if(targetText == '송파구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxSongpa.style.display = 'block'; //서초구 셀렉트 박스 활성화
+
+      // 송파구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxSongpa.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+    }
+  })
+
+  // 시간 선택 시 이벤트
+  // 시간 셀렉트 박스 선택 글자
+  const hourSelectBoxChose = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  // 분 셀렉트 박스 선택 글자
+  const minSelectBoxChose = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  
+  hourchoselist.addEventListener("click", (e) => {
+    const hourTargeText = e.target.innerText;
+
+    // 선택 박스 초기화 진행
+    minSelectBoxChose.innerText = "선택";
+
+    hourSelectBoxChose.innerText = hourTargeText;
+    hourchoselist.style.display = 'none';
+    minchoselist.style.display = 'block';
+    // 분 선택 이벤트
+    minchoselist.addEventListener("click", (e1) => {
+      const minTargetText = e1.target.innerText;
+
+      minSelectBoxChose.innerText = minTargetText;
+      minchoselist.style.display = 'none';
+    })
+
+  })
+
 </script>
 </html>

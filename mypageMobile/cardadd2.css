@@ -730,6 +730,8 @@ button:not(:disabled) {
   height: 12px;
 }
 
+/* 가상 키보드 누르기 전 모습 */
+
 .SimplePayInfoPasswordForm_masking_p6-AH::after {
   display: block;
   margin-top: 4px;
@@ -782,4 +784,47 @@ button:not(:disabled) {
 
 iframe, img, video {
   vertical-align: top;
+}
+/* 아래는 가상 키보드 눌렀을 때 이벤트 */
+
+.SimplePayInfoPasswordForm_input_3CHwF span:nth-child(1)::after{
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: #00c4c4;
+  height: 12px;
+}
+
+.SimplePayInfoPasswordForm_input_3CHwF span:nth-child(2)::after{
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: #00c4c4;
+  height: 12px;
+}
+
+.SimplePayInfoPasswordForm_input_3CHwF span:nth-child(3)::after{
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: #00c4c4;
+  height: 12px;
+}
+
+.SimplePayInfoPasswordForm_input_3CHwF span:nth-child(4)::after{
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: #00c4c4;
+  height: 12px;
+}
+
+.SimplePayInfoPasswordForm_input_3CHwF span:nth-child(5)::after{
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: #00c4c4;
+  height: 12px;
+}
+
+.SimplePayInfoPasswordForm_input_3CHwF span:nth-child(6)::after{
+  margin-top: 0;
+  border-radius: 50%;
+  background-color: #00c4c4;
+  height: 12px;
 }

@@ -17,6 +17,21 @@
   <!-- 하단 스타일CSS -->
   <link rel="stylesheet" href="../css/footer.css">
 
+  <!-- 로고 -->
+  <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+  <!-- 즐겨찾기 기능 JS -->
+  <script src="../js/bookmark.js"></script>
+
+  <!-- 슬라이드 배너 JS -->
+  <script src="../js/slideBenu.js"></script>
+
+  <!-- 스토리 만족도 문의 정책 JS -->
+  <script src="../js/view-info-content.js"></script>
+  
+  <!-- 스토어 베스트 프로젝트 JS -->
+  <script src="../js/view-container.js"></script>
+
 </head>
 <body>
   <!-- 바디 전체박스 -->
@@ -88,19 +103,31 @@
         <!-- 이미지 전체박스-->
         <div class="img-bx">
 
+          <!-- 왼쪽 슬라이드 버튼 -->
+          <button type="button" class="slide-btn lbtn"></button>
+          
+          <!-- 오른쪽 슬라이드 버튼 -->
+          <button type="button" class="slide-btn rbtn"></button>
+
           <!-- 슬라이드 박스 -->
-          <div class="slide-bx">
+          <ul class="slide-bx">
 
             <!-- 이미지1 -->
-            <div class="slide-img-1"></div>
+            <li class="">
+              <img src="../images/picture1.png" alt="">
+            </li>
 
             <!-- 이미지2 -->
-            <div class="slide-img-2"></div>
+            <li class="">
+              <img src="../images/picture2.png" alt="">
+            </li>
 
             <!-- 이미지3 -->
-            <div class="slide-img-3"></div>
+            <li class="">
+              <img src="../images/picture3.png" alt="">
+            </li>
             
-          </div>
+          </ul>
 
         </div>
 
@@ -480,19 +507,19 @@
               <!-- 스토리, 만족도, 문의 정책 박스 -->
               <nav class="client-bx">
 
-                <ul>
+                <ul class="info-box">
 
                   <!-- 스토리 -->
                   <li>
                     <a href="" class="active">
-                      <span class="allocation">스토리</span>
+                      <span class="allocation info-content">스토리</span>
                     </a>
                   </li>
 
                   <!-- 만족도 -->
                   <li>
                     <a href="" class="active">
-                      <span>
+                      <span class="info-content">
                         
                         만족도
                         
@@ -505,7 +532,7 @@
                   <!-- 문의 정책 -->
                   <li>
                     <a href="" class="active">
-                      <span>문의・정책</span>
+                      <span class="info-content">문의・정책</span>
                     </a>
                   </li>
 
@@ -851,7 +878,7 @@
 
               <span>
                 <div>
-                  <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z"></path></svg>
+                  <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 24px; height: 24px;"><path id="favorite-path" d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z"></path></svg>
                   <span class="favorite-number">7,391</span>
                 </div>
               </span>

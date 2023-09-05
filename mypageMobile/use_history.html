@@ -14,21 +14,16 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.c30dc2b4.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.3570589c.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
   <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
   <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
-  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
   <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
   <link rel="stylesheet" href="cardlist.css">
   <link rel="stylesheet" href="mypagemobile.css">
@@ -109,7 +104,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="select-menu_menu css-9g7j0m-menu">
+                  <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
                     <!-- selectbox list -->
                     <div class="select-menu_menu-list css-11unzgr">
                       <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
@@ -136,7 +131,7 @@
               <ul class="MyParkingMateUseList_1v-gA">
                 <li class="MyParkingMateUseList_ListItem_1H9_W">
                   <!-- 링크 이동 -->
-                  <a href="">
+                  <a >
                     <dl class="MyParkingMateListItem_3dBPk">
                       <!-- 내용의 상단 -->
                       <dt>
@@ -227,4 +222,57 @@
     </li>
   </ul>
 </body>
+<script>
+  // 리스트박스 클릭 시 이벤트
+// 전체 부분
+const listboxChose = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.select-menu-hidden-input-box");
+// 리스트박스 부분
+const showlist = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+// 리스트 박스 화살표
+const listarrow1 = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_indicators.css-1wy0on6");
+listboxChose.addEventListener("click", function(){
+
+  if(showlist.style.display == 'none'){
+    showlist.style.display = 'block';
+    listarrow1.style.transform = "rotate(180deg)";
+  }else{
+    showlist.style.display = 'none';
+    listarrow1.style.transform = "rotate(0deg)";
+    // transform: rotate(180deg);
+  }
+})
+
+// 이용내역 dt 클릭 시 이벤트
+const use_historyToDetail = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div:nth-child(2) > ul > li > a > dl > dd");
+const link = 'use_history_detail.html'
+use_historyToDetail.addEventListener("click", (e) => {
+  location.href = link;
+})
+
+// 뒤로가기 버튼 클릭 시
+const backbutton = document.querySelector("#main-app > div > div > header > div > button.HeaderMobile_button_3V4yt.HeaderMobile_back_mSo62");
+  const link2 = 'mypageMobile.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("body > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link2);
+  })
+
+  // 선택 박스 클릭 시 선택박스에 선택된 값 나타내기
+  // 전체 text 값
+  const selectBoxVal = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > section > div > div.MyParkingMateUseLsitContainer_topArea_3S18O > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value-container--has-value.css-1hwfws3 > div");
+  showlist.addEventListener("click", (e) => {
+    const targetText = e.target.innerText;
+
+    selectBoxVal.innerText = targetText;
+    showlist.style.display = 'none';
+  })
+</script>
 </html>
