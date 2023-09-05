@@ -1056,13 +1056,13 @@ button {
 }
 
 .modal-container{
-  display:none;
+  height: 0%;
 }
 
 .modal-overlay{
   display: inline-flex;
   position: fixed;
-  top: 0;
+  top: 100%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1071,13 +1071,14 @@ button {
   z-index: 99999;
   background-color: rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  height: 0%;
 }
 
 .modal-close{
   position: absolute;
   width: 100%;
-  height: 200px;
-  top:0;
+  height: 0%;
+  top:100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -1097,6 +1098,7 @@ button {
   max-height: 90%;
   overflow: visible;
   padding: 16px 0;
+  top:100%;
 }
 
 .confirmModal-header{
@@ -1170,7 +1172,7 @@ button {
   align-items: center;
   transition: box-shadow .2s,background-color .3s;
   border-radius: 3px;
-  box-shadow: 0 16px 16px -1px rgba(10,22,70,.1), 0 0 5px rgba(10,22,70,.06);
+  /* box-shadow: 0 16px 16px -1px rgba(10,22,70,.1), 0 0 5px rgba(10,22,70,.06); */
   cursor: pointer;
   padding: 14px 16px;
 }
@@ -1216,6 +1218,11 @@ button {
   font-size: 20px;
 }
 
+.checked{
+  border: solid 1px #00b2b2;
+  background-color: #00c4c4;
+}
+
 .withIcon_icon{
   display: block;
   transform: scale(1);
@@ -1242,9 +1249,9 @@ button {
   opacity: 0;
 }
 
-.Checkbox_checkIcon{
+/* .Checkbox_checkIcon{
   opacity: 0;
-}
+} */
 
 .Checkbox_content{
   display: inline-block;
