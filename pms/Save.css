@@ -1,0 +1,660 @@
+:root{
+  --scrollbar-width: 0;
+}
+
+a, body, button, dd, div, dl, dt,
+em, footer, form, h1, h2, h3, h4,
+h5, h6, header, html, i, iframe,
+img, input, label, li, p, section,
+select, span, strong, table, ul {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body, button, html, input, textarea {
+  font-family: Pretendard Variable,pretendard,-apple-system,blinkmacsystemfont,system-ui,roboto,Helvetica Neue,Segoe UI,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,sans-serif;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+body>#root, #page-container {
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+main, section, article {
+  display: block;
+}
+
+.web-header .web-header-mobile {
+  display: block;
+  position: relative;
+}
+
+.web-header .header-wrapper {
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+.web-header .header-wrapper .header-container {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+.ParkingMateMobile_container_1OTMW {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  transform: translateY(0);
+  transition: transform .25s;
+  z-index: 100;
+  margin-left: 0;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.15);
+  background-color: #fff;
+  padding: 0 0 8px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+  list-style: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ParkingMateMobile_item_1b4ZL {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.ParkingMateMobile_link_t1Y9t{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  max-width: 72px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a, input, optgroup, select, textarea {
+  color: inherit;
+}
+
+a, button {
+  outline: none;
+  color: inherit;
+}
+
+.MyParkingMateMenu_icon_Home_pwW81 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  max-width: 72px;
+  margin: 0 auto;
+}
+
+.MyParkingMateMenu_icon_Home_pwW81 .MyParkingMateSupporterProjectHome_icon_32Rsj{
+  display: inline-block;
+  margin-right: 0px;
+  background: url("/mypageMobile/logo.svg") no-repeat center/26px 26px;
+  width: 21px;
+  height: 16px;
+  color: #868e96;
+  fill: gray;
+}
+
+.MyParkingMateMenu_icon_registor_pwW81 .MyParkingMateSupporterProjectregistor_icon_32Rsj{
+  display: inline-block;
+  margin-right: 0px;
+  background: url("/mypageMobile/freebooking.svg") no-repeat center/24px 24px;
+  width: 21px;
+  height: 26px;
+  color: #868e96;
+  fill: gray;
+}
+
+.ParkingMateMobile_text_2-voS{
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  top: 33px;
+  color: #868e96;
+}
+
+.withIcon_icon_3VTbq{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+}
+
+.withIcon_icon_3VTbq.withIcon_inline_1lwwX{
+  display: inline;
+}
+
+.ParkingMateMobile_icon_3OOAF{
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #868e96;
+  font-size: 24px;
+}
+
+.ParkingMateMobile_icon_3OOAF.ParkingMate_active_3WNf8{
+  color: #212529;
+}
+
+.ParkingMateMobile_icon_3OOAF.ParkingMate_active_3WNf8+.ParkingMateMobile_text_2-voS{
+  color: #212529;
+  font-weight: 700;
+}
+
+.PreviewOverlay_container_W6b-E {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ff9d9d;
+  border-bottom: 1px solid #ff9d9d;
+  background-color: #fff1f1;
+  color: #f66;
+}
+
+.PreviewOverlay_container_W6b-E .PreviewOverlay_title_1p_pc {
+  line-height: 28px;
+  font-size: 16px;
+  margin-left: 8px;
+  font-weight: 700;
+}
+
+.PreviewOverlay_container_W6b-E .PreviewOverlay_description_3Cqx5 {
+  margin-left: 16px;
+}
+
+.MainWrapper_content_GZkTa {
+  transition: padding-top .25s;
+  padding-top: 0;
+}
+
+.Header_container_1qtDB {
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1201;
+  padding: 0 16px;
+  width: 100%;
+  height: 56px;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe, img, video {
+  vertical-align: top;
+}
+
+canvas, img, picture, video {
+  max-width: 100%;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.HeaderMobile_home_1oUFL {
+  right: 6px;
+}
+
+.HeaderMobile_button_3V4yt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 0px;
+  width: 44px;
+}
+
+button {
+  background-color: transparent;
+}
+
+.Button_icon_2Lds2 {
+  color: #495057;
+}
+
+.App_categoryFilter_W8TI0 {
+  position: sticky;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+}
+
+.CategoryFilter_container_QCU1Y {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 8px 0;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  gap: 8px;
+}
+
+.CategoryFilter_container_QCU1Y .CategoryFilter_categoryfilterList_2WMA0 {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  overflow-x: auto;
+  gap: 8px;
+}
+
+.CategoryFilter_container_QCU1Y .CategoryFilter_hideScrollbar_5kdyj {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.CategoryFilter_container_QCU1Y .CategoryFilter_categoryfilterList_2WMA0 .CategoryFilter_filterItem_1-_sW {
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+  align-items: center;
+  height: 56px;
+}
+
+.CategoryFilter_container_QCU1Y .CategoryFilter_categoryfilterList_2WMA0 .CategoryFilter_filterItem_1-_sW .CategoryFilter_button_U4yZv.CategoryFilter_current_3lUyE {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #212529;
+  background-color: #212529;
+  color: #fff;
+}
+
+.Button_button_2FuOU {
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 9px 23px;
+  vertical-align: middle;
+  text-decoration: none;
+  line-height: 1.75;
+  white-space: nowrap;
+  color: #495057;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Button_button_2FuOU span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.Button_button_2FuOU .Button_children_ilFun {
+  vertical-align: top;
+}
+
+.CategoryFilter_container_QCU1Y .CategoryFilter_categoryfilterList_2WMA0 .CategoryFilter_filterItem_1-_sW .CategoryFilter_button_U4yZv {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #f9fafb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  padding: 9px 11px;
+  color: #212529;
+}
+
+.ContentsContainer_container_32V3E {
+  background-color: #f9fafb;
+  padding: 16px 0;
+  height: 100%;
+}
+
+.WishParking_container_18waD {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 16px 8px;
+  border-bottom: 1px solid #f2f4f6;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 6px 16px;
+}
+
+.WishParking_container_18waD .WishParking_caption_tA8Mk{
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #868e96;
+}
+
+.HorizentalParking_container_1Rk50 {
+  position: relative;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_buttonWrapper_K2wmz {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.WishButton_button_1ZqbG {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  outline: none;
+  width: 44px;
+  height: 44px;
+}
+
+button {
+  background-color: transparent;
+}
+
+.WishButton_button_1ZqbG svg {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp {
+  display: flex;
+  gap: 12px;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_thumbnailContainer_10-dl {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f2f4f6;
+  flex-shrink: 0;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_thumbnailContainer_10-dl .HorizentalParking_thumbnailPlaceholder_310yP {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+}
+
+.ParkingThumbnail_visible_343f4 {
+  opacity: 1;
+}
+
+.ParkingThumbnail_thumbnail_3bDBJ {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .25s;
+  background: no-repeat 50%/cover border-box;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 10px;
+}
+
+/* 찜하기 하트버튼 */
+.WishButton_button_1ZqbG[aria-pressed=true] path {
+  fill: #f25555;
+}
+
+/* 찜하기 하트버튼 테두리 */
+.WishButton_button_1ZqbG path {
+  stroke: #f2f4f6;
+  stroke-width: 2px;
+  fill: rgba(33,37,41,.4);
+  transition: fill .25s ease-in-out;
+}
+
+.WishButton_button_1ZqbG * {
+  pointer-events: none;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  max-height: 148px;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf .HorizentalParking_detail-5ch7U {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf .HorizentalParking_detail-5ch7U .HorizentalParking_archive_2M3g8 {
+  line-height: 28px;
+  font-size: 16px;
+  color: #00c4c4;
+  font-weight: 700;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf .HorizentalParking_detail-5ch7U .HorizentalParking_title_1AhKb {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  white-space: normal;
+  color: #212529;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf .HorizentalParking_detail-5ch7U .HorizentalParking_sellerName_1jQEW {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #868e96;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf .HorizentalParking_detailBadges_1xtfF {
+  margin-top: 8px;
+}
+
+.ParkingBadge_container_3AVaM{
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.Badge_container_9G9PS.Badge_visible_3LNXv {
+  display: inline-flex;
+}
+
+.Badge_container_9G9PS {
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.Badge_container_9G9PS .Badge_badge_ovUKI.Badge_label_2Rft2.Badge_secondary_UV-TU.Badge_tertiary_3uYKh {
+  border: solid 1px #f2f4f6;
+  background-color: #f2f4f6;
+  color: #495057;
+}
+
+.Badge_container_9G9PS .Badge_badge_ovUKI.Badge_label_2Rft2.Badge_sm_1OBNp {
+  border-radius: 3px;
+  padding: 2px 4px;
+  height: 18px;
+}
+
+.Badge_container_9G9PS .Badge_badge_ovUKI.Badge_sm_1OBNp {
+  line-height: 1.4;
+  font-size: 10px;
+}
+
+.Badge_container_9G9PS .Badge_badge_ovUKI {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+#main-app .bottombar {
+  height: 44px;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_thumbnailContainer_10-dl .HorizentalParking_thumbnailPlaceholder_310yP .HorizentalParking_isFinshed_2-OJO {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0,0,0,.2);
+  width: 100%;
+  height: 100%;
+}
+
+.HorizentalParking_container_1Rk50 .HorizentalParking_card_qglkp .HorizentalParking_detailWrapper_oS4Wf .HorizentalParking_detail-5ch7U .HorizentalParking_archive_2M3g8.finsh {
+  color: #868e96;
+}
+
+/* 재신청 버튼 부분 */
+.Button_button_2FuOU.Button_sm_16X6h {
+  padding: 6px 11px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.Button_button_2FuOU.Button_primary_2mZni {
+  border-color: #00c4c4;
+  color: #00c4c4;
+}
+
+.Button_button_2FuOU.Button_block_1-g8w {
+  width: 100%;
+}
+
+.EncoreButton_container_BQdSE {
+  position: absolute;
+  top: 160px;
+}
+
+.Button_button_2FuOU .Button_children_ilFun {
+  vertical-align: top;
+}
+
+.EncoreButton_container_BQdSE .EncoreButton_hasEncoreQty_2xu3C {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.EncoreButton_container_BQdSE .EncoreButton_hasEncoreQty_2xu3C .EncoreButton_caption_3z6HM {
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.WishParking_container_18waD .WishParking_dataTracking_3dURm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
