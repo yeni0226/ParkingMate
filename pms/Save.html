@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <title>찜하기</title>
+  <link rel="stylesheet" href="Save.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
+  <link rel="stylesheet" href="/mypageMobile/font.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/wui.c30dc2b4.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/css/vendor.3570589c.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
+  <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/common.a1265b88.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/static/web/layout.c8035bb3.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+</head>
+<body class="show-gnb" style="overflow: auto;">
+  <div id="page-container">
+    <main id="main-app">
+      <div class="web-header">
+        <!-- 상단 바쪽 -->
+        <div class="web-header-mobile">
+          <header class="header-wrapper">
+            <div class="header-container" style="display: flex;">
+              <div class="PreviewOverlay_container_W6b-E">
+                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true" style="width: 24px; height: 24px;">
+                  <path fill="none" d="M0 0h40v40H0z"></path>
+                  <path d="M29.12 2.23H10.88a1 1 0 0 0-1 1v33.88a1 1 0 0 0 1 1h18.24a1 1 0 0 0 1-1V3.28a1 1 0 0 0-1-1.05zm-7.3 30.61A1.82 1.82 0 1 1 20 31a1.83 1.83 0 0 1 1.82 1.84zm6.26 3.23H11.92V4.32h16.16z"></path>
+                  <path d="M18.18 6.89h3.65v2.08h-3.65z"></path>
+                </svg>
+                <p class="PreviewOverlay_title_1p_pc">미리보기 모드</p>
+                <p class="PreviewOverlay_description_3Cqx5">저장한 내용을 미리 볼 수 있어요.</p>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+      <!-- 상단바를 제외한 메인쪽(상단바 아래부분) -->
+      <div class="MainWrapper_content_GZkTa">
+        <!-- 상단바 쪽 -->
+        <div class="Header_container_1qtDB">
+          <div style="display: flex; gap: 5px;">
+            <p>찜한</p>
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMiAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDAwMDggMC45MDAwMjRDNC4zMDQ0NSAwLjkwMDAyNCAyLjYyMzM4IDEuNzQ1MTIgMS41NzQzNCAzLjIxMzc4QzAuNTE0MTU5IDQuNjk4MDIgMC4xMjY0NjMgNi43NzY1NSAwLjkzMDg2NCA5LjE4OTc1QzEuNTgwODYgMTEuMTM5NyAzLjM4NjQzIDEzLjI2ODMgNS4yODM5OCAxNS4wOTQ4QzcuMjAyOSAxNi45NDE5IDkuMzA0MjMgMTguNTYyMiAxMC42NjAyIDE5LjQ5NDRDMTAuODY0OSAxOS42MzUyIDExLjEzNTIgMTkuNjM1MiAxMS4zNCAxOS40OTQ0QzEyLjY5NTkgMTguNTYyMiAxNC43OTczIDE2Ljk0MTkgMTYuNzE2MiAxNS4wOTQ4QzE4LjYxMzcgMTMuMjY4MyAyMC40MTkzIDExLjEzOTcgMjEuMDY5MyA5LjE4OTc1QzIxLjg3MzcgNi43NzY1NSAyMS40ODYgNC42OTgwMiAyMC40MjU4IDMuMjEzNzhDMTkuMzc2OCAxLjc0NTEyIDE3LjY5NTcgMC45MDAwMjQgMTYuMDAwMSAwLjkwMDAyNEMxMy40MTc1IDAuOTAwMDI0IDExLjgzNTYgMi4yNDgwMSAxMS4wMDAxIDMuMzY4NzRDMTAuMTY0NiAyLjI0ODAxIDguNTgyNjcgMC45MDAwMjQgNi4wMDAwOCAwLjkwMDAyNFoiIGZpbGw9IiNGRjY2NjYiLz4KPC9zdmc+Cg==" alt="">
+            <p>만 모았어요</p>
+          </div>
+          <!-- 상단 바 오른쪽 아이콘 -->
+          <div>
+            <button class="HeaderMobile_button_3V4yt HeaderMobile_home_1oUFL">
+              <!-- 홈으로 돌아가는 버튼 및 링크 -->
+              <a class="" href="">
+                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq Button_icon_2Lds2" aria-hidden="true" style="width: 24px; height: 24px;">
+                  <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
+                  <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
+                  <path fill="none" d="M0 0h40v40H0z"></path>
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+        <!-- 상단바 아래쪽 -->
+        <div class="App_containerWrapper_KiLM_">
+          <div class="App_container_1ciND">
+            <div></div>
+            <!-- 상단 카테고리 -->
+            <div class="CategoryFilter_container_QCU1Y App_categoryFilter_W8TI0">
+              <ul class="CategoryFilter_categoryfilterList_2WMA0 CategoryFilter_hideScrollbar_5kdyj">
+                <!-- 카테고리 리스트 -->
+                <li class="CategoryFilter_filterItem_1-_sW">
+                  <button class="Button_button_2FuOU Button_tertiaryGrey_3jJV7 Button_contained_2SIAT Button_md_46Ai- CategoryFilter_button_U4yZv CategoryFilter_current_3lUyE" type="button">
+                    <span>
+                      <span class="Button_children_ilFun">전체</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="CategoryFilter_filterItem_1-_sW">
+                  <button class="Button_button_2FuOU Button_tertiaryGrey_3jJV7 Button_contained_2SIAT Button_md_46Ai- CategoryFilter_button_U4yZv" type="button">
+                    <span>
+                      <span class="Button_children_ilFun">강남구</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="CategoryFilter_filterItem_1-_sW">
+                  <button class="Button_button_2FuOU Button_tertiaryGrey_3jJV7 Button_contained_2SIAT Button_md_46Ai- CategoryFilter_button_U4yZv" type="button">
+                    <span>
+                      <span class="Button_children_ilFun">서초구</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="CategoryFilter_filterItem_1-_sW">
+                  <button class="Button_button_2FuOU Button_tertiaryGrey_3jJV7 Button_contained_2SIAT Button_md_46Ai- CategoryFilter_button_U4yZv" type="button">
+                    <span>
+                      <span class="Button_children_ilFun">송파구</span>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="ContentsContainer_container_32V3E">
+              <div class="WishParking_container_18waD">
+                <p class="WishParking_caption_tA8Mk">12일전에 찜했어요</p>
+                <div class="HorizentalParking_container_1Rk50" style="height: 148px;">
+                  <!-- 찜버튼과 사진 테두리 -->
+                  <div class="HorizentalParking_buttonWrapper_K2wmz" style="width: 144px; height: 144px;">
+                    <button type="button" class="WishButton_button_1ZqbG WishButton_interaction_2FCel" aria-label="찜하기 버튼" aria-pressed="true" data-ga-category="찜하기_상품카드_프리오더" data-ga-action="찜하기_취소" data-ga-label="">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                        <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- 찜 상품 전체 테두리 -->
+                  <a class="HorizentalParking_card_qglkp" >
+                    <!-- 찜 사진 박스 -->
+                    <div class="HorizentalParking_thumbnailContainer_10-dl" style="width: 144px; height: 144px;">
+                      <div class="HorizentalParking_thumbnailPlaceholder_310yP" style="padding-top: 100%;">
+                        <div aria-hidden="true" class="ParkingThumbnail_thumbnail_3bDBJ ParkingThumbnail_visible_343f4" style="background-image: url(&quot;https://cdn.wadiz.kr/wwwwadiz/green001/2023/0805/20230805202654758_230907.jpg/wadiz/resize/600/format/jpg/quality/85/&quot;); border-radius: 8px;">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 찜 상품 내용 box -->
+                    <div class="HorizentalParking_detailWrapper_oS4Wf">
+                      <!-- 내용 제목 -->
+                      <div class="HorizentalParking_detail-5ch7U">
+                        <span class="HorizentalParking_archive_2M3g8">강남구 주차장</span>
+                        <p class="HorizentalParking_title_1AhKb">[강남구/역삼동] 편리한 주차장 cctv 완비, 관리인 있음.</p>
+                        <p class="HorizentalParking_sellerName_1jQEW">토종이</p>
+                      </div>
+                      <!-- 해시태그 -->
+                      <div class="HorizentalParking_detailBadges_1xtfF">
+                        <div class="ParkingBadge_container_3AVaM">
+                          <!-- 해시태그 내용 -->
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">넓은 주차장</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">기계식 주차장</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">시간당 1,500원</span>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="WishParking_container_18waD">
+                <p class="WishParking_caption_tA8Mk">10일전에 찜했어요</p>
+                <div class="HorizentalParking_container_1Rk50" style="height: 148px;">
+                  <!-- 찜버튼과 사진 테두리 -->
+                  <div class="HorizentalParking_buttonWrapper_K2wmz" style="width: 144px; height: 144px;">
+                    <button type="button" class="WishButton_button_1ZqbG WishButton_interaction_2FCel" aria-label="찜하기 버튼" aria-pressed="true" data-ga-category="찜하기_상품카드_프리오더" data-ga-action="찜하기_취소" data-ga-label="">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                        <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- 찜 상품 전체 테두리 -->
+                  <a class="HorizentalParking_card_qglkp" >
+                    <!-- 찜 사진 박스 -->
+                    <div class="HorizentalParking_thumbnailContainer_10-dl" style="width: 144px; height: 144px;">
+                      <div class="HorizentalParking_thumbnailPlaceholder_310yP" style="padding-top: 100%;">
+                        <div aria-hidden="true" class="ParkingThumbnail_thumbnail_3bDBJ ParkingThumbnail_visible_343f4" style="background-image: url(&quot;https://cdn.wadiz.kr/wwwwadiz/green001/2023/0805/20230805202654758_230907.jpg/wadiz/resize/600/format/jpg/quality/85/&quot;); border-radius: 8px;">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 찜 상품 내용 box -->
+                    <div class="HorizentalParking_detailWrapper_oS4Wf">
+                      <!-- 내용 제목 -->
+                      <div class="HorizentalParking_detail-5ch7U">
+                        <span class="HorizentalParking_archive_2M3g8">서초구 주차장</span>
+                        <p class="HorizentalParking_title_1AhKb">[서초구/반포동] 기계식 주차장 cctv 완비, 상가건물</p>
+                        <p class="HorizentalParking_sellerName_1jQEW">일요일이</p>
+                      </div>
+                      <!-- 해시태그 -->
+                      <div class="HorizentalParking_detailBadges_1xtfF">
+                        <div class="ParkingBadge_container_3AVaM">
+                          <!-- 해시태그 내용 -->
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">상가 주차장</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">기계식 주차장</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">시간당 1,200원</span>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="WishParking_container_18waD">
+                <div class="WishParking_dataTracking_3dURm"></div>
+                <div class="HorizentalParking_container_1Rk50" style="height: 192px;">
+                  <!-- 찜버튼과 사진 테두리 -->
+                  <div class="HorizentalParking_buttonWrapper_K2wmz" style="width: 144px; height: 144px;">
+                    <button type="button" class="WishButton_button_1ZqbG WishButton_interaction_2FCel" aria-label="찜하기 버튼" aria-pressed="true" data-ga-category="찜하기_상품카드_프리오더" data-ga-action="찜하기_취소" data-ga-label="">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                        <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- 찜 상품 전체 테두리 -->
+                  <a class="HorizentalParking_card_qglkp" >
+                    <!-- 찜 사진 박스 -->
+                    <div class="HorizentalParking_thumbnailContainer_10-dl" style="width: 144px; height: 144px;">
+                      <div class="HorizentalParking_thumbnailPlaceholder_310yP" style="padding-top: 100%;">
+                        <div aria-hidden="true" class="ParkingThumbnail_thumbnail_3bDBJ ParkingThumbnail_visible_343f4" style="background-image: url(&quot;https://cdn.wadiz.kr/wwwwadiz/green001/2023/0805/20230805202654758_230907.jpg/wadiz/resize/600/format/jpg/quality/85/&quot;); border-radius: 8px;">
+                        </div>
+                        <!-- 종료된 주차장 -->
+                        <div class="HorizentalParking_isFinshed_2-OJO">판매하지 않습니다.</div>
+                      </div>
+                    </div>
+                    <!-- 찜 상품 내용 box -->
+                    <div class="HorizentalParking_detailWrapper_oS4Wf">
+                      <!-- 내용 제목 -->
+                      <div class="HorizentalParking_detail-5ch7U">
+                        <span class="HorizentalParking_archive_2M3g8 finsh">송파구 주차장</span>
+                        <p class="HorizentalParking_title_1AhKb">[송파구/잠실동] 먹자골목 주차장 근처 상가와 가까움.</p>
+                        <p class="HorizentalParking_sellerName_1jQEW">월종이</p>
+                      </div>
+                      <!-- 해시태그 -->
+                      <div class="HorizentalParking_detailBadges_1xtfF">
+                        <div class="ParkingBadge_container_3AVaM">
+                          <!-- 해시태그 내용 -->
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">상가 주차장</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">지정 주차제</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">시간당 2,500원</span>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- 재판매 요청 버튼 -->
+                  <button class="Button_button_2FuOU Button_primary_2mZni Button_sm_16X6h Button_block_1-g8w EncoreButton_container_BQdSE" type="button">
+                    <span>
+                      <span class="Button_children_ilFun">
+                        <div class="EncoreButton_hasEncoreQty_2xu3C">
+                          <p>재판매 요청하기</p>
+                          <p class="EncoreButton_caption_3z6HM">100명 신청 중</p>
+                        </div>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="WishParking_container_18waD">
+                <p class="WishParking_caption_tA8Mk">5일전에 찜했어요</p>
+                <div class="HorizentalParking_container_1Rk50" style="height: 148px;">
+                  <!-- 찜버튼과 사진 테두리 -->
+                  <div class="HorizentalParking_buttonWrapper_K2wmz" style="width: 144px; height: 144px;">
+                    <button type="button" class="WishButton_button_1ZqbG WishButton_interaction_2FCel" aria-label="찜하기 버튼" aria-pressed="true" data-ga-category="찜하기_상품카드_프리오더" data-ga-action="찜하기_취소" data-ga-label="">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                        <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- 찜 상품 전체 테두리 -->
+                  <a class="HorizentalParking_card_qglkp" >
+                    <!-- 찜 사진 박스 -->
+                    <div class="HorizentalParking_thumbnailContainer_10-dl" style="width: 144px; height: 144px;">
+                      <div class="HorizentalParking_thumbnailPlaceholder_310yP" style="padding-top: 100%;">
+                        <div aria-hidden="true" class="ParkingThumbnail_thumbnail_3bDBJ ParkingThumbnail_visible_343f4" style="background-image: url(&quot;https://cdn.wadiz.kr/wwwwadiz/green001/2023/0805/20230805202654758_230907.jpg/wadiz/resize/600/format/jpg/quality/85/&quot;); border-radius: 8px;">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 찜 상품 내용 box -->
+                    <div class="HorizentalParking_detailWrapper_oS4Wf">
+                      <!-- 내용 제목 -->
+                      <div class="HorizentalParking_detail-5ch7U">
+                        <span class="HorizentalParking_archive_2M3g8">강남구 주차장</span>
+                        <p class="HorizentalParking_title_1AhKb">[강남구/논현동] 지정주차장 우선 예약제.</p>
+                        <p class="HorizentalParking_sellerName_1jQEW">화종이</p>
+                      </div>
+                      <!-- 해시태그 -->
+                      <div class="HorizentalParking_detailBadges_1xtfF">
+                        <div class="ParkingBadge_container_3AVaM">
+                          <!-- 해시태그 내용 -->
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">지정 주차장</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">예약 시스템</span>
+                            </span>
+                            <span class="Badge_container_9G9PS Badge_visible_3LNXv">
+                              <span class="Badge_badge_ovUKI Badge_label_2Rft2 Badge_sm_1OBNp Badge_secondary_UV-TU Badge_tertiary_3uYKh">하루당 20,000원</span>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 하단 메뉴바 -->
+      <div class="bottombar">
+        <ul class="ParkingMateMobile_container_1OTMW">
+          <!-- 하단 메뉴 첫번째 -->
+          <li class="ParkingMateMobile_item_1b4ZL">
+            <a class="ParkingMateMobile_link_t1Y9t" >
+              <!-- 하단 메뉴 첫번째 아이콘 -->
+              <span class="MyParkingMateMenu_icon_Home_pwW81" aria-hidden="true">
+                <i class="MyParkingMateSupporterProjectHome_icon_32Rsj" aria-hidden="true"></i>
+              </span>
+              <span class="ParkingMateMobile_text_2-voS">홈</span>
+            </a>
+          </li>
+          <!-- 하단 메뉴 두번째 -->
+          <li class="ParkingMateMobile_item_1b4ZL">
+            <a class="ParkingMateMobile_link_t1Y9t"  >
+              <span class="MyParkingMateMenu_icon_registor_pwW81" aria-hidden="true">
+                <i class="MyParkingMateSupporterProjectregistor_icon_32Rsj" aria-hidden="true"></i>
+              </span>
+              <span class="ParkingMateMobile_text_2-voS">예약하기</span>
+            </a>
+          </li>
+          <!-- 하단 메뉴 세번째 -->
+          <li class="ParkingMateMobile_item_1b4ZL">
+            <a class="ParkingMateMobile_link_t1Y9t"  >
+              <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icjRzeW8za3R4YSIgZD0iTTAgMGg0MHY0MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9Im1kajRrdnh3amIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcjRzeW8za3R4YSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCAwQzguOTU0IDAgMCA4Ljk1NSAwIDIwYzAgMTEuMDQ2IDguOTU0IDIwIDIwIDIwczIwLTguOTU0IDIwLTIwQzQwIDguOTU1IDMxLjA0NiAwIDIwIDBtMCAxYzEwLjQ3NyAwIDE5IDguNTIzIDE5IDE5cy04LjUyMyAxOS0xOSAxOVMxIDMwLjQ3NyAxIDIwIDkuNTIzIDEgMjAgMSIgZmlsbD0iIzg2OEU5NiIgbWFzaz0idXJsKCNtZGo0a3Z4d2piKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBzdHJva2U9IiM4NjhFOTYiIGQ9Ik0yMCAxMXYxOE0yOSAyMEgxMSIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">
+            </a>
+          </li>
+          <!-- 하단 메뉴 네번째 -->
+          <li class="ParkingMateMobile_item_1b4ZL">
+            <a class="ParkingMateMobile_link_t1Y9t"  >
+              <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq ParkingMateMobile_icon_3OOAF ParkingMate_active_3WNf8" aria-hidden="true" style="width: 24px; height: 24px;">
+                <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
+              </svg>
+              <span class="ParkingMateMobile_text_2-voS">이벤트</span>
+            </a>
+          </li>
+        
+          <!-- 하단 메뉴 다섯번째 -->
+          <li class="ParkingMateMobile_item_1b4ZL">
+            <a class="ParkingMateMobile_link_t1Y9t ParkingMateMobile_active_3WNf8"  >
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq ParkingMateMobile_icon_3OOAF ParkingMateMobile_active_3WNf8" aria-hidden="true" style="width: 24px; height: 24px;">
+                <path d="M20.27 3.46a9.42 9.42 0 1 0 0 18.84 9.42 9.42 0 1 0 0-18.84zm0 22.13c-6.52 0-15.19 1.09-15.19 10.57h30.38c0-9.48-8.67-10.57-15.19-10.57z"></path>
+                <path fill="none" d="M0 0h40v40H0z"></path>
+              </svg>
+              <span class="ParkingMateMobile_text_2-voS">마이페이지</span>
+            </a>
+          </li>
+                  </ul>
+      </div>
+    </main>
+  </div>
+</body>
+<script>
+  // // 찜버튼 클릭 시 이벤트
+  const pickicon = document.querySelectorAll(".WishButton_button_1ZqbG");
+  
+  [].forEach.call(pickicon,function(pickicons){
+    pickicons.addEventListener("click",click);
+  })
+
+  function click(e){
+    const hearticon = e.target.getAttribute('aria-Pressed');
+
+    console.log(e.target.getAttribute('aria-Pressed'));
+
+    if(hearticon == 'true'){
+      e.target.setAttribute('aria-Pressed', 'false');
+      // return hearticon;
+    }
+    
+    if(hearticon == 'false'){
+
+      e.target.setAttribute('aria-Pressed', 'true');
+      // return hearticon;
+    }
+  }
+
+  // 상단 구 버튼 클릭 시 이벤트
+  let isClick = "false";
+  // 전체 버튼
+  const allButton = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(1) > button");
+  // 강남구 버튼
+  const gangnamButton = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(2) > button");
+  // 서초구 버튼
+  const seochoButton = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(3) > button");
+  // 송파구 버튼
+  const songpaButton = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(4) > button");
+
+  // 전체 버튼 클릭 시 이벤트
+
+  // 전체 글자
+  const allWord = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(1) > button > span > span");
+  allButton.addEventListener("click", (e) => {
+    console.log(isClick);
+    if(isClick == "false"){
+      allButton.style.backgroundColor = "#f9fafb";
+      allButton.style.border = "1px solid #f9fafb";
+      allWord.style.color = "#212529";
+      allWord.style.fontWeight = "100";
+      isClick = "ture";
+    }else {
+      allButton.style.backgroundColor = "#212529";
+      allButton.style.border = "1px solid #212529";
+      allWord.style.color = " #fff";
+      allWord.style.fontWeight = "700";
+      isClick = "false";
+    }
+
+    // 다른 버튼들
+    gangnamButton.style.backgroundColor = "#f9fafb";
+    gangnamButton.style.border = "1px solid #f9fafb";
+    gangnamWord.style.color = "#212529";
+    gangnamWord.style.fontWeight = "100";
+
+    songpaButton.style.backgroundColor = "#f9fafb";
+    songpaButton.style.border = "1px solid #f9fafb";
+    songpaWord.style.color = "#212529";
+    songpaWord.style.fontWeight = "100";
+
+    seochoButton.style.backgroundColor = "#f9fafb";
+    seochoButton.style.border = "1px solid #f9fafb";
+    seochoWord.style.color = "#212529";
+    seochoWord.style.fontWeight = "100";    
+  })
+  // 강남구 버튼 클릭 시 이벤트
+  // 강남구 글자
+  const gangnamWord = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(2) > button > span > span");
+  gangnamButton.addEventListener("click", (e) => {
+    console.log(isClick);
+    if(isClick == "false"){
+      gangnamButton.style.backgroundColor = "#f9fafb";
+      gangnamButton.style.border = "1px solid #f9fafb";
+      gangnamWord.style.color = "#212529";
+      gangnamWord.style.fontWeight = "100";
+      isClick = "ture";
+    }else {
+      gangnamButton.style.backgroundColor = "#212529";
+      gangnamButton.style.border = "1px solid #212529";
+      gangnamWord.style.color = " #fff";
+      gangnamWord.style.fontWeight = "700";
+      isClick = "false";
+    }
+    // 다른 버튼들
+    allButton.style.backgroundColor = "#f9fafb";
+    allButton.style.border = "1px solid #f9fafb";
+    allWord.style.color = "#212529";
+    allWord.style.fontWeight = "100";
+
+    songpaButton.style.backgroundColor = "#f9fafb";
+    songpaButton.style.border = "1px solid #f9fafb";
+    songpaWord.style.color = "#212529";
+    songpaWord.style.fontWeight = "100";
+
+    seochoButton.style.backgroundColor = "#f9fafb";
+    seochoButton.style.border = "1px solid #f9fafb";
+    seochoWord.style.color = "#212529";
+    seochoWord.style.fontWeight = "100";
+  })
+
+  // 서초구 버튼 클릭 시 이벤트
+  // 서초구 글자
+  const seochoWord = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(3) > button > span > span");
+  seochoButton.addEventListener("click", (e) => {
+    console.log(isClick);
+    if(isClick == "false"){
+      seochoButton.style.backgroundColor = "#f9fafb";
+      seochoButton.style.border = "1px solid #f9fafb";
+      seochoWord.style.color = "#212529";
+      seochoWord.style.fontWeight = "100";
+      isClick = "ture";
+    }else {
+      seochoButton.style.backgroundColor = "#212529";
+      seochoButton.style.border = "1px solid #212529";
+      seochoWord.style.color = " #fff";
+      seochoWord.style.fontWeight = "700";
+      isClick = "false";
+    }
+
+    // 다른 버튼들
+    gangnamButton.style.backgroundColor = "#f9fafb";
+    gangnamButton.style.border = "1px solid #f9fafb";
+    gangnamWord.style.color = "#212529";
+    gangnamWord.style.fontWeight = "100";
+
+    songpaButton.style.backgroundColor = "#f9fafb";
+    songpaButton.style.border = "1px solid #f9fafb";
+    songpaWord.style.color = "#212529";
+    songpaWord.style.fontWeight = "100";
+
+    allButton.style.backgroundColor = "#f9fafb";
+    allButton.style.border = "1px solid #f9fafb";
+    allWord.style.color = "#212529";
+    allWord.style.fontWeight = "100";    
+  })
+
+  // 서초구 버튼 클릭 시 이벤트
+  // 서초구 글자
+  const songpaWord = document.querySelector("#main-app > div.MainWrapper_content_GZkTa > div.App_containerWrapper_KiLM_ > div > div.CategoryFilter_container_QCU1Y.App_categoryFilter_W8TI0 > ul > li:nth-child(4) > button > span > span");
+  songpaButton.addEventListener("click", (e) => {
+    console.log(isClick);
+    if(isClick == "false"){
+      songpaButton.style.backgroundColor = "#f9fafb";
+      songpaButton.style.border = "1px solid #f9fafb";
+      songpaWord.style.color = "#212529";
+      songpaWord.style.fontWeight = "100";
+      isClick = "ture";
+    }else {
+      songpaButton.style.backgroundColor = "#212529";
+      songpaButton.style.border = "1px solid #212529";
+      songpaWord.style.color = " #fff";
+      songpaWord.style.fontWeight = "700";
+      isClick = "false";
+    }
+
+    // 다른 버튼들
+    gangnamButton.style.backgroundColor = "#f9fafb";
+    gangnamButton.style.border = "1px solid #f9fafb";
+    gangnamWord.style.color = "#212529";
+    gangnamWord.style.fontWeight = "100";
+
+    seochoButton.style.backgroundColor = "#f9fafb";
+    seochoButton.style.border = "1px solid #f9fafb";
+    seochoWord.style.color = "#212529";
+    seochoWord.style.fontWeight = "100";
+
+    allButton.style.backgroundColor = "#f9fafb";
+    allButton.style.border = "1px solid #f9fafb";
+    allWord.style.color = "#212529";
+    allWord.style.fontWeight = "100"; 
+  })
+</script>
+</html>
