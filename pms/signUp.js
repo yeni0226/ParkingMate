@@ -48,31 +48,21 @@ let $checkChildLabel = $(".check-child-label");
 let $input = $("input[name=chk]");
 
 $allCheckLabel.on("click",(e) =>{
-  if($(".fullAgreement").is(":checked")) {
-    $input.prop("checked", true); 
-    $(".outsideFullAgreement").prop("checked", true); 
-    $allCheck.addClass('checked');
-    $checkChild.addClass('checked');
-  }else {
-    $allCheck.removeClass('checked');
-    $checkChild.removeClass('checked');
-    $input.prop("checked", false);
-    $(".outsideFullAgreement").prop("checked", false); 
-  } 
-});
+  //변수에 라벨 클릭 시 checked 여부 저장 (true / false)
+  let isChecked = $(e.target).prop("checked");
+  
+  //기존에 두 체크박스 checked 값이 다른 경우가 있었음 => 두 체크박스 속성 무조건 같도록 isChecked변수로 박아버림(true / false)
+   $(".fullAgreement").prop("checked", isChecked);
 
-$outsideAllCheckLabel.on("click",(e) =>{
-  if($(".outsideFullAgreement").is(":checked")) {
-    $input.prop("checked", true); 
-    $(".fullAgreement").prop("checked", true); 
+  //위랑 같은 이유, 한쪽은 true인데 한쪽은 false라 애가 한쪽이 체크되서 true인 상태에서 다른 쪽 누를라하면 걔는 false 라 동작안됨
+  //위에서 두 체크박스 값 같도록 박아버리고 isChecked변수로 css 제어
+  if (isChecked) {
     $allCheck.addClass('checked');
     $checkChild.addClass('checked');
-  }else {
+  } else {
     $allCheck.removeClass('checked');
     $checkChild.removeClass('checked');
-    $input.prop("checked", false);
-    $(".fullAgreement").prop("checked", false); 
-  } 
+  }
 });
 
 $input.on("click", (e) =>{
