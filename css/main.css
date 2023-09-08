@@ -245,3 +245,221 @@
   color: #212529;
   font-weight: 700;
 }
+
+/* 공유박스 */
+.share-bx {
+  position: absolute;
+  display: none;
+  left: 1.5%;
+  bottom: -1;
+  z-index: 2;
+
+  width: 97%;
+  background-color: #fff;
+  height: 140px;
+  border-radius: 10px;
+  transition: bottom .4s;
+  outline: 1px solid #868e96;
+}
+
+.search-bx {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 10px 0 0;
+  height: 40px;
+  min-height: 40px;
+  line-height: 40px;
+  color: #212529;
+}
+
+.search-mg-bx {
+  position: relative;
+  width: 16px;
+}
+
+/* 검색박스 내용 */
+.search-content-bx {
+  display: flex;
+  position: relative;
+  flex: 1 1 0%;
+  margin-right: 40px;
+}
+
+.search-content-bx input {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  flex-grow: 1;
+  outline: none;
+  background: none;
+  padding-right: 32px;
+  width: 100%;
+  appearance: none;
+  font-size: 14px;
+}
+
+.search-all {
+  position: absolute;
+  z-index: 2;
+  top: -120px;
+  left: 17%;
+
+  transition: top .2s;
+}
+
+.sb-2 {
+  margin-top: 2px;
+  position: relative;
+}
+
+.search-bx:focus {
+  border-color: #00c4c4;
+}
+
+/* 검색 버튼 */
+.search-bx-search-btn {
+  position: absolute;
+  top: 52%;
+  right: 12px;
+  left: auto;
+  transform: translateY(-52%);
+  z-index: 1;
+  pointer-events: visible;
+}
+
+.search-content-bx input:focus + .search-bx {
+  border-color: #00c4c4;
+}
+
+
+
+.share-header-container {
+  margin: 0 10px;
+  margin-top: 15px;
+}
+
+.share-header-container h3 {
+  text-align: left;
+  font-size: 16px;
+}
+
+.share-main-container {
+  display: flex;
+  margin: 12px 10px 0 10px;
+}
+
+.share-main-container>div {
+  text-align: center;
+}
+
+.share-main-container p {
+  font-size: 8px;
+  margin-top: 6px;
+}
+
+.share-main-container div:nth-child(2), 
+.share-main-container div:nth-child(3){
+  margin-left: 32px;
+}
+
+/* 옵션 선택박스 */
+.select-option-bx {
+  margin-top: 6px;
+}
+
+/* 옵션 선택ul */
+.select-option-ul {
+  border: 1px solid #e3e6e8;
+  border-radius: 3px;
+  display: flex;
+  background-color: #fff;
+}
+
+.select-option-li:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.selected-li:before {
+  border: 1px solid #00c73c !important;
+  bottom: -1px !important;
+  content: "" !important;
+  left: -1px !important;
+  position: absolute !important;
+  right: -1px !important;
+  top: -1px !important;
+  z-index: 1;
+}
+
+.select-option-li:before {
+  border-left: 1px solid #ecf0f2;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.select-option-btn {
+  height: 100%;
+  padding-top: 1px;
+  position: relative;
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.selected-li span {
+  color: #00c73c;
+}
+
+.select-option-ul li {
+  box-sizing: border-box;
+  height: 62px;
+  position: relative;
+  width: 25%;
+}
+
+.select-option-btn span {
+  display: block;
+  font-size: 14px;
+  margin: 3px auto 0;
+}
+
+.select-img {
+  height: 22px;
+  width: 22px;
+  fill: #878e9a;
+  display: block;
+}
+
+.selected-li .select-img {
+  color: #00c73c;
+}
+
+.select-img-ibx {
+  display: block;
+  font-size: 14px;
+  margin: 3px auto 0;
+}
+
+.selected-li svg {
+  fill: #00c73c;
+}
+
+.select-option-li svg {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  width: 100%;
+}
