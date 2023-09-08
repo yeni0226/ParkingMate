@@ -17,6 +17,13 @@
   <!-- 메인 스타일CSS -->
   <link rel="stylesheet" href="../css/payment-page-main.css">
 
+  <!--  -->
+  <script src="../js/expand.js"></script>
+
+  <script src="../js/more-menu.js"></script>
+
+  <!-- <script src="../js/input-value.js"></script> -->
+
 </head>
 <body>
 
@@ -68,7 +75,7 @@
                 <p>홍길동 010-1234-5678</p>
 
                 <!-- 펼쳐보기 버튼 -->
-                <button class="expand-button">
+                <button class="expand-button" id="expand-btn1">
 
                   <span>
 
@@ -128,7 +135,7 @@
                 <h3 class="delivery-info-text3">배송 정보</h3>
 
                 <!-- 펼쳐보기 버튼 -->
-                <button class="expand-button">
+                <button class="expand-button" id="expand-btn2" type="button">
 
                   <span>
 
@@ -166,13 +173,13 @@
                     <p class="recipient-info">받으실 분</p>
 
                     <!-- 받으실 분 이름 입력 칸 -->
-                    <input type="text" placeholder="이름을 입력해주세요" class="recipient-input">
+                    <input id="inputBx1" type="text" placeholder="이름을 입력해주세요" class="recipient-input">
 
                     <!-- 휴대폰 -->
                     <p class="recipient-info">휴대폰</p>
 
                     <!-- 받으실 분 번호 입력 칸 -->
-                    <input type="text" placeholder="번호를 입력해주세요" class="recipient-input">
+                    <input id="inputBx2" type="text" placeholder="번호를 입력해주세요" class="recipient-input">
 
                     <!-- 안심번호 사용 전체박스 -->
                     <div class="secure-call-box">
@@ -238,7 +245,7 @@
                   <div class="delivery-notes-input">
 
                     <div class="select-menu-hidden-input-box">
-                      <input type="text" readonly="">
+                      <input id="input22" type="text" readonly="">
                     </div>
 
                     <!-- 배송 요청 사항 선택칸 -->
@@ -276,9 +283,40 @@
 
                       </div>
 
+                      <div class="more-menu">
+
+                        <div class="more-menu-ibx">
+
+                          <div class="select-menu-option">
+                            배송 시 요청사항을 선택해주세요
+                          </div>
+                          <div class="select-menu-option">
+                            문 앞에 놓아주세요
+                          </div>
+                          <div class="select-menu-option">
+                            경비(관리)실에 맡겨주세요
+                          </div>
+                          <div class="select-menu-option">
+                            택배함에 넣어주세요
+                          </div>
+                          <div class="select-menu-option">
+                            직접 받을거에요
+                          </div>
+                          <div class="select-menu-option">
+                            직접 입력
+                          </div>
+
+                        </div>
+
+                      </div>
+
                     </div>
 
                   </div>
+
+                  <!-- 직접입력 박스 -->
+                  <textarea name="" id="deliveryRequest" maxlength="100"
+                    placeholder="내용을 입력해주세요.(최대 100자)"></textarea>
 
                 </div>
 
@@ -304,7 +342,7 @@
                 <div class="expand-bx2">
 
                   <!-- 펼쳐보기 버튼 -->
-                  <button class="expand-button">
+                  <button class="expand-button" id="expand-btn3" type="button">
 
                     <span>
 
@@ -391,6 +429,8 @@
 
                 </div>
 
+                
+
               </div>
 
             </section>
@@ -476,118 +516,7 @@
               <hr class="Divider_divider__ToZaf Divider_thick__1Weqv Divider_lightBG__3bAAk Divider_caption2__3b6Dr" style="height: 8px;">
             </div>
 
-            <!-- 결제수단 박스 -->
-            <section class="payment-options-bx">
-
-              <!-- 결제수단 컨테이너 -->
-              <div class="payment-option-container">
-
-                <!-- 결제수단 텍스트 -->
-                <h3 class="payment-option-text">결제 수단</h3>
-
-                <!-- 뭔지모름4 -->
-                <div class="wwwwww"></div>
-
-              </div>
-
-              <!-- 결제수단 고르는 칸 -->
-              <div class="payment-method-select">
-
-                <!-- 결제수단 고르는 칸 인박스 -->
-                <div class="payment-method-select-ibx">
-
-                  <!-- 네이버 -->
-                  <div>
-
-                    <!-- 네이버 결제수단 박스 -->
-                    <p class="naver-payment-bx">
-
-                      <label class="naver-payment" for="">
-
-                        <!-- 체크 아이콘 -->
-                        <input class="paymentMode" type="text">
-
-                        <!-- 옆 마진 -->
-                        <span class="payment-icon"></span>
-
-                        <!-- 네이버 아이콘 -->
-                        <span class="payment-label">
-
-                          <span class="naver-icon"></span>
-
-                        </span>
-
-                      </label>
-
-                      <!-- new 이미지 박스 -->
-                      <span class="new-img-bx">
-
-                        <!-- new 이미지 -->
-                        <span class="new-img">NEW</span>
-
-                      </span>
-
-                    </p>
-
-                  </div>
-
-                  <!-- 카카오 -->
-                  <p class="naver-payment-bx kakao-payment">
-
-                    <label class="naver-payment" for="">
-
-                      <!-- 체크 아이콘 -->
-                      <input class="paymentMode" type="text">
-
-                      <!-- 옆 마진 -->
-                      <span class="payment-icon"></span>
-
-                      <!-- 카카오 아이콘 -->
-                      <span class="payment-label">
-
-                        <span class="kakao-icon"></span>
-
-                      </span>
-
-                    </label>
-
-                    <!-- new 이미지 박스 -->
-                    <span class="new-img-bx">
-
-                      <!-- new 이미지 -->
-                      <span class="new-img">NEW</span>
-
-                    </span>
-
-                  </p>
-
-                  <!-- 그외 -->
-                  <p class="naver-payment-bx kakao-payment">
-
-                    <label class="naver-payment" for="">
-
-                      <!-- 체크 아이콘 -->
-                      <input class="paymentMode" type="text">
-
-                      <!-- 옆 마진 -->
-                      <span class="payment-icon"></span>
-
-                      <!-- 그 외 결제수단 -->
-                      <span class="payment-label more-payment">
-
-                        신용/체크카드
-
-                      </span>
-
-                    </label>
-
-                  </p>
-
-                </div>
-
-              </div>
-
-            </section>
+            
 
             <!-- 여백박스 -->
             <div class="main-header-container-under-margin-bx">
