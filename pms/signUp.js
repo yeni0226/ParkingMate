@@ -16,7 +16,7 @@ $button.on("click", (e) =>{
   $modal.animate({height : '100%'});
   $close.animate({height : '200px',top :'0%'});
   $overlay.animate({height : '100%',top:'0'});
-  $content.animate({height : '100%',top:'20vh'});
+  $content.animate({height : '100%',top:'12vh'});
   // $header.animate({height : '100%'});
   // $before.animate({height : '100%'});
   $body.css("overflow", "hidden");
@@ -66,7 +66,6 @@ $allCheckLabel.on("click",(e) =>{
 });
 
 $input.on("click", (e) =>{
-  console.log($(e.target).prop("checked"))
   if($(e.target).is(':checked')){
     $(e.target).next(".check-child").addClass('checked');
   }else{
