@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fa70a3dc-946e-4901-884f-246f790581c4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/3팀보고.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/3팀보고.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/my-location.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/my-location.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/road-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/road-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pms/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +21,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2VbCg82ae5WJv5WouFh0oA5iOc2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,6 +36,10 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/web_1900_pms/project/ParkingMate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -42,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695095500916</updated>
       <workItem from="1695095501932" duration="255000" />
+      <workItem from="1695099162810" duration="643000" />
     </task>
     <servers />
   </component>
