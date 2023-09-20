@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body, button, html, input, textarea {
+  font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+div {
+  display: block;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+main, section, article {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+#parkingmate-page-container{
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+.parkingmate-web-header{
+  position: sticky;
+  top: 0;
+  transition: top .25s;
+  z-index: 1201;
+  width: 100%;
+}
+
+.parkingmate-web-header-mobile{
+  display: block;
+  position: relative;
+}
+
+.parkingmate-header-wrapper{
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+.parkingmate-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+.parkingmate-header-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+}
+
+.back-button {
+  left: 6px;
+}
+
+.home-button{
+  right: 6px;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.parkingmate-header-button-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  color: #495057;
+}
+
+.parkingmate-main-wrapper{
+  transition: padding-top .25s;
+  padding-top: 0;
+}
+
+.parkingmate-account-container{
+  position: relative;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 390px;
+  overflow: hidden;
+}
+
+.parkingmate-account-title{
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.parkingmate-bline-text{
+  position: absolute;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.parkingmate-signInForm{
+  margin-top: 24px
+}
+
+.parkingmate-signInForm-field{
+  margin-top: 16px;
+  margin-bottom: 16px; 
+}
+
+.parkingmate-input{
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  background-color: #fff;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 100%;
+  height: auto;
+  color: #212529;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-email{
+  height: 48px;
+  min-height: 48px;
+}
+
+.input-password{
+  height: 48px;
+  min-height: 48px;
+}
+
+.parkingmate-forgot{
+  float: right;
+  line-height: 24px;
+  color: #adb5bd;
+  font-size: 13px;
+}
+
+.parkingmate-button{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 8px 15px;
+  vertical-align: middle;
+  text-decoration: none;
+  line-height: 1.43;
+  white-space: nowrap;
+  color: #495057;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.parkingmate-login-button{
+  margin-top: 32px;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.parkingmate-kakao-button{
+  border-color: #fee500;
+  background-color: #fee500;
+  margin-top: 12px;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.parkingmate-button span{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-kakao-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.parkingmate-google-button{
+  border-color: #ced4da;
+  background-color: #fff;
+  margin-top: 12px;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.parkingmate-google-button-svg{
+  position: absolute;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.parkingmate-SNSButtonList{
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.parkingmate-SNSButtonList span{
+  vertical-align: text-top;
+}
+
+.parkingmate-naver-button{
+  border-color: #00d337;
+  background-color: #00d337;
+  color: #fff;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 999em;
+  margin-left: 0;
+}
+
+.parkingmate-naver-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.parkingmate-facebook-button{
+  border-color: #1877f2;
+  background-color: #1877f2;
+  color: #fff;
+  margin-left: 12px;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 999em;
+}
+
+.parkingmate-facebook-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.parkingmate-apple-button{
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+  margin-left: 12px;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  border-radius: 999em
+}
+
+.parkingmate-apple-button-svg{
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.parkingmate-signUpMessage{
+  position: relative;
+  bottom: auto;
+  left: auto;
+  margin-top: 16px;
+  box-shadow: none;
+  background: none;
+  height: 56px;
+  text-align: center;
+  line-height: 56px;
+}
+
+.parkingmate-signUpMessage a{
+  margin-left: 6px;
+  text-decoration: underline;
+  color: #00c4c4;
+}

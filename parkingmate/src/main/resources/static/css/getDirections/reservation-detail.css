@@ -1,0 +1,264 @@
+body {
+  pointer-events: auto!important;
+}
+
+body{
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+a, input, optgroup, select, textarea {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, button {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+}
+
+body, div, h1, h2, h3, h4, dl, dt, li, ul, em, a, span, input, p, 
+html, form, button, dd{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline; 
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+a, input, optgroup, select, textarea {
+  color: inherit;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, textarea {
+  background: none;
+}
+
+#mypageWrap {
+  width: 100%;
+}
+
+.mypage-usedetail.bg{
+  background: #F5F7FA;
+  padding-bottom: 160px;
+}
+
+.mypage-detail{
+  width: 100%;
+}
+
+.PurchaseInfoContainer_container_3GaoT{
+  box-shadow: 0 0 1px #0003;
+  background: #fff;
+  padding: 24px 16px;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+#mypageWrap .mypage-usedatail.myPurchase .mypage-usedetail p{
+  color: #60656a;
+}
+
+.PurchaseInfoContainer_container_3GaoT .PurchaseInfoContainer_cate_J_9eo{
+  margin-bottom: 12px;
+}
+
+.mypage-detail p{
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.PurchaseInfoContainer_container_3GaoT .MyParkingMateUseListItem_title_1IMXx{
+  margin-bottom: 8px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529!important;
+}
+
+.PurchaseInfoContainer_container_3GaoT .MyParkingMateUseListItem_seller_3eBFn{
+  margin-bottom: 20px;
+}
+
+.PurchaseInfoContainer_container_3GaoT .MyParkingMateUseListItem_seller_3eBFn button{
+  outline: 0;
+  color: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.PurchaseInfoContainer_container_3GaoT .PurchaseInfoContainer_summary_31paD{
+  padding-top: 15px;
+}
+
+.PurchaseInfoContainer_container_3GaoT .PurchaseInfoContainer_summary_31paD .PurchaseInfoContainer_list_--p4u{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 16px;
+  color: #495057;
+  padding: 5px;
+}
+
+.PurchaseInfoContainer_container_3GaoT .PurchaseInfoContainer_summary_31paD .PurchaseInfoContainer_list_--p4u .PurchaseInfoContainer_listTitle_2lTUr{
+  color: #868e96!important;
+}
+
+.PurchaseInfo_container_3N4ZP{
+  color: #495057;
+}
+
+.PurchaseInfo_container_3N4ZP .PurchaseInfo_subText_1j6ij{
+  position: relative;
+  line-height: 20px;
+  color: #495057;
+  font-size: 13px;
+  padding: 5px;
+}
+
+.PurchasePayment_container_3piIf{
+  position: relative;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 1px #0003;
+  background: #fff;
+  padding: 24px 16px;
+  line-height: 18px;
+  color: #495057;
+  font-size: 15px;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_title_V50m2{
+  margin-bottom: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529;
+}
+
+li, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_list_2wppq{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 16px;
+  color: #495057;
+  padding: 5px;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_list_2wppq>p:first-child{
+  flex: 1;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_list_2wppq>p:nth-child(2){
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529!important;
+}
+
+.Divider_divider_32LTn.Divider_horizontal_1WjNM .Divider_spacing5_3wbgZ{
+  margin: 16px 0;
+}
+
+.Divider_divider_32LTn.Divider_horizontal_1WjNM.Divider_lightBG_1KGrH{
+  background-color: #f2f4f6;
+  opacity: 1;
+}
+
+.Divider_divider_32LTn.Divider_horizontal_1WjNM{
+  height: 1px;
+}
+
+.Divider_divider_32LTn{
+  border: 0;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_list_2wppq.PurchasePayment_bold_iIZny{
+  margin-top: 8px;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_list_2wppq.PurchasePayment_bold_iIZny>p{
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0!important;
+  color: #212529!important;
+}
+
+.PurchasePayment_container_3piIf .PurchasePayment_list_2wppq.PurchasePayment_bold_iIZny>p:nth-child(2){
+  color: #00b2b2!important;
+}
+
+#mypageWrap .mypage-usedatail.myPurchase .mypage-usedetail > .inner-section{
+  padding: 12px 0;
+}
+
+#mypageWrap .mypage-usedatail.myPurchase .mypage-usedetail .Payment_detailInfo_1ApPw{
+  margin-bottom: 12px;
+}
+
+.mypage-usedetail .Payment_detailInfo_1ApPw{
+  background: #fff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+}
+
+.mypage-usedetail h4{
+  margin-bottom: 20px;
+}
+
+.form-wrap dl{
+  margin-bottom: 8px;
+  width: 100%;
+  display: table;
+}
+
+.form-wrap dl dt{
+  width: auto;
+  display: table-cell;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.form-wrap dl dd{
+  width: auto;
+  display: table-cell;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4a4a4a;
+  text-align: right;
+  font-weight: 500;
+}

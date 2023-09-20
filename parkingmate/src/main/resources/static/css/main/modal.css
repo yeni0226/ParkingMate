@@ -1,0 +1,316 @@
+@charset "utf-8";
+@font-face {
+  font-family: "SegoeUI_online_security";
+  src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+}
+
+@font-face {
+  font-family: "SegoeUI_bold_online_security";
+  src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body, button, html, input, textarea {
+  font-family: pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+div {
+  display: block;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+main, section, article {
+  display: block;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+iframe, img, video {
+  vertical-align: top;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.parkingmate-modal-container{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  display:block;
+}
+
+.parkingmate-modal-area{
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+
+  width: 80%;
+  min-width: 250px;
+  max-width: 600px;
+  height: 65vh;
+  min-height:350px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+}
+
+.parkingmate-modal-background{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 30%;
+}
+
+.parkingmate-account-container{
+  position: relative;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 390px;
+  overflow: hidden;
+}
+
+.parkingmate-account-title {
+  line-height: 38px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.parkingmate-bline-text {
+  position: absolute;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.parkingmate-signInForm {
+  margin-top: 24px;
+}
+
+.parkingmate-signInForm-field {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.parkingmate-bline-text {
+  position: absolute;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.parkingmate-input {
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  background-color: #fff;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 100%;
+  height: auto;
+  color: #212529;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-email {
+  height: 48px;
+  min-height: 48px;
+}
+
+.parkingmate-signInForm-field {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.parkingmate-bline-text {
+  position: absolute;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.input-password {
+  height: 48px;
+  min-height: 48px;
+}
+
+.parkingmate-forgot {
+  float: right;
+  line-height: 24px;
+  color: #adb5bd;
+  font-size: 13px;
+}
+
+.parkingmate-button {
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 8px 15px;
+  vertical-align: middle;
+  text-decoration: none;
+  line-height: 1.43;
+  white-space: nowrap;
+  color: #495057;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.parkingmate-login-button {
+  margin-top: 32px;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.parkingmate-button span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.parkingmate-bline-text {
+  position: absolute;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.parkingmate-kakao-button {
+  border-color: #fee500;
+  background-color: #fee500;
+  margin-top: 12px;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.parkingmate-kakao-button-svg {
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.parkingmate-signUpMessage {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  margin-top: 16px;
+  box-shadow: none;
+  background: none;
+  height: 56px;
+  text-align: center;
+  line-height: 56px;
+}
+
+.parkingmate-signUpMessage a {
+  margin-left: 6px;
+  text-decoration: underline;
+  color: #00c4c4;
+}
+
+.parkingmate-modal-background {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 30%;
+}
+
+.parkingmate-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+}
+
+.parkingmate-close-button-icon {
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+}
+

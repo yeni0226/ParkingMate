@@ -1,0 +1,1043 @@
+body {
+  font-size: 13px;
+}
+
+/* 메인박스 레이아웃 */
+.payment-layout {
+  position: relative;
+  background-color: #f2f4f6;
+  width: 100%;
+}
+
+/* 메인 상단 서포터정보 박스 */
+.main-header-container {
+  background-color: #fff;
+  padding: 24px 16px;
+}
+
+/* 메인 상단 서포터정보 인박스 */
+.main-header-container-ibx {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+/* 서포터 정보 텍스트 */
+.main-header-container-text-bx {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 사용자 정보 박스 */
+.guest-info-bx {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #212529;
+}
+
+/* 펼쳐보기 버튼 */
+.expand-button {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+}
+
+.expand-button span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+/* 메인 상단 서포터정보 펼쳐보기 박스 */
+.main-header-container-expand-bx {
+  margin-top: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 펼쳐진 후 */
+.expand-bx-open {
+  margin-top: 16px;
+  height: auto;
+  overflow: visible;
+  word-break: break-all;
+}
+
+/* 전화번호 박스 */
+.guest-phone-number-bx,
+.guest-email-bx {
+  margin-top: 8px;
+}
+
+/* 메인 상단 서포터정보 박스 밑 여백박스 */
+.main-header-container-under-margin-bx{
+  padding: 0 16px;
+}
+
+/* 메인 상단 서포터정보 박스 밑 여백박스 안 hr 태그 */
+.Divider_divider__ToZaf.Divider_thick__1Weqv.Divider_lightBG__3bAAk {
+  background-color: #f2f4f6;
+  opacity: 1;
+
+  margin: 0;
+  border: 0;
+}
+
+/* 배송정보, 상품정보, 쿠폰, 결제수단, 결제금액, 결제하기 인박스 */
+.payment-ibx {
+  background-color: #fff;
+  padding: 24px 16px;
+}
+
+/* 배송정보 전체박스 */
+.delivery-info-bx {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+/* 배송정보 텍스트 */
+.delivery-info-text3 {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 받는사람 정보 전체박스 */
+.shipping-receiver-box {
+  margin-top: 16px;
+  height: auto;
+  overflow: visible;
+  word-break: break-all;
+  width: 100%;
+}
+
+/* 신규 배송지 입력 div */
+.new-delivery-address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 신규 배송지 입력 버튼 */
+.new-delivery-address-btn {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 40px;
+  background: #212529;
+  color: #fff;
+}
+
+/* 받으실 분 */
+.recipient-info {
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 16px;
+  color: #212529;
+}
+
+/* 받으실 분 이름 입력 칸 */
+.recipient-input {
+  margin-top: 8px;
+  height: 40px;
+  min-height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 16px;
+  width: 100%;
+  vertical-align: middle;
+  color: #212529;
+}
+
+::placeholder {
+  font-size: 80%;
+  color: #808080;
+}
+
+/* 안심번호 사용 전체박스 */
+.secure-call-box {
+  line-height: 18px;
+  font-size: 10px;
+  font-weight: 400;
+  display: flex;
+  margin-top: 8px;
+  color: #868e96;
+}
+
+.secure-call-box>div {
+  display: inline;
+}
+
+/* ? 모양 버튼박스 */
+.help-button {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  margin-right: 6px;
+  margin-left: -4px;
+}
+
+/* 더보기 박스 */
+.help-content-bx {
+  display: inline-block;
+  max-width: 264px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* ? 모양 박스 */
+.help-shape-bx {
+  vertical-align: middle;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+/* 우편번호 div */
+.postal-code-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* 우편번호 확인칸 */
+.postal-code-input {
+  height: 40px;
+  min-height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* 우편번호 미확인 */
+.no-select {
+  border-color: #f2f4f6;
+  background-color: #f9fafb;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* 우편번호 확인칸 모양 */
+.postal-shape {
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  /* background-color: #fff; */
+  padding: 0 16px;
+  width: 100%;
+  /* height: 48px; */
+  vertical-align: middle;
+  color: #212529;
+  /* line-height: 28px;
+  font-size: 16px;
+  font-weight: 400; */
+}
+
+/* 주소찾기 버튼 */
+.find-address {
+  margin-left: 8px;
+  padding: 9px 15px;
+  line-height: 1.43;
+  font-size: 13px;
+  border-color: #495057;
+  background-color: #495057;
+  color: #fff;
+}
+
+/* 주소찾기 버튼 모양 */
+.find-address-shape {
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.find-address span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+/* 주소찾기 텍스트 */
+.find-address-text {
+  vertical-align: top;
+}
+
+.mt {
+  margin-top: 8px;
+}
+
+/* 배송 요청 사항(선택) 전체박스 */
+.delivery-notes {
+  margin-top: 16px;
+}
+
+/* 배송 요청 사항 텍스트 */
+.delivery-text {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* 배송 요청 사항 입력칸 */
+.delivery-notes-input {
+  position: relative;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.select-menu-hidden-input-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.select-menu-hidden-input-box input {
+  width: 100%;
+  height: 100%;
+}
+
+/* 배송 요청사항 선택 칸 */
+.delivery-notes-select {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.delivery-notes-content {
+  z-index: 9999;
+  border: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+.select-menu-bx {
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  box-shadow: none;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 38px;
+  position: relative;
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  outline: 0px !important;
+}
+
+/* 배송 시 요청사항을 선택해주세요 텍스트 박스 */
+.select-menu-text-bx {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0%;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* 배송 시 요청사항을 선택해주세요 텍스트 */
+.select-menu-text {
+  color: rgb(128, 128, 128);
+  margin-left: 2px;
+  margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+/* 직접 입력칸 */
+.self-input {
+  background: 0px center;
+  border: 0px;
+  font-size: inherit;
+  outline: 0px;
+  padding: 0px;
+  width: 1px;
+  color: transparent;
+  left: -100px;
+  opacity: 0;
+  position: relative;
+  transform: scale(0);
+}
+
+/* 펼쳐보기 전체박스 */
+.delivery-notes-expand-container {
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* 펼쳐보기 인박스 */
+.delivery-notes-expand-container-ibx {
+  color: rgb(204, 204, 204);
+  display: flex;
+  padding: 8px;
+  transition: color 150ms ease 0s;
+  box-sizing: border-box;
+}
+
+/* 상품 정보 div */
+.product-bx {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+/* 상품정보 텍스트 */
+.product-bx-text {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.expand-bx2 {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529;
+}
+
+/* 상품 이미지, 요청사항, 배송 안내 전체박스 */
+.product-info {
+  margin-top: 16px;
+  height: auto;
+  overflow: visible;
+  word-break: break-all;
+  width: 100%;
+}
+
+/* 상품 정보 인박스 */
+.product-info-ibx {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상품 이미지, 이름, 개수, 가격 */
+.product-item {
+  display: flex;
+  position: relative;
+}
+
+/* 상품 이미지박스 */
+.product-image-bx {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 12px;
+  width: 72px;
+  height: 72px;
+}
+
+/* 상품 이름, 갯수, 가격 */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 상품 이미지 */
+.product-image {
+  background-color: #808080;
+  border-radius: 8px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .25s;
+  /* background: no-repeat 50%/cover border-box; */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 10px;
+}
+
+/* 상품 이름 */
+.product-name {
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #212529;
+}
+
+/* 여백 */
+.margin-bx {
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 2px;
+  color: #868e96;
+}
+
+/* 상품 가격 */
+.product-price {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* 주문요청사항 */
+.order-request {
+  margin-top: 16px;
+  height: 40px;
+  min-height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 16px;
+  width: 100%;
+  vertical-align: middle;
+  color: #212529;
+}
+
+/* 배송안내 */
+.delivery-info {
+  margin-top: 16px;
+}
+
+/* 배송안내 인박스 */
+.delivery-info-ibx {
+  background-color: #f9fafb;
+  color: #495057;
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* 배송안내 텍스트 */
+.delivery-info-text {
+  margin-bottom: 8px;
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+/* 부가설명 */
+.delivery-info-text2 {
+  margin-left: -20px;
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+  /* margin: 0; */
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  color: #495057;
+}
+
+/* 배송안내 ? 이미지 */
+.MessageBox_icon__1NYKB {
+  color: #868e96;
+}
+
+.MessageBox_icon__1NYKB {
+  flex-shrink: 0;
+  margin-top: 2px;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+/* 쿠폰박스 */
+.coupon-box {
+  background-color: #fff;
+  padding: 24px 16px;
+}
+
+/* 쿠폰 div */
+.coupon-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+/* 쿠폰 텍스트 */
+.coupon-text {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 뭔지모름 */
+.www {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #212529;
+}
+
+/* 뭔지모름2 */
+.wwww {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.wwww input {
+  width: 100%;
+  height: 100%;
+}
+
+/* 뭔지모름3 */
+.wwwww {
+  z-index: 9999;
+  border: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+/* 뭔지모름4 */
+.wwwwww {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529;
+}
+
+/* 사용가능 쿠폰 선택칸 */
+.coupon-options {
+  margin-top: 16px;
+  height: auto;
+  overflow: visible;
+  word-break: break-all;
+  width: 100%;
+}
+
+/* 사용가능 쿠폰 인박스 */
+.coupon-options-ibx {
+  position: relative;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 쿠폰 리스트 박스 */
+.coupon-list-bx {
+  pointer-events: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 쿠폰 리스트 */
+.coupon-list {
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  box-shadow: none;
+  align-items: center;
+  background-color: rgb(242, 242, 242);
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 38px;
+  position: relative;
+  transition: all 100ms ease 0s;
+  box-sizing: border-box;
+  outline: 0px !important;
+}
+
+/* 사용 가능한 쿠폰 n장 박스 */
+.available-coupon-bx {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0%;
+  flex-wrap: wrap;
+  padding: 2px 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* 사용 가능한 쿠폰 n장 텍스트 */
+.available-coupon-text {
+  color: rgb(128, 128, 128);
+  margin-left: 2px;
+  margin-right: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.available-coupon-bx input {
+  background: 0px center;
+    border: 0px;
+    font-size: inherit;
+    outline: 0px;
+    padding: 0px;
+    width: 1px;
+    color: transparent;
+    left: -100px;
+    opacity: 0;
+    position: relative;
+    transform: scale(0);
+}
+
+
+
+/* 결제금액 */
+.checkout-total-bx {
+  background-color: #fff;
+  padding: 24px 16px;
+}
+
+/* 결제금액 div */
+.checkout-total-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+/* 결제금액 내용 */
+.checkout-total-content {
+  margin-top: 16px;
+  height: auto;
+  overflow: visible;
+  word-break: break-all;
+  width: 100%;
+}
+
+/* 결제금액 텍스트 */
+.cehckout-total-text {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 결제금액 내용 인박스 */
+.checkout-total-content-ibx {
+
+}
+
+/* 결제금액 내용 */
+.checkout-total-content-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 마진 */
+.mg-bx2 {
+  margin: 16px 0;
+  background-color: #f2f4f6;
+  opacity: 1;
+  height: 1px;
+}
+
+/* 결제금액 내용 디테일 인박스 */
+.checkout-total-content-details-ibx {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상품 금액 설명 */
+.total-payment {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.mt-bx {
+  margin-top: 8px;
+}
+
+/* 총 결제 금액 */
+.total-payment-last {
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 24px;
+  color: #212529;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-payment dl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #868e96;
+}
+
+.total-payment dt, 
+.total-payment dd {
+  display: flex;
+  align-items: center;
+}
+
+.payment-price {
+  color: #212529;
+}
+
+.price-em {
+  margin-right: 4px;
+}
+
+.total-payment-last-text {
+  line-height: 28px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.margin-bx2 {
+  height: calc(92px + env(safe-area-inset-bottom));
+  background-color: #fff;
+}
+
+/* 결제하기 박스 */
+.payment-button-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1100;
+  background-color: #fff;
+  padding: 0 0 16px;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+}
+
+/* 위 선 */
+.mg-bx3 {
+  margin: 0px;
+  background-color: #f2f4f6;
+  opacity: 1;
+  height: 1px;
+}
+
+/* 결제하기 버튼 마진 박스 */
+.payment-btn-mg-bx {
+  padding: 0 16px;
+}
+
+/* 펼쳐보기 div */
+.payment-btn-expand-content {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+}
+
+/* 간격박스 */
+.mg-bx4 {
+  transition: height .25s;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #495057;
+}
+
+/* 결제하기 버튼 */
+.payment-btn {
+  margin-top: 8px;
+  background-color: #00c4c4;
+  border-color: #00c4c4;
+  color: #fff;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 15px;
+  width: 100%;
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.payment-btn span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.payment-btn-text {
+  vertical-align: top;
+}
+
+/* 펼쳐보기 img */
+#payment-btn-img {
+  transform: rotate(90deg);
+  transition: transform .15s;
+  margin-top: 8px;
+}
+
+/* 뭔지 모름 */
+.rewQ {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 8px);
+  top: 0;
+}
+
+#expand-btn1 {
+  transform: rotate(180deg);
+}
+
+#expand-btn2 {
+  transform: rotate(180deg);
+}
+
+input:focus {
+  border: 1px solid #a0bfd9;
+}
+
+/* 메뉴 더 보기 */
+.more-menu {
+  display: none;
+  z-index: 1110;
+  margin-top: 4px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(33,37,41,.06), 0 6px 6px -1px rgba(33,37,41,.1);
+  padding: 8px 4px;
+  top: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 메뉴 더 보기 인박스 */
+.more-menu-ibx {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 메뉴 옵션 */
+.select-menu-option {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: transparent;
+  color: inherit;
+  cursor: default;
+  display: block;
+  padding: 8px 12px;
+  width: 100%;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* 직접 입력칸 */
+#deliveryRequest {
+  margin-top: 8px;
+  height: 104px;
+  padding: 10px 12px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+  transition-property: border-color,background-color,color;
+  transition-duration: .15s;
+  outline: none;
+  border: 1px solid #dde2e6;
+  border-radius: 3px;
+  background: #fff;
+  resize: none;
+  width: 100%;
+  color: #212529;
+}

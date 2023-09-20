@@ -1,0 +1,1761 @@
+body {
+  font-size: 15px;
+}
+
+/* 메인 첫번째 콘테이너 */
+.main-container {
+  padding: 0 16px;
+}
+
+/* 이미지 전체박스 */
+.img-bx {
+  position: relative;
+  margin: 0 -16px;
+  text-align: center;
+
+  width: 100vw;
+  height: 410px;
+  overflow: hidden;
+}
+
+/* 슬라이드 버튼 공통 */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 55px;
+  margin-top: -27px;
+
+  background-size: cover!important;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 왼쪽 슬라이드 버튼 */
+.lbtn {
+  left: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABuCAYAAAB7unCOAAAABGdBTUEAALGPC/xhBQAAAjlJREFUeAHt2jFqAlEQxvGY1cbY2CRNQBTEdLmCta2F18lpPIK1lzCk22bBRoiEVIHFuAGbTFLs7rz3vhk/Ic3THd5v/qnEzmKxeLm5otftFVl/qAR7L87CLOxsA/yXdhZUcFhYrMTZAQs7Cyo4LCxW4uyAhZ0FFRwWFitxdsDCzoIKDguLlTg7YGFnQQWHhcVKnB2wsLOggsPCYiXODljYWVDBgSg8Ho8Hq9XqKcuyjrih8kFycIVdLpfPk8nkYT6fPyr7xLik4Au21+t1i6I4bLfbQtxQ+SAZ+Dd2vV6/lmV5UvaJcUnAqbCVPjo4JTY6ODU2KhgBGw2Mgo0CRsIGB6Nhg4IRscHAqNggYGSsOhgdqwq2gFUDW8GqgC1hW4OtYVuBLWIbg61iG4EtYxuBq4csv7LpdDqvAzgej1/7/f59NpvdD4fDwWg0utvtdofTKfjXUXWu+e9na4OrSZbRjcCW0Y3BVtGtwBbRrcHW0CpgS2g1sBW0KtgCWh2Mjg4CRkYHA6Oig4IR0cHBaOgoYCR0NDAKOioYAR0dnBqdBJwSnQz8F/r8e60yz/OP6r1Qr6TgCnX5uqjf72ebzSYP/d1YN9Qm68w9V/08/73VeabpZ6P/TqvpRbWeI1hrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzWBi1jNa9WFhrk6hzrq7wNxNqQMRLNUFBAAAAAElFTkSuQmCC);
+}
+
+/* 오른쪽 슬라이드 버튼 */
+.rbtn {
+  right: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABuCAYAAAB7unCOAAAABGdBTUEAALGPC/xhBQAAAilJREFUeAHt2rFqAkEQxnHNpdNGkKQ5EAUxpMkrWNtaCD5NXsfCd7C2SyGkE0SwCURIqhi5cAGb2dLZmY/xu0Z2i/V+87dabE4mk9fGDT13N2T9pxIcvTgLs3CwCfAnHSxowmHhZCTBNlg4WNCEw8LJSIJtsHCwoAmHhZORBNtg4WBBEw4LJyMJtsHCwYImHBZORhJsg4WDBU04LJyMJNgGCwcLmnDUCxdF0ZzNZk/9fr+dfBvAhjp4PB6Xg8HgcTqdviCii+FwONYc/G63++r1eq1Op9MejUYPh8Ph83g8/mh+xzVnqYOrqmpsNpsPVLQ6uJ4+MjoLGBmdDYyKzgpGRGcHo6FNwEhoMzAK2hSMgDYHe6NdwJ5oN7AX2hXsgXYHW6MhwJZoGLAVGgpsgYYD50ZDgnOi1S/x6pdFfmDB9XXvfD5/LsuyezqdfpfL5dt2u/2+dpiQ4FzYelhw4JxYOHBuLBTYAgsDtsJCgC2x7mBrrCvYA+sG9sK6gD2x5mBvrCkYAWsGRsGagJGw2cFo2KxgRGw2MCo2CxgZmwVc/zFN+1qmflGt517roMs5q9Vq3+12W+v1eq9xB3U5V+tTHXw+n6vFYvGu9YLa58DdaWkD5XkEy4lEW7NwtKLSw8JyItHWLBytqPSwsJxItDULRysqPSwsJxJtzcLRikoPC8uJRFuzcLSi0sPCciLR1iwcraj0sLCcSLQ1C0crKj0sLCcSbX1zhf8AAKU/JNEM0C8AAAAASUVORK5CYII=);
+}
+
+/* 슬라이드 박스 */
+.slide-bx {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  /* overflow-y: hidden; */
+  width: 1230px;
+  height: 410px;
+
+  right: 0;
+
+  /* transition: transform 0.4s; */
+}
+
+/* 슬라이드 이미지 전체 */
+.slide-bx>li>img {
+  height: 100%;
+}
+
+/* 슬라이드 이미지1 */
+.slide-img-1 {
+  background: url(../../images/picture1.png) no-repeat center;
+}
+
+/* 슬라이드 이미지2 */
+.slide-img-2 {
+  background: url(../../images/picture2.png) no-repeat center;
+}
+
+/* 슬라이드 이미지3 */
+.slide-img-3 {
+  background: url(../../images/picture3.png) no-repeat center;
+}
+
+/* 메인 내용 박스 */
+.main-content {
+  position: relative;
+  margin-top: 16px;
+}
+
+/* 카테고리 공유 박스 */
+.category-share-bx {
+  display: flex;
+  justify-content: space-between;
+  color: #868e96;
+}
+
+/* 카테고리 박스 */
+.category-bx {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 카테고리 박스 */
+.category-bx>a {
+  display: flex;
+  align-items: center;
+  color: #868e96;
+}
+
+/* 카테고리 박스 폰트 */
+.category-bx>a>span {
+  font-size: 13px;
+}
+
+/* #박스 */
+.s-bx {
+  display: flex;
+  gap: 8px;
+}
+
+.s-bx>a {
+  height: 26px;
+  border-color: #f2f4f6;
+  background-color: #f2f4f6;
+  padding: 4px 11px;
+  line-height: 1.5;
+  font-size: 12px;
+  border-radius: 999em;
+}
+
+.s-bx>a>span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.s-bx>a>span>div {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  gap: 2px;
+}
+
+/* # 폰트 */
+.s-p {
+  color: #00c4c4;
+}
+
+/* 카테고리 폰트 */
+.category-p {
+  font-size: 10px;
+}
+
+/* 공유 박스 */
+.share-bx {
+  width: 24px;
+  height: 24px
+}
+
+a, button {
+  color: inherit;
+}
+
+hr {
+  display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+}
+
+/* 테그 가전 > # 냉장고 공유 버튼 밑 선 */
+.main-content>hr {
+  margin: 16px 0;
+  background-color: #f2f4f6;
+  opacity: 1;
+  height: 1px;
+}
+
+/* 제목 박스 */
+.title-bx {
+  display: flex;
+}
+
+/* 제목 */
+.title {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* 별점, 리뷰, 그외 박스 */
+.point-review-bx {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* 별점, 리뷰, 안 박스 */
+.point-review-ibx {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-flex;
+  margin-right: 16px;
+}
+
+.point-bx {
+  margin-right: 4px;
+  display: flex;
+}
+
+/* 별 이미지 */
+.star-img {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0idHJhbnNwYXJlbnQiIGQ9Ik0wIDBoMzJ2MzJIMHoiLz4KICAgICAgICA8cGF0aCBkPSJNMCAwaDMydjMySDB6Ii8+CiAgICAgICAgPHBhdGggZD0ibTE2IDI2Ljk5NC03LjYyIDQuNzFjLS45MzguNTgtMi4xNjQuMjgtMi43MzgtLjY2OS0uMjc0LS40NTQtLjM1OC0xLS4yMzctMS41MTlsMi4wNzEtOC43OS02Ljc4LTUuODc4YTIuMDMzIDIuMDMzIDAgMCAxLS4yMTctMi44NDIgMS45ODggMS45ODggMCAwIDEgMS4zNTUtLjY5OWw4Ljg5OC0uNzIxIDMuNDI5LTguMzQ1YTEuOTg0IDEuOTg0IDAgMCAxIDMuNjc4LjAwMWwzLjQyOCA4LjM0NCA4LjkuNzIxYTIuMDEgMi4wMSAwIDAgMSAxLjgyNyAyLjE3MSAyLjAyNSAyLjAyNSAwIDAgMS0uNjkgMS4zN2wtNi43ODEgNS44NzggMi4wNzIgOC43OWEyLjAxOCAyLjAxOCAwIDAgMS0xLjQ3NSAyLjQzIDEuOTczIDEuOTczIDAgMCAxLTEuNS0uMjQzTDE2IDI2Ljk5M3oiIGZpbGw9IiNGRkJFMUEiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K);
+  background-size: contain;
+
+  margin-top: 1px;
+  margin-bottom: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+/* 별점 */
+.star-point {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 3px;
+  color: #343a40;
+}
+
+/* 리뷰 갯수 */
+.review-number {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 2px;
+  color: #adb5bd;
+}
+
+/* 몇 명 이용했는지 박스 */
+.human-bx {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-top: -2px;
+  color: #495057;
+}
+
+/* 사람 이미지 */
+.human-bx>span:before {
+  display: inline-block;
+  margin: -3px 5px 0 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxkZWZzPgogICAgICAgIDxjbGlwUGF0aCBpZD0ienFyYmw3c2NoYSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNzUgMHYxNzg2SDBWMGgzNzV6Ii8+CiAgICAgICAgPC9jbGlwUGF0aD4KICAgICAgICA8Y2xpcFBhdGggaWQ9Im04NzZmZzB3dWIiPgogICAgICAgICAgICA8cGF0aCBkPSJNMS43NSAwYTEuNzUgMS43NSAwIDEgMSAwIDMuNSAxLjc1IDEuNzUgMCAwIDEgMC0zLjV6Ii8+CiAgICAgICAgPC9jbGlwUGF0aD4KICAgICAgICA8Y2xpcFBhdGggaWQ9ImQ4djMzZDFjZ2MiPgogICAgICAgICAgICA8cGF0aCBkPSJNMi43NSAwQTIuNzUgMi43NSAwIDAgMSA1LjUgMi43NVY1LjVBLjUuNSAwIDAgMSA1IDZILjVhLjUuNSAwIDAgMS0uNS0uNVYyLjc1QTIuNzUgMi43NSAwIDAgMSAyLjU4Mi4wMDVMMi43NSAweiIvPgogICAgICAgIDwvY2xpcFBhdGg+CiAgICAgICAgPGNsaXBQYXRoIGlkPSJubWd4dTY2c3pkIj4KICAgICAgICAgICAgPHBhdGggZD0iTTIuNzUgMEEyLjc1IDIuNzUgMCAwIDEgNS41IDIuNzVWNS41QS41LjUgMCAwIDEgNSA2SC41YS41LjUgMCAwIDEtLjUtLjVWMi43NUEyLjc1IDIuNzUgMCAwIDEgMi41ODIuMDA1TDIuNzUgMHoiLz4KICAgICAgICA8L2NsaXBQYXRoPgogICAgICAgIDxjbGlwUGF0aCBpZD0iYnZqNjlzd2NiZSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yLjc1IDBhMi43NSAyLjc1IDAgMSAxIDAgNS41IDIuNzUgMi43NSAwIDAgMSAwLTUuNXoiLz4KICAgICAgICA8L2NsaXBQYXRoPgogICAgICAgIDxjbGlwUGF0aCBpZD0id3AydzZ5M29rZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00IDBhNCA0IDAgMCAxIDQgNHY0LjVhLjUuNSAwIDAgMS0uNS41aC03YS41LjUgMCAwIDEtLjUtLjVWNEE0IDQgMCAwIDEgMy44LjAwNUw0IDB6Ii8+CiAgICAgICAgPC9jbGlwUGF0aD4KICAgIDwvZGVmcz4KICAgIDxnIGNsaXAtcGF0aD0idXJsKCN6cXJibDdzY2hhKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMSAtNTY2KSI+CiAgICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI204NzZmZzB3dWIpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjIgNTcwLjgzMykiPgogICAgICAgICAgICA8cGF0aCBmaWxsPSIjQ0NEMkQ3IiBkPSJNMCAwaDMuNXYzLjVIMFYweiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGlwLXBhdGg9InVybCgjZDh2MzNkMWNnYykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMSA1NzMuODMzKSI+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNDQ0QyRDciIGQ9Ik0wIDBoNS41djZIMFYweiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGlwLXBhdGg9InVybCgjbTg3NmZnMHd1YikiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMi41IDU3MC44MzMpIj4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI0NDRDJENyIgZD0iTTAgMGgzLjV2My41SDBWMHoiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI25tZ3h1NjZzemQpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzEuNSA1NzMuODMzKSI+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNDQ0QyRDciIGQ9Ik0wIDBoNS41djZIMFYweiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyBjbGlwLXBhdGg9InVybCgjYnZqNjlzd2NiZSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNi4yNSA1NjcuMzMzKSI+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNBQkIzQkIiIGQ9Ik0wIDBoNS41djUuNUgwVjB6Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGNsaXAtcGF0aD0idXJsKCN3cDJ3Nnkzb2tmKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI1IDU3Mi4zMzMpIj4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI0FCQjNCQiIgZD0iTTAgMGg4djlIMFYweiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==) no-repeat 0 0;
+  background-size: 100% 100%;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  content: "";
+}
+
+/* ? 박스 */
+.question-btn {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+}
+
+/* ? 박스 옆 마진 박스 */
+.ml-bx {
+  max-width: 264px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* ? 박스 */
+.question-bx {
+  vertical-align: middle;
+  margin-left: 4px;
+  display: inline-block;
+
+  width: 16px;
+  height: 16px;
+  color: #cdd3d8;
+}
+
+/* 가격 박스 행 */
+.price-bx {
+  display: flex;
+  align-items: center;
+  margin: 21px 0 8px;
+}
+
+/* 가격 */
+.price {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00b2b2;
+}
+
+/* 가격 원 */
+.won-bx {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin: 2px 0 0 2px;
+  vertical-align: top;
+  color: #212529;
+}
+
+/* 쿠폰박스 */
+.coupon-btn {
+  cursor: pointer;
+
+  line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 8px;
+    background-color: rgba(231,249,249,.8);
+    padding: 15px 12px 13px;
+    width: 100%;
+    color: #00b2b2;
+    font-weight: 500;
+}
+
+/* 쿠폰박스 옆 다운로드 이미지 */
+.AvailableCouponButton_icon__6SEtq {
+  display: inline-block;
+  margin: -2px 0 0 8px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/* 배송, 혜택 전체박스 */
+.shipping-benefit-bx {
+  position: relative;
+  margin: 24px 0;
+  padding: 16px 0;
+}
+
+.shipping-benefit-bx:before {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  left: -16px;
+  background-color: #f2f4f6;
+  height: 1px;
+  content: "";
+}
+
+.shipping-benefit-bx:after {
+  bottom: 0;
+  position: absolute;
+  right: -16px;
+  left: -16px;
+  background-color: #f2f4f6;
+  height: 1px;
+  content: "";
+}
+
+/* 배송 박스, 혜택박스 */
+.shipping-bx,
+.benefit-bx {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 0;
+}
+
+/* 배송 텍스트, 헤택 텍스트 */
+.shipping-text,
+.benefit-text {
+  float: left;
+  min-width: 36px;
+  color: #adb5bd;
+  font-weight: 700;
+}
+
+/* 배송 내용박스, 혜택 내용박스 */
+.shipping-content-bx,
+.benefit-content-bx {
+  padding-left: 15px;
+  overflow: hidden;
+}
+
+/* 배송 내용 안박스 */
+.shipping-content-ibx,
+.benefit-content-ibx {
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* 배송 내용 상단박스 */
+.header-shipping-bx {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+/* 배송 이미지 */
+.shipping-img {
+  display: inline-block;
+  margin-right: 4px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAzNiAyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icmp4a3cxZjBxYSIgZD0iTTAgMGgyNi41djI0LjE3M0gweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5LjUpIj4KICAgICAgICAgICAgPG1hc2sgaWQ9IjVqMnE1dTNlaWIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcmp4a3cxZjBxYSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNi41IDQuMDI5djE2LjExNWMwIDIuMjI1LTEuNzkgNC4wMjktNCA0LjAyOUgwVjQuMDI5QzAgMS44MDQgMS43OSAwIDQgMGgxOC41YzIuMjEgMCA0IDEuODA0IDQgNC4wMjkiIGZpbGw9IiMwQ0MiIG1hc2s9InVybCgjNWoycTV1M2VpYikiLz4KICAgICAgICA8L2c+CiAgICAgICAgPHBhdGggZD0iTTI3LjYwNSAxNC40OTNjLS45NzUgMC0xLjc2Ni0uODYyLTEuNzY2LTEuOTI1IDAtMS4wNjMuNzkxLTEuOTI0IDEuNzY2LTEuOTI0Ljk3NiAwIDEuNzY3Ljg2MSAxLjc2NyAxLjkyNHMtLjc5MSAxLjkyNS0xLjc2NyAxLjkyNXptMy41NTcgMS4xNHYtNi4yMmgtLjg5M2EuODI3LjgyNyAwIDAgMC0uODIyLjc2NXYtLjAwMWEzLjIxNiAzLjIxNiAwIDAgMC0yLjM1Ni0uODY4IDMuMjY0IDMuMjY0IDAgMCAwLTIuOTEgMi4xOTRjLS40NSAxLjMyLS4wMDggMi42OC45OTQgMy41MTZhMy43NDMgMy43NDMgMCAwIDAgMi4zODguODQ3Yy44NDYgMCAxLjYyNi0uMjc1IDIuMjM3LS43MjhhLjczOS43MzkgMCAwIDAgLjY5NS40OTVoLjY2N3pNMjIuMzU5IDkuNDE2bC0xLjI0OCAzLjg3Mi0xLjI1OC0zLjg3MmgtMS4yM2EuODI2LjgyNiAwIDAgMC0uNzgzLjU3MmwtMS4wNzIgMy4zLTEuMjQ4LTMuODcyaC0xLjc0OWwyLjA1NCA2LjIxOGgxLjc1NWwxLjM2LTMuOTkgMS4zNTkgMy45OWgxLjc1NmwyLjA1My02LjIxOGgtMS43NXoiIGZpbGw9IiNGRkYiLz4KICAgICAgICA8cGF0aCBkPSJNOS41IDguMDU4SDYuODkxYy0yLjIwOCAwLTQgMS44MDMtNCA0LjAyOHYzLjQ5MkgyYy0xLjEwNSAwLTIgLjkwMi0yIDIuMDE0djQuNTY2YzAgMS4xMTMuODk1IDIuMDE1IDIgMi4wMTVoNy41VjguMDU4eiIgZmlsbD0iIzA4OUNBMCIvPgogICAgICAgIDxwYXRoIGQ9Ik01LjcgMjQuMTczYzAtMi4xMTQgMS43MDEtMy44MjggMy44LTMuODI4IDIuMDk5IDAgMy44IDEuNzE0IDMuOCAzLjgyOFMxMS41OTkgMjggOS41IDI4Yy0yLjA5OSAwLTMuOC0xLjcxMy0zLjgtMy44MjdNMjYuMzUzIDI0LjE3M2MwLTIuMTE0IDEuNzAxLTMuODI4IDMuOC0zLjgyOCAyLjA5OSAwIDMuOCAxLjcxNCAzLjggMy44MjhTMzIuMjUyIDI4IDMwLjE1MyAyOGMtMi4wOTkgMC0zLjgtMS43MTMtMy44LTMuODI3IiBmaWxsPSIjNDk1MDU3Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=) no-repeat 100% center/contain;
+  width: 24px;
+  height: 19px;
+}
+
+/* 하단 배송 내용 */
+.footer-shipping-bx {
+  margin-top: -4px;
+}
+
+.footer-shipping-bx:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/* 무료배송 박스 */
+.free-shipping-bx {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2px;
+  color: #868e96;
+}
+
+/* 무료배송 안박스 */
+.free-shipping-ibx {
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #868e96;
+}
+
+/* 혜택 설명 안박스 */
+.benefit-content-ibx:before {
+  display: inline-block;
+  
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAyMiAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMnYxOUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwM0NDQ0MiIGQ9Ik0xMi4wOTIuNzMgNy45NDMgOS4zNWwxMS43NDIgNi4zIDIuMjUzLTkuNTA2eiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0wIDYuMTQzdjkuNTA2aDE5LjY4NWwyLjI1My05LjUwNnoiLz4KICAgICAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgICAgICAgPHBhdGggZD0iTTIuNDY0IDExLjE4NWMwLTEuMDI0LjcxNi0xLjg1OCAyLjAxNi0xLjg1OC41ODUgMCAxLjAzOS4xOTYgMS4zMjEuMzk2di44OWgtLjAwNWMtLjM4OC0uMjU3LS43NjEtLjQ3OC0xLjI4Ni0uNDc4LS42OTUgMC0xLjEwOS40MzMtMS4xMDkgMS4wNDUgMCAuNTk4LjM5MyAxLjAyNSAxLjEwNCAxLjAyNS41MjUgMCAuOTEzLS4xODUgMS4yOTEtLjQ2N2guMDA1di45Yy0uMjU3LjE3NS0uNzQ2LjM3Ni0xLjM4MS4zNzYtMS4zMzYgMC0xLjk1Ni0uODE0LTEuOTU2LTEuODI5TTYuNjU2IDkuNDEyaC45MjN2Mi43MDNoMS45NGwtLjAzNS44MTRINi42NTZ6TTEwLjA5NCAxMS41NjJ2LTIuMTVoLjkyN3YyLjA5YzAgLjUyNy4zODMuNjkzLjgxNy42OTMuNDM0IDAgLjgyMi0uMTU1LjgyMi0uNjczdi0yLjExaC45MjJ2Mi4xM2MwIDEuMDktLjc0NiAxLjQ4Mi0xLjc1IDEuNDgyLTEuMDA4IDAtMS43MzgtLjM5Mi0xLjczOC0xLjQ2Mk0xNi40ODIgMTIuMTg1Yy4zMzgtLjAwNS40Ny0uMTE1LjQ3LS4zNjYgMC0uMjQyLS4xMjItLjM2Mi0uNDctLjM2MmgtMS4wNjR2LjczM2wxLjA2NC0uMDA1em0tLjA0NS0xLjM2MWMuMzE3IDAgLjQ0NC0uMDk2LjQ0NC0uMzQ3IDAtLjIzMS0uMTQyLS4zMjctLjQ0NC0uMzI3aC0xLjAxOXYuNjc0aDEuMDE5ek0xNC41MSA5LjQxMmgyLjExN2MuNzMxIDAgMS4xNy4zMDEgMS4xNy44ODQgMCAuMzkyLS4xNTYuNjczLS41OTUuODA0LjQ1NC4xOC42Ny40MjIuNjcuODQgMCAuNzI4LS41NTQuOTg5LTEuMzMuOTg5SDE0LjUxVjkuNDEyeiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==) no-repeat center;
+  background-size: 100% 100%;
+  width: 22px;
+  height: 19px;
+  vertical-align: middle;
+  content: "";
+}
+
+/* 할인 쿠폰 버튼 */
+.discount-btn {
+  text-decoration: underline;
+  color: #00b2b2;
+  font-size: 12px;
+}
+
+/* 펀딩 박스 */
+.funding-bx {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+/* 이전 펀딩 정보 */
+.before-funding-bx {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  flex: 1 1;
+  color: #212529;
+}
+
+/* 이전 펀딩 정보 텍스트 */
+.before-funding-bx>a {
+  text-decoration: underline;
+  color: #adb5bd;
+}
+
+/* 이전 펀딩 정보 오른쪽 박스 */
+.funding-right-bx {
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+/* 성공박스 */
+.success-bx,
+.funding-bx2 {
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+  border-radius: 16px;
+  background-color: #f2f4f6;
+  padding: 6px 12px;
+  vertical-align: top;
+  color: #868e96;
+}
+
+/* 성공 텍스트 */
+.success,
+.funding {
+  margin-left: 2px;
+}
+
+/* 업로더 정보 */
+.uploader-information {
+  color: #212529;
+  border: 1px solid #dde2e6;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+/* 업로더 정보 안박스 */
+.uploader-information-ibx {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 업로더 정보 헤더 */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-header-link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.info-header-btn {
+  padding-left: 8px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+  padding: 6px 11px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.info-header-btn>span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+/* 팔로우 텍스트 */
+.follow {
+  vertical-align: top;
+}
+
+/* 프사 박스 */
+.profile-bx {
+  display: inline-flex;
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+/* 프사 */
+.profile {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
+  display: block;
+  position: absolute;
+  opacity: 1;
+  border-radius: 100%;
+  background: no-repeat 50%/cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* 이름 박스 */
+.name-bx {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* 이름 */
+.name {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* 팔로워 수 */
+.follow-number {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #00b2b2;
+}
+
+.margin-box {
+  display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+/* 펀딩 내용 박스 */
+.uploader-information-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 업로더 내용 */
+.mark-info {
+  line-height: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* 업로드 내용 1 */
+.info-1 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 펀딩 이미지 */
+.funding-img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* 별 이미지2 */
+.star-img2 {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9ImFydHdvcmtfSWxsdXN0X3N0YXIiPgo8ZyBpZD0iaWNfc3RhciI+CjxwYXRoIGlkPSJQYXRoIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUuMTQyNjkgMTMuODg1NUw3Ljk5OTk4IDEyLjA2MjFWMkM3LjcwNzQ1IDIuMDAwMTQgNy40Mjk4OSAyLjE4MDk3IDcuMzEwMyAyLjQ4MDUzTDYuMDI0NjcgNS43MTA2N0wyLjY4NzU2IDUuOTg5OTlDMi40OTA0MSA2LjAwNjc2IDIuMzA4MTggNi4xMDM5IDIuMTc5NzMgNi4yNjAzNEMxLjkxMTI2IDYuNTg3NjQgMS45NDc4NSA3LjA3OTk3IDIuMjYwNzYgNy4zNjA0Nkw0LjgwMzY0IDkuNjM1OTlMNC4wMjY5NiAxMy4wMzg2QzMuOTgxNDEgMTMuMjM5MSA0LjAxMzE1IDEzLjQ1MDUgNC4xMTU4MyAxMy42MjY1QzQuMzMwOTEgMTMuOTkzOSA0Ljc5MDU3IDE0LjExMDIgNS4xNDI2OSAxMy44ODU1WiIgZmlsbD0iIzAwQzRDNCIvPgo8cGF0aCBpZD0iUGF0aF8yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEwLjg1NzMgMTMuODg1NUw4LjAwMDAyIDEyLjA2MjFWMkM4LjI5MjU1IDIuMDAwMTQgOC41NzAxMSAyLjE4MDk3IDguNjg5NyAyLjQ4MDUzTDkuOTc1MzMgNS43MTA2N0wxMy4zMTI0IDUuOTg5OTlDMTMuNTA5NiA2LjAwNjc2IDEzLjY5MTggNi4xMDM5IDEzLjgyMDMgNi4yNjAzNEMxNC4wODg3IDYuNTg3NjQgMTQuMDUyMSA3LjA3OTk3IDEzLjczOTIgNy4zNjA0NkwxMS4xOTY0IDkuNjM1OTlMMTEuOTczIDEzLjAzODZDMTIuMDE4NiAxMy4yMzkxIDExLjk4NjkgMTMuNDUwNSAxMS44ODQyIDEzLjYyNjVDMTEuNjY5MSAxMy45OTM5IDExLjIwOTQgMTQuMTEwMiAxMC44NTczIDEzLjg4NTVaIiBmaWxsPSIjMDBDNEM0Ii8+CjwvZz4KPC9nPgo8L3N2Zz4K) no-repeat 50%/contain;
+}
+
+/* 리뷰 갯수2 */
+.review-number2 {
+  color: #adb5bd;
+}
+
+/* 돈 이미지 */
+.money-img {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9ImFydHdvcmtfSWxsdXN0X3dvbiIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4OV8xNTUwKSI+CjxnIGlkPSJpY19hbW91bnQtZnVuZGluZyI+CjxwYXRoIGlkPSJDb21iaW5lZC1TaGFwZSIgZD0iTTggMUMxMS44MjA1IDAuOTk4MTM4IDE0LjkzNjkgNC4wNjAwMSAxNS4wMDI0IDcuODc5OTlDMTUuMDY3OSAxMS43IDEyLjA1ODQgMTQuODY2OSA4LjI0IDE0Ljk5Nkw4IDE1QzQuMTM0MDEgMTUgMSAxMS44NjYgMSA4QzEgNC4xMzQwMSA0LjEzNDAxIDEgOCAxWk0xMS4wMiA1LjI3MkMxMC43MjEyIDUuMTc0ODUgMTAuNDAwMiA1LjMzODI1IDEwLjMwMyA1LjYzN0w5LjQyIDguMzQ2TDguNTQxIDUuNjM3TDguNTA1IDUuNTVDOC4yODYgNS4xMTUgNy42MTkgNS4xNDQgNy40NTkgNS42MzZMNi41NzcgOC4zNDZMNS42OTcgNS42MzdMNS42NjUgNS41NThDNS41MzE1MyA1LjI5MjM1IDUuMjE2MDUgNS4xNzQyMyA0Ljk0MDkzIDUuMjg2OUM0LjY2NTgxIDUuMzk5NTcgNC41MjM4IDUuNzA1MDQgNC42MTUgNS45ODhMNS4wMjcgNy4yNTZINC4wNjJMMy45NzggNy4yNjNDMy43MDQgNy4zMDQgMy40OTI5NiA3LjU0NyAzLjQ5Mjk2IDcuODRDMy40OTExMyA3Ljk5Mjk0IDMuNTUwMTcgOC4xNDAzNCAzLjY1NzEgOC4yNDk3MUMzLjc2NDAyIDguMzU5MDcgMy45MTAwNiA4LjQyMTQyIDQuMDYzIDguNDIzSDUuNDA2TDYuMDM3IDEwLjM2M0w2LjA3MyAxMC40NUM2LjI5MyAxMC44ODUgNi45NTkgMTAuODU2IDcuMTE5IDEwLjM2M0w3Ljk5OSA3LjY1M0w4Ljg4MSAxMC4zNjNMOC45MTcgMTAuNDVDOS4xMzYgMTAuODg1IDkuODAzIDEwLjg1NiA5Ljk2MyAxMC4zNjNMMTAuNTkzIDguNDIzSDExLjkzN0wxMi4wMjIgOC40MTdDMTIuMjk2IDguMzc1IDEyLjUwNiA4LjEzMiAxMi41MDYgNy44NEMxMi41MDYgNy41MTcgMTIuMjUyIDcuMjU2IDExLjkzOCA3LjI1NkgxMC45NzJMMTEuMzg1IDUuOTg4TDExLjQwNSA1LjkwNkMxMS40NTEgNS42Mjg1NyAxMS4yODc0IDUuMzU5MTYgMTEuMDIgNS4yNzJaIiBmaWxsPSIjMDBDNEM0Ii8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODlfMTU1MCI+CjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K) no-repeat 50%/contain;
+}
+
+/* 사람 이미지 */
+.human-img  {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9ImFydHdvcmtfSWxsdXN0X3BlcnNvbiIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4OV8xNTU2KSI+CjxnIGlkPSJpY19wZXJzb24iPgo8cGF0aCBpZD0iU2hhcGUiIGQ9Ik04IDguMDAwMDZDNi4zNDcgNy45OSA1IDYuNyA1IDQuOTU4QzUgMy4zNDMgNi4zNDcgMiA4IDJDOS42NTMgMiAxMSAzLjM0MyAxMSA0Ljk1OEMxMSA2LjY5OSA5LjY1MyA4LjAxIDggOC4wMDAwNlpNMTMuMzEyIDE0SDIuNjg4QzIuMjE0IDE0IDIgMTMuNjk4IDIgMTMuMjc0QzIgMTIuMDIzIDMuOTE3IDguNzUgOCA4Ljc1QzEyLjA4MyA4Ljc1IDE0IDEyLjAyMyAxNCAxMy4yNzRDMTQgMTMuNjk4IDEzLjc4NiAxNCAxMy4zMTIgMTRaIiBmaWxsPSIjMDBDNEM0Ii8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODlfMTU1NiI+CjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K) no-repeat 50%/contain;
+}
+
+/* 스토리, 만족도, 문의 정책  */
+.client-bx {
+  position: sticky;
+  top: 56px;
+  z-index: 1;
+  margin: 0 auto 24px;
+  border-bottom: 1px solid #f2f4f6;
+  background-color: #fff;
+  padding: 0 16px;
+}
+
+/* 스토리, 만족도, 문의 정책 ul */
+.client-bx>ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* 스토리, 만족도, 문의 정책 width */
+.client-bx>ul>li {
+  width: 33.3333333333%;
+}
+
+/*  */
+.active {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* 선택됨 */
+.allocation {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #212529;
+  color: #212529 !important;
+}
+
+.info-content {
+  display: inline-block;
+  padding: 14px 4px;
+  color: #495057;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* 만족도 옆 숫자 */
+.satisfaction-number {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+  color: #00b2b2;
+  font-weight: 500;
+}
+
+/* 추가 주차장 마진 탑 */
+.mt-bx {
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 추가 주차장 마진 안 마진박스 */
+.mt-bx2 {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* 컨테이너 별 div */
+.store-container-box {
+  margin: 0 auto;
+}
+
+/* 컨테이너 인박스 */
+.store-container-ibx {
+  /* margin: 0 16px; */
+  min-height: 460px;
+}
+
+/* 스토리 div */
+.story_container {
+  width: 100%;
+  /* display: none; */
+}
+
+/* 유의사항 */
+.warning-message {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  background-color: #f9fafb;
+  color: #495057;
+  display: flex;
+  border-radius: 8px;
+  padding: 16px;
+  color: #868e96;
+}
+
+/* 내용 */
+.story-content {
+  margin-top: 16px;
+}
+
+.story-content-text {
+  margin-bottom: 8px;
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+.MessageBox_icon__1NYKB {
+  flex-shrink: 0;
+  margin-top: 2px;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: #868e96;
+}
+
+.story-content-detail {
+  margin-left: -20px;
+  line-height: 18px;
+  font-size: 10px;
+  font-weight: 400;
+  /* margin: 0; */
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  color: #495057;
+}
+
+.story-content-detail>ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.story-content-detail>ul li {
+  display: flex;
+  margin-bottom: 4px;
+  line-height: 18px;
+}
+
+.story-content-detail>ul li:before {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding-left: 4px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 14px;
+  content: "\2022";
+}
+
+/* 만족도 div */
+.satisfaction-box {
+  display: none;
+  width: 100%;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 만족도 텍스트 */
+.satisfaction-text span {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #212529;
+  vertical-align: middle;
+}
+
+/* 별점박스 */
+.star-rating-box {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* 스토어 점수 */
+.store-rating-bx {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #212529;
+}
+
+/* 스토어 텍스트 */
+.store-text {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 별점 */
+.star-rating-detail {
+  margin-top: 4px;
+  text-align: center;
+  display: flex;
+  margin-right: 8px;
+}
+
+/* 별점 총점 */
+.star-rating-total {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+/* 제일 큰 별 */
+.rating-icon {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0idHJhbnNwYXJlbnQiIGQ9Ik0wIDBoMzJ2MzJIMHoiLz4KICAgICAgICA8cGF0aCBkPSJNMCAwaDMydjMySDB6Ii8+CiAgICAgICAgPHBhdGggZD0ibTE2IDI2Ljk5NC03LjYyIDQuNzFjLS45MzguNTgtMi4xNjQuMjgtMi43MzgtLjY2OS0uMjc0LS40NTQtLjM1OC0xLS4yMzctMS41MTlsMi4wNzEtOC43OS02Ljc4LTUuODc4YTIuMDMzIDIuMDMzIDAgMCAxLS4yMTctMi44NDIgMS45ODggMS45ODggMCAwIDEgMS4zNTUtLjY5OWw4Ljg5OC0uNzIxIDMuNDI5LTguMzQ1YTEuOTg0IDEuOTg0IDAgMCAxIDMuNjc4LjAwMWwzLjQyOCA4LjM0NCA4LjkuNzIxYTIuMDEgMi4wMSAwIDAgMSAxLjgyNyAyLjE3MSAyLjAyNSAyLjAyNSAwIDAgMS0uNjkgMS4zN2wtNi43ODEgNS44NzggMi4wNzIgOC43OWEyLjAxOCAyLjAxOCAwIDAgMS0xLjQ3NSAyLjQzIDEuOTczIDEuOTczIDAgMCAxLTEuNS0uMjQzTDE2IDI2Ljk5M3oiIGZpbGw9IiNGRkJFMUEiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K);
+  background-size: contain;
+}
+
+/* 별 마진 */
+.rating-icon-mg {
+  margin-top: 11px;
+  margin-bottom: 13px;
+  width: 20px;
+  height: 20px;
+}
+
+/* 평점 */
+.rating-point {
+  line-height: 44px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 6px;
+  color: #212529;
+}
+
+/* 만점 */
+.max-rating-point {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  color: #adb5bd;
+}
+
+/* 상품 별점 */
+.another-rating-point {
+  display: inline-block;
+  position: relative;
+  margin-top: 4px;
+}
+
+/* 별점 인박스 */
+.another-rating-point-ibx {
+  display: inline-flex;
+  align-items: center;
+}
+
+.another-rating-point-ibx>span {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 4px;
+  color: #495057;
+}
+
+.another-rating-point-ibx-point-bx {
+  display: flex;
+  margin-right: 8px;
+}
+
+.rating-icon-mg2 {
+  margin-top: 1px;
+  margin-bottom: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.rating-score {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 3px;
+  color: #495057;
+}
+
+.rating-bx-mg {
+  margin: 32px 32px 0;
+  background-color: #edeef0;
+  width: 1px;
+  height: 90px;
+}
+
+/* 스토어 펀딩 */
+.store-punding-bx {
+  margin-top: 40px;
+}
+
+/* 스토어 펀딩 인박스 */
+.store-punding-ibx {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-flex;
+  border: solid 1px #e9ecef;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  width: 100%;
+  height: 40px;
+  color: #868e96;
+}
+
+/* 스토어 펀딩 버튼 박스 */
+.store-funding-btn-bx {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  font-size: 14px;
+}
+
+/* 버튼 선택됨 */
+.select-btn {
+  outline: 1px solid #e9ecef;
+  background-color: #fff;
+  color: #212529;
+  font-weight: 700;
+}
+
+.store-funding-btn-bx span {
+  line-height: 28px;
+  font-size: 12px;
+}
+.select-btn>span {
+  color: #212529;
+  font-weight: 700;
+}
+
+.select-btn .satisfaction-count {
+  color: #00b2b2;
+  font-weight: 500;
+}
+
+/* 리뷰 */
+.review-bx {
+  margin-top: 32px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 리뷰 헤더 콘테이너 */
+.review-header-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.only-photo {
+  display: inline-flex;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+}
+
+.only-photo-checkbox {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+}
+
+.only-photo-mg-bx {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+  transition-property: opacity,border-color,background-color;
+  transition-duration: .15s;
+  opacity: 1;
+  z-index: 1;
+  border: 1px solid #cdd3d8;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 1em;
+  height: 1em;
+}
+
+/* 사진 만족도만 텍스트 박스 */
+.only-photo-text-bx {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  color: #495057;
+}
+
+.only-photo-text {
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* 정렬 인박스 */
+.sort-container {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  line-height: 24px;
+  color: rgba(0,0,0,.87);
+  font-size: 13px;
+}
+
+/* 리뷰 칸 */
+.review-shape {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 공백 */
+.review-mg-bx33 {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  background-color: #f2f4f6;
+  width: 100%;
+  height: 1px;
+}
+
+/* 사용자 컨테이너 */
+.review-user-container {
+  display: inline-flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+/* 사용자 내용 */
+.review-user-content-bx {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 사용자 프로필 */
+.user-profile {
+  display: inline-flex;
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.default-profile {
+  /* background-image: url(https://cdn.wadiz.kr/wwwwadiz/green002/sns_profile_pics/20171204112242988_56396980.jpg/wadiz/quality/95/optimize/) ; */
+  background-color: #dde2e6;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
+}
+
+.default-set {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  border-radius: 100%;
+  /* background: no-repeat 50%/cover; */
+  width: 100%;
+  height: 100%;
+}
+
+/* 이름, 별점 */
+.user-profile-detail {
+  position: relative;
+  margin-left: 8px;
+  width: calc(100% - 48px);
+}
+
+/* 이름, 등록 날짜 */
+.user-name-date-bx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 별점, 구매횟수 */
+.rating-point-buy-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* 이름 */
+.user-name {
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #212529;
+}
+
+/* 등록 날짜 */
+.user-update-bx {
+  display: flex;
+}
+
+.user-update {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+}
+
+.user-update>span {
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #adb5bd;
+}
+
+/* 더보기 */
+.user-update-more-btn {
+  margin: 4px 0 4px 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.user-update-more-btn .withIcon_icon__3VTbq {
+  margin-left: 0;
+  margin-top: 1px;
+}
+
+/* 별점박스 */
+.rating-bx {
+  display: flex;
+  margin-right: 8px;
+}
+
+/* 구매횟수박스 */
+.buy-number {
+  display: inline-flex;
+}
+
+.buy-number>span {
+  margin-left: 4px;
+  line-height: 14px;
+  font-size: 9px;
+  border-radius: 9px;
+  background-color: #f0f4ff;
+  padding: 2px 6px;
+  height: 18px;
+  color: #3364ff;
+  font-weight: 500;
+}
+
+.rating-icon-mg3 {
+  margin-top: 1px;
+  margin-bottom: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.rating-bx>span {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 3px;
+  color: #343a40;
+}
+
+/* 댓글 */
+.review-user-content {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: -webkit-box;
+  margin-top: 12px;
+  width: 100%;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.buy-product-bx {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.buy-product {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #adb5bd;
+  font-weight: 500;
+}
+
+/* 문의 정책 헤더 */
+.pilicy-header-container {
+  margin-bottom: 32px;
+}
+
+/* 문의 정책 메인 */
+.pilicy-main-container {
+  width: 100%;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.pilicy-header-text {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pilicy-btn {
+  margin-top: 16px;
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+  width: 100%;
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  padding: 9px 23px;
+  vertical-align: middle;
+  text-decoration: none;
+  line-height: 1.75;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.pilicy-btn span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.pilicy-text {
+  vertical-align: top;
+}
+
+.pilicy-main-container-ibx {
+  margin: 0 0 40px;
+}
+
+.pilicy-main-container-ibx h3 {
+  line-height: 28px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pilicy-content-bx {
+  border-radius: 8px;
+  background-color: #f9fafb;
+  padding: 16px;
+  white-space: pre-line;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529;
+}
+
+.pilicy-content-ul {
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 16px;
+  text-indent: -16px;
+  color: #212529;
+}
+
+.pilicy-content-ul li:before {
+  display: inline-block;
+  padding-left: 10px;
+  width: 15px;
+  text-align: center;
+  content: "\b7";
+}
+
+.policy-container {
+  display: none;
+}
+
+
+
+
+
+
+
+
+/* 같이보면 좋은 프로젝트 헤더 콘테이너 */
+.m-p-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 같이보면 좋은 주차장 텍스트 */
+.m-p-text {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* waAi 전체박스 */
+.waAi-img-bx {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  height: 20px;
+}
+
+/* waAi 전체박스 안박스 */
+.waAi-img-ibx {
+  display: inline-flex;
+  cursor: pointer;
+  line-height: 1;
+  color: #868e96;
+  font-size: 0;
+}
+
+/* waAi 이미지 */
+.waAi-img {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzciIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAzNyAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYSIgZD0iTTAgMGgxMi41NnY3LjU4MkgweiIvPgogICAgICAgIDxwYXRoIGlkPSJjIiBkPSJNMCAwaDIuOTcydjMuMDAzSDB6Ii8+CiAgICA8L2RlZnM+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0wIDBoMzd2MTZIMHoiLz4KICAgICAgICA8cGF0aCBkPSJNMTYuODEgMTIuMzI3Yy0xLjE4NiAwLTIuMTQ3LTEuMDUtMi4xNDctMi4zNDcgMC0xLjI5Ni45NjEtMi4zNDYgMi4xNDctMi4zNDYgMS4xODUgMCAyLjE0NiAxLjA1IDIuMTQ2IDIuMzQ2cy0uOTYxIDIuMzQ3LTIuMTQ2IDIuMzQ3em00LjMyMSAxLjM5VjYuMTM0aC0xLjA4NWMtLjUyNiAwLS45NTcuNDEtLjk5OS45MzJ2LS4wMDFhMy45IDMuOSAwIDAgMC0zLTEuMDVjLTEuOTIyLjE1NS0zLjQ3IDEuNzM3LTMuNjAyIDMuNjhhMy45MTMgMy45MTMgMCAwIDAgMS40MTIgMy4yNzNBNC41NCA0LjU0IDAgMCAwIDE2Ljc1OCAxNGE0LjU0OCA0LjU0OCAwIDAgMCAyLjcxOC0uODg2Ljg5OC44OTggMCAwIDAgLjg0NC42MDNoLjgxMXoiIGZpbGw9IiMyNjI2MkIiLz4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDYuMTM2KSI+CiAgICAgICAgICAgIDxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI2EiLz4KICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICA8cGF0aCBkPSJNMTAuNDM1IDAgOC45MTggNC43MjIgNy4zOSAwSDUuODk2Yy0uNDMzIDAtLjgxOC4yODItLjk1My42OThMMy42NDEgNC43MjIgMi4xMjUgMEgwbDIuNDk1IDcuNTgyaDIuMTMzTDYuMjggMi43MTdsMS42NTIgNC44NjVoMi4xMzNMMTIuNTYgMGgtMi4xMjV6IiBmaWxsPSIjMjYyNjJCIiBtYXNrPSJ1cmwoI2IpIi8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGQ9Im0yNi45NjYgOC44NzMgMS4yODctMy44MSAxLjI4NyAzLjgxaC0yLjU3NHptNC4yMSA0Ljg0NSAyLjUzNi4wMDItMy45OTgtMTEuMzMxaC0yLjA1MmMtLjUxNiAwLS45Ny4zMzMtMS4xMzEuODI4bC0uMDAzLjAxLTMuNzMyIDEwLjQ5MWgyLjUzNWwxLjAxNC0zLjAwNWgzLjgxN2wxLjAxNCAzLjAwNXpNMzQuMjk1IDEzLjcyaDIuNDM4VjUuOTk5aC0xLjI2N2MtLjY0NyAwLTEuMTcxLjUzLTEuMTcxIDEuMTgzdjYuNTM4eiIgZmlsbD0iIzI2MjYyQiIvPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0LjAyOCAyKSI+CiAgICAgICAgICAgIDxtYXNrIGlkPSJkIiBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI2MiLz4KICAgICAgICAgICAgPC9tYXNrPgogICAgICAgICAgICA8cGF0aCBkPSJNMS40ODYgMEMuNjY2IDAgMCAuNjcyIDAgMS41MDJzLjY2NiAxLjUwMSAxLjQ4NiAxLjUwMSAxLjQ4Ni0uNjcyIDEuNDg2LTEuNTAxQzIuOTcyLjY3MiAyLjMwNiAwIDEuNDg2IDAiIGZpbGw9IiMwQ0MiIG1hc2s9InVybCgjZCkiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=);
+  width: 37px;  
+  height: 16px;
+}
+
+/* ? 이미지 */
+.Tooltip_tooltip__2SdxS {
+  display: block;
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+/* 주차장 선택 전체박스 */
+.m-p-select-bx {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.title-ibx {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.img-bx2 {
+  position: relative;
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #f2f4f6;
+}
+
+/* 사진 */
+.m-p-img {
+  border-radius: 8px;
+}
+
+/* 설명 칸 */
+.m-p-content-bx {
+  /* width: 100%; */
+  overflow: hidden;
+}
+
+/* 제목, 회사 */
+.m-p-title-company {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 별점, 리뷰 */
+.m-p-price-scope {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* m-p 주차장-제목 */
+.m-p-title {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  white-space: normal;
+  color: #212529;
+}
+
+/* m-p 주차장-업로더 */
+.m-p-company {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  white-space: normal;
+  word-break: break-all;
+  color: #868e96;
+}
+
+/* m-p-price */
+.m-p-price {
+  line-height: 28px;
+  font-size: 16px;
+  color: #00c4c4;
+  font-weight: 700;
+}
+
+/* m-p-scope 박스 */
+.m-p-scope-bx {
+  display: flex;
+}
+
+/* m-p-scope 안박스 */
+.m-p-scope-ibx {
+  display: flex;
+  margin-right: 8px;
+}
+
+/* m-p-star 이미지 */
+.m-p-star-img {
+  margin-top: 3px;
+  margin-bottom: 5px;
+  width: 12px;
+  height: 12px;
+
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0idHJhbnNwYXJlbnQiIGQ9Ik0wIDBoMzJ2MzJIMHoiLz4KICAgICAgICA8cGF0aCBkPSJNMCAwaDMydjMySDB6Ii8+CiAgICAgICAgPHBhdGggZD0ibTE2IDI2Ljk5NC03LjYyIDQuNzFjLS45MzguNTgtMi4xNjQuMjgtMi43MzgtLjY2OS0uMjc0LS40NTQtLjM1OC0xLS4yMzctMS41MTlsMi4wNzEtOC43OS02Ljc4LTUuODc4YTIuMDMzIDIuMDMzIDAgMCAxLS4yMTctMi44NDIgMS45ODggMS45ODggMCAwIDEgMS4zNTUtLjY5OWw4Ljg5OC0uNzIxIDMuNDI5LTguMzQ1YTEuOTg0IDEuOTg0IDAgMCAxIDMuNjc4LjAwMWwzLjQyOCA4LjM0NCA4LjkuNzIxYTIuMDEgMi4wMSAwIDAgMSAxLjgyNyAyLjE3MSAyLjAyNSAyLjAyNSAwIDAgMS0uNjkgMS4zN2wtNi43ODEgNS44NzggMi4wNzIgOC43OWEyLjAxOCAyLjAxOCAwIDAgMS0xLjQ3NSAyLjQzIDEuOTczIDEuOTczIDAgMCAxLTEuNS0uMjQzTDE2IDI2Ljk5M3oiIGZpbGw9IiNGRkJFMUEiIGZpbGwtcnVsZT0ibm9uemVybyIvPgogICAgPC9nPgo8L3N2Zz4K);
+  background-size: contain;
+}
+
+/* m-p 별점 */
+.m-p-scope-text {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 3px;
+  color: #495057;
+}
+
+/* 배송 전체박스 */
+.m-p-shipping-bx {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* 배송 전체 안박스 */
+.m-p-shipping-ibx {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* 배송 전체 안 마진 박스 */
+.m-p-shipping-mbx {
+  border: solid 1px #f2f4f6;
+  background-color: #f2f4f6;
+  color: #495057;
+  border-radius: 3px;
+  padding: 2px 4px;
+  height: 18px;
+  font-size: 10px;
+}
+
+/* 배송 이미지 */
+.delivery-img {
+  display: inline-block;
+  margin-right: 4px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAzNiAyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icmp4a3cxZjBxYSIgZD0iTTAgMGgyNi41djI0LjE3M0gweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5LjUpIj4KICAgICAgICAgICAgPG1hc2sgaWQ9IjVqMnE1dTNlaWIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcmp4a3cxZjBxYSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNi41IDQuMDI5djE2LjExNWMwIDIuMjI1LTEuNzkgNC4wMjktNCA0LjAyOUgwVjQuMDI5QzAgMS44MDQgMS43OSAwIDQgMGgxOC41YzIuMjEgMCA0IDEuODA0IDQgNC4wMjkiIGZpbGw9IiMwQ0MiIG1hc2s9InVybCgjNWoycTV1M2VpYikiLz4KICAgICAgICA8L2c+CiAgICAgICAgPHBhdGggZD0iTTI3LjYwNSAxNC40OTNjLS45NzUgMC0xLjc2Ni0uODYyLTEuNzY2LTEuOTI1IDAtMS4wNjMuNzkxLTEuOTI0IDEuNzY2LTEuOTI0Ljk3NiAwIDEuNzY3Ljg2MSAxLjc2NyAxLjkyNHMtLjc5MSAxLjkyNS0xLjc2NyAxLjkyNXptMy41NTcgMS4xNHYtNi4yMmgtLjg5M2EuODI3LjgyNyAwIDAgMC0uODIyLjc2NXYtLjAwMWEzLjIxNiAzLjIxNiAwIDAgMC0yLjM1Ni0uODY4IDMuMjY0IDMuMjY0IDAgMCAwLTIuOTEgMi4xOTRjLS40NSAxLjMyLS4wMDggMi42OC45OTQgMy41MTZhMy43NDMgMy43NDMgMCAwIDAgMi4zODguODQ3Yy44NDYgMCAxLjYyNi0uMjc1IDIuMjM3LS43MjhhLjczOS43MzkgMCAwIDAgLjY5NS40OTVoLjY2N3pNMjIuMzU5IDkuNDE2bC0xLjI0OCAzLjg3Mi0xLjI1OC0zLjg3MmgtMS4yM2EuODI2LjgyNiAwIDAgMC0uNzgzLjU3MmwtMS4wNzIgMy4zLTEuMjQ4LTMuODcyaC0xLjc0OWwyLjA1NCA2LjIxOGgxLjc1NWwxLjM2LTMuOTkgMS4zNTkgMy45OWgxLjc1NmwyLjA1My02LjIxOGgtMS43NXoiIGZpbGw9IiNGRkYiLz4KICAgICAgICA8cGF0aCBkPSJNOS41IDguMDU4SDYuODkxYy0yLjIwOCAwLTQgMS44MDMtNCA0LjAyOHYzLjQ5MkgyYy0xLjEwNSAwLTIgLjkwMi0yIDIuMDE0djQuNTY2YzAgMS4xMTMuODk1IDIuMDE1IDIgMi4wMTVoNy41VjguMDU4eiIgZmlsbD0iIzA4OUNBMCIvPgogICAgICAgIDxwYXRoIGQ9Ik01LjcgMjQuMTczYzAtMi4xMTQgMS43MDEtMy44MjggMy44LTMuODI4IDIuMDk5IDAgMy44IDEuNzE0IDMuOCAzLjgyOFMxMS41OTkgMjggOS41IDI4Yy0yLjA5OSAwLTMuOC0xLjcxMy0zLjgtMy44MjdNMjYuMzUzIDI0LjE3M2MwLTIuMTE0IDEuNzAxLTMuODI4IDMuOC0zLjgyOCAyLjA5OSAwIDMuOCAxLjcxNCAzLjggMy44MjhTMzIuMjUyIDI4IDMwLjE1MyAyOGMtMi4wOTkgMC0zLjgtMS43MTMtMy44LTMuODI3IiBmaWxsPSIjNDk1MDU3Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=) no-repeat 100% center/contain;
+  width: 16px;
+  height: 12px;
+}
+
+/* 스토어 베스트 프로젝트 박스 */
+.store-best-priject-bx {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+/* 스토어 베스트 프로젝트 텍스트 박스 */
+.sbp-text-bx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 전체 와디즈, 오늘출발, 테크 가전, 패션잡화 */
+.sbp-container-bx {
+  position: relative;
+  margin-top: 8px;
+  overflow-y: hidden;
+}
+
+/* 스토어 베스트 프로젝트 텍스트 */
+.sbp-text {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+/* 카테고리 컨테이너 */
+.sbp-container {
+  margin-top: 8px;
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  gap: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* 카테고리 컨테이너 list */
+.sbp-container-li {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #868e96;
+  position: relative;
+  padding: 3px 0 17px;
+}
+
+/* 카테고리 선택됨 */
+.sel {
+  color: #212529;
+  font-weight: 700;
+}
+
+/* 카테고리 (전체) */
+.sbp-all:before {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: #212529;
+  width: 100%;
+  height: 2px;
+  content: "";
+}
+
+/* 예약하기 버튼 전체박스 */
+.booking-bx {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  border-top: 1px solid #e9ecef;
+  background: #fff;
+  padding: 8px 16px;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+
+  display: flex;
+  text-align: center;
+  gap: 16px;
+}
+
+/* 즐겨찾기 박스 */
+.favorite-bx {
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+/* 즐겨찾기 할당시 */
+.favorite-select {
+  fill: #f66;;
+}
+
+/* 예약하기 버튼 */
+.booking-btn {
+  border-color: #00c4c4;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* 즐겨찾기 버튼 */
+.favorite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  border-color: rgba(0,0,0,0);
+}
+
+/* 즐겨찾기 수 */
+.favorite-number {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  color: #868e96;
+}
+
+/* 즐겨찾기 이미지 */
+.withIcon_icon__3VTbq {
+  margin-left: 3px;
+}
+
+/* 예약하기 버튼 */
+.booking-btn {
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+}
