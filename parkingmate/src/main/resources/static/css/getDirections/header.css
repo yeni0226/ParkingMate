@@ -1,0 +1,153 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 3;
+}
+
+/* 헤더 박스 */
+.header-wrap {
+  position: relative;
+  top: 0px;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+/* 헤더 콘테이너 */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+/* 버튼박스 전부 */
+.button-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+}
+
+/* 하단 배너 전체박스 */
+.gnb-container {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+  justify-content: space-between;
+  transform: translateY(0);
+  transition: transform .25s;
+  z-index: 100;
+  margin-left: 0;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.15);
+  background-color: #fff;
+  padding: 0 0 8px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+  list-style: none;
+}
+
+/* 하단 로고 버튼 */
+.gnb-item {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* 하단 로고 a태그 */
+.gnb-link {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto;
+}
+
+.GNBMobile_icon__3OOAF {
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  color: #868e96;
+  font-size: 24px;
+}
+
+/* 하단 배너 클릭 기능 */
+.on{
+  color: #212529 !important;
+  font-weight: 700 !important;
+}
+
+/* 하단 로고 밑 텍스트 */
+.gnb-text {
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  top: 33px;
+  color: #868e96;
+}
+
+/* 뒤로가기 버튼박스 */
+.back-button {
+  cursor: pointer;
+  left: 6px;
+}
+
+/* 뒤로가기, 검색, 홈 이미지 */
+.withIcon_icon__3VTbq {
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* 홈 버튼 */
+.home-button {
+  right: 6px;
+}
+
+/* 검색 버튼 */
+.search-button {
+  right: 50px;
+}
+
+/* 로고 박스 */
+.title-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 로고 */
+.title {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}

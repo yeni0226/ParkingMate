@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkingMate</title>
+
+  <!-- 전체 스타일 -->
+  <link rel="stylesheet" href="/css/getDirections/style.css">
+
+  <!-- 헤더 스타일CSS -->
+  <link rel="stylesheet" href="/css/getDirections/header.css">
+
+  <!-- 로고 -->
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+  <!-- 메인CSS -->
+  <link rel="stylesheet" href="/css/getDirections/main.css">
+
+  <!-- 내 위치JS -->
+  <script src="/js/getDirections/map.js"></script>
+
+  <!-- 하단 배너 선택 JS -->
+  <script src="/js/getDirections/my-location-footer.js"></script>
+
+  <!-- 공유버튼 JS -->
+  <script src="/js/getDirections/share.js"></script>
+
+  <script src="/js/getDirections/search-bx.js"></script>
+
+  <!-- 카카오 공유 API -->
+  <!-- <script src="../js/kakao-share.js"></script> -->
+
+  <!-- <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script> -->
+</head>
+<body>
+
+  <!-- 바디 전체박스 -->
+  <div class="wrap">
+
+    <!-- 헤더박스 -->
+    <div class="header">
+
+      <!-- 헤더 안 컨테이너 전체박스 -->
+      <div class="header-wrap">
+
+        <!-- 헤더 컨테이너 -->
+        <div class="header-container">
+
+          <!-- 하단 배너 -->
+          <ul class="gnb-container">
+
+            <!-- 홈 -->
+            <li class="gnb-item" id="home-li">
+              <a class="gnb-link" href="/main/main-page-test">
+
+                <!-- pm 로고 -->
+                <img src="/images/logo.svg" style="width:28px;height:28px;" class="gnb-svg"/>
+                <span class="gnb-text on">홈</span>
+
+              </a>
+            </li>
+
+            <!-- 예약 -->
+            <li class="gnb-item" id="reservation-li">
+              <a class="gnb-link" href="reservation-list">
+
+                <!-- 예약하기 로고 (할당x)-->
+                <svg id="reservation-logo" viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" 
+                  class="withIcon_icon__3VTbq GNBMobile_icon__3OOAF GNBIcon_feed__1AjUB" 
+                  aria-hidden="true" style="width: 21px; height: 21px;">
+                  <path id="reservation-path" fill-rule="evenodd" clip-rule="evenodd" d="M21 5.5a4.502 4.502 0 0 1-2.979 4.236l1.343 6.267a3.5 3.5 0 1 1-3.345 3.127l-4.537-1.297a5.5 5.5 0 1 1-1.878-6.874l3.192-2.903A4.5 4.5 0 1 1 21 5.5zm-3.233 3.048a3.301 3.301 0 1 0-2.536-6.096 3.301 3.301 0 0 0 2.536 6.096zM16.5 10a4.482 4.482 0 0 1-2.896-1.056l-3.084 2.803a5.517 5.517 0 0 1 1.35 4.95l4.479 1.279a3.513 3.513 0 0 1 1.842-1.723l-1.343-6.266c-.115.009-.231.013-.348.013zm-10 1.2a4.28 4.28 0 0 1 3.132 1.354 4.285 4.285 0 0 1 1.08 3.811c-.081.401-.219.781-.403 1.133a4.317 4.317 0 0 1-2.067 1.934A4.3 4.3 0 1 1 6.5 11.2zm13.895 10.42a2.3 2.3 0 1 0-.895.18c.317 0 .62-.064.895-.18z">
+                  </path>
+                </svg>
+
+                <!-- 예약 로고 (할당o) -->
+                <span class="gnb-text">예약하기</span>
+
+              </a>
+            </li>
+
+            <!-- 플러스 -->
+            <li class="gnb-item">
+              <div class="gnb-link">
+
+                <!-- 플러스 로고 -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icjRzeW8za3R4YSIgZD0iTTAgMGg0MHY0MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9Im1kajRrdnh3amIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcjRzeW8za3R4YSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCAwQzguOTU0IDAgMCA4Ljk1NSAwIDIwYzAgMTEuMDQ2IDguOTU0IDIwIDIwIDIwczIwLTguOTU0IDIwLTIwQzQwIDguOTU1IDMxLjA0NiAwIDIwIDBtMCAxYzEwLjQ3NyAwIDE5IDguNTIzIDE5IDE5cy04LjUyMyAxOS0xOSAxOVMxIDMwLjQ3NyAxIDIwIDkuNTIzIDEgMjAgMSIgZmlsbD0iIzg2OEU5NiIgbWFzaz0idXJsKCNtZGo0a3Z4d2piKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBzdHJva2U9IiM4NjhFOTYiIGQ9Ik0yMCAxMXYxOE0yOSAyMEgxMSIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">
+
+              </div>
+
+            </li>
+
+            <!-- 찜하기 -->
+            <li class="gnb-item" id="select-li">
+              <a class="gnb-link" href="/mypage/save">
+
+                <!-- 하트 로고 -->
+                <svg id="select-logo" viewBox="0 0 32 32" focusable="false" role="presentation" 
+                  class="withIcon_icon__3VTbq GNBMobile_icon__3OOAF" aria-hidden="true" 
+                  style="width: 24px; height: 24px;">
+                  <path id="select-path" d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z">
+                  </path>
+                </svg>
+                <span class="gnb-text">찜하기</span>
+                
+              </a>
+            </li>
+
+            <!-- 마이파킹메이트 -->
+            <li class="gnb-item" id="parkingMate-li">
+              <a class="gnb-link" href="">
+
+                <!-- 마이파킹메이트 로고 -->
+                <svg id="parkingMate-logo" viewBox="0 0 40 40" focusable="false" role="presentation" 
+                  class="withIcon_icon__3VTbq GNBMobile_icon__3OOAF" aria-hidden="true" 
+                  style="width: 24px; height: 24px;">
+                  <path id="parkingMate-path" d="M20.27 22.3a9.43 9.43 0 1 0-9.42-9.42 9.43 9.43 0 0 0 9.42 9.42zm0-16.76a7.34 7.34 0 1 1-7.34 7.34 7.34 7.34 0 0 1 7.34-7.34zm0 20.05c-6.52 0-15.19 1.09-15.19 10.57h2.08c0-5.95 3.92-8.49 13.11-8.49s13.11 2.54 13.11 8.49h2.08c0-9.48-8.67-10.57-15.19-10.57z">
+                  </path><path fill="none" d="M0 0h40v40H0z"></path>
+                </svg>
+                <span class="gnb-text">마이파킹메이트</span>
+
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- 뒤로가기 버튼 -->
+          <button class="back-button button-all">
+
+            <!-- 뒤로가기 이미지 -->
+            <svg viewBox="0 0 24 24" fill="none" focusable="false" 
+              role="presentation" class="withIcon_icon__3VTbq Button_icon__2Lds2" 
+              aria-hidden="true" style="width: 24px;height: 24px;">
+              <path fill-rule="evenodd" clip-rule="evenodd" 
+              d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z">
+              </path>
+            </svg>
+
+          </button>
+
+          <!-- 홈 버튼 -->
+          <button class="home-button button-all">
+            <a class="" href="">
+
+              <!-- 홈 이미지 -->
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" 
+                class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true" 
+                style="width: 24px; height: 24px;">
+                <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
+                <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
+                <path fill="none" d="M0 0h40v40H0z"></path>
+              </svg>
+
+            </a>
+          </button>
+
+          <!-- 검색 버튼 -->
+          <button class="search-button button-all">
+
+            <!-- 검색 이미지 -->
+            <svg viewBox="0 0 40 40" focusable="false" role="presentation" 
+              class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true" 
+              style="width: 24px; height: 24px;"><path fill="none" d="M0 0h40v40H0z"></path>
+              <path d="M29.2 27.91a14.38 14.38 0 1 0-1.42 1.4l7.16 7.15.07.08 1.41-1.41zM18.45 6a12.36 12.36 0 0 1 8.35 3.23 12.24 12.24 0 0 1 4 8.59A12.39 12.39 0 1 1 17.88 6z"></path>
+            </svg>
+
+          </button>
+
+          <!-- 로고 -->
+          <div class="title-logo">
+            <p class="title">ParkingMate</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="search-all">
+
+      <!-- search-box -->
+      <div class="search-bx">
+  
+        <!-- 왼쪽 마진 -->
+        <div class="search-mg-bx"></div>
+  
+        <!-- 검색박스 내용 -->
+        <div class="search-content-bx">
+          <input type="text" placeholder="출발지를 입력해주세요.">
+        </div>
+  
+        <!-- 검색 버튼 -->
+  
+      </div>
+  
+      <!-- search-box -->
+      <div class="search-bx sb-2">
+  
+        <!-- 왼쪽 마진 -->
+        <div class="search-mg-bx"></div>
+  
+        <!-- 검색박스 내용 -->
+        <div class="search-content-bx">
+          <input type="text" placeholder="목적지를 입력해주세요.">
+        </div>
+  
+        <!-- 검색 버튼 -->
+        <button class="search-bx-search-btn">
+          <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 20px; height: 20px;"><path fill="none" d="M0 0h40v40H0z"></path><path d="M29.2 27.91a14.38 14.38 0 1 0-1.42 1.4l7.16 7.15.07.08 1.41-1.41zM18.45 6a12.36 12.36 0 0 1 8.35 3.23 12.24 12.24 0 0 1 4 8.59A12.39 12.39 0 1 1 17.88 6z"></path></svg>
+        </button>
+  
+      </div>
+
+      <!-- 옵션 선택박스 -->
+      <div class="select-option-bx">
+
+        <!-- 옵션 선택ul -->
+        <ul class="select-option-ul">
+
+          <li class="select-option-li selected-li">
+            <button class="select-option-btn">
+              <span class="select-img">
+                <span class="select-img-ibx">
+                  <svg viewBox="0 0 17 18"><path d="M11.75 11.567a.813.813 0 111.626 0 .813.813 0 01-1.626 0zm-8.125 0a.813.813 0 111.626 0 .813.813 0 01-1.626 0zm0-3.16h9.75V4.343h-9.75v4.062zm8.031-6.095c-.04-.09-.08-.18-.114-.264a.533.533 0 00-.389-.315C10.586 1.593 9.711 1.5 8.5 1.5s-2.086.094-2.653.233a.533.533 0 00-.39.315 9.95 9.95 0 01-.113.264H3.219A1.22 1.22 0 002 3.532V16.1c0 .224.182.4.406.4h.813a.401.401 0 00.406-.4V15h9.75v1.1c0 .224.182.4.406.4h.813a.401.401 0 00.406-.4V3.531a1.22 1.22 0 00-1.219-1.219h-2.125z" fill-rule="evenodd"></path></svg>
+                </span>
+              </span>
+              <span>대중교통</span>
+            </button>
+          </li>
+
+          <li class="select-option-li">
+            <button class="select-option-btn">
+              <span class="select-img">
+                <span class="select-img-ibx">
+                  <svg viewBox="0 0 24 24"><path d="M18 13.283a1 1 0 110 2 1 1 0 010-2zM7.186 6.663A31.349 31.349 0 0112 6.281c1.958 0 3.678.203 4.814.382l1.871 4.127c-2.271-.106-4.518-.159-6.685-.159s-4.414.053-6.685.159l1.87-4.127zM5 14.283a1 1 0 112 0 1 1 0 01-2 0zm15.531-3.875l-2.32-4.884a.998.998 0 00-.734-.557A33.375 33.375 0 0012 4.5c-2.394 0-4.448.29-5.477.467a.994.994 0 00-.734.557l-2.32 4.884h-.683a.285.285 0 00-.286.285v1.429c0 .158.128.286.286.286H3v6.609c0 .265.217.482.482.482h1.446a.484.484 0 00.482-.482v-1.189c1.643.07 3.984.145 6.59.145s4.946-.074 6.59-.145v1.19c0 .264.217.481.482.481h1.446a.484.484 0 00.482-.482v-6.609h.214a.286.286 0 00.286-.286v-1.429a.285.285 0 00-.286-.285h-.683z"></path></svg>
+                </span>
+              </span>
+              <span>자동차</span>
+            </button>
+          </li>
+
+          <li class="select-option-li">
+            <button class="select-option-btn">
+              <span class="select-img">
+                <span class="select-img-ibx">
+                  <svg viewBox="0 0 24 24"><path d="M14.032 3.622a1.622 1.622 0 11-3.243-.001 1.622 1.622 0 013.243.001zm3.405 8.306a.564.564 0 01.111.765l-.365.523a.567.567 0 01-.753.161l-1.818-1.092v1.066l1.995 7.977a.541.541 0 01-.525.672h-1.096a.539.539 0 01-.505-.35l-2.305-6.146-2.304 6.146a.543.543 0 01-.507.35H8.27a.54.54 0 01-.524-.672l1.994-7.977V9.66l-.214.21-1.544 3.182a.567.567 0 01-.698.285l-.559-.199a.56.56 0 01-.32-.29.556.556 0 01-.022-.431L7.632 8.91a.853.853 0 01.171-.285l1.673-1.84a1.41 1.41 0 011.043-.462h2.964a1.13 1.13 0 011.129 1.13v2.222l2.825 2.252z"></path></svg>
+                </span>
+              </span>
+              <span>도보</span>
+            </button>
+          </li>
+
+          <li class="select-option-li">
+            <button class="select-option-btn">
+              <span class="select-img">
+                <span class="select-img-ibx">
+                  <svg viewBox="0 0 24 24"><path d="M18.439 19.89a2.954 2.954 0 01-2.951-2.95c0-1.628 1.324-2.952 2.951-2.952s2.951 1.324 2.951 2.951-1.324 2.951-2.951 2.951zm0-7.512c-2.515 0-4.561 2.046-4.561 4.561S15.924 21.5 18.44 21.5 23 19.454 23 16.94a4.566 4.566 0 00-4.561-4.562zm-6.9-1.551l1.582 1.588c.21.21.323.499.312.796l-.18 4.95a.536.536 0 01-.535.517H11.59a.537.537 0 01-.535-.5l-.316-4.608-2.863-2.876a1.61 1.61 0 01.002-2.274l.024-.023-.002-.002 3.736-3.738a1.072 1.072 0 011.518 0l.476.475.003-.003 3.339 3.338 1.905.137c.28.02.498.254.498.535v.574c0 .296-.24.537-.537.537h-2.675c-.284 0-.557-.114-.759-.315l-1.488-1.487-2.377 2.379zm5.674-5.9a1.61 1.61 0 11-2.275-2.278 1.61 1.61 0 012.275 2.279zM5.56 19.89a2.954 2.954 0 01-2.951-2.95c0-1.628 1.324-2.952 2.951-2.952s2.951 1.324 2.951 2.951S7.187 19.89 5.56 19.89zm0-7.512C3.046 12.378 1 14.424 1 16.94s2.046 4.56 4.561 4.56 4.561-2.046 4.561-4.56a4.566 4.566 0 00-4.561-4.562z"></path></svg>
+                </span>
+              </span>
+              <span>자전거</span>
+            </button>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- 메인박스 -->
+    <div class="main">
+
+      <!-- 카카오 지도 API -->
+      <div id="map" style="width:100%;height:100vh;"></div>
+
+      <!-- 내 위치 버튼 -->
+      <button type="button" class="my-location-button" id="getMyPositionBtn" onclick="getCurrentPosBtn()" >
+
+        <!-- 내 위치 이미지 -->
+        <img src="/images/location-black.png" class="my-location-image">
+
+      </button>
+
+      <!-- 밑에서 올라오는 페이지 -->
+      <div class="footer-page">
+
+        <!-- 페이지 닫는 x 버튼 div -->
+        <div class="close-page-bx">
+
+          <!-- 페이지 닫은 버튼 -->
+          <button class="close-page-btn" type="button">
+
+            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq MobileHeadupBanner_closeIcon__3PUoF" aria-hidden="true"><path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z"></path></svg>
+
+          </button>
+
+        </div>
+        
+        <!-- 이미지 div -->
+        <div class="imagebx">
+          
+          <!-- 이미지 span -->
+          <div class="pk-img"></div>
+
+        </div>
+
+        <!-- 밑에서 올라오는 페이지 사진 아래 전체박스 -->
+        <div class="footer-page-ibx">
+          
+          <!-- 주차장 제목, 공유 -->
+          <div class="parking-name-share">
+
+            <!-- 주차장 이름 -->
+            <div class="parking-name">
+
+              <!-- 주차장 이름 텍스트 -->
+              <p class="parking-name-p">
+                어디어디어디 주차장
+              </p>
+            </div>
+
+            <!-- 주차장 공유 버튼 -->
+            <div class="parking-share">
+
+              <!-- 주차장 공유 -->
+              <p class="parking-share-p">
+
+                주차장 공유
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- 별, 점수, 리뷰갯수, 로드뷰 -->
+          <ul class="star-point-roadview">
+
+            <!-- 별모양 박스 -->
+            <li class="star-box">
+
+              <!-- 별 이미지 -->
+              <img src="/images/star.png" class="star-img">
+
+            </li>
+
+            <!-- 리뷰 점수 -->
+            <li class="point-box">
+
+              <!-- 리뷰 텍스트 -->
+              <p class="point-p">4.7</p>
+
+            </li>
+
+            <!-- 리뷰 갯수 -->
+            <li class="review-number">
+
+              <!-- 리뷰 갯수 텍스트 -->
+              <p class="review-p">(200)</p>
+
+            </li>
+
+            <!-- 로드뷰 박스 -->
+            <li class="loadview-box">
+
+              <!-- 로드뷰 텍스트 -->
+              <p class="loadview-p">
+                
+                <a href="">
+                  로드뷰
+                </a>
+
+              </p>
+
+            </li>
+
+          </ul>
+
+          <!-- 가격박스 -->
+          <div class="price-box">
+
+            <!-- 가격 숫자 -->
+            <p class="price-number">29,000</p>
+
+            <!-- 가격 뒤 원 -->
+            <p class="price-number2">원</p>
+
+          </div>
+
+          <!-- 주차장 설명박스 -->
+          <div class="parking-content-box">
+
+            <!-- 주차장 설명 -->
+            <p class="parking-content">
+              경기도 성남시 탁구 우동 주차장-주소
+            </p>
+
+          </div>
+
+          <!-- 예약하기 버튼 박스 -->
+          <div class="reservation-button">
+
+            <!-- 예약하기 텍스트 -->
+            <p>예약하기</p>
+
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <!-- 공유박스 -->
+    <div class="share-bx">
+      
+      <div class="share-header-container">
+        <h3>공유</h3>
+      </div>
+
+      <div class="share-main-container">
+
+        <div>
+          <svg viewBox="0 0 36 36" focusable="false" style="pointer-events: none; display: block; width: 50px;">
+            <circle cx="18" cy="18" r="17.5" stroke="#E7E7E7" fill="#F4F4F4" stroke-width=".5"></circle>
+            <path d="m21.41,23.29l-0.71,-0.71l4.59,-4.58l-4.59,-4.59l0.71,-0.71l5.3,5.3l-5.3,5.29zm-6.12,-0.7l-4.58,-4.59l4.59,-4.59l-0.71,-0.7l-5.3,5.29l5.29,5.29l0.71,-0.7z" fill="#606060"></path>
+          </svg>
+          <p>링크복사</p>
+        </div>
+
+        <div>
+          <svg viewBox="0 0 60 60" focusable="false" style="pointer-events: none; display: block; width: 50px;">
+            <g fill-rule="nonzero" fill="none">
+              <path d="M28.486325 59.9692983c-6.6364044-.569063-11.5630204-2.3269562-16.3219736-5.8239328C4.44376336 48.4721167 0 39.6467923 0 29.9869344 0 15.1115596 10.506778 2.79838844 25.2744118.36718043 31.302519-.62523147 37.978265.41644488 43.5623517 3.2208101 57.138627 10.0389054 63.3436513 25.7618627 58.2050226 40.3239688c-3.5279559 9.9977054-12.7897094 17.6177847-23.3910729 19.2449379-2.0856252.3201125-5.0651487.5086455-6.3276247.4003916z" fill="#FFE812"></path>
+              <path d="M30.5 14C19.730375 14 11 20.69445394 11 28.952339c0 5.3388968 3.649875 10.0235376 9.14025 12.6688251-.2986875 1.0018068-1.9194375 6.4448229-1.9839375 6.8724233 0 0-.0388125.3212929.175125.4438292.2139375.1225362.4655625.0273518.4655625.0273518.6135-.0833319 7.1143125-4.5241766 8.2395-5.2953162 1.1240625.1548115 2.2815.2352259 3.4635.2352259 10.769625 0 19.5-6.6942716 19.5-14.9523391C50 20.69445394 41.269625 14 30.5 14z" fill="#000"></path>
+              <path d="M20.11212489 33c-.64033041 0-1.16107056-.4353882-1.16107056-.9707294v-6.0386824h-1.81165709C16.51106456 25.9905882 16 25.5440188 16 24.9952941S16.51125807 24 17.13939724 24h5.94545526c.6283327 0 1.1393973.4465694 1.1393973.9952941s-.5112581.9952941-1.1393973.9952941h-1.8116571v6.0386824c0 .5353412-.5207401.9707294-1.16107051.9707294zm10.18104071-.0132141c-.4841664 0-.8545479-.1721224-.9662042-.4489412l-.5749235-1.3176847-3.5404911-.0001694-.5753105 1.3185318c-.1112692.2763105-.4814572.4482635-.9656237.4482635-.2546749.0002283-.5064123-.0476164-.7380538-.140273-.3200685-.1292611-.6277522-.484687-.2751737-1.4433882l2.7772807-6.3996988c.1956404-.48672.789915-.9881788 1.546159-1.0032565.7583726.0149082 1.3526472.5165365 1.5486746 1.004273l2.7761197 6.3968188c.3533525.9609035.0456688 1.3164988-.2743997 1.4454212-.2316966.0924919-.4834067.1402736-.7380538.1401035-.0001935 0 0 0 0 0zm-2.1516573-3.5671341l-1.1597159-2.8842353-1.159716 2.8842353h2.3194319zm5.0326604 3.4321129c-.6136258 0-1.1126927-.4181082-1.1126927-.9317647v-6.9035294c0-.5605835.5317704-1.0164706 1.1852596-1.0164706s1.1852595.4558871 1.1852595 1.0164706v5.9717647H36.89927c.6136258 0 1.1126926.4181082 1.1126926.9317647s-.4990668.9317647-1.1126926.9317647h-3.7251013zm6.4505209.1350212c-.6403304 0-1.1610705-.4558871-1.1610705-1.0164706v-6.9538447c0-.5605835.5207401-1.0164706 1.1610705-1.0164706.6403305 0 1.1610706.4558871 1.1610706 1.0164706v2.1847341l3.2393869-2.8359529c.1666136-.1458636.395538-.2261647.6440071-.2261647.2898806 0 .5809223.10944.7990101.3001976.2033808.1778824.3247127.4067577.3413547.6444424.0168355.2397176-.0743085.4594447-.2562096.6188611l-2.6458863 2.3160283 2.8579752 3.3147106c.1863887.2147949.2666819.4860225.2229256.7530353-.0418059.2671791-.2040382.5085898-.4504954.6703623-.2007827.1336077-.4461848.2056972-.698384.2051577-.3648049.0014863-.7088533-.1483913-.9275018-.4040471l-2.722904-3.1585129-.4028915.3527152v2.2177695c-.0007462.5613249-.5202804 1.016232-1.1614576 1.0169788z" fill="#FFE812"></path>
+            </g>
+          </svg>
+          <p>카카오톡</p>
+        </div>
+
+        <div>
+          <svg viewBox="0 0 60 60" focusable="false" style="pointer-events: none; display: block; width: 50px;">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M28.4863253 59.9692983c-6.6364044-.569063-11.5630204-2.3269561-16.3219736-5.8239327C4.44376366 48.4721168 3e-7 39.6467924 3e-7 29.9869344c0-14.8753747 10.506778-27.18854591 25.2744118-29.61975392 6.0281072-.9924119 12.7038532.04926445 18.2879399 2.85362966C57.1386273 10.0389054 63.3436516 25.7618627 58.2050229 40.3239688 54.677067 50.3216743 45.4153135 57.9417536 34.81395 59.5689067c-2.0856252.3201125-5.0651487.5086456-6.3276247.4003916z" fill="#3B5998" fill-rule="nonzero"></path>
+              <path d="M25.7305108 45h5.4583577V30.0073333h4.0947673l.8098295-4.6846666h-4.9045968V21.928c0-1.0943333.7076019-2.2433333 1.7188899-2.2433333h2.7874519V15h-3.4161354v.021c-5.3451414.194-6.4433395 3.2896667-6.5385744 6.5413333h-.0099897v3.7603334H23v4.6846666h2.7305108V45z" fill="#FFF"></path>
+            </g>
+          </svg>
+          <p>페이스북</p>
+        </div>
+
+
+      </div>
+
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e5db0a27e4f46752911719172477ebc&libraries=services"></script>
+
+<!-- 카카오 지도 API -->
+<script>
+  
+  // 카카오 지도 API
+  // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+// x 버튼 선택
+const xBtn = document.querySelector(".close-page-btn");
+
+// 밑에서 올라오는 페이지 선택
+const footerPage = document.querySelector(".footer-page");
+
+// 밑에서 올라오는 페이지 위치
+const footerPageOpen = document.querySelector(".open")
+
+// 밑에서 올라오는 페이지 안 제목
+const footerPageTitle = document.querySelector(".parking-name-p")
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 장소 검색 객체를 생성합니다
+var ps = new kakao.maps.services.Places(map); 
+
+// 카테고리로 주차장을 검색합니다
+ps.categorySearch('PK6', placesSearchCB, {useMapBounds:true}); 
+
+// 키워드 검색 완료 시 호출되는 콜백함수 입니다
+function placesSearchCB (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+        for (var i=0; i<data.length; i++) {
+            displayMarker(data[i]);    
+        }       
+    }
+}
+
+// 지도에 마커를 표시하는 함수입니다
+function displayMarker(place) {
+    // 마커를 생성하고 지도에 표시합니다
+    var marker = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(place.y, place.x) 
+    });
+
+    // 마커에 클릭이벤트를 등록합니다
+    kakao.maps.event.addListener(marker, 'click', function() {
+        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
+        // footerPage.classList.add("open");
+        infowindow.open(map, marker);
+        footerPageTitle.textContent = place.place_name;
+        let placeNameLength = place.place_name.length;
+        console.log(placeNameLength);
+        footerPage.style.position = "absolute"
+        footerPage.style.top = "2px";
+        
+        // if(placeNameLength > 12){
+        //   footerPage.style.top = "27%";
+        // } else if(placeNameLength <= 12) {
+        //   footerPage.style.top = "30%";
+        // }
+        
+    });
+
+    // 하단에서 위로 올라오는 페이지 삭제 함수
+    function handleDocumentClick(event) {
+      if (!footerPage.contains(event.target)) {
+        // footerPage.classList.remove("open"); // 클래스 삭제
+        // footerPage.style.position = "fixed"
+        // footerPage.style.top = "100%"
+        infowindow.close(map, marker);
+      }
+    }
+
+    // x 버튼 누를시 페이지 내려감
+    xBtn.addEventListener("click", function() {
+      footerPage.style.top = "100%"
+      setTimeout(() => {
+        footerPage.style.position = "fixed"
+
+      }, 600);
+    })
+
+    document.addEventListener("click", handleDocumentClick);
+}
+</script>
+
+<!-- 내 위치 찍기 API QUERY -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+
+
+
+
+
+</html>

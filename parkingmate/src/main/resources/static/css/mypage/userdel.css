@@ -1,0 +1,437 @@
+body.modalOpen{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body>#root, #wadizTopBanner, #page-container {
+  transform-origin: 50% 0;
+  transition-property: opacity,transform;
+  transition-duration: 80ms;
+  transition-timing-function: ease-out;
+}
+
+div, a, dl, dt, dd, li, ul, span, button, em,
+p, input, section, h1, h2, h3, h4, h5, form, body,
+header, label, img {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  line-height: inherit;
+  color: inherit;
+  font-size: 15px;
+}
+
+body, table th {
+  font-weight: 400;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+a, button {
+  color: inherit;
+  outline: none;
+}
+
+body, button, input, select, textarea {
+  font-family: inherit;
+}
+
+input, textarea {
+  background: none;
+}
+
+input, optgroup, select, textarea {
+  color: inherit;
+}
+
+:root {
+  --scrollbar-width: 0;
+}
+
+main, section, article {
+  display: block;
+}
+
+#main-app .web-header {
+  z-index: 1201;
+}
+
+.web-header{
+  position: sticky;
+  top: 0;
+  transition: top .25s;
+}
+
+.web-header .web-header-mobile{
+  display: block;
+  position: relative;
+}
+
+.web-header .header-wrapper{
+  position: relative;
+  top: 0;
+  z-index: 9998;
+  background-color: #fff;
+  width: 100%;
+  height: 56px;
+  text-align: center;
+}
+
+.web-header .header-wrapper .header-container{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+  height: 100%;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+iframe, img, video {
+  vertical-align: top;
+}
+
+.SimplePayInfoFormDialogModal_overlay_-uxMQ {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20000;
+}
+
+.SimplePayInfoFormDialogModal_content_1XSUr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.SimplePayInfoForm_contents_frc3R {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.SimplePayInfoFormNavBar_contents_MU7AO {
+  position: relative;
+  background-color: #fff;
+  height: 56px;
+}
+
+.Button_button_2FuOU.Button_iconOnly_F0Izx.Button_lg_1Dftp {
+  width: 48px;
+  height: 48px;
+}
+
+.Button_button_2FuOU.Button_secondary_LNLsN.Button_text_2-UCU {
+  border-color: rgba(0,0,0,0);
+}
+
+.SimplePayInfoFormNavBar_contents_MU7AO .SimplePayInfoFormNavBar_closeButton_MzCd0 {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.Button_button_2FuOU.Button_iconOnly_F0Izx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.Button_button_2FuOU.Button_lg_1Dftp {
+  font-size: 16px;
+}
+
+.Button_button_2FuOU.Button_secondary_LNLsN {
+  color: #495057;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.Button_button_2FuOU{
+  position: relative;
+  transition-property: background-color,border-color,color,opacity;
+  transition-duration: .15s;
+  border: 1px solid #cdd3d8;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.Button_button_2FuOU span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.Button_button_2FuOU .Button_children_ilFun {
+  vertical-align: top;
+}
+
+.Button_button_2FuOU.Button_iconOnly_F0Izx.Button_lg_1Dftp>span svg {
+  width: 20px;
+  height: 20px;
+}
+
+.Button_button_2FuOU span svg {
+  display: inline-block;
+}
+
+.withIcon_icon_3VTbq{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.SimplePayInfoFormNavBar_contents_MU7AO .SimplePayInfoNavBar_closeButton_MzCd0 {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.SimplePayInfoFormEditList_contents_3ck1v {
+  padding: 36px 24px;
+}
+
+.SimplePayInfoFormEditList_contents_3ck1v .SimplePayInfoFormEditList_title_2YViO {
+  margin: 0 0 16px;
+  line-height: 1.29;
+  color: rgba(0,0,0,.84);
+  font-size: 28px;
+}
+
+.SimplePayInfoFormEditList_contents_3ck1v .SimplePayInfoFormEditList_description_2WrDh {
+  margin-bottom: 16px;
+}
+
+.SimplePayInfoFormEditList_description_2WrDh {
+  color: rgba(0,0,0,.54);
+}
+
+.Button_button_2FuOU.Button_lg_1Dftp {
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.Button_button_2FuOU.Button_secondary_LNLsN {
+  border-color: #cdd3d8;
+  color: #495057;
+}
+
+.Button_button_2FuOU.Button_block_1-g8w {
+  width: 100%;
+}
+
+.SimplePayInfoFormEditList_contents_3ck1v .SimplePayInfoFormEditList_supporterClubGuide_1tX-l {
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 56px;
+  color: #868e96;
+}
+/* 간편 결제 등록 중 취소 버튼 클릭 */
+.DialogModal_dialogPortal_tWJEr {
+  position: static;
+}
+
+.DialogModal_dialogOverlay_1IIAi.DialogModal_basic_LYr1j {
+  background: #fff;
+}
+
+.DialogModal_dialogOverlayAfterOpen_1ul6O {
+  opacity: 1;
+}
+
+.DialogModal_dialogOverlay_1IIAi{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition-property: opacity;
+  z-index: 20000;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.DialogModal_dialogOverlay_1IIAi, .DialogModal_dialogContent_F81a7 {
+  transition-duration: 80ms;
+}
+
+.DialogModal_dialogContentAfterOpen_3iQTA {
+  transform: none;
+}
+
+.DialogModal_dialogContent_F81a7 {
+  position: relative;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+  outline: none;
+  min-height: 100%;
+}
+
+.BasicDialog_modalWrap_3bCH_ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  min-height: 100%;
+  text-align: center;
+}
+
+.BasicDialog_modalWrapBox_2sdut {
+  position: relative;
+  padding-top: 56px;
+  height: 100%;
+  text-align: left;
+}
+
+.BasicDialog_dialogBox_2Mi92 {
+  position: relative;
+  margin: 0 auto;
+  padding: 24px 32px 32px;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+.BasicDialog_dialogTitle_MXCow {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 32px;
+  color: #44484b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.BasicDialog_dialogMessage_12xfB {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  color: #44484b;
+}
+
+.BasicDialog_dialogMessage_12xfB p {
+  margin: 12px 0;
+  line-height: 24px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.BasicDialog_dialogButtonArea_3hd7n {
+  margin-top: 31px;
+  text-align: right;
+}
+
+.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ .BasicDialog_dialogButton_17YDz {
+  float: right;
+}
+
+.Button_button_2FuOU.Button_primary_2mZni.Button_contained_2SIAT {
+  border-color: #00c4c4;
+  background-color: #00c4c4;
+  color: #fff;
+  width: 100%;
+}
+
+.Button_button_2FuOU.Button_lg_1Dftp {
+  padding: 9px 23px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.Button_button_2FuOU span {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+}
+
+.Button_button_2FuOU .Button_children_ilFun {
+  vertical-align: top;
+}
+
+.BasicDialog_dialogButtonArea_3hd7n.BasicDialog_reverse_3eMW_ .BasicDialog_dialogButton_17YDz {
+  float: right;
+}
+
+.BasicDialog_dialogButton_17YDz:not([class*=Button_lg]) {
+  padding: 9px 24px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.BasicDialog_dialogButton_17YDz {
+  margin-left: 10px;
+}
+
+.BasicDialog_dialogButtonArea_3hd7n::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.BasicDialog_modalWrap_3bCH_ button.BasicDialog_modalClose_1o3rb{
+  position: fixed;
+  top: 30px;
+  left: 28px;
+  transition: color .2s;
+  z-index: 50001;
+  margin: 0!important;
+  border: 0!important;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0!important;
+  width: 30px!important;
+  height: 30px!important;
+  color: #60656a;
+  font-size: 22px!important;
+  background: rgba(255,255,255,.95);
+}

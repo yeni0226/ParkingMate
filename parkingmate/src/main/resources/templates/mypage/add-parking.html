@@ -1,0 +1,777 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkingMate</title>
+
+  <style>.async-hide { opacity: 0 !important} </style>
+  <style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+    .fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+    .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+    .fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style>
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/mypage/font.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/supporter-club-intro.978fbaa0.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day.afe7a0c1.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/wadiz-day~wishes.3f77e16d.chunk.css">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/0.12412ac2.chunk.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_editor.pkgd.min.css?20230613">
+  <link rel="stylesheet" type="text/css" href="https://cdn.wadiz.kr/resources/static/editor/4.0.15/froala_custom.css?v=20221122">
+  <link rel="stylesheet" type="text/css" href="https://static.wadiz.kr/main/css/my-wadiz.8de3e6d3.chunk.css">
+  <link rel="stylesheet" href="https://static.wadiz.kr/main/main.d37df1e2.css">
+  <link rel="stylesheet" href="/css/mypage/usersettingMobile.css">
+  <link rel="stylesheet" href="/css/mypage/mypagemobile.css">
+  <link rel="stylesheet" href="/css/mypage/addParking.css">
+  <link rel="mask-icon" href="/resources/static/svg/wa.svg" color="#1d2129">
+</head>
+<body class="show-ParkingMate">
+  <!-- 전체적인 페이지 틀 -->
+ <div id="page-container">
+  <div class="black-bg-wrap" style="display: none;"></div>
+  <!-- 맨 위 layer -->
+  <div id="ParkingMate-header">
+    <div class="web-header">
+      <div class="web-header-mobile">
+        <header class="header-wrapper">
+          <div class="header-container" style="display: flex;">
+              <!-- 하단 메뉴바 -->
+              <ul class="ParkingMateMobile_container_1OTMW">
+                <!-- 하단 메뉴 첫번째 -->
+                <li class="ParkingMateMobile_item_1b4ZL">
+                  <a class="ParkingMateMobile_link_t1Y9t" href="" >
+                    <!-- 하단 메뉴 첫번째 아이콘 -->
+                    <span class="MyParkingMateMenu_icon_Home_pwW81" aria-hidden="true">
+                      <i class="MyParkingMateSupporterProjectHome_icon_32Rsj" aria-hidden="true"></i>
+                    </span>
+                    <span class="ParkingMateMobile_text_2-voS">홈</span>
+                  </a>
+                </li>
+                <!-- 하단 메뉴 두번째 -->
+                <li class="ParkingMateMobile_item_1b4ZL">
+                  <a class="ParkingMateMobile_link_t1Y9t" href="" >
+                    <span class="MyParkingMateMenu_icon_registor_pwW81" aria-hidden="true">
+                      <i class="MyParkingMateSupporterProjectregistor_icon_32Rsj" aria-hidden="true"></i>
+                    </span>
+                    <span class="ParkingMateMobile_text_2-voS">예약하기</span>
+                  </a>
+                </li>
+                <!-- 하단 메뉴 세번째 -->
+                <li class="ParkingMateMobile_item_1b4ZL">
+                  <a class="ParkingMateMobile_link_t1Y9t" href="" >
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icjRzeW8za3R4YSIgZD0iTTAgMGg0MHY0MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9Im1kajRrdnh3amIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcjRzeW8za3R4YSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCAwQzguOTU0IDAgMCA4Ljk1NSAwIDIwYzAgMTEuMDQ2IDguOTU0IDIwIDIwIDIwczIwLTguOTU0IDIwLTIwQzQwIDguOTU1IDMxLjA0NiAwIDIwIDBtMCAxYzEwLjQ3NyAwIDE5IDguNTIzIDE5IDE5cy04LjUyMyAxOS0xOSAxOVMxIDMwLjQ3NyAxIDIwIDkuNTIzIDEgMjAgMSIgZmlsbD0iIzg2OEU5NiIgbWFzaz0idXJsKCNtZGo0a3Z4d2piKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBzdHJva2U9IiM4NjhFOTYiIGQ9Ik0yMCAxMXYxOE0yOSAyMEgxMSIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">
+                  </a>
+                </li>
+                <!-- 하단 메뉴 네번째 -->
+                <li class="ParkingMateMobile_item_1b4ZL">
+                  <a class="ParkingMateMobile_link_t1Y9t" href="" >
+                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq ParkingMateMobile_icon_3OOAF" aria-hidden="true" style="width: 24px; height: 24px;">
+                      <path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z"></path>
+                    </svg>
+                    <span class="ParkingMateMobile_text_2-voS">이벤트</span>
+                  </a>
+                </li>
+
+                <!-- 하단 메뉴 다섯번째 -->
+                <li class="ParkingMateMobile_item_1b4ZL">
+                  <a class="ParkingMateMobile_link_t1Y9t ParkingMateMobile_active_3WNf8" href="#" >
+                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_3VTbq ParkingMateMobile_icon_3OOAF ParkingMateMobile_active_3WNf8" aria-hidden="true" style="width: 24px; height: 24px;">
+                      <path d="M20.27 3.46a9.42 9.42 0 1 0 0 18.84 9.42 9.42 0 1 0 0-18.84zm0 22.13c-6.52 0-15.19 1.09-15.19 10.57h30.38c0-9.48-8.67-10.57-15.19-10.57z"></path>
+                      <path fill="none" d="M0 0h40v40H0z"></path>
+                    </svg>
+                    <span class="ParkingMateMobile_text_2-voS">마이페이지</span>
+                  </a>
+                </li>
+              </ul>
+            <!-- 상단 왼쪽 뒤로가기 버튼 -->
+            <button class="HeaderMobile_button_fkD3P HeaderMobile_back_1QuEl">
+              <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon_djI-9 Button_icon_3GWPk" aria-hidden="true" style="width: 24px; height: 24px;">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path>
+              </svg>
+            </button>
+            <!-- 상단 오른쪽 홈 버튼 -->
+            <button class="HeaderMobile_button_fkD3P HeaderMobile_home_27bqt">
+              <!-- 홈 링크 -->
+              <a href="/web/home">
+                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_djI-9 Button_icon_3GWPk" aria-hidden="true" style="width: 24px; height: 24px;">
+                  <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
+                  <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
+                  <path fill="none" d="M0 0h40v40H0z"></path>
+                </svg>
+              </a>
+            </button>
+            <!-- 상단 바 -->
+            <div class="TitleField_container_2Mj7X">
+              <p class="TitleField_title_2M2yO">주차장 등록</p>
+            </div>
+            <!-- 미리보기 -->
+            <div class="PreviewOverlay_container_3Q3h2">
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon_djI-9" aria-hidden="true" style="width: 24px; height: 24px;">
+                <path fill="none" d="M0 0h40v40H0z"></path>
+                <path d="M29.12 2.23H10.88a1 1 0 0 0-1 1v33.88a1 1 0 0 0 1 1h18.24a1 1 0 0 0 1-1V3.28a1 1 0 0 0-1-1.05zm-7.3 30.61A1.82 1.82 0 1 1 20 31a1.83 1.83 0 0 1 1.82 1.84zm6.26 3.23H11.92V4.32h16.16z"></path>
+                <path d="M18.18 6.89h3.65v2.08h-3.65z"></path>
+              </svg>
+              <p class="PreviewOverlay_title_21y5H">미리보기 모드</p>
+              <p class="PreviewOverlay_description_2ihG6">저장한내용 미리보기</p>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+  <!-- 기본정보설정 내용 -->
+  <form id="forwardForm" method="get">
+    <input type="hidden" id="returnURL" name="returnURL">
+  </form>
+  <input type="hidden" id="sessionLoginCheck" value="true">
+
+  <!-- 계정 wrap -->
+  <div id="accountWrap">
+    <!-- 계정 container -->
+    <div id="newContainer">
+      <!-- 계정 wrap : class -->
+      <div class="account-wrap">
+        <h2>주차장 등록</h2>
+        <form id="saveForm">
+          <!-- 아이디 체크 -->
+          <div class="input-btn-wrap">
+            <div class="input">
+              <!-- 아이디 입력 -->
+              <input type="text" id="userName" name="userName" class="disable input-text" placeholder="계정을 입력하세요" value="">
+              <p id="id-result"></p>
+            </div>
+            <div id="idChangeBtn" class="idAuthBtn btn" data-status="check">
+              <!-- 변경 링크?? -->
+              <a href="" onclick="return false;">
+                <span>확인</span>
+              </a>
+            </div>
+            <!-- 아이디 체크 버튼 -->
+            <div id="idCheckBtn" class="idAuthBtn btn" style="display: none;" data-status="check">
+              <a href="" onclick="return false;">
+                <span>인증하기</span>
+              </a>
+            </div>
+            <!-- 아이디 재인증 -->
+            <div id="idRetryBtn" class="idAuthBtn btn" style="display: none;" data-status="retry">
+              <a href="" onclick="return false;">
+                <span>재전송</span>
+              </a>
+            </div>
+            <!-- ::after -->
+          </div>
+          <div id="emailConfirmArea" class="input-btn-wrap" style="display: none;">
+            <div class="input">
+              <div id="emailConfirmBtn" class="emailAuthBtn btn" data-status="confirm">
+                <a href="" onclick="return false;">
+                  <span>인증완료</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 이메일 인증실패 : 인증번호 잘못입력 -->
+          <p id="emailCheckNumberError" class="error-text emailMsg">인증번호를 잘못입력하였습니다 다시 입력해주세요</p>
+          <!-- 이메일 인증 실패 : 기간 만료 -->
+          <p id="emailTimeOutTokenError" class="error-text emailMsg">기간이 만료된 인증번호입니다. 다시 입력해주세요.</p>
+          <!-- 이메일 인증 실패 : 시간 오버 -->
+          <p id="emailTimeOutError" class="error-text emailMsg">시간이 종료되었습니다. 다시 인증해주세요.</p>
+          <!-- 이메일 인증 성공 -->
+          <p id="emailSuccessNumberCheckMsg" class="error-text emailMsg" style="color:#50e3c2;">인증이 완료되었습니다.</p>
+          <!-- 이메일 인증 실패 : 형식이 잘못됨 -->
+          <p id="emailError" class="error-text emailMsg">이메일 형식이 올바르지 않습니다.</p>
+          <!-- 이메일 인증 실패 : 이미 가입된 이메일 -->
+          <p id="emailJoinedError" class="error-text emailMsg">이미 회원가입된 계정입니다. 다른 이메일을 입력해주세요.</p>
+          <!-- 이메일 인증 실패 : 90일 이내 탈퇴한 회원 -->
+          <p id="emailDropOutError" class="error-text emailMsg">90일 이내에 탈퇴한 이력이 있는 계정은 사용하실 수 없습니다. 다른 이메일을 입력해주세요.</p>
+          <!-- 이메일 인증 필요 -->
+          <p id="checkEmailInfo" class="info-text emailMsg">이메일 인증이 필요합니다.</p>
+          <!-- 아이디와 안내 메일 변경 -->
+          <p id="changeEmailInfo" class="info-text emailMsg">로그인 아이디와 안내 메일 발송 주소가 변경됩니다.</p>
+          <!-- 인증메일 발송 -->
+          <p id="sendEmailInfo" class="info-text emailMsg">인증메일이 발송되었습니다.</p>
+
+          <div class="change-input-wrap">
+            <!-- 주차장 이름 등록 -->
+            <input type="text" name="ParkingName" class="input-text" maxlength="20" placeholder="주차장 등록할 이름을 입력하세요" value="">
+            <p id="parkingName-result"></p>
+            <input type="text" name="realParkingName" class="input-text disable hide" maxlength="20" placeholder="주차장 이름" value="" disabled="" style="display: none;">
+            
+          </div>
+          <!-- 주차장 위치 박스 -->
+          <div class="change-input-wrap_selectbox_container">
+            <!-- 주차장 위치 -->
+            <div class="change-input-wrap_selectbox">
+            <div class="select-menu small MyParkingMateListContainer_selectBox_2OOCH">
+              <div class="select-menu-hidden-input-box">
+                <input type="text" readonly>
+              </div>
+              <div class="css-2b097c-container">
+                <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
+                <div class="select-menu_control select-menu_control--menu-is-open css-yk16xz-control">
+                  <div class="select-menu_value-container select-menu_value--has-value css-1hwfws3">
+                    <div class="select-menu_single-value css-1uccc01-singleValue">선택</div>
+                    <input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                  </div>
+                  <div class="select-menu_indicators css-1wy0on6">
+                    <span class="select-menu_indicator-separator css-0"></span>
+                    <div class="select-menu_indicator select-menu_dropdown-indicator css-tlfecz-indicatorContainer" aria-hidden="true">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                        <path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- select bar list -->
+                <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">강남구</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-2" tabindex="-1">서초구</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-3" tabindex="-1">송파구</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- 주차장 위치2 -->
+            <div class="change-input-wrap_selectbox">
+            <div class="select-menu small MyParkingMateListContainer_selectBox_2OOCH">
+              <div class="select-menu-hidden-input-box">
+                <input type="text" readonly>
+              </div>
+              <div class="css-2b097c-container">
+                <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
+                <div class="select-menu_control select-menu_control--menu-is-open css-yk16xz-control">
+                  <div class="select-menu_value-container select-menu_value--has-value css-1hwfws3">
+                    <div class="select-menu_single-value css-1uccc01-singleValue">선택</div>
+                    <input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                  </div>
+                  <div class="select-menu_indicators css-1wy0on6">
+                    <span class="select-menu_indicator-separator css-0"></span>
+                    <div class="select-menu_indicator select-menu_dropdown-indicator css-tlfecz-indicatorContainer" aria-hidden="true">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                        <path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- select bar list 강남구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Gangnam" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Gangnam">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-1" tabindex="-1">역삼동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-2" tabindex="-1">대치동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-3" tabindex="-1">논현동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-4" tabindex="-1">삼성동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-5" tabindex="-1">신사동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Gangnam" id="react-select-5-option-6" tabindex="-1">청담동</div>
+                  </div>
+                </div>
+                <!-- select bar list 서초구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Seocho" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Seocho">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-1" tabindex="-1">서초동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-2" tabindex="-1">잠원동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-3" tabindex="-1">반포동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-4" tabindex="-1">방배동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-5" tabindex="-1">양재동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Seocho" id="react-select-5-option-6" tabindex="-1">내곡동</div>
+                  </div>
+                </div>
+
+                <!-- select bar list 송파구 -->
+                <div class="select-menu_menu css-9g7j0m-menu Songpa" style="display: none;">
+                  <div class="select-menu_menu-list css-11unzgr Songpa">
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-0" tabindex="-1">전체</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-1" tabindex="-1">잠실동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-2" tabindex="-1">석촌동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-3" tabindex="-1">가락동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-4" tabindex="-1">문정동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-5" tabindex="-1">송파동</div>
+                    <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option Songpa" id="react-select-5-option-6" tabindex="-1">방이동</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+        <!-- 주차장 위치 세부정보 등록 -->
+        <div class="change-input-wrap">
+          <input type="text" name="ParkingNamedetail" class="input-text-other" maxlength="200" placeholder="주차장 위치 세부정보를 입력하세요" value="">
+          <p id="parkinglocationName-result"></p>
+          <input type="text" name="realParkingNamedetail" class="input-text disable hide" maxlength="200" placeholder="주차장 세부위치" value="" disabled="" style="display: none;">
+        </div>
+
+        <!-- 대여시간 -->
+        <div class="change-input-wrap_selectbox_container">
+          <!-- 대여시간 : 시 -->
+          <div class="change-input-wrap_selectbox">
+          <div class="select-menu small MyParkingMateListContainer_selectBox_2OOCH">
+            <div class="select-menu-hidden-input-box">
+              <input type="text" readonly>
+            </div>
+            <div class="css-2b097c-container">
+              <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
+              <div class="select-menu_control select-menu_control--menu-is-open css-yk16xz-control">
+                <div class="select-menu_value-container select-menu_value--has-value css-1hwfws3">
+                  <div class="select-menu_single-value css-1uccc01-singleValue">선택</div>
+                  <input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                </div>
+                <div class="select-menu_indicators css-1wy0on6">
+                  <span class="select-menu_indicator-separator css-0"></span>
+                  <div class="select-menu_indicator select-menu_dropdown-indicator css-tlfecz-indicatorContainer" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                      <path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- select bar list -->
+              <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
+                <div class="select-menu_menu-list css-11unzgr">
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">1시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-2" tabindex="-1">2시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-3" tabindex="-1">3시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-4" tabindex="-1">4시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-5" tabindex="-1">5시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-6" tabindex="-1">6시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-7" tabindex="-1">7시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-8" tabindex="-1">8시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-9" tabindex="-1">9시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-10" tabindex="-1">10시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-11" tabindex="-1">11시간</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-12" tabindex="-1">12시간</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!-- 대여시간 : 분 -->
+          <div class="change-input-wrap_selectbox">
+          <div class="select-menu small MyParkingMateListContainer_selectBox_2OOCH">
+            <div class="select-menu-hidden-input-box">
+              <input type="text" readonly>
+            </div>
+            <div class="css-2b097c-container">
+              <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="css-7pg0cj-a11yText"></span>
+              <div class="select-menu_control select-menu_control--menu-is-open css-yk16xz-control">
+                <div class="select-menu_value-container select-menu_value--has-value css-1hwfws3">
+                  <div class="select-menu_single-value css-1uccc01-singleValue">선택</div>
+                  <input id="react-select-5-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+                </div>
+                <div class="select-menu_indicators css-1wy0on6">
+                  <span class="select-menu_indicator-separator css-0"></span>
+                  <div class="select-menu_indicator select-menu_dropdown-indicator css-tlfecz-indicatorContainer" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon_3VTbq" aria-hidden="true">
+                      <path d="M16 9.6L26.4 20l-1.12 1.12L16 11.84l-9.28 9.28L5.6 20 16 9.6z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- select bar list -->
+              <div class="select-menu_menu css-9g7j0m-menu" style="display: none;">
+                <div class="select-menu_menu-list css-11unzgr">
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-0" tabindex="-1">00분</div>
+                  <div class="select-menu_option select-menu_option--is-selected css-9gakcf-option" id="react-select-5-option-1" tabindex="-1">30분</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+
+      <!-- 가격 -->
+      <div class="change-input-wrap">
+        <input type="text" name="ParkingPrice" class="input-text" maxlength="20" placeholder="주차장 대여금액을 입력하세요" value="">
+        <p id="parkingPriceName-result"></p>
+        <input type="text" name="realParkingPrice" class="input-text disable hide" maxlength="20" placeholder="주차장 대여 금액" value="" disabled="" style="display: none;">
+      </div>
+
+      <!-- 부가시설입력 -->
+      <div class="change-input-wrap">
+        <input type="text" name="ParkingOther" class="input-text-other" maxlength="1000" placeholder="건물위치, cctv 유무, 관리인 유무 등을 입력하세요" value="">
+        <p id="parkingOtherName-result"></p>
+        <input type="text" name="realParkingOther" class="input-text-other disable hide" maxlength="1000" placeholder="주차장 세부사항" value="" disabled="" style="display: none;">
+      </div>
+
+        <div class="change-input-wrap small">
+          <div class="btn-wrap">
+            <button type="button" id="saveBtn" class="pm button primary block btn-block-mint" onclick="location.href='addParkingComplete.html'">확인</button>
+          </div>
+        </div>
+        <input type="hidden" id="validEmailFirstCheck" value="Y">
+        <input type="hidden" id="validEmail" value="1">
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
+</body>
+
+<script>
+// 계정 클릭 시 클릭 이벤트
+const idClick = document.querySelector("#idChangeBtn");
+const id = document.querySelector("#userName");
+const idResult = document.querySelector("#id-result");
+idClick.addEventListener("click", function(){
+  if(!id.value){
+    idResult.innerText = "아이디가 존재하지 않습니다.";
+    idResult.style.color = "red";
+    return;
+  }
+})
+
+// 주차장 이름 클릭 이벤트
+const parkingNamebox = document.querySelector("#saveForm > div:nth-child(13) > input:nth-child(1)");
+const parkingResult = document.querySelector("#parkingName-result");
+
+parkingNamebox.addEventListener("click", (e) => {
+  const target = e.target;
+  parkingResult.innerText = e.target.value;
+  if(!target.value){
+    parkingNamebox.style.borderColor = "#00c4c4";
+    parkingResult.innerText = "주차장이름은 필수 입니다!!";
+    parkingResult.style.color = "red";
+    target.focus();
+    return;
+  }
+})
+
+// 주차장 등록 입력박스 마우스 떼었을때 시 이벤트
+parkingNamebox.addEventListener("mouseout", (e) => {
+  parkingNamebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingNamebox.style.borderColor = "#e4e4e4";
+    target.focus();
+
+    }
+  })
+
+// 주차장 이름 textbox안에 값 존재 시,
+parkingNamebox.addEventListener("keyup", (e) => {
+  const target = e.target;
+  parkingResult.innerText = e.target.value;
+
+  if(target.value){
+    parkingNamebox.style.borderColor = "#e4e4e4";
+    parkingResult.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+
+// 주차장 위치 클릭 이벤트
+const parkinglocationNamebox = document.querySelector("#saveForm > div:nth-child(15) > input.input-text-other");
+const parkinglocationNameResult = document.querySelector("#parkinglocationName-result");
+
+parkinglocationNamebox.addEventListener("click", (e) => {
+  const target = e.target;
+  parkinglocationNameResult.innerText = e.target.value;
+  if(!target.value){
+    parkinglocationNamebox.style.borderColor = "#00c4c4";
+    parkinglocationNameResult.innerText = "주차장 위치 입력은 필수 입니다!!";
+    parkinglocationNameResult.style.color = "red";
+    target.focus();
+    return;
+  }
+})
+
+// 주차장 위치 입력박스 마우스 떼었을때 시 이벤트
+parkinglocationNamebox.addEventListener("mouseout", (e) => {
+  parkinglocationNamebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkinglocationNamebox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
+// 주차장 위치 textbox안에 값 존재 시,
+parkinglocationNamebox.addEventListener("keyup", (e) => {
+  const target = e.target;
+  parkinglocationNameResult.innerText = e.target.value;
+
+  if(target.value){
+    parkinglocationNamebox.style.borderColor = "#e4e4e4";
+    parkinglocationNameResult.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+
+// 주차장 대여 금액 입력 클릭 시
+const parkingPricebox = document.querySelector("#saveForm > div:nth-child(17) > input:nth-child(1)");
+const parkingPriceResult = document.querySelector("#parkingPriceName-result");
+
+parkingPricebox.addEventListener("click", (e) => {
+  const target = e.target;
+  parkingPriceResult.innerText = e.target.value;
+  if(!target.value){
+    parkingPricebox.style.borderColor = "#00c4c4";
+    parkingPriceResult.innerText = "주차장 대여금액 입력은 필수 입니다!!";
+    parkingPriceResult.style.color = "red";
+    target.focus();
+    return;
+  }
+})
+
+// 주차장 대여금액 입력박스 마우스 떼었을때 시 이벤트
+parkingPricebox.addEventListener("mouseout", (e) => {
+  parkingPricebox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingPricebox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
+// 주차장 대여금액 textbox안에 값 존재 시,
+parkingPricebox.addEventListener("keyup", (e) => {
+  const target = e.target;
+  parkingPriceResult.innerText = e.target.value;
+
+  if(target.value){
+    parkingPricebox.style.borderColor = "#e4e4e4";
+    parkingPriceResult.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+// 주차장 부가 시설 입력 클릭 시
+const parkingOtherbox = document.querySelector("#saveForm > div:nth-child(18) > input:nth-child(1)");
+const parkingOtherResult = document.querySelector("#parkingOtherName-result");
+
+parkingOtherbox.addEventListener("click", (e) => {
+  const target = e.target;
+  parkingOtherResult.innerText = e.target.value;
+  if(!target.value){
+    parkingOtherbox.style.borderColor = "#00c4c4";
+    parkingOtherResult.innerText = "주차장 부가시설 정보를 입력해주세요!!";
+    parkingOtherResult.style.color = "red";
+    target.focus();
+    return;
+  }
+})
+
+// 주차장 부가 시설 입력박스 마우스 떼었을때 시 이벤트
+parkingOtherbox.addEventListener("mouseout", (e) => {
+  parkingOtherbox.style.borderColor = "#f66";
+    const target = e.target;
+
+    // console.log(target.value); 
+    if(target.value){
+      parkingOtherbox.style.borderColor = "#e4e4e4";
+      target.focus();
+    }
+  })
+
+// 주차장 부가 시설 textbox안에 값 존재 시,
+parkingOtherbox.addEventListener("keyup", (e) => {
+  const target = e.target;
+  parkingOtherResult.innerText = e.target.value;
+
+  if(target.value){
+    parkingOtherbox.style.borderColor = "#e4e4e4";
+    parkingOtherResult.style.display = 'none';
+    target.focus();
+
+  }
+})
+
+// 리스트박스 클릭 시 이벤트
+// 구 선택 부분
+const listboxChose = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.select-menu-hidden-input-box > input[type=text]");
+// 리스트박스 부분(구)
+const showlist = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+// 리스트 박스 화살표
+const listarrow1 = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_indicators.css-1wy0on6 > div > svg");
+listboxChose.addEventListener("click", function(){
+
+  if(showlist.style.display == 'none'){
+    showlist.style.display = 'block';
+    listarrow1.style.transform = "rotate(180deg)";
+  }else{
+    showlist.style.display = 'none';
+    listarrow1.style.transform = "rotate(0deg)";
+    // transform: rotate(180deg);
+  }
+})
+
+// 역 선택 부분
+const listboxStation = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.select-menu-hidden-input-box > input[type=text]");
+//  역 리스트 박스
+const showlistStation = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+//  역 리스트 박스 화살표
+const listarrow2 = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_indicators.css-1wy0on6 > div > svg");
+
+listboxStation.addEventListener("click", function(){
+  if(showlistStation.style.display == 'none'){
+    showlistStation.style.display = 'block';
+    listarrow2.style.transform = "rotate(180deg)";
+  }else{
+    showlistStation.style.display = 'none';
+    listarrow2.style.transform = "rotate(0deg)";
+  }
+})
+
+// 시간 선택 박스
+const hourlistbox = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(1) > div > div.select-menu-hidden-input-box");
+// 시간 선택하는 리스트
+const hourchoselist = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+// 시간 선택 화살표
+const listarrow3 = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_indicators.css-1wy0on6 > div > svg");
+
+hourlistbox.addEventListener("click", function(){
+  if(hourchoselist.style.display == 'none'){
+    hourchoselist.style.display = 'block';
+    listarrow3.style.transform = "rotate(180deg)";
+  }else{
+    hourchoselist.style.display = 'none';
+    listarrow3.style.transform = "rotate(0deg)";
+  }
+})
+// 분 선택 박스
+const minlistbox = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(2) > div > div.select-menu-hidden-input-box");
+// 분 선택
+const minchoselist = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+// 분 선택 화살표
+const listarrow4 = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_indicators.css-1wy0on6 > div > svg");
+
+minlistbox.addEventListener("click", function(){
+  if(minchoselist.style.display == 'none'){
+    minchoselist.style.display = 'block';
+    listarrow4.style.transform = "rotate(180deg)";
+  }else{
+    minchoselist.style.display = 'none';
+    listarrow4.style.transform = "rotate(0deg)";
+  }
+})
+
+
+// 뒤로가기 버튼 클릭 시
+  const backbutton = document.querySelector("#ParkingMate-header > div > div > header > div > button.HeaderMobile_button_fkD3P.HeaderMobile_back_1QuEl");
+  const link = 'addParkingCancel.html'
+  backbutton.addEventListener("click",(e) =>{
+
+  location.replace(link);
+  })
+
+// 마이페이지 아이콘 클릭 시
+  const mypageicon = document.querySelector("#ParkingMate-header > div > div > header > div > ul > li:nth-child(5) > a");
+
+  mypageicon.addEventListener("click",(e) =>{
+
+  location.replace(link);
+  })
+
+  //  셀렉트박스(구) 선택 시 선택창에 나타내기
+  const choseselectval = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu");
+  // 선택 글자가 있는 selectbox(구)
+  const selectboxchose = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  // 강남구 셀렉트 박스(동)
+  const selectboxGangnam = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Gangnam");
+  // 서초구 셀렉트 박스(동)
+  const selectboxtSeocho = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Seocho");
+  // 송파구 셀렉트 박스(동)
+  const selectboxSongpa = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_menu.css-9g7j0m-menu.Songpa");
+  // 선택 글자가 있는 selectbox(동)
+  const selectboxchosegu = document.querySelector("#saveForm > div:nth-child(14) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  
+  //  셀렉트박스(동) 선택 시 선택창에 나타내기
+
+  // (구) 셀렉트 박스 선택 시, 그에 맞는 (동) 셀렉트 박스 활성화
+  choseselectval.addEventListener("click", (e) =>{
+    const targetText = e.target.innerText;
+    // 선택 박스 초기화 진행
+    selectboxchosegu.innerText = "선택";
+
+    if(targetText == '강남구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxGangnam.style.display = 'block'; //강남구 셀렉트 박스 활성화
+      // 강남구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxGangnam.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+      
+    }else if(targetText == '서초구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxtSeocho.style.display = 'block'; //서초구 셀렉트 박스 활성화
+
+      // 서초구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxtSeocho.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+
+    }else if(targetText == '송파구'){
+      selectboxchose.innerText = targetText;
+      choseselectval.style.display = 'none';
+      selectboxSongpa.style.display = 'block'; //서초구 셀렉트 박스 활성화
+
+      // 송파구 (동) 클릭 시 선택쪽 변경 이벤트
+      selectboxSongpa.addEventListener("click",(e1) =>{
+      const targetText2 = e1.target.innerText;
+
+      selectboxchosegu.innerText = targetText2;
+      selectboxGangnam.style.display = 'none';
+      selectboxtSeocho.style.display = 'none';
+      selectboxSongpa.style.display = 'none';
+      })
+    }
+  })
+
+  // 시간 선택 시 이벤트
+  // 시간 셀렉트 박스 선택 글자
+  const hourSelectBoxChose = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(1) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  // 분 셀렉트 박스 선택 글자
+  const minSelectBoxChose = document.querySelector("#saveForm > div:nth-child(16) > div:nth-child(2) > div > div.css-2b097c-container > div.select-menu_control.select-menu_control--menu-is-open.css-yk16xz-control > div.select-menu_value-container.select-menu_value--has-value.css-1hwfws3 > div");
+  
+  hourchoselist.addEventListener("click", (e) => {
+    const hourTargeText = e.target.innerText;
+
+    // 선택 박스 초기화 진행
+    minSelectBoxChose.innerText = "선택";
+
+    hourSelectBoxChose.innerText = hourTargeText;
+    hourchoselist.style.display = 'none';
+    minchoselist.style.display = 'block';
+    // 분 선택 이벤트
+    minchoselist.addEventListener("click", (e1) => {
+      const minTargetText = e1.target.innerText;
+
+      minSelectBoxChose.innerText = minTargetText;
+      minchoselist.style.display = 'none';
+    })
+
+  })
+
+</script>
+</html>

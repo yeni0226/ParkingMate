@@ -5,10 +5,168 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa70a3dc-946e-4901-884f-246f790581c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/config/MyBatisConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/controller/CouponController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/controller/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/controller/GetDirectionsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/controller/MyPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/PostMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/coupon/couponlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/coupon/coupons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/event/event.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/event/eventDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/event/event_media.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/payment-page-header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/payment-page-main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/road-view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/getDirections/view-main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/login/findId.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/login/findPassword.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/login/signUp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/login/signUpCoplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/main/main-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/main/modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/ChangeProfile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/Save.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/Save_NoLogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/addParking.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/addParkingCancel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/addParkingComplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/caradd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/caraddCancel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/caraddlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardadd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardadd2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardadd3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardadd4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardadd5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardaddCancel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardadddel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardaddlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/cardlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/carlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/myPageMobile_Logout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/mypagemobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/mypagemobile_NoLogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/use_history.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/use_history_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/userdel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/usersettingMobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/usersetting_emailChange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/mypage/usersetting_phoneNumberChange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/font/AppleSDGothicNeoM.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/font/Pretendard-Bold.subset.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/font/Pretendard-Medium.subset.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/font/Pretendard-Regular.subset.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/font/wadizicon.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/car_add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/car_number.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/freeCar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/freebooking.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/location-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/location-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/park-exam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/picture1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/picture2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/picture3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/reservation.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/sad.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/coupon/couponlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/bookmark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/expand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/input-value.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/more-menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/my-location-footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/search-bx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/share.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/slideBenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/view-container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/getDirections/view-info-content.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/login/signUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/main-page/main-page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/main-page/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/coupon/couponlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/coupon/coupons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/event/event-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/event/event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/get-directions/my-location.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/get-directions/payment-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/get-directions/road-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/get-directions/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/login/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/login/sign-up-complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/login/sign-up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/main/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/main/main-page-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/main/main-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/add-parking-cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/add-parking-complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/add-parking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/caradd-cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/caradd-no.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/caradd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/caraddlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadd-cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadd2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadd3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadd4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadd5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardadddel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardaddlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/cardlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/carlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/change-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/mypage-mobile-logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/mypage-mobile-no-login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/mypage-mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/save-no-login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/save.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/use-history-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/use-history.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/use-nohistory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/userdel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/usersetting-email-change.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/usersetting-phone-number-change.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/mypage/usersettings-mobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pms/find-id.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pms/find-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/my-location.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/my-location.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/road-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/road-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3팀보고.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/3팀보고.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/event01.css" beforeDir="false" afterPath="$PROJECT_DIR$/event/eventDetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/event01.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/event-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event/event02.html" beforeDir="false" afterPath="$PROJECT_DIR$/event/event02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/login/findId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pms/findId.html" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/login/find-id.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pms/findPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/login/find-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pms/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pms/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pms/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zim/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zim/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zim/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/event/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zim/main.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +193,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/web_1900_pms/project/ParkingMate",
+    "last_opened_file_path": "C:/web_1900_pms/spring/workspace/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +201,22 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\css\mypage" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\templates\mypage" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\images" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\js" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\js\getDirections" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\js\event" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\js\login" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\js\coupon" />
+      <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\js\main-page" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +226,10 @@
       <option name="presentableId" value="Default" />
       <updated>1695095500916</updated>
       <workItem from="1695095501932" duration="255000" />
-      <workItem from="1695099162810" duration="643000" />
+      <workItem from="1695099162810" duration="4202000" />
+      <workItem from="1695111094762" duration="3711000" />
+      <workItem from="1695125920071" duration="1561000" />
+      <workItem from="1695183142687" duration="2496000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParkingMate</title>
+
+  <!-- 전체 스타일 -->
+  <link rel="stylesheet" href="/css/getDirections/style.css">
+
+  <!-- 헤더 스타일CSS -->
+  <link rel="stylesheet" href="/css/getDirections/header.css">
+
+  <!-- 뷰 메인 CSS -->
+  <link rel="stylesheet" href="/css/getDirections/view-main.css">
+
+  <!-- 하단 스타일CSS -->
+  <link rel="stylesheet" href="/css/getDirections/footer.css">
+
+  <!-- 로고 -->
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+  <!-- 즐겨찾기 기능 JS -->
+  <script src="/js/getDirections/bookmark.js"></script>
+
+  <!-- 슬라이드 배너 JS -->
+  <script src="/js/getDirections/slideBenu.js"></script>
+
+  <!-- 스토리 만족도 문의 정책 JS -->
+  <script src="/js/getDirections/view-info-content.js"></script>
+  
+  <!-- 스토어 베스트 프로젝트 JS -->
+  <script src="/js/getDirections/view-container.js"></script>
+
+</head>
+<body>
+  <!-- 바디 전체박스 -->
+  <div class="wrap">
+
+    <!-- 헤더박스 -->
+    <div class="header">
+
+      <!-- 헤더 안 컨테이너 전체박스 -->
+      <div class="header-wrap">
+
+        <!-- 헤더 컨테이너 -->
+        <div class="header-container">
+
+          <!-- 뒤로가기 버튼 -->
+          <button class="back-button button-all">
+
+            <!-- 뒤로가기 이미지 -->
+            <svg viewBox="0 0 24 24" fill="none" focusable="false" 
+              role="presentation" class="withIcon_icon__3VTbq Button_icon__2Lds2" 
+              aria-hidden="true" style="width: 24px;height: 24px;">
+              <path fill-rule="evenodd" clip-rule="evenodd" 
+              d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z">
+              </path>
+            </svg>
+
+          </button>
+
+          <!-- 홈 버튼 -->
+          <button class="home-button button-all">
+            <a class="" href="">
+
+              <!-- 홈 이미지 -->
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" 
+                class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true" 
+                style="width: 24px; height: 24px;">
+                <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
+                <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
+                <path fill="none" d="M0 0h40v40H0z"></path>
+              </svg>
+
+            </a>
+          </button>
+
+          <!-- 검색 버튼 -->
+          <button class="search-button button-all">
+
+            <!-- 검색 이미지 -->
+            <svg viewBox="0 0 40 40" focusable="false" role="presentation" 
+              class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true" 
+              style="width: 24px; height: 24px;"><path fill="none" d="M0 0h40v40H0z"></path>
+              <path d="M29.2 27.91a14.38 14.38 0 1 0-1.42 1.4l7.16 7.15.07.08 1.41-1.41zM18.45 6a12.36 12.36 0 0 1 8.35 3.23 12.24 12.24 0 0 1 4 8.59A12.39 12.39 0 1 1 17.88 6z"></path>
+            </svg>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 메인박스 -->
+    <div class="main">
+      
+      <!-- 메인 첫번째 콘테이너박스 -->
+      <div class="main-container">
+
+        <!-- 이미지 전체박스-->
+        <div class="img-bx">
+
+          <!-- 왼쪽 슬라이드 버튼 -->
+          <button type="button" class="slide-btn lbtn"></button>
+          
+          <!-- 오른쪽 슬라이드 버튼 -->
+          <button type="button" class="slide-btn rbtn"></button>
+
+          <!-- 슬라이드 박스 -->
+          <ul class="slide-bx">
+
+            <!-- 이미지1 -->
+            <li class="">
+              <img src=/images/picture1.png" alt="">
+            </li>
+
+            <!-- 이미지2 -->
+            <li class="">
+              <img src="/images/picture2.png" alt="">
+            </li>
+
+            <!-- 이미지3 -->
+            <li class="">
+              <img src="/images/picture3.png" alt="">
+            </li>
+            
+          </ul>
+
+        </div>
+
+        <!-- 사진 아래부터 전체 박스 -->
+        <div class="main-content">
+
+          <!-- 카테고리, 공유 박스 -->
+          <div class="category-share-bx"> 
+
+            <!-- 카테고리 박스 -->
+            <div class="category-bx">
+              <a href="">
+
+                <!-- 카테고리 텍스트 -->
+                <span>
+                  테크·가전
+                </span>
+
+                <!-- 화살표 -->
+                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 18px; height: 18px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+
+              </a>
+
+              <!-- #박스 -->
+              <div class="s-bx">
+                
+
+                <a href="">
+
+                  <span>
+                    <div>
+                      <span class="s-p">#</span>
+                      <span class="category-p">카테고리</span>
+                    </div>
+                  </span>
+
+                </a>
+
+              </div>
+
+            </div>
+
+            <!-- 공유버튼 박스 -->
+            <div class="share-bx">
+
+              <button type="button" style="position: relative;">
+                
+                <div style="position: absolute;visibility: hidden;left: -10px;top: -10px;width: 44px;height: 44px;"></div>
+
+                <!-- 공유 이미지 -->
+                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M30 26a6 6 0 0 0-4.7 2.3L13.7 22a5.9 5.9 0 0 0 0-3.9l11.6-6.3a6 6 0 1 0-1-1.8l-11.6 6.3a6 6 0 1 0 0 7.4L24.3 30a6 6 0 1 0 5.7-4zM26 8a4.1 4.1 0 1 1 .1 1 4 4 0 0 1-.1-1zM8 24a4 4 0 1 1 3.9-5A4 4 0 0 1 8 24zm22 12a4 4 0 0 1-4-4 4 4 0 0 1 4-4 4 4 0 0 1 0 8z"></path></svg>
+              </button>
+
+            </div>
+
+          </div>
+
+          <!-- 선 -->
+          <hr class="Divider_divider__ToZaf Divider_horizontal__3W5eD Divider_lightBG__3bAAk Divider_spacing5__C3W8V Divider_caption2__3b6Dr">
+
+          <!-- 제목 박스 -->
+          <div class="titlt-bx">
+
+            <!-- 제목 -->
+            <h3 class="title">주차장 제목</h3>
+
+          </div>
+
+          <!-- 별점, 리뷰, 그외.. 박스 -->
+          <div class="point-review-bx">
+
+            <!-- 별점 리뷰 박스 -->
+            <div>
+
+              <a href="" class="point-review-ibx">
+
+                <!-- 별 이미지, 별점 -->
+                <div class="point-bx">
+
+                  <!-- 별 이미지 -->
+                  <div class="star-img"></div>
+
+                  <!-- 별점 -->
+                  <span class="star-point">4.7</span>
+
+                </div>
+
+                <!-- 리뷰 숫자 -->
+                <span class="review-number">
+                  (
+                  2,293
+                  )
+                </span>
+
+              </a>
+
+            </div>
+
+
+            <!-- 몇 명 이용 박스 -->
+            <div class="human-bx">
+
+              <span>39,963</span>
+              명 이용
+
+            </div>
+
+            <!-- ? 이미지 -->
+            <div>
+
+              <!-- ? 박스 전체박스-->
+              <button type="button" class="question-btn">
+
+                <!-- 옆 마진 박스 -->
+                <span class="ml-bx"></span>
+
+                <!-- ? 박스 -->
+                <span class="question-bx">
+
+                  <!-- ? 이미지 -->
+                  <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq Tooltip_helpOutlineIcon__JkkNy" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path d="M20 39a19 19 0 1 1 19-19 19.06 19.06 0 0 1-19 19zm0-36a17 17 0 1 0 17 17A17 17 0 0 0 20 3z"></path><path d="M24.34 10A5.75 5.75 0 0 0 20 8.33a5.7 5.7 0 0 0-6 6h2a3.7 3.7 0 0 1 4-4 3.7 3.7 0 0 1 4 4A4.29 4.29 0 0 1 22 18l-.7.6a6.51 6.51 0 0 0-2.3 5.7h2c0-1.9 0-2.6 1.7-4.3l.6-.5a6.28 6.28 0 0 0 2.7-5.2 5.73 5.73 0 0 0-1.66-4.3zM20 26.87a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 1 0 0-3.6z"></path></svg>
+                </span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+          <!-- 가격박스 행 -->
+          <div class="price-bx">
+
+            <!-- 가격박스-->
+            <em class="price">
+              <span>44,000</span>
+              <span class="won-bx">원</span>
+            </em>
+
+          </div>
+
+          <!-- 쿠폰 박스 -->
+          <button type="button" class="coupon-btn">
+
+            바로 사용 가능한 할인 쿠폰 보기
+            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__3VTbq AvailableCouponButton_icon__6SEtq" aria-hidden="true"><path d="M40.8 43.2H7.2v-2.4h33.6v2.4zm-5.28-22.08L25.2 31.44V4.8h-2.4v26.64L12.48 21.12 10.8 22.8 24 36l13.2-13.2-1.68-1.68z"></path></svg>
+
+          </button>
+
+          <!-- 배송, 혜택 전체박스 -->
+          <div class="shipping-benefit-bx">
+
+            <dl>
+
+              <!-- 배송박스 -->
+              <div class="shipping-bx">
+
+                <!-- 배송 -->
+                <dt class="shipping-text">
+                  배송
+                </dt>
+
+                <!-- 배송 설명 -->
+                <dd class="shipping-content-bx">
+
+                  <!-- 배송 설명 안박스 -->
+                  <div class="shipping-content-ibx">
+
+                    <!-- 택배 이미지, 텍스트 -->
+                    <span class="header-shipping-bx">
+
+                      <!-- 배송 이미지 -->
+                      <i class="shipping-img"></i>
+
+                      <!-- 배송 텍스트 -->
+                      <span>와배송 상품</span>
+
+                    </span>
+
+                    <!-- 배송 내용 -->
+                    <div class="footer-shipping-bx">
+
+                      <span>
+                        평일 16시 전 주문하면 오늘 출발
+                      </span>
+
+                      <!-- 무료배송 박스 -->
+                      <div class="free-shipping-bx">
+
+                        <!-- 무료배송 안박스 -->
+                        <div class="free-shipping-ibx">
+
+                          <span>무료배송</span>
+                          <span>(제주/도서산간 5,000원)</span>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </dd>
+
+
+              </div>
+
+              <!-- 혜택박스 -->
+              <div class="benefit-bx">
+
+                <!-- 혜택 -->
+                <dt class="benefit-text">
+                  혜택
+                </dt>
+
+                <!-- 혜택 설명 -->
+                <dd class="benefit-content-bx">
+
+                  <!-- 혜택 설명 안박스 -->
+                  <div class="benefit-content-ibx">
+
+                    올인원 멤버는
+                    
+                    <button class="discount-btn">
+                      배송비 할인 + 쿠폰팩
+                    </button>
+
+                  </div>
+
+                </dd>
+
+              </div>
+
+            </dl>
+
+          </div>
+
+          <!-- 펀딩 박스 -->
+          <div class="funding-bx">
+
+            <!-- 이전 펀딩 정보 -->
+            <h3 class="before-funding-bx">
+              <a href="">
+                이전 펀딩 정보
+              </a>
+            </h3>
+
+            <!-- n억원 성공, n명 펀딩 박스 -->
+            <div class="funding-right-bx">
+
+              <!-- 성공 박스 -->
+              <div class="success-bx">
+
+                <!-- n원 + -->
+                <span>5.1억 원+</span>
+
+                <!-- 성공 -->
+                <span class="success">성공</span>
+
+              </div>
+
+              <!-- 펀딩 박스 -->
+              <div class="funding-bx2">
+
+                <!-- n명 -->
+                <span>6592명</span>
+
+                <!-- 펀딩 -->
+                <span class="funding">펀딩</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- 업로더 정보 -->
+          <div class="uploader-information">
+
+            <!-- 양옆 마진 박스 -->
+            <div class="margin-box">
+
+              <!-- 업로더 정보 안박스 -->
+              <div class="uploader-information-ibx">
+  
+                <!-- 업로더 정보 헤더 -->
+                <div class="info-header">
+  
+                  <!-- 업로더 프사, 이름 -->
+                  <a href="" class="info-header-link">
+  
+                    <!-- 프사박스-->
+                    <div class="profile-bx">
+  
+                      <!-- 프사 -->
+                      <span class="profile"></span>
+  
+                    </div>
+                    
+                    <!-- 이름박스 -->
+                    <div class="name-bx">
+  
+                      <!-- 이름 -->
+                      <span class="name">업로더-이름</span>
+  
+                      <!-- 팔로우 수 -->
+                      <span class="follow-number">n명이 팔로우 중</span>
+  
+                    </div>
+  
+                  </a>
+  
+                  <!-- 팔로우 -->
+                  <button type="button" class="info-header-btn">
+                    <span>
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq Button_icon__t6yp6 MakerInfo_icon__3L1Zo" aria-hidden="true" style="width: 14px; height: 14px;"><path d="M30.4 15.2H16.8V1.6h-1.6v13.6H1.6v1.6h13.6v13.6h1.6V16.8h13.6v-1.6z"></path></svg>
+                      <span class="follow">팔로우</span>
+                    </span> 
+                  </button>
+  
+                </div>
+  
+              </div>
+
+              <!-- 업로더 정보 내용 -->
+              <div class="uploader-information-content">
+
+                <div class="mark-info">
+
+                  <!-- 별, 만족도, 리뷰 갯수 -->
+                  <div class="info-1">
+
+                    <!-- 별 -->
+                    <span class="star-img2 funding-img"></span>
+
+                    <!-- 만족도 (점수) -->
+                    <span>만족도 4.0</span>
+
+                    <!-- 리뷰 갯수 -->
+                    <span class="review-number2">(978개)</span>
+
+                  </div>
+
+                  <!-- 돈, 누적 펀딩액+ -->
+                  <div class="info-1">
+
+                    <!-- 돈 -->
+                    <span class="money-img funding-img"></span>
+
+                    <span>누적 펀딩액 8억원+</span>
+
+                  </div>
+
+                  <!-- 사람, 서포터+ -->
+                  <div class="info-1">
+
+                    <!-- 사람 -->
+                    <span class="human-img funding-img"></span>
+
+                    <span>서포터 9,999+명</span>
+
+                  </div>
+                  
+                </div>
+
+              </div>
+
+            </div>
+
+            
+          </div>
+
+          <div>
+
+            <div>
+
+              <!-- 스토리, 만족도, 문의 정책 박스 -->
+              <nav class="client-bx">
+
+                <ul class="info-box">
+
+                  <!-- 스토리 -->
+                  <li>
+                    <a href="" class="active">
+                      <span class="allocation info-content">스토리</span>
+                    </a>
+                  </li>
+
+                  <!-- 만족도 -->
+                  <li>
+                    <a href="" class="active">
+                      <span class="info-content">
+                        
+                        만족도
+                        
+                        <span class="satisfaction-number">2,222</span>
+
+                      </span>
+                    </a>
+                  </li>
+
+                  <!-- 문의 정책 -->
+                  <li>
+                    <a href="" class="active">
+                      <span class="info-content">문의・정책</span>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </nav>
+
+              <!-- 컨테이너 별 div -->
+              <div class="store-container-box">
+
+                <!-- 컨테이너 인박스 -->
+                <div class="store-container-ibx">
+
+                  <!-- 스토리 div -->
+                  <div class="story_container">
+
+                    <!-- 유의사항 -->
+                    <div class="warning-message">
+
+                      <!-- i 이미지 -->
+                      <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq MessageBox_icon__1NYKB" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path d="M20 1a19 19 0 1 0 19 19A19.06 19.06 0 0 0 20 1zm1 28.6h-2v-13h2zm-1-15.84A1.8 1.8 0 1 1 21.8 12a1.8 1.8 0 0 1-1.8 1.76z"></path></svg>
+
+                      <!-- 내용 -->
+                      <div class="story-content-2">
+
+                        <p class="story-content-text">구매 전 반드시 확인하세요!</p>
+
+                        <div class="story-content-detail">
+                          <ul>
+                            <li>아래 스토리 내용은 이전 펀딩 진행 시 작성된 내용입니다.</li>
+                            <li>프로젝트 변경사항을 반드시 확인하세요.</li>
+                            <li>상품 금액은 스토리 상이 아닌 구매하기 버튼을 클릭해서 상품 선택 후 확인해 주세요.</li>
+                          </ul>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <!-- 내용 -->
+                    <div class="story-content"></div>
+
+                  </div>
+
+                  <!-- 만족도 div -->
+                  <div class="satisfaction-box">
+
+                    <!-- 만족도 텍스트 -->
+                    <div class="satisfaction-text">
+                      <span>만족도</span>
+                    </div>
+
+                    <!-- 별점박스 -->
+                    <div class="star-rating-box">
+
+                      <!-- 스토어 점수 -->
+                      <div class="store-rating-bx">
+
+                        <!-- 스토어 텍스트 -->
+                        <h4 class="store-text">스토어</h4>
+
+                        <!-- 별점 -->
+                        <div class="star-rating-detail">
+
+                          <!-- 제일 큰 별 -->
+                          <div class="rating-icon rating-icon-mg"></div>
+
+                          <!-- 평점 -->
+                          <div class="rating-point">4.7</div>
+
+                          <!-- 만점 -->
+                          <div class="max-rating-point">/5.0</div>
+
+                        </div>
+
+                        <!-- 별점 총점 -->
+                        <div class="star-rating-total">
+
+                          <!-- 상품 별점 -->
+                          <div class="another-rating-point">
+
+                            <!-- 별점 인박스 -->
+                            <div class="another-rating-point-ibx">
+
+                              <span>상품</span>
+
+                              <div class="another-rating-point-ibx-point-bx">
+
+                                <div class="rating-icon rating-icon-mg2"></div>
+                                <span class="rating-score">4.8</span>
+
+                              </div>
+
+                            </div>
+
+                            
+
+                          </div>
+
+                          <!-- 배송 별점 -->
+                          <div class="another-rating-point">
+
+                            <!-- 별점 인박스 -->
+                            <div class="another-rating-point-ibx">
+
+                              <span>배송</span>
+
+                              <div class="another-rating-point-ibx-point-bx">
+
+                                <div class="rating-icon rating-icon-mg2"></div>
+                                <span class="rating-score">4.7</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- 공백 -->
+                      <div class="rating-bx-mg"></div>
+
+                      <!-- 펀딩 점수 -->
+                      <div class="store-rating-bx">
+
+                        <!-- 스토어 텍스트 -->
+                        <h4 class="store-text">스토어</h4>
+
+                        <!-- 별점 -->
+                        <div class="star-rating-detail">
+
+                          <!-- 제일 큰 별 -->
+                          <div class="rating-icon rating-icon-mg"></div>
+
+                          <!-- 평점 -->
+                          <div class="rating-point">4.4</div>
+
+                          <!-- 만점 -->
+                          <div class="max-rating-point">/5.0</div>
+
+                        </div>
+
+                        <!-- 별점 총점 -->
+                        <div class="star-rating-total">
+
+                          <!-- 상품 별점 -->
+                          <div class="another-rating-point">
+
+                            <!-- 별점 인박스 -->
+                            <div class="another-rating-point-ibx">
+
+                              <span>상품</span>
+
+                              <div class="another-rating-point-ibx-point-bx">
+
+                                <div class="rating-icon rating-icon-mg2"></div>
+                                <span class="rating-score">4.3</span>
+
+                              </div>
+
+                            </div>
+
+                            
+
+                          </div>
+
+                          <!-- 배송 별점 -->
+                          <div class="another-rating-point">
+
+                            <!-- 별점 인박스 -->
+                            <div class="another-rating-point-ibx">
+
+                              <span>배송</span>
+
+                              <div class="another-rating-point-ibx-point-bx">
+
+                                <div class="rating-icon rating-icon-mg2"></div>
+                                <span class="rating-score">4.5</span>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <!-- 스토어 펀딩 -->
+                    <div class="store-punding-bx">
+
+                      <!-- 스토어 펀딩 인박스 -->
+                      <div class="store-punding-ibx">
+
+                        <!-- 스토어 버튼 박스 -->
+                        <div class="store-funding-btn-bx select-btn">
+                          <span>스토어</span>
+                          <span class="satisfaction-count">1,869</span>
+                        </div>
+                        
+                        <!-- 펀딩 버튼 박스 -->
+                        <div class="store-funding-btn-bx">
+                          <span>펀딩</span>
+                          <span class="satisfaction-count">437</span>
+                        </div>
+                        
+
+                      </div>
+
+                    </div>
+
+                    <!-- 리뷰 -->
+                    <div>
+
+                      <div class="review-bx">
+
+                        <!-- 리뷰 헤더 콘테이너 -->
+                        <div class="review-header-container">
+
+                          <!-- 사진만족도만 체크 칸 -->
+                          <div>
+                            <label class="only-photo" for="">
+
+                              <input class="only-photo-checkbox" type="checkbox">
+
+                              <span class="only-photo-mg-bx"></span>
+                              
+                              <!-- 사진 만족도만 텍스트 박스 -->
+                              <span class="only-photo-text-bx">
+
+                                <span>
+                                  <span class="only-photo-text">
+                                    사진 만족도만
+                                  </span>
+                                </span>
+
+                              </span>
+
+                            </label>
+                          </div>
+
+                          <!-- 정렬박스 -->
+                          <div>
+
+                            <!-- 정렬 인박스 -->
+                            <div class="sort-container">
+                              최신순
+
+                              <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq SortingSelect_icon__28ocK" aria-hidden="true"><path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path></svg>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <!-- 리뷰 -->
+                        <div>
+
+                          <!-- 리뷰 칸 -->
+                          <div class="review-shape">
+
+                            <!-- 공백 -->
+                            <div class="review-mg-bx33"></div>
+
+                            <!-- 사용자 컨테이너 -->
+                            <div class="review-user-container">
+
+                              <!-- 사용자 프로필사진 박스 -->
+                              
+
+                                <!-- 사용자 프로필 -->
+                                <div class="user-profile">
+                                  <span class="default-profile default-set"></span>
+                                </div>
+
+                                <!-- 이름, 별점 -->
+                                <div class="user-profile-detail">
+
+                                  <!-- 이름, 등록 날짜 -->
+                                  <div class="user-name-date-bx">
+
+                                    <!-- 이름 -->
+                                    <span class="user-name">홍길동</span>
+
+                                    <!-- 등록 날짜 -->
+                                    <div class="user-update-bx">
+
+                                      <!-- 등록 날짜 -->
+                                      <div class="user-update">
+                                        <span>
+                                          2020.02.22
+                                        </span>
+                                      </div>
+
+                                      <!-- 더보기 -->
+                                      <div class="user-update-more-btn">
+                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path d="M24.52 5A4.52 4.52 0 1 0 20 9.57 4.53 4.53 0 0 0 24.52 5zm0 30A4.52 4.52 0 1 0 20 39.48 4.53 4.53 0 0 0 24.52 35zm0-15A4.52 4.52 0 1 0 20 24.52 4.53 4.53 0 0 0 24.52 20z"></path></svg>
+                                      </div>
+
+                                    </div>
+
+                                  </div>
+
+                                  <!-- 별점, 구매횟수 -->
+                                  <div class="rating-point-buy-number">
+
+                                    <!-- 별점박스 -->
+                                    <div class="rating-bx">
+                                      <div class="rating-icon rating-icon-mg3"></div>
+                                      <span>5.0</span>
+                                    </div>
+
+                                    <!-- 구매횟수박스 -->
+                                    <div class="buy-number">
+                                      <!-- 구매 텍스트 -->
+                                      <span>1회 구매</span>
+                                    </div>
+
+                                  </div>
+
+                                </div>
+
+                              
+
+                            </div>
+
+                            <!-- 사용자 내용 -->
+                            <div class="review-user-content-bx">
+
+                              <!-- 댓글 -->
+                              <div class="review-user-content">댓글입니다</div>
+
+                              <div class="buy-product-bx">
+                                <span class="buy-product">구매한 상품</span>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <!-- 문의 정책 div -->
+                  <div class="policy-container">
+
+                    <!-- 문의 정책 헤더 -->
+                    <div class="pilicy-header-container">
+
+                      <p class="pilicy-header-text">
+                        지금 보고 있는 상품에 대해 궁금하신가요?
+                      </p>
+
+                      <button type="button" class="pilicy-btn">
+                        <span>
+                          <span class="pilicy-text">파밍메이트 문의하기</span>
+                        </span>
+                      </button>
+
+                    </div>
+
+                    <!-- 문의 정책 메인 -->
+                    <div class="pilicy-main-container">
+
+                      <div class="pilicy-main-container-ibx">
+
+                        <h3>교환/환불 정책</h3>
+
+                        <div class="pilicy-content-bx">
+                          <ul class="pilicy-content-ul">
+                            <li>서포터 단순 변심에 의한 교환/반품은 상품 수령 후 7일 이내에 신청할 수 있습니다.(반품 배송비 서포터 부담)</li>
+                            <li>상품의 내용이 표시∙광고 내용과 다르거나 계약내용과 다르게 이행된 경우에는 해당 상품 등을 수령한 날부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내에 교환/반품을 신청할 수 있습니다.(반품 배송비 메이커 부담)</li>
+                            <li>
+                              다음의 경우에는 교환/반품을 신청할 수 없습니다.
+                              <ul></ul>
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+
+                      <div class="pilicy-main-container-ibx"></div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- 추가 주차장 -->
+              <section>
+
+                <div class="mt-bx">
+
+                  <div class="mt-bx2">
+
+                    <!-- 같이보면 좋은 프로젝트 -->
+                    <div class="more-parking">
+
+                      <div>
+
+                        <!-- 같이보면 좋은 프로젝트 헤더 -->
+                        <div class="m-p-header-container">
+
+                          <!-- 같이 보면 좋은 주차장 텍스트 -->
+                          <div class="m-p-text">같이 보면 좋은 주차장</div>
+
+                          <!-- waAi 이미지 전체박스 -->
+                          <div class="waAi-img-bx">
+
+                            <!-- waAi 이미지 안박스 -->
+                            <div class="waAi-img-ibx">
+
+                              <!-- waAi 이미지 -->
+                              <span class="waAi-img"></span>
+
+                              <!-- ? 이미지 -->
+                              <div style="display: block;">
+                                <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq Tooltip_tooltip__2SdxS" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path d="M20 39a19 19 0 1 1 19-19 19.06 19.06 0 0 1-19 19zm0-36a17 17 0 1 0 17 17A17 17 0 0 0 20 3z"></path><path d="M24.34 10A5.75 5.75 0 0 0 20 8.33a5.7 5.7 0 0 0-6 6h2a3.7 3.7 0 0 1 4-4 3.7 3.7 0 0 1 4 4A4.29 4.29 0 0 1 22 18l-.7.6a6.51 6.51 0 0 0-2.3 5.7h2c0-1.9 0-2.6 1.7-4.3l.6-.5a6.28 6.28 0 0 0 2.7-5.2 5.73 5.73 0 0 0-1.66-4.3zM20 26.87a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 1 0 0-3.6z"></path></svg>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <!-- 사진, 제목, 설명, 가격, 별점 -->
+                        <div class="m-p-select-bx">
+                          
+                          <!-- 1칸 -->
+                          <div class="title-bx">
+
+                            <!-- 사진 칸 -->
+                            <div style="position:relative;overflow: hidden;">
+                              
+                              <a href="" class="title-ibx">
+
+                                <!-- 사진 박스 -->
+                                <div class="img-bx2">
+
+                                  <div class="img-ibx2">
+
+                                    <!-- 사진 -->
+                                    <div class="m-p-img"></div>
+
+
+                                  </div>
+
+                                </div>
+
+                                <!--  -->
+                                <div></div>
+
+                              </a>
+
+                            </div>
+
+                            <!-- 설명 칸 -->
+                            <div class="m-p-content-bx">
+
+                              <!-- 제목, 회사 -->
+                              <div class="m-p-title-company">
+
+                                <!-- 제목 -->
+                                <p class="m-p-title">
+                                  주차장-제목
+                                </p>
+
+                                <!-- 회사 -->
+                                <p class="m-p-company">
+                                  주차장 업로더
+                                </p>
+
+                              </div>
+
+                              <!-- 가격, 별점 -->
+                              <div class="m-p-price-scope">
+
+                                <!-- 가격, 별점 안박스 -->
+                                <div class="m-p-price-scope-ibx">
+
+                                  <!-- 가격 -->
+                                  <span class="m-p-price">44,000원</span>
+
+                                  <!-- 별점박스-->
+                                  <div class="m-p-scope-bx">
+
+                                    <!-- 별점 리뷰박스 -->
+                                    <div class="m-p-scope-ibx">
+
+                                      <!-- 별 이미지 -->
+                                      <div class="m-p-star-img"></div>
+
+                                      <!-- 별 점 -->
+                                      <span class="m-p-scope-text">4.6</span>
+
+                                    </div>
+
+                                    <!-- 배송 박스 -->
+                                    <div class="m-p-shipping-bx">
+
+                                      <!-- 배송 안박스 -->
+                                      <span class="m-p-shipping-ibx">
+
+                                        <!-- 배송 안 마진박스 -->
+                                        <span class="m-p-shipping-mbx">
+                                          
+                                          <!-- 배송 이미지 -->
+                                          <i class="delivery-img"></i>
+
+                                          와배송
+
+                                        </span>
+
+                                      </span>
+
+                                    </div>
+
+                                  </div>
+
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <!-- 스토어 베스트 프로젝트 -->
+                    <div class="store-best-priject-bx">
+                      
+                      <!-- 스토어 베스트 프로젝트 텍스트 박스 -->
+                      <div class="sbp-text-bx">
+                        
+                        <!-- 스토어 베스트 프로젝트 텍스트 -->
+                        <div class="sbp-text">
+                          스토어 베스트 프로젝트
+                        </div>
+
+                      </div>
+
+                      <!-- 전체 와디즈, 오늘출발, 테크 가전, 패션잡화 -->
+                      <div class="sbp-container-bx">
+
+                        <!-- 카테고리 컨테이너 -->
+                        <ul class="sbp-container no-scroll">
+
+                          <!-- 전체박스 -->
+                          <li class="sbp-container-li sel">
+
+                            <!-- 전체 -->
+                            <div class="sbp-all">
+                              전체
+                            </div>
+
+                          </li>
+
+                          <!-- 와디즈 Only -->
+                          <li class="sbp-container-li">
+
+                            <div class="">와디즈 Only</div>
+
+                          </li>
+
+                          <!-- 오늘 출발 -->
+                          <li class="sbp-container-li">
+
+                            <div class="">오늘 출발</div>
+
+                          </li>
+
+                          <!-- 테크·가전 -->
+                          <li class="sbp-container-li">
+
+                            <div class="">테크·가전</div>
+
+                          </li>
+
+                          <!-- 패션·잡화 -->
+                          <li class="sbp-container-li">
+
+                            <div class="">패션·잡화</div>
+
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                      <!-- 사진, 제목, 설명, 가격, 별점 -->
+                      <div class="m-p-select-bx">
+                          
+                        <!-- 1칸 -->
+                        <div class="title-bx">
+
+                          <!-- 사진 칸 -->
+                          <div style="position:relative;overflow: hidden;">
+                            
+                            <a href="" class="title-ibx">
+
+                              <!-- 사진 박스 -->
+                              <div class="img-bx2">
+
+                                <div class="img-ibx2">
+
+                                  <!-- 사진 -->
+                                  <div class="m-p-img"></div>
+
+
+                                </div>
+
+                              </div>
+
+                              <!--  -->
+                              <div></div>
+
+                            </a>
+
+                          </div>
+
+                          <!-- 설명 칸 -->
+                          <div class="m-p-content-bx">
+
+                            <!-- 제목, 회사 -->
+                            <div class="m-p-title-company">
+
+                              <!-- 제목 -->
+                              <p class="m-p-title">
+                                주차장-제목
+                              </p>
+
+                              <!-- 회사 -->
+                              <p class="m-p-company">
+                                주차장 업로더
+                              </p>
+
+                            </div>
+
+                            <!-- 가격, 별점 -->
+                            <div class="m-p-price-scope">
+
+                              <!-- 가격, 별점 안박스 -->
+                              <div class="m-p-price-scope-ibx">
+
+                                <!-- 가격 -->
+                                <span class="m-p-price">44,000원</span>
+
+                                <!-- 별점박스-->
+                                <div class="m-p-scope-bx">
+
+                                  <!-- 별점 리뷰박스 -->
+                                  <div class="m-p-scope-ibx">
+
+                                    <!-- 별 이미지 -->
+                                    <div class="m-p-star-img"></div>
+
+                                    <!-- 별 점 -->
+                                    <span class="m-p-scope-text">4.6</span>
+
+                                  </div>
+
+                                  <!-- 배송 박스 -->
+                                  <div class="m-p-shipping-bx">
+
+                                    <!-- 배송 안박스 -->
+                                    <span class="m-p-shipping-ibx">
+
+                                      <!-- 배송 안 마진박스 -->
+                                      <span class="m-p-shipping-mbx">
+                                        
+                                        <!-- 배송 이미지 -->
+                                        <i class="delivery-img"></i>
+
+                                        와배송
+
+                                      </span>
+
+                                    </span>
+
+                                  </div>
+
+                                </div>
+
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </section>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- 예약하기 버튼 박스 -->
+        <div class="booking-bx">
+
+          <!-- 즐겨찾기 박스 -->
+          <div class="favorite-bx">
+
+            <!-- 즐겨찾기 버튼 -->
+            <button type="button" class="favorite-btn">
+
+              <span>
+                <div>
+                  <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true" style="width: 24px; height: 24px;"><path id="favorite-path" d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z"></path></svg>
+                  <span class="favorite-number">7,391</span>
+                </div>
+              </span>
+
+            </button>
+
+          </div>
+
+          <!-- 예약하기 버튼 -->
+          <button type="button" class="booking-btn">
+
+            <!-- 예약하기 텍스트 -->
+            <span>예약하기</span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 하단박스 -->
+    <div class="footer">
+      
+      <!-- 정책 박스 -->
+      <div class="footer-policy">
+
+        <!-- 정책 안박스 -->
+        <div class="f-p-ibx">
+
+          <!-- 정책 헤더 -->
+          <div class="f-p-header">
+
+            <!-- 정책. 약관 박스 -->
+            <div class="policy-bx">
+              정책 · 약관
+              <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Linker_linkerIcon__147tH" aria-hidden="true" style="width: 16px; height: 16px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+            </div>
+
+            <!-- 개인정보처리방침 -->
+            <div class="info-bx">
+              개인정보처리방침
+              <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Linker_linkerIcon__147tH" aria-hidden="true" style="width: 16px; height: 16px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+            </div>
+
+          </div>
+
+          <!-- 정책  -->
+          <div class="f-p-footer">
+
+            <!-- 제휴문의 -->
+            <div class="footer-menu">
+              제휴문의
+              <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Linker_linkerIcon__147tH" aria-hidden="true" style="width: 16px; height: 16px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+            </div>
+
+            <!-- 공지사항 -->
+            <a href="" class="footer-menu">
+              공지사항
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq FooterMenu_openLinkIcon__15pDJ" aria-hidden="true"><path d="M31.42 35.84h-27V8.4h14.76v-2H2.42v31.44h31V22.55h-2v13.29z"></path><path d="M37.32 15.41l-.01-13-12.99.01v2l9.72-.01-18.19 19.42 1.46 1.37 18-19.22.01 9.43h2z"></path></svg>
+            </a>
+
+            <!-- 인재채용 -->
+            <a href="" class="footer-menu">
+              인재채용
+              <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__3VTbq FooterMenu_openLinkIcon__15pDJ" aria-hidden="true"><path d="M31.42 35.84h-27V8.4h14.76v-2H2.42v31.44h31V22.55h-2v13.29z"></path><path d="M37.32 15.41l-.01-13-12.99.01v2l9.72-.01-18.19 19.42 1.46 1.37 18-19.22.01 9.43h2z"></path></svg>
+            </a>
+
+            <!-- sns -->
+            <div class="footer-menu">
+              SNS
+              <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Linker_linkerIcon__147tH" aria-hidden="true" style="width: 16px; height: 16px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+            </div>
+
+            <!-- language -->
+            <div class="footer-menu">
+
+              <!-- 언어 박스 -->
+              <div class="language-bx">
+
+                <!-- language 이미지 -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjEiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCA2MSAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9IiM0OTUwNTciIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgPHBhdGggZD0iTTEuOTA0IDguNjJoNC41MTlWMTBILjE3NVYuMDQ3aDEuNzN6TTEyLjAwOCAxMGMtLjA3My0uMTQxLS4xMzctLjM3MS0uMTkyLS42OWEyLjU4NiAyLjU4NiAwIDAgMS0xLjk0MS44MjdjLS43NDMgMC0xLjM0OS0uMjEyLTEuODE4LS42MzZhMi4wMzQgMi4wMzQgMCAwIDEtLjcwNC0xLjU3MmMwLS43ODkuMjkyLTEuMzk0Ljg3OC0xLjgxNS41ODYtLjQyMiAxLjQyMy0uNjMzIDIuNTEyLS42MzNoMS4wMTl2LS40ODVjMC0uMzgzLS4xMDctLjY5LS4zMjItLjkyLS4yMTQtLjIzLS41NC0uMzQ1LS45NzctLjM0NS0uMzc4IDAtLjY4OC4wOTUtLjkzLjI4NGEuODc4Ljg3OCAwIDAgMC0uMzYyLjcyMUg3LjUxYzAtLjQwNS4xMzQtLjc4NS40MDMtMS4xMzguMjY5LS4zNTMuNjM1LS42MyAxLjA5Ny0uODMuNDYzLS4yLjk3OS0uMzAxIDEuNTQ5LS4zMDEuODY1IDAgMS41NTYuMjE3IDIuMDcuNjUzLjUxNi40MzUuNzggMS4wNDcuNzk0IDEuODM1djMuMzM2YzAgLjY2NS4wOTMgMS4xOTYuMjggMS41OTNWMTBoLTEuNjk1em0tMS44MjUtMS4xOTZjLjMyOCAwIC42MzYtLjA4LjkyNi0uMjQuMjktLjE2LjUwNy0uMzczLjY1My0uNjQyVjYuNTI3aC0uODk2Yy0uNjE1IDAtMS4wNzguMTA3LTEuMzg3LjMyMi0uMzEuMjE0LS40NjUuNTE3LS40NjUuOTA5IDAgLjMxOS4xMDYuNTczLjMxOC43NjIuMjExLjE5LjQ5NS4yODQuODUuMjg0ek0xNi43MDQgMi42MDRsLjA0OC44NTRjLjU0Ny0uNjYgMS4yNjUtLjk5MSAyLjE1My0uOTkxIDEuNTQgMCAyLjMyNC44ODIgMi4zNTIgMi42NDVWMTBoLTEuNjYxVjUuMjA4YzAtLjQ3LS4xMDItLjgxNy0uMzA0LTEuMDQyLS4yMDMtLjIyNi0uNTM1LS4zMzktLjk5NS0uMzM5LS42NyAwLTEuMTcuMzAzLTEuNDk3LjkxVjEwaC0xLjY2MVYyLjYwNGgxLjU2NXpNMjIuNjU4IDYuMjQ3YzAtMS4xNDguMjctMi4wNjYuODEtMi43NTEuNTQtLjY4NiAxLjI1Ny0xLjAzIDIuMTUtMS4wMy44NDMgMCAxLjUwNi4yOTUgMS45OS44ODNsLjA3NS0uNzQ1aDEuNDk3djcuMTdjMCAuOTcxLS4zMDIgMS43MzctLjkwNiAyLjI5Ny0uNjA0LjU2LTEuNDE5Ljg0MS0yLjQ0NC44NDFhMy45MzkgMy45MzkgMCAwIDEtMS41OS0uMzM4Yy0uNTE3LS4yMjYtLjkxLS41Mi0xLjE3OC0uODg2bC43ODYtLjk5OGMuNTEuNjA3IDEuMTM5LjkxIDEuODg2LjkxLjU1MiAwIC45ODctLjE1IDEuMzA2LS40NDguMzE5LS4yOTkuNDc5LS43MzcuNDc5LTEuMzE2di0uNWMtLjQ3OS41MzQtMS4xMTcuOC0xLjkxNS44LS44NjUgMC0xLjU3My0uMzQzLTIuMTIyLTEuMDMyLS41NS0uNjg4LS44MjQtMS42NC0uODI0LTIuODU3em0xLjY1NS4xNDRjMCAuNzQyLjE1MSAxLjMyNy40NTQgMS43NTMuMzAzLjQyNi43MjQuNjQgMS4yNjEuNjQuNjcgMCAxLjE2Ny0uMjg4IDEuNDktLjg2MlY0LjY2OGMtLjMxNC0uNTYtLjgwNi0uODQtMS40NzYtLjg0LS41NDcgMC0uOTcyLjIxNi0xLjI3NS42NDktLjMwMy40MzMtLjQ1NCAxLjA3LS40NTQgMS45MTR6TTM1LjM2NiA5LjI3NWMtLjQ4Ny41NzUtMS4xOC44NjItMi4wNzguODYyLS44MDIgMC0xLjQxLS4yMzUtMS44MjItLjcwNC0uNDEyLS40Ny0uNjE4LTEuMTQ5LS42MTgtMi4wMzdWMi42MDRoMS42NnY0Ljc3MWMwIC45MzkuMzkgMS40MDggMS4xNyAxLjQwOC44MDYgMCAxLjM1MS0uMjkgMS42MzQtLjg2OFYyLjYwNGgxLjY2VjEwaC0xLjU2NWwtLjA0LS43MjV6TTQzLjA4NCAxMGMtLjA3My0uMTQxLS4xMzctLjM3MS0uMTkxLS42OWEyLjU4NiAyLjU4NiAwIDAgMS0xLjk0Mi44MjdjLS43NDMgMC0xLjM0OS0uMjEyLTEuODE4LS42MzZhMi4wMzQgMi4wMzQgMCAwIDEtLjcwNC0xLjU3MmMwLS43ODkuMjkzLTEuMzk0Ljg3OC0xLjgxNS41ODYtLjQyMiAxLjQyMy0uNjMzIDIuNTEyLS42MzNoMS4wMTl2LS40ODVjMC0uMzgzLS4xMDctLjY5LS4zMjEtLjkyLS4yMTUtLjIzLS41NC0uMzQ1LS45NzgtLjM0NS0uMzc4IDAtLjY4OC4wOTUtLjkzLjI4NGEuODc4Ljg3OCAwIDAgMC0uMzYyLjcyMWgtMS42NjFjMC0uNDA1LjEzNC0uNzg1LjQwMy0xLjEzOC4yNy0uMzUzLjYzNS0uNjMgMS4wOTctLjgzLjQ2My0uMi45OC0uMzAxIDEuNTQ5LS4zMDEuODY2IDAgMS41NTYuMjE3IDIuMDcxLjY1My41MTUuNDM1Ljc4IDEuMDQ3Ljc5MyAxLjgzNXYzLjMzNmMwIC42NjUuMDkzIDEuMTk2LjI4IDEuNTkzVjEwaC0xLjY5NXptLTEuODI1LTEuMTk2Yy4zMjggMCAuNjM3LS4wOC45MjYtLjI0LjI5LS4xNi41MDctLjM3My42NTMtLjY0MlY2LjUyN2gtLjg5NmMtLjYxNSAwLTEuMDc3LjEwNy0xLjM4Ny4zMjItLjMxLjIxNC0uNDY1LjUxNy0uNDY1LjkwOSAwIC4zMTkuMTA2LjU3My4zMTguNzYyLjIxMi4xOS40OTUuMjg0Ljg1LjI4NHpNNDUuOTQ4IDYuMjQ3YzAtMS4xNDguMjctMi4wNjYuODEtMi43NTEuNTQtLjY4NiAxLjI1Ny0xLjAzIDIuMTUtMS4wMy44NDMgMCAxLjUwNi4yOTUgMS45OS44ODNsLjA3NS0uNzQ1aDEuNDk3djcuMTdjMCAuOTcxLS4zMDIgMS43MzctLjkwNiAyLjI5Ny0uNjA0LjU2LTEuNDE4Ljg0MS0yLjQ0NC44NDFhMy45MzkgMy45MzkgMCAwIDEtMS41OS0uMzM4Yy0uNTE2LS4yMjYtLjkxLS41Mi0xLjE3OC0uODg2bC43ODYtLjk5OGMuNTEuNjA3IDEuMTM5LjkxIDEuODg2LjkxLjU1MiAwIC45ODctLjE1IDEuMzA2LS40NDguMzItLjI5OS40NzktLjczNy40NzktMS4zMTZ2LS41Yy0uNDc5LjUzNC0xLjExNy44LTEuOTE0LjgtLjg2NiAwLTEuNTc0LS4zNDMtMi4xMjMtMS4wMzItLjU1LS42ODgtLjgyNC0xLjY0LS44MjQtMi44NTd6bTEuNjU1LjE0NGMwIC43NDIuMTUxIDEuMzI3LjQ1NCAxLjc1My4zMDMuNDI2LjcyNC42NCAxLjI2MS42NC42NyAwIDEuMTY3LS4yODggMS40OS0uODYyVjQuNjY4Yy0uMzE0LS41Ni0uODA2LS44NC0xLjQ3Ni0uODQtLjU0NyAwLS45NzIuMjE2LTEuMjc1LjY0OS0uMzAzLjQzMy0uNDU0IDEuMDctLjQ1NCAxLjkxNHpNNTcuNDMzIDEwLjEzN2MtMS4wNTMgMC0xLjkwNi0uMzMyLTIuNTYtLjk5NS0uNjU0LS42NjMtLjk4MS0xLjU0Ni0uOTgxLTIuNjQ5di0uMjA1YzAtLjczOC4xNDItMS4zOTguNDI3LTEuOTc5YTMuMjUyIDMuMjUyIDAgMCAxIDEuMi0xLjM1NyAzLjE3MiAzLjE3MiAwIDAgMSAxLjcyMi0uNDg1YzEuMDA3IDAgMS43ODYuMzIxIDIuMzM1Ljk2NC41NDkuNjQyLjgyMyAxLjU1MS44MjMgMi43Mjd2LjY3aC00LjgzM2MuMDUuNjEuMjU0IDEuMDk0LjYxMiAxLjQ1LjM1OC4zNTUuODA4LjUzMyAxLjM1LjUzMy43NjEgMCAxLjM4MS0uMzA4IDEuODYtLjkyM2wuODk1Ljg1NGEyLjk5IDIuOTkgMCAwIDEtMS4xODYgMS4wMjkgMy43MTMgMy43MTMgMCAwIDEtMS42NjQuMzY2ek01Ny4yMzQgMy44Yy0uNDU1IDAtLjgyMy4xNi0xLjEwNC40NzgtLjI4LjMyLS40NTkuNzY0LS41MzYgMS4zMzNoMy4xNjV2LS4xMjNjLS4wMzctLjU1Ni0uMTg1LS45NzYtLjQ0NS0xLjI2LS4yNi0uMjg2LS42Mi0uNDI4LTEuMDgtLjQyOHoiLz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="번역 아이콘" class="FooterMenu_languageIcon__3tCsp">
+                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Linker_linkerIcon__147tH" aria-hidden="true" style="width: 16px; height: 16px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- 와디즈 고객센터 -->
+          <!-- Customer Service -->
+          <div class="c-s-footer">
+
+            <!-- 인박스 -->
+            <div class="c-s-footer-ibx">
+
+              <!-- 하단 마진박스 -->
+              <section class="footer-mg-bx">
+                
+                <!-- 와디즈 고객센터 -->
+                <strong class="c-s-bx">
+                  와디즈 고객센터
+                </strong>
+
+                <!-- 채팅, 문의, 도움말 -->
+                <div>
+
+                  <!-- 채팅 -->
+                  <button type="button" class="chat-btn">
+                    채팅 상담하기
+                    <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                  </button>
+
+                  <!-- 문의 등록하기 -->
+                  <a href="" class="chat-btn">
+                    문의 등록하기
+                    <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                  </a>
+
+                  <!-- 도움말 센터 바로가기 -->
+                  <a href="" class="chat-btn help-bx">
+                    도움말 센터 바로가기
+                    <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path></svg>
+                  </a>
+
+                </div>
+
+                <!-- 상담 가능 시간 박스 -->
+                <dl class="can-time-bx">
+
+                  <!-- 상담 가능 시간 텍스트 -->
+                  <dt>상단 가능 시간</dt>
+
+                  <!-- 평일 오전 9시 ~ 오후 6시 (주말, 공휴일 제외) 텍스트 -->
+                  <dd>평일 오전 9시 ~ 오후 6시 (주말, 공휴일 제외)</dd>
+
+                </dl>
+
+              </section>
+
+              <!-- 와디즈 그외 설명 박스 -->
+              <section class="last-content-bx">
+
+                <!-- 회사, 대표, 사업자등록번호, 주소 등 설명박스 -->
+                <address>
+
+                  <!-- 회사, 대표, 사업자등록번호, 주소 -->
+                  <ul class="l-c-bx">
+
+                    <!-- 회사 이름 -->
+                    <li>와디즈㈜</li>
+
+                    <!-- 회사 대표 이름 -->
+                    <li>대표이사 신혜성</li>
+
+                    <!-- 사업자등록번호 -->
+                    <li>사업자등록번호 258-87-01370</li>
+
+                    <!-- 신고번호 -->
+                    <li>통신판매업신고번호 2021 성남분당C-1153</li>
+
+                    <!-- 회사 주소 -->
+                    <li>경기 성남시 분당구 판교로 242 PDC A동 402호</li>
+
+                  </ul>
+
+                  <!-- 이메일, 상담 그외 박스 -->
+                  <div>
+
+                    <!-- 이메일, 상담 박스 -->
+                    <ul class="email-counseling-bx">
+
+                      <!-- 이메일 상담 info@wadiz.kr -->
+                      <li>
+                        <a href="" class="email-btn">
+                          이메일 상담 info@wadiz.kr
+                        </a>
+                      </li>
+
+                      <!-- 유선 상담 -->
+                      <li>
+                        유선 상담 
+                        <a href="">1661-9056</a>
+                      </li>
+
+                    </ul> 
+
+                    <!-- 와디즈 ltd -->
+                    <span class="wadiz-ltd">
+                      © wadiz Co., Ltd.
+                    </span>
+
+                  </div>
+
+                </address>
+
+                <!-- 상품 유의사항 -->
+                <div class="warning-bx">
+
+                  <p>일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.</p>
+
+                  <p>해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.</p>
+
+                </div>
+
+                <!-- 안드로이드, ios앱 -->
+                <div class="android-ios-bx">
+
+                  <!-- 안드로이드 -->
+                  <a href="https://play.google.com/store/apps/details?id=com.markmount.wadiz" target="_blank" class="icon-google-play" rel="noopener noreferrer">Android앱</a>
+
+                  <!-- ios -->
+                  <a href="https://itunes.apple.com/kr/app/wadijeu/id1107828621" target="_blank" class="icon-apple" rel="noopener noreferrer">iOS앱</a>
+
+                </div>
+
+              </section>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div></div>
+
+    </div>
+
+  </div>
+</body>
+</html>
