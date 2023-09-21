@@ -5,107 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa70a3dc-946e-4901-884f-246f790581c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/READ/패키지 경로 및 요소 명_[확인 필수].xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/Parking_PictureToParkingDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/SellerToParkingPictureDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/SellerToPaymentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/SellerToProfileDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToChoiceDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToCouponDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToOrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToParkingDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToPaymentHistoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToProfileDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToSNSStatusDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/DTO/UserToUseHistoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/CarInfoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/CardInfoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/ChoiceVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/CouponVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/EventVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/OrderVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/ParkingPictureVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/ParkingVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/PaymentHistoryVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/PaymentMethodVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/PaymentVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/ProfileVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/ReservationVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/SellerVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/TagVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/UseHistoryVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/UserVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/CarInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/CardInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/ChoiceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/CouponMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/EventMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/OrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/ParkingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/ParkingPictureMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/PaymentHistoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/PaymentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/PaymentMethodMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/ProfileMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/ReservationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/SellerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/TagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/UseHistoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/CarInfoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/CardInfoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/ChoiceDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/CouponDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/EventDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/ParkingDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/ParkingPictureDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/PaymentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/PaymentHistoryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/PaymentMethodDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/ProfileDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/ReservationDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/SellerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/TagDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/UseHistoryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/repository/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/CarInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/CardInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/ChoiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/CouponService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/EventService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/ParkingPictureService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/ParkingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/PaymentHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/PaymentMethodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/ProfileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/ReservationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/SellerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/TagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/UseHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/CarInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/CardInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/ChoiceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/CouponMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/EventMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/ParkingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/ParkingPictureMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/PaymentHistoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/PaymentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/PaymentMethodMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/ProfileMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/ReservationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/SellerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/TagMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/UseHistoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parkingmate/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/login/findId.js" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/js/login/findId.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +33,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Merging master",
-    "last_opened_file_path": "C:/web_1900_pms/project/ParkingMate",
+    "last_opened_file_path": "C:/web_1900_pms/project/ParkingMate/parkingmate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -169,7 +70,7 @@
       <workItem from="1695111094762" duration="3711000" />
       <workItem from="1695125920071" duration="1561000" />
       <workItem from="1695183142687" duration="2496000" />
-      <workItem from="1695204235227" duration="50000" />
+      <workItem from="1695204235227" duration="1003000" />
     </task>
     <servers />
   </component>

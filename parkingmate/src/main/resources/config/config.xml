@@ -2,7 +2,7 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-<!--        DTO-->
+        <!--        DTO-->
         <typeAlias type="com.app.parkingmate.domain.DTO.Parking_PictureToParkingDTO" alias="parking_PictureToParkingDTO" />
         <typeAlias type="com.app.parkingmate.domain.DTO.SellerToParkingPictureDTO" alias="sellerToParkingPictureDTO" />
         <typeAlias type="com.app.parkingmate.domain.DTO.SellerToPaymentDTO" alias="sellerToPaymentDTO" />
