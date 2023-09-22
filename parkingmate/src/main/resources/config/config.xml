@@ -22,15 +22,11 @@
         <typeAlias type="com.app.parkingmate.domain.VO.ChoiceVO" alias="choiceVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.CouponVO" alias="couponVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.EventVO" alias="eventVO" />
-        <typeAlias type="com.app.parkingmate.domain.VO.OrderVO" alias="orderVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.ParkingPictureVO" alias="parkingPictureVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.ParkingVO" alias="parkingVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.PaymentHistoryVO" alias="paymentHistoryVO" />
-        <typeAlias type="com.app.parkingmate.domain.VO.PaymentMethodVO" alias="paymentMethodVO" />
-        <typeAlias type="com.app.parkingmate.domain.VO.PaymentVO" alias="paymentVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.ProfileVO" alias="profileVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.ReservationVO" alias="reservationVO" />
-        <typeAlias type="com.app.parkingmate.domain.VO.SellerVO" alias="sellerVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.TagVO" alias="tagVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.UseHistoryVO" alias="useHistoryVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.UserVO" alias="userVO" />
