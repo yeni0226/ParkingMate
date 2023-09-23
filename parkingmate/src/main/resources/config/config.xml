@@ -3,21 +3,18 @@
 <configuration>
     <typeAliases>
         <!--        DTO-->
-        <typeAlias type="com.app.parkingmate.domain.DTO.Parking_PictureToParkingDTO" alias="parking_PictureToParkingDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.SellerToParkingPictureDTO" alias="sellerToParkingPictureDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.SellerToPaymentDTO" alias="sellerToPaymentDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.SellerToProfileDTO" alias="sellerToProfileDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToChoiceDTO" alias="userToChoiceDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToCouponDTO" alias="userToCouponDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToOrderDTO" alias="userToOrderDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToParkingDTO" alias="userToParkingDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToPaymentHistoryDTO" alias="userToPaymentHistoryDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToProfileDTO" alias="userToProfileDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToSNSStatusDTO" alias="userToSNSStatusDTO" />
-        <typeAlias type="com.app.parkingmate.domain.DTO.UserToUseHistoryDTO" alias="userToUseHistoryDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.CarInfoDTO" alias="carInfoDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ChoiceDTO" alias="choiceDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.CouponDTO" alias="couponDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ParkingDTO" alias="parkingDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ParkingPictureDTO" alias="parkingPictureDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.PaymentHistoryDTO" alias="paymentHistoryDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ProfileDTO" alias="profileDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ReservationDTO" alias="reservationDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.TagDTO" alias="tagDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.UseHistoryDTO" alias="useHistoryDTO" />
 
         <!--    VO-->
-        <typeAlias type="com.app.parkingmate.domain.VO.CardInfoVO" alias="cardInfoVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.CarInfoVO" alias="carInfoVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.ChoiceVO" alias="choiceVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.CouponVO" alias="couponVO" />

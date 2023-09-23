@@ -1,30 +1,37 @@
-package com.app.parkingmate.domain.VO;
+package com.app.parkingmate.domain.DTO;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Component
 @Data
-public class TagDTO {
-//    태그 고유 id
-//    not null
-    private Integer TagId;
-//    태그 1
-    private String Tag1;
-//    태그 2
-    private String Tag2;
-//    태그 3
-    private String Tag3;
+public class ChoiceDTO {
+//    찜 고유 id
+//     not null
+    private Integer ChoiceId;
+//    찜 카테고리
+//    도시
+//    도시 : (시), (구) 카테고리
+//    500자
+    private  String ChoiceCategory;
+//   찜 기간
+    private Integer Choice_Period;
+//    재판매 요청
+//    기본 값 : false
+//    Ture : 해당 찜 재판매 요청
+//    False : 해당 찜 재판매 요청 x
+//     not null
+    private Boolean ReChoiceRequest;
 //    생성 날짜
-    private LocalDateTime CreateDate;
+    private Date CreateDate;
 //    업데이트 날짜
-    private LocalDateTime UpdateDate;
-//    =================================================== FK
-//    회원 테이블 id
-//    not null
+    private Date UpdateDate;
+
+//    =========================================== FK
+//    회원 테이블의 회원 id
+//     not null
     private Integer UserId;
     //    회원 닉네임
 //    not null
@@ -66,9 +73,9 @@ public class TagDTO {
 //    기본 값 : 미사용
 //    옵션 : 미사용, 카카오 로그인
     private String UserSnsLoginStatus;
-//    =========================================================
-//    주차장 테이블 id
-//    not null
+//    ===================================================
+//    주차장 테이블의 주차장 id
+//     not null
     private Integer ParkingId;
     //    주차장 주소
 //    3000자

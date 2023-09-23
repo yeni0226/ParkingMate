@@ -1,4 +1,4 @@
-package com.app.parkingmate.domain.VO;
+package com.app.parkingmate.domain.DTO;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
