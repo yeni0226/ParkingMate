@@ -30,5 +30,30 @@
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.TagVO" alias="tagVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.UseHistoryVO" alias="useHistoryVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.UserVO" alias="userVO" />-->
+
+        <typeAlias type="com.app.parkingmate.domain.DTO.CarInfoDTO" alias="carInfoDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ChoiceDTO" alias="choiceDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.CouponDTO" alias="couponDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ParkingDTO" alias="parkingDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ParkingPictureDTO" alias="parkingPictureDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.PaymentHistoryDTO" alias="paymentHistoryDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ProfileDTO" alias="profileDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.ReservationDTO" alias="reservationDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.TagDTO" alias="tagDTO" />
+        <typeAlias type="com.app.parkingmate.domain.DTO.UseHistoryDTO" alias="useHistoryDTO" />
+
+        <!--    VO-->
+        <typeAlias type="com.app.parkingmate.domain.VO.CarInfoVO" alias="carInfoVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.ChoiceVO" alias="choiceVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.CouponVO" alias="couponVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.EventVO" alias="eventVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.ParkingPictureVO" alias="parkingPictureVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.ParkingVO" alias="parkingVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.PaymentHistoryVO" alias="paymentHistoryVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.ProfileVO" alias="profileVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.ReservationVO" alias="reservationVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.TagVO" alias="tagVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.UseHistoryVO" alias="useHistoryVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.UserVO" alias="userVO" />
     </typeAliases>
 </configuration>
