@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주차메이트</title>
+    <!-- <link href="https://static.wadiz.kr/assets/icon/favicon.ico" rel="shortcut icon" type="image/x-icon" /> -->
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
+    <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css" />
+    <link rel="stylesheet" href="/css/main/main-page.css" />
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e5db0a27e4f46752911719172477ebc"></script>
+    <style>
+      @font-face {
+        font-family: "SegoeUI_online_security";
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+      }
+
+      @font-face {
+        font-family: "SegoeUI_bold_online_security";
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parkingmate-page-container">
+      <div class="parkingmate-modal-container">
+        <div class="parkingmate-modal-area">
+          <button class="parkingmate-close-button">
+            <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-close-button-icon" aria-hidden="true"><path d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z"></path></svg>
+          </button>
+          <div class="parkingmate-account-container">
+            <h2 class="parkingmate-account-title">로그인</h2>
+            <section aria-labelledby="emailLogin">
+              <h3 class="parkingmate-bline-text">email 로그인</h3>
+              <form class="parkingmate-signInForm">
+                <div class="parkingmate-signInForm-field" data-test-id="emailField">
+                  <label class="parkingmate-bline-text">이메일</label>
+                  <input type="email" class="parkingmate-input input-email" placeholder="이메일 입력" title="이메일 입력">
+                </div>
+                <div class="parkingmate-signInForm-field" data-test-id="passwordField">
+                  <label class="parkingmate-bline-text">비밀번호</label>
+                  <input type="password" class="parkingmate-input input-password" placeholder="비밀번호 입력" title="비밀번호 입력">
+                </div>
+                <div class="parkingmate-login-action">
+                  <p class="parkingmate-forgot">
+                    <a href="">로그인 정보를 잊으셨나요?</a>
+                  </p>
+                </div>
+                <button class="parkingmate-button parkingmate-login-button" type="submit">
+                  <span>
+                    <span class="parkingmate-button-children">로그인</span>
+                  </span>
+                </button>
+              </form>
+            </section>
+            <section aria-labelledby="SNSLogin">
+              <h3 class="parkingmate-bline-text">SNS 로그인</h3>
+              <div>
+                <button class="parkingmate-button parkingmate-kakao-button" aria-label="카카오로 인증하기">
+                  <span>
+                    <span class="parkingmate-button-children">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-kakao-button-svg" aria-hidden="true"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path></svg>
+                      카카오로 시작하기
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </section>
+            <div class="parkingmate-signUpMessage">
+              <p>
+                아직 주차메이트 계정이 없나요?
+                <a href="" data-test-id="signUpLink">회원가입</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="parkingmate-modal-background"></div>
+      </div>
+      <main id="parkingmate-main">
+        <div class="parkingmate-web-header">
+          <div class="parkingmate-web-header-mobile">
+            <header class="parkingmate-header-wrapper">
+              <div class="parkingmate-header-container">
+                <ul class="parkingmate-footer-button">
+                  <!-- 홈버튼 -->
+                  <li class="parkingmate-footer-button-item">
+                    <a href="main-page-예비.html" class="parkingmate-footer-button-item-in item-active">
+                      <object data="/images/logo.svg" class="parkingmate-footer-button-item-svg"></object>
+                      <span class="parkingmate-footer-button-item-in-text">홈</span>
+                    </a>
+                  </li>
+                  <!-- 예약하기로 바꾸기 -->
+                  <li class="parkingmate-footer-button-item">
+                    <a href="" class="parkingmate-footer-button-item-in">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512" class="parkingmate-footer-button-item-svg"><g id="_01_align_center" data-name="01 align center"><path d="M21,2H18V0H16V2H8V0H6V2H3A3,3,0,0,0,0,5V24H24V5A3,3,0,0,0,21,2ZM2,5A1,1,0,0,1,3,4H21a1,1,0,0,1,1,1V8H2ZM2,22V10H22V22Z"/><rect x="15" y="13" width="2" height="2"/><rect x="11" y="13" width="2" height="2"/><rect x="7" y="13" width="2" height="2"/><rect x="15" y="17" width="2" height="2"/><rect x="11" y="17" width="2" height="2"/><rect x="7" y="17" width="2" height="2"/></g></svg>
+                      <span class="parkingmate-footer-button-item-in-text">예약하기</span>
+                    </a>
+                  </li>
+                  <!-- 주차장 등록 버튼?? -->
+                  <li class="parkingmate-footer-button-item">
+                    <div class="parkingmate-footer-button-plus">
+                      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0icjRzeW8za3R4YSIgZD0iTTAgMGg0MHY0MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9Im1kajRrdnh3amIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjcjRzeW8za3R4YSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCAwQzguOTU0IDAgMCA4Ljk1NSAwIDIwYzAgMTEuMDQ2IDguOTU0IDIwIDIwIDIwczIwLTguOTU0IDIwLTIwQzQwIDguOTU1IDMxLjA0NiAwIDIwIDBtMCAxYzEwLjQ3NyAwIDE5IDguNTIzIDE5IDE5cy04LjUyMyAxOS0xOSAxOVMxIDMwLjQ3NyAxIDIwIDkuNTIzIDEgMjAgMSIgZmlsbD0iIzg2OEU5NiIgbWFzaz0idXJsKCNtZGo0a3Z4d2piKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBzdHJva2U9IiM4NjhFOTYiIGQ9Ik0yMCAxMXYxOE0yOSAyMEgxMSIvPgogICAgPC9nPgo8L3N2Zz4K" alt="">
+                    </div>
+                  </li>
+                  <!-- 찜하기 즐겨찾기? -->
+                  <li class="parkingmate-footer-button-item">
+                    <a href="" class="parkingmate-footer-button-item-in">
+                      <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="parkingmate-footer-button-item-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085zm-5.28 21.84l-.88.8-.88-.8h-.08C8.4 19.76 4 15.84 4 11.44l-.001-.082A5.76 5.76 0 0 1 9.928 5.6a6.542 6.542 0 0 1 4.865 2.232l.486.567h1.52l.48-.56a6.548 6.548 0 0 1 4.877-2.24l.084-.001a5.76 5.76 0 0 1 5.76 5.76l-.001.085c0 4.396-4.4 8.316-11.12 14.396z"></path></svg>
+                      <span class="parkingmate-footer-button-item-in-text">이벤트</span>
+                    </a>
+                  </li>
+                  <!-- 마이페이지 이동 -->
+                  <li class="parkingmate-footer-button-item">
+                    <a href="" class="parkingmate-footer-button-item-in">
+                      <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-footer-button-item-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M20.27 22.3a9.43 9.43 0 1 0-9.42-9.42 9.43 9.43 0 0 0 9.42 9.42zm0-16.76a7.34 7.34 0 1 1-7.34 7.34 7.34 7.34 0 0 1 7.34-7.34zm0 20.05c-6.52 0-15.19 1.09-15.19 10.57h2.08c0-5.95 3.92-8.49 13.11-8.49s13.11 2.54 13.11 8.49h2.08c0-9.48-8.67-10.57-15.19-10.57z"></path><path fill="none" d="M0 0h40v40H0z"></path></svg>
+                      <span class="parkingmate-footer-button-item-in-text">마이페이지</span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- <button class="parkingmate-search-container">
+                  <p>위치 검색하기</p>
+                  <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-search-container-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path fill="none" d="M0 0h40v40H0z"></path><path d="M29.2 27.91a14.38 14.38 0 1 0-1.42 1.4l7.16 7.15.07.08 1.41-1.41zM18.45 6a12.36 12.36 0 0 1 8.35 3.23 12.24 12.24 0 0 1 4 8.59A12.39 12.39 0 1 1 17.88 6z"></path></svg>
+                </button> -->
+                <div class="parkingmate-search-container">
+                  <!-- 위치 검색하는 input -->
+                  <input type="text" class="parkingmate-search-container-input" placeholder="위치 검색하기"></input>
+                  <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-search-container-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path fill="none" d="M0 0h40v40H0z"></path><path d="M29.2 27.91a14.38 14.38 0 1 0-1.42 1.4l7.16 7.15.07.08 1.41-1.41zM18.45 6a12.36 12.36 0 0 1 8.35 3.23 12.24 12.24 0 0 1 4 8.59A12.39 12.39 0 1 1 17.88 6z"></path></svg>
+                </div>
+                <div class="parkingmate-alram">
+                  <button class="parkingmate-alram-button" aria-label="알림">
+                    <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-alram-button-svg" aria-hidden="true"><path fill="none" d="M0 0h40v40H0z"></path><path d="M36.78 32l-.89-1.56a16.92 16.92 0 0 1-2.18-8.68v-7.12A12.78 12.78 0 0 0 30 5.54a13.86 13.86 0 0 0-9.91-4 14.05 14.05 0 0 0-9.95 4 12.74 12.74 0 0 0-3.76 9.1v7.14a16.92 16.92 0 0 1-2.18 8.68L3.22 32h10.91a5.58 5.58 0 0 0 .2 2.8 5.75 5.75 0 0 0 4.44 3.86 5.52 5.52 0 0 0 1 .09 5.79 5.79 0 0 0 3.71-1.36 5.7 5.7 0 0 0 2-4.38 4.88 4.88 0 0 0-.11-1zM8.37 21.78v-7.14A10.66 10.66 0 0 1 11.52 7 11.81 11.81 0 0 1 20 3.66 11.92 11.92 0 0 1 28.48 7a10.65 10.65 0 0 1 3.14 7.62v7.14a19.52 19.52 0 0 0 1.67 8.16H6.71a19.52 19.52 0 0 0 1.66-8.14zM23.42 33a3.64 3.64 0 0 1-7.11 1.13 3.41 3.41 0 0 1 0-2.14h7a3.18 3.18 0 0 1 .11 1.01z"></path></svg>
+                  </button>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+        <!-- 지도부분 -->
+        <div id="parkingmate-map"></div>
+        <!-- 지도부분 -->
+        <!-- 내 위치 버튼 -->
+        <button type="button" class="my-location-button" id="getMyPositionBtn" onclick="getCurrentPosBtn()" >
+
+          <!-- 내 위치 이미지 -->
+          <img src="/images/location-black.png" class="my-location-image">
+
+        </button>
+
+      </main>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/main-page/main-page.js"></script>
+  <!-- 내 위치 찍기 API QUERY -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</html>
