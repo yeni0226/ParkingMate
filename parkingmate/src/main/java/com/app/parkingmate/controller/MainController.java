@@ -13,13 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/main/*")
 public class MainController {
 
-
     @GetMapping("main-page")
-    public void goToLoginForm(){;}
-
-    @GetMapping("main-page-test")
     public void goToMainPage(){;}
 
     @GetMapping("footer")
     public void goToFooter(){;}
+
+    @GetMapping("header")
+    public void goToHeader(){;}
+
+    @GetMapping("main-header")
+    public void goToMainHeader(){;}
 }

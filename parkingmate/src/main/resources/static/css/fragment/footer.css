@@ -1,0 +1,404 @@
+/* 하단 전체 박스 */
+.footer {
+  position: relative;
+  background: #fff;
+  padding-top: 120px;
+  color: #212121;
+  font-size: 12px;
+  
+}
+
+/* 정책박스 */
+.footer-policy {
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  text-align: left;
+}
+
+/* 정책 안박스 */
+.f-p-ibx {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* 정책 헤더박스 */
+.f-p-header,
+.f-p-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.f-p-header {
+  margin: 0 16px;
+}
+
+/* 정책 . 약관 박스 */
+.policy-bx,
+.info-bx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 50%;
+  height: 40px;
+  text-align: left;
+  color: #495057;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+
+  position: relative;
+  outline: none;
+}
+
+/* 정책 footer박스 */
+.f-p-footer {
+  flex-wrap: wrap;
+
+  margin: 0 16px;
+}
+
+/* 정책 옆 화살표 이미지 */
+.Linker_linkerIcon__147tH {
+  display: inline-block!important;
+  transform: rotate(90deg);
+  animation: Linker_activeHide__1EcPt .5s forwards;
+  margin-left: 4px;
+  color: rgba(0,0,0,.54);
+}
+
+/* 개인정보 박스 */
+.info-bx {
+  font-weight: 700;
+}
+
+/* footer 박스 안 menu */
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 50%;
+  height: 40px;
+  text-align: left;
+  color: #495057;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+  outline: none;
+}
+
+.FooterMenu_openLinkIcon__15pDJ {
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: text-top;
+}
+
+/* 언어 박스 */
+.language-bx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* 고객센터 박스 */
+.s-c-footer {
+  padding-bottom: 0;
+}
+
+/* 고객센터 인박스 */
+.s-c-footer-ibx {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 하단 마진박스 */
+.footer-mg-bx {
+  border-bottom: 1px solid #f2f4f6;
+  padding: 16px;
+}
+
+/* 와디즈 고객센터 */
+.c-s-bx {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #212529;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 고객센터 박스 */
+.c-s-bx {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #212529;
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 고객센터 박스 before */
+.c-s-bx:before {
+  display: inline-block;
+  margin-right: 8px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURUdwTCUoLSEmKyEmKSElKScsLiImKiElKSElKSEmKiElKiIlKyElKiInKyIlKSIlKiImKSQqLS1AQCElKRLEMhcAAAATdFJOUwAiVJbvEoz7vm7ZSaMxdqumGwUhhJyxAAABbElEQVRIx6VW2aKEIAglcwGrafH///VW0zSh0DKXR0Q8HDYB/i/OkB8QW0/GXVtXhCHtEpDGc/M+FdJWOpY6JEGCV5A1NiliG8n+lXQJVJhPbTqVesouXNjPNy7whCJ+hqrhZ7hkzBnkLg6RO8aP3X3R8Zlgv+zWzJWZPVBd03xu2IHf88vw9p+MLOyzzIdPznk9dDBuCO0IHa+S7QGeVQB/wMCz/65EYroIsLODAFGgFjn/MQb1Aq6cZikKLLscUliYNXo5NFnQK+VZCFn5eKE+vGY/c9SFUgeDYv8CGGOuHHKSuP/CfqVJvhAn6ISWRRWSARcF9aAFPRP+UoDKtEYFKmmJ0y4YoTTeNYtoZaQ6r5KgUN6nQkIDbTEQSZAqqUW3PpX89OIQ2Po0b4XjEMjGzPZCdzItx8KZ9b7UOXVUav13czl8++PRuG8fLpR2erSycjy/LUV97dbu0WLvq2dfh+r252S49zm5lD8cD271e3tWtwAAAABJRU5ErkJggg==) no-repeat center/16px 16px;
+  width: 16px;
+  height: 16px;
+  content: "";
+}
+
+/* 채팅 btn, 문의 등록, 도움말 */
+.chat-btn {
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  margin: 8px 0;
+  cursor: pointer;
+  padding: 0;
+  width: 49%;
+  text-align: left;
+  color: #495057;
+}
+
+/* 도움말 센터 */
+.help-bx {
+  width: 100%;
+}
+
+/* 상담 가능 시간 박스 */
+.can-time-bx {
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 8px;
+  border-top: 1px solid #f2f4f6;
+  padding-top: 16px;
+  white-space: nowrap;
+  color: #868e96;
+}
+
+/* 상담 가능 시간 텍스트 */
+.can-time-bx>dt {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+/* 마지막 설명 박스 */
+.last-content-bx {
+  padding: 24px 16px 0;
+  line-height: 18px;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.l-c-bx li,
+.email-counseling-bx>li{
+  display: inline;
+  color: #495057;
+}
+
+.l-c-bx li:after {
+  content: "|";
+  color: #dde2e6;
+  margin: 0 5px;
+}
+
+/* 이메일, 상담 그외 박스 */
+.email-counseling-bx {
+  margin-top: 4px;
+}
+
+.email-counseling-bx>li>a {
+  transition: color .2s;
+}
+
+.email-counseling-bx>li:after {
+  content: "|";
+  color: #dde2e6;
+  margin: 0 5px;
+}
+
+/* 와디즈 ltd */
+.wadiz-ltd {
+  display: inline-block;
+  margin-top: 4px;
+  color: #000;
+  font-weight: 900;
+}
+
+/* 상품 유의사항 */
+.warning-bx {
+  margin-top: 16px;
+  color: #868e96;
+}
+
+.warning-bx p {
+  font-size: 10px;
+  display: inline;
+}
+
+/* 안드로이드 ios 박스*/
+.android-ios-bx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 32px;
+  margin-bottom: 160px;
+  gap: 37px;
+}
+
+.android-ios-bx>a {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #212529;
+}
+
+.FooterContainer_container__3B0Z_ .FooterContainer_rightSection__3R7v7 .FooterContainer_appStoreSection__3Jmpn a:before {
+  margin-right: 4px;
+}
+
+
+.parkingmate-footer-button{
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  transform: translateY(0);
+  transition: transform .25s;
+  z-index: 100;
+  margin-left: 0;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.15);
+  background-color: #fff;
+  padding: 0 0 8px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  width: 100%;
+  list-style: none;
+}
+
+.parkingmate-footer-button-item{
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.parkingmate-footer-button-item-in{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto
+}
+
+.item-active{
+  color: #212529;
+  font-weight: 700;
+}
+
+.parkingmate-footer-button-item-in-text{
+  line-height: 14px;
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+  position: absolute;
+  top: 33px;
+  color: #868e96;
+}
+
+.item-active .parkingmate-footer-button-item-in-text{
+  color: #212529;
+  font-weight: 700;
+}
+
+.parkingmate-footer-button-item-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  top: 9px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  color: #868e96;
+  font-size: 24px;
+}
+
+.item-active .parkingmate-footer-button-item-svg{
+  display: block;
+  transform: scale(1);
+  transition: transform .3s ease-out;
+  fill: currentColor;
+  position: absolute;
+  top: 3px;
+  margin-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 24px;
+  font-size: 24px;
+  color: #212529;
+}
+
+.parkingmate-footer-button-plus{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  transition: .2s;
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 2px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  max-width: 72px;
+  margin: 0 auto;
+}
+
+.parkingmate-search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dde2e6;
+  width: 100%;
+  height: 40px;
+  margin-right: 16px;
+  padding: 0 16px;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}

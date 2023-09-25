@@ -74,7 +74,7 @@ public class MyPageController {
     @GetMapping("mypage-mobile-logout")
     public void goToMyPageLogOut(){;}
 
-    @GetMapping("mypage-mobile-no-logout")
+    @GetMapping("mypage-mobile-no-login")
     public void goToMyPageNoLogOut(){;}
 
     @GetMapping("save")
@@ -98,6 +98,6 @@ public class MyPageController {
     @GetMapping("usersetting-phone-number-change")
     public void goToUserSettingPhoneNumberChange(){;}
 
-    @GetMapping("usersetting-mobile")
+    @GetMapping("usersettings-mobile")
     public void goToUserSettingMobile(){;}
 }

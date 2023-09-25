@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/css/login/login.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
     <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css" />
+    <link rel="stylesheet" href="/css/fragment/header.css" />
+    <link rel="stylesheet" href="/css/fragment/footer.css" />
 
     <style>
       @font-face {
@@ -26,22 +28,7 @@
 <body>
   <div id="parkingmate-page-container">
     <main id="parkingmate-main">
-      <div class="parkingmate-web-header">
-        <div class="parkingmate-web-header-mobile">
-          <header class="parkingmate-header-wrapper">
-            <div class="parkingmate-header-container">
-              <button class="parkingmate-header-button back-button">
-                <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="parkingmate-header-button-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path></svg>
-              </button>
-              <button class="parkingmate-header-button home-button">
-                <a href="">
-                  <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="parkingmate-header-button-svg" aria-hidden="true" style="width: 24px; height: 24px;"><path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path><path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path><path fill="none" d="M0 0h40v40H0z"></path></svg>
-                </a>
-              </button>
-            </div>
-          </header>
-        </div>
-      </div>
+      <th:block th:replace="~{fragment/header :: header}"></th:block>
       <div class="parkingmate-main-wrapper">
         <div class="parkingmate-account-intro-login">
           <div class="parkingmate-account-container">

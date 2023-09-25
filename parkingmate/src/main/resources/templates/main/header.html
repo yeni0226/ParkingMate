@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:logo" content="" size="150x150" />
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>FOOTER</title>
+    <link rel="stylesheet" href="/css/fragment/header.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/7f85a56ba4.css" />
+    <link rel="stylesheet" href="https://static.wadiz.kr/assets/fonts/font.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <style>
+      @font-face {
+        font-family: "SegoeUI_online_security";
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+      }
+
+      @font-face {
+        font-family: "SegoeUI_bold_online_security";
+        src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+      }
+    </style>
+  </head>
+<body>
+<th:block  th:fragment="header">
+  <div class="header">
+
+  <!-- 헤더 안 컨테이너 전체박스 -->
+  <div class="header-wrap">
+
+    <!-- 헤더 컨테이너 -->
+    <div class="header-container">
+
+      <!-- 뒤로가기 버튼 -->
+      <button class="back-button button-all">
+
+        <!-- 뒤로가기 이미지 -->
+        <svg viewBox="0 0 24 24" fill="none" focusable="false"
+             role="presentation" class="withIcon_icon__3VTbq Button_icon__2Lds2"
+             aria-hidden="true" style="width: 24px;height: 24px;">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z">
+          </path>
+        </svg>
+
+      </button>
+
+      <!-- 홈 버튼 -->
+      <button class="home-button button-all">
+        <a class="" href="/main/main-page">
+
+          <!-- 홈 이미지 -->
+          <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+               class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true"
+               style="width: 24px; height: 24px;">
+            <path d="M13.38 36.13h2.4v-13.9h8.44v13.9h2.4V19.84H13.38v16.29z"></path>
+            <path d="M20 3.41L3.8 14.49v21.64h2.4V15.75L20 6.32l13.8 9.43v20.38h2.4V14.49L20 3.41z"></path>
+            <path fill="none" d="M0 0h40v40H0z"></path>
+          </svg>
+
+        </a>
+      </button>
+
+      <!-- 로고 -->
+      <div class="title-logo">
+        <p class="title">ParkingMate</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+</th:block>
+</body>
+<script type="text/javascript" src="/js/coupon/couponlist.js"></script>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,8 @@
 
   <!-- 메인 스타일CSS -->
   <link rel="stylesheet" href="/css/getDirections/payment-page-main.css">
+  <link rel="stylesheet" href="/css/fragment/header.css" />
+  <link rel="stylesheet" href="/css/fragment/footer.css" />
 
   <!--  -->
   <script src="/js/getDirections/expand.js"></script>
@@ -31,27 +33,7 @@
   <div class="page-container">
 
     <!-- 헤더 전체박스 -->
-    <div class="web-header">
-
-      <!-- 헤더 포지션박스 -->
-      <header class="header-wrapper">
-
-        <!-- 헤더 양옆 마진박스 -->
-        <div class="header-container">
-
-          <!-- 뒤로가기 버튼박스 -->
-          <button class="back-btn">
-            
-            <!-- 뒤로가기 이미지 -->
-            <svg viewBox="0 0 24 24" fill="none" focusable="false" role="presentation" class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true" style="width: 24px; height: 24px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.076 2.576l.848.848L8.35 12l8.575 8.576-.848.848L6.65 12l9.425-9.424z"></path></svg>
-
-          </button>
-
-        </div>
-
-      </header>
-
-    </div>
+    <th:block th:replace="~{fragment/header :: header}"></th:block>
 
     <!-- 메인박스 -->
     <div>
