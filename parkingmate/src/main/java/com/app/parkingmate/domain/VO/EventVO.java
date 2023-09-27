@@ -9,6 +9,8 @@ import java.util.Date;
 @Component
 @Data
 public class EventVO {
+<<<<<<< HEAD
+=======
 //    이벤트 고유 id
 //    not null
     private Integer EventId;
@@ -35,5 +37,6 @@ public class EventVO {
     private LocalDateTime CreateDate;
 //    업데이트 날짜
     private LocalDateTime UpdateDate;
+>>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
 
 }
