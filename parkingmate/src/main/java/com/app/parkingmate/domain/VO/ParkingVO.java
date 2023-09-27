@@ -38,7 +38,11 @@ public class ParkingVO {
 //    주차 면수
 //    기본 값 : 5
 //    not null
-    private Integer Parking_Count;
+    private Integer ParkingSpaceNumber;
+//    주차 찜 상태
+//    기본 값 : 0
+//    옵션 : 0 - false(찜 상태 x), 1 - ture(찜 상태)
+    private Integer ParkingDibsStatus;
 //    생성 날짜
     private Date CreateDate;
 //    업데이트 날짜

@@ -297,7 +297,7 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3e5db0a27e4f46752911719172477ebc&libraries=services"></script>
 
 <!-- 카카오 지도 API -->
-<script>
+<script th:inline="javascript">
   
   // 카카오 지도 API
   // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
@@ -388,6 +388,52 @@ function displayMarker(place) {
 
     document.addEventListener("click", handleDocumentClick);
 }
+
+  // 주소로 장소 표시
+  // 장소 검색 객체를 생성합니다
+  var ps = new kakao.maps.services.Places();
+  // 검색할 장소 입력 박스
+  var SearchBox = document.querySelector("body > div > div.search-all > div > div.search-content-bx > input[type=text]");
+  // 검색 버튼
+  var Searchicon = document.querySelector("body > div > div.search-all > div > button");
+
+  // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+  function placesSearchCB (data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+      var parkings = [[${parkings}]];
+      // console.log(parkings);
+
+      // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
+      // LatLngBounds 객체에 좌표를 추가합니다
+      var bounds = new kakao.maps.LatLngBounds();
+      for (var i=0; i<data.length; i++) {
+
+        console.log(data[i].address_name);
+        console.log(parkings);
+        // console.log(data[i].address_name.includes(parkings));
+        if(data[i].address_name.includes(parkings)){
+          console.log("존재!");
+        }
+        displayMarker(data[i]);
+        // console.log(data[i].address_name +','+ data[i].category_group_name+','+ data[i].place_name+','+data[i].x+','+data[i].y );
+        // console.log(data[i].category_group_name);
+        // console.log(data[i].place_name);
+        // console.log(data[i].x);
+        // console.log(data[i].y);
+        bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+      }
+
+      // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+      map.setBounds(bounds);
+    }
+  }
+
+  Searchicon.addEventListener("click", (e) => {
+    const SearchVal = SearchBox.value;
+    // 키워드로 장소를 검색합니다
+    ps.keywordSearch(SearchVal, placesSearchCB);
+
+  })
 </script>
 <script type="text/javascript" src="/js/main-page/modal.js"></script>
 <!-- 내 위치 찍기 API QUERY -->
