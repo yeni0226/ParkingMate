@@ -9,16 +9,14 @@ import java.util.Date;
 @Component
 @Data
 public class EventVO {
-<<<<<<< HEAD
-=======
 //    이벤트 고유 id
 //    not null
     private Integer EventId;
 //    이벤트 상태
 //    not null
-//    기본 값 : 진행 중
-//    옵션 : 진행 중, 종료, 예정
-    private String EventStatus;
+//    기본 값 : 0
+//    옵션 : 0 - 진행 중, 1- 종료,  2 - 예정
+    private Integer EventStatus;
 //    이벤트 제목
 //    not null
     private String EventTitle;
@@ -37,6 +35,4 @@ public class EventVO {
     private LocalDateTime CreateDate;
 //    업데이트 날짜
     private LocalDateTime UpdateDate;
->>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
-
 }

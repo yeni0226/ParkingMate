@@ -9,9 +9,6 @@ import java.util.Date;
 @Component
 @Data
 public class CouponVO {
-<<<<<<< HEAD
-
-=======
 //    쿠폰 고유 id
 //     not null
     private Integer CouponId;
@@ -39,6 +36,10 @@ public class CouponVO {
 //     not null
 //    500자
     private String CouponCode;
+//    쿠폰 상태
+//    기본 값 : 0
+//    옵션 : 0 - 사용 가능, 1 - 사용 불가
+    private Integer CouponStatus;
 //    생성 날짜
     private LocalDateTime CreateDate;
 //    업데이트 날짜
@@ -51,5 +52,4 @@ public class CouponVO {
 //    이벤트 테이블의 이벤트 고유 id
 //     not null
     private Integer EventId;
->>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
 }

@@ -19,7 +19,7 @@
 <!--            VO-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.CardInfoVO" alias="cardInfoVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.CarInfoVO" alias="carInfoVO" />-->
-<!--        <typeAlias type="com.app.parkingmate.domain.VO.ChoiceVO" alias="choiceVO" />-->
+<!--        <typeAlias type="com.app.parkingmate.domain.VO.DibsVOalias="choiceVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.CouponVO" alias="couponVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.EventVO" alias="eventVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.ParkingPictureVO" alias="parkingPictureVO" />-->
@@ -44,7 +44,7 @@
 
         <!--    VO-->
         <typeAlias type="com.app.parkingmate.domain.VO.CarInfoVO" alias="carInfoVO" />
-        <typeAlias type="com.app.parkingmate.domain.VO.ChoiceVO" alias="choiceVO" />
+        <typeAlias type="com.app.parkingmate.domain.VO.DibsVO" alias="choiceVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.CouponVO" alias="couponVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.EventVO" alias="eventVO" />
         <typeAlias type="com.app.parkingmate.domain.VO.ParkingPictureVO" alias="parkingPictureVO" />

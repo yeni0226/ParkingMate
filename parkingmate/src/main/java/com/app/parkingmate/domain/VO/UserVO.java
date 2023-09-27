@@ -28,17 +28,17 @@ public class UserVO {
     private String UserEmail;
 //    회원 전화번호
 //    not null
-    private Integer UserPhoneNumber;
+    private String UserPhoneNumber;
 //    회원 상태
-//    기본 값 : 이용 중
-//    옵션 : 이용 중, 정지, 탈퇴
+//    기본 값 : 0
+//    옵션 : 0 - 이용 중, 1 - 정지, 2 - 탈퇴
 //    not null
-    private String UserStatus;
+    private Integer UserStatus;
 //    회원 구분
-//    기본 값 : 회원
-//    옵션 : 회원 ,판매자
+//    기본 값 : 0
+//    옵션 : 0 - 회원 ,1 - 판매자
 //    not null
-    private String UserClass;
+    private Integer UserClass;
 //    회원 가입 날짜
 //    not null
     private Date UserStartDate;
@@ -49,9 +49,9 @@ public class UserVO {
 //  not null
     private  String UserProfile;
 //    SNS 로그인상태
-//    기본 값 : 미사용
-//    옵션 : 미사용, 카카오 로그인
-    private String UserSnsLoginStatus;
+//    기본 값 : 0
+//    옵션 : 0 - 미사용, 1 - 카카오 로그인
+    private Integer UserSnsLoginStatus;
 //    생성 날짜
     private LocalDateTime CreateDate;
 //    업데이트 날짜
