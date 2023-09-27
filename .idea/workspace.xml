@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa70a3dc-946e-4901-884f-246f790581c4" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/footer-button.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/footer.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/fragment/footer-button.html" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/fragment/footer-button.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/header.html" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/CarInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/java/com/app/parkingmate/domain/VO/CarInfoVO.java" afterDir="false" />
+>>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -42,8 +48,22 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/web_1900_pms/project/ParkingMate/parkingmate/src/main/resources/static/css/parkingUpload&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\web_1900_pms\project\ParkingMate\parkingmate\src\main\resources\static\css\parkingUpload" />
@@ -75,7 +95,11 @@
       <workItem from="1695183142687" duration="2496000" />
       <workItem from="1695204235227" duration="1003000" />
       <workItem from="1695347474577" duration="318000" />
+<<<<<<< HEAD
       <workItem from="1695723212884" duration="304000" />
+=======
+      <workItem from="1695422873997" duration="51000" />
+>>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
     </task>
     <servers />
   </component>
