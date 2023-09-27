@@ -16,7 +16,7 @@
 <!--        <typeAlias type="com.app.parkingmate.domain.DTO.UserToSNSStatusDTO" alias="userToSNSStatusDTO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.DTO.UserToUseHistoryDTO" alias="userToUseHistoryDTO" />-->
 
-        <!--    VO-->
+<!--            VO-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.CardInfoVO" alias="cardInfoVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.CarInfoVO" alias="carInfoVO" />-->
 <!--        <typeAlias type="com.app.parkingmate.domain.VO.ChoiceVO" alias="choiceVO" />-->

@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequiredArgsConstructor
 @Slf4j
-@RequestMapping("/main/*")
+@RequestMapping("/*")
 public class MainController {
 
-    @GetMapping("main-page")
-    public void goToMainPage(){;}
+     @GetMapping("/")
+    public String goToHome(){
+        return "/main/main-page";
+    }
 
-    @GetMapping("footer")
-    public void goToFooter(){;}
+    @GetMapping("/main-page")
+    public String goToMain(){
+        return "/main/main-page";
+    }
 
-    @GetMapping("header")
-    public void goToHeader(){;}
 
-    @GetMapping("main-header")
-    public void goToMainHeader(){;}
 }

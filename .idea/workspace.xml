@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa70a3dc-946e-4901-884f-246f790581c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/parkingUpload/font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/static/css/parkingUpload/mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/parking-upload/parking-upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/config/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/footer-button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/fragment/footer-button.html" beforeDir="false" afterPath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/fragment/footer-button.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingmate/src/main/resources/templates/header.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/web_1900_pms/project/ParkingMate/parkingmate/src/main/resources/static/css/parkingUpload",
+    "last_opened_file_path": "C:/web_1900_pms/project/ParkingMate/parkingmate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +75,7 @@
       <workItem from="1695183142687" duration="2496000" />
       <workItem from="1695204235227" duration="1003000" />
       <workItem from="1695347474577" duration="318000" />
+      <workItem from="1695723212884" duration="304000" />
     </task>
     <servers />
   </component>
