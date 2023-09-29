@@ -22,11 +22,13 @@ public class MainController {
 
      @GetMapping("/")
     public String goToHome(Model model){
-         Optional<ParkingVO> checkParkingName = parkingService.getParking(parkingVO);
-//        log.info(checkParkingName.get().getParkingCategory());
-//        checkParkingName.get().getParkingAddress();
-//        db의 카테고리 부분 값 가져옴
-         model.addAttribute("parkings",parkingService.getParking(parkingVO).get().getParkingCategory());
+//         Optional<ParkingVO> checkParkingName = parkingService.getParking(parkingVO);
+////        log.info(checkParkingName.get().getParkingCategory());
+////        checkParkingName.get().getParkingAddress();
+////        db의 카테고리 부분 값 가져옴
+//         model.addAttribute("parkings",parkingService.getParking(parkingVO).get().getParkingCategory());
+////         model.addAttribute("parkings", checkParkingName.get().getParkingCategory());
+
         return "/main/main-page";
     }
 
