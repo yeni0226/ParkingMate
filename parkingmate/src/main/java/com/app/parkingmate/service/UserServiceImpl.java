@@ -17,11 +17,22 @@ public class UserServiceImpl implements UserService {
 
     private final UserDAO userDAO;
 
-//
+////
+//    @Override
+//    public Optional<UserVO> getMember(Integer Id) {
+////        Optional<UserVO> member = userDAO.findByMember(Id);
+////        log.info(member);
+//        return userDAO.findByMember(Id);
+//    }
+
     @Override
-    public Optional<UserVO> getMember(Integer Id) {
-//        Optional<UserVO> member = userDAO.findByMember(Id);
-//        log.info(member);
-        return userDAO.findByMember(Id);
+    public void join(UserVO userVO) {
+        userDAO.save(userVO);
+    }
+
+
+    @Override
+    public UserVO getEmail(UserVO userVO) {
+        return userDAO.findByEmail(userVO);
     }
 }

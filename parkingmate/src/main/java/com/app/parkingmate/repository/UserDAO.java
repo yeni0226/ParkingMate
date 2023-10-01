@@ -14,9 +14,19 @@ import java.util.Optional;
 public class UserDAO {
     private final UserMapper userMapper;
 
-//  회원 정보 조회
-    public Optional<UserVO> findByMember(Integer Id) {
-//        Optional<UserVO> member = userMapper.select(Id);
-        return userMapper.select(Id);
-    };
+
+    public void save(UserVO userVO){
+        userMapper.insert(userVO);
+    }
+
+    public UserVO findByEmail(UserVO userVO){
+        return userMapper.select(userVO);
+    }
+
+
+////  회원 정보 조회
+//    public Optional<UserVO> findByMember(Integer Id) {
+////        Optional<UserVO> member = userMapper.select(Id);
+//        return userMapper.select(Id);
+//    };
 }

@@ -3,12 +3,13 @@ package com.app.parkingmate.domain.VO;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 @Component
 @Data
-public class UserVO {
+public class UserVO implements Serializable{
 //    회원 고유 id
 //    not null
 //    private Integer UserId;

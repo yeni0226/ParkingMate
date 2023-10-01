@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.app.parkingmate.mapper.UserMapper">
+
+    <insert id="insert">
+        INSERT INTO TBL_USER(ID, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_NICKNAME, USER_PHONE_NUMBER, USER_START_DATE, USER_PROFILE)
+        VALUES (SEQ_USER.NEXTVAL, #{UserName}, #{UserPassword}, #{UserEmail}, #{UserNickName} , #{UserPhoneNumber}, #{UserStartDate}, #{UserProfile})
+    </insert>
+
+
     <select id="select" resultType="userVO">
-        SELECT ID, USER_NICKNAME, USER_NAME, USER_PASSWORD
+        SELECT ID, USER_NICKNAME, USER_NAME, USER_PASSWORD, USER_EMAIL, USER_PHONE_NUMBER, USER_START_DATE, USER_PROFILE
         FROM TBL_USER
-        WHERE ID = #{Id}
+        WHERE USER_EMAIL = #{UserEmail}
     </select>
+
 </mapper>

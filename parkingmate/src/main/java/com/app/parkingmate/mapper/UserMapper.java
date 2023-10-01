@@ -7,6 +7,12 @@ import java.util.Optional;
 
 @Mapper
 public interface UserMapper {
+
+    public void insert(UserVO userVO);
+
+
+    public UserVO select(UserVO userVO);
+
 //    회원 정보 조회
-    public Optional<UserVO> select(Integer Id);
+//    public Optional<UserVO> select(Integer Id);
 }
