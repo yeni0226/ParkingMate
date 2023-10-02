@@ -4,6 +4,7 @@ import com.app.parkingmate.domain.VO.UserVO;
 import com.app.parkingmate.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -20,8 +21,8 @@ public class UserDAO {
     }
 
 //    find-id, find-password
-    public Optional<UserVO> findByEmail(UserVO userVO){
-        return userMapper.select(userVO);
+    public Optional<UserVO> findByEmail(String UserEmail){
+        return userMapper.select(UserEmail);
     }
 
 
@@ -39,6 +40,7 @@ public class UserDAO {
     public void updateByKakaoProfile(UserVO userVO){
         userMapper.updateKaKaoProfile(userVO);
     }
+
 
 
 //    로그인

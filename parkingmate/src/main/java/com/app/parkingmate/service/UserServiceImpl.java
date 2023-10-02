@@ -51,8 +51,13 @@ public class UserServiceImpl implements UserService {
             }
 
         }else{
-            userVO.setUserSnsLoginStatus(0);
-            userDAO.save(userVO);
+            Optional<UserVO> foundEmail = getEmail(userVO.getUserEmail());
+            if(foundEmail.isPresent()){
+                return;
+            }else{
+                userVO.setUserSnsLoginStatus(0);
+                userDAO.save(userVO);
+            }
         }
     }
 
@@ -65,8 +70,8 @@ public class UserServiceImpl implements UserService {
 
 //    find-id, find-password
     @Override
-    public Optional<UserVO> getEmail(UserVO userVO) {
-        return userDAO.findByEmail(userVO);
+    public Optional<UserVO> getEmail(String UserEmail) {
+        return userDAO.findByEmail(UserEmail);
     }
 
     //   카카오 이메일로 조회(login(카카오)부분)

@@ -12,7 +12,7 @@ public interface UserMapper {
 
 
 //    find-id, find-password할때 조회쿼리
-    public Optional<UserVO> select(UserVO userVO);
+    public Optional<UserVO> select(String UserEmail);
     
 //    카카오 이메일로 조회(login(카카오)부분)
     public Optional<UserVO> kakaoSelect(String KakaoEmail);

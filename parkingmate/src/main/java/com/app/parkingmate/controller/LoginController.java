@@ -70,8 +70,8 @@ public class LoginController {
     public void goToFindIdForm(UserVO userVO){;}
 
     @PostMapping("find-id")
-    public RedirectView checkEmail(UserVO userVO){
-        Optional<UserVO> checkEmail = userService.getEmail(userVO);
+    public RedirectView checkEmail(String UserEmail){
+        Optional<UserVO> checkEmail = userService.getEmail(UserEmail);
         log.info(checkEmail.toString());
         if(checkEmail.isPresent()){
             return new RedirectView("/login/login");
@@ -83,8 +83,8 @@ public class LoginController {
     public void goToFindPasswordForm(UserVO userVO){;}
 
     @PostMapping("find-password")
-    public RedirectView findEmail(UserVO userVO){
-        Optional<UserVO> foundEmail = userService.getEmail(userVO);
+    public RedirectView findEmail(String UserEmail){
+        Optional<UserVO> foundEmail = userService.getEmail(UserEmail);
         log.info(foundEmail.toString());
         if(foundEmail.isPresent()){
             return new RedirectView("/login/login");

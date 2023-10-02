@@ -12,7 +12,7 @@ public interface UserService {
 
 
 //    find-id,find-password
-    public Optional<UserVO> getEmail(UserVO userVO);
+    public Optional<UserVO> getEmail(String UserEmail);
 
 //  카카오 이메일로 조회(login(카카오)부분)
     public Optional<UserVO> getKakaoEmail(String KakaoEmail);
