@@ -1,6 +1,8 @@
 package com.app.parkingmate.domain.VO;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -10,7 +12,7 @@ import java.util.Date;
 public class ParkingVO {
 //    주차장 고유 id
 //    not null
-    private Integer ParkingId;
+    private Integer Id;
 //    주차장 주소
 //    3000자
 //    not null
