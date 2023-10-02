@@ -59,4 +59,10 @@ public class UserVO implements Serializable{
 //    업데이트 날짜
     private LocalDateTime UpdateDate;
 
+    private String KakaoEmail;
+
+    private String UserProfileName;
+
+    private String UserProfilePath;
+
 }

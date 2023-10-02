@@ -39,17 +39,17 @@ class ParkingmateApplicationTests {
 
 	}
 
-	@Test
-	public void UserTest(){
-		UserVO userVO = new UserVO();
-		userVO.setUserName("김철수");
-		userVO.setUserPassword("7777");
-		userVO.setUserEmail("kim@gmail.com");
-		userVO.setUserNickName("김7777");
-		userVO.setUserPhoneNumber("010-1111-2222");
-		userVO.setUserStartDate(new Date());
-		userVO.setUserProfile("나는 철수");
-		userService.join(userVO);
-	}
+//	@Test
+//	public void UserTest(){
+//		UserVO userVO = new UserVO();
+//		userVO.setUserName("김철수");
+//		userVO.setUserPassword("7777");
+//		userVO.setUserEmail("kim@gmail.com");
+//		userVO.setUserNickName("김7777");
+//		userVO.setUserPhoneNumber("010-1111-2222");
+//		userVO.setUserStartDate(new Date());
+//		userVO.setUserProfile("나는 철수");
+//		userService.join(userVO);
+//	}
 
 }

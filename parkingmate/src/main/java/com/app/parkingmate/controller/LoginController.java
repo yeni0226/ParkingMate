@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.Optional;
 
@@ -24,9 +26,17 @@ public class LoginController {
     private final UserService userService;
 
     @GetMapping("login")
-    public void goToLoginForm(Integer Id){
-//        log.info(userService.getMember(UserId).get().getUserName());
-//        log.info(userService.getMember(Id).toString());
+    public void goToLoginForm(UserVO userVO){
+
+    }
+    @PostMapping("login")
+    public RedirectView login(UserVO userVO, HttpSession session, RedirectAttributes attributes){
+        Optional<UserVO> foundMember = userService.login(userVO);
+        if(foundMember.isPresent()){
+            session.setAttribute("user", foundMember.get());
+            return new RedirectView("/mypage/mypage-mobile");
+        }
+        return new RedirectView("/login/login");
     }
 
 
@@ -36,31 +46,59 @@ public class LoginController {
 
     @PostMapping("sign-up")
     public RedirectView signUp(UserVO userVO){
-        userVO.setUserNickName("choi3333");
-        userVO.setUserPhoneNumber("010-1171-2224");
-        userVO.setUserStartDate(new Date());
-        userVO.setUserProfile("나는철수");
+//        userVO.setUserNickName("iu");
+//        userVO.setUserPhoneNumber("010-2424-2424");
+//        userVO.setUserStartDate(new Date());
+//        userVO.setUserProfile("나는qwer");
 
         log.info(userVO.toString());
-        userService.join(userVO);
+        userService.join(userVO, null);
 
-        return new RedirectView("/login/login");
+        return new RedirectView("/login/sign-up-complete");
     }
 
     @GetMapping("sign-up-complete")
-    public void goToSignUpComplete(){;}
+    public void goToSignUpComplete(){
+        ;}
+
+//    @PostMapping("sign-up-complete")
+//    public RedirectView signUpComplete(){
+//        return new RedirectView("/login/login");
+//    }
 
     @GetMapping("find-id")
-    public void goToFindIdForm(){;}
+    public void goToFindIdForm(UserVO userVO){;}
+
+    @PostMapping("find-id")
+    public RedirectView checkEmail(UserVO userVO){
+        Optional<UserVO> checkEmail = userService.getEmail(userVO);
+        log.info(checkEmail.toString());
+        if(checkEmail.isPresent()){
+            return new RedirectView("/login/login");
+        }
+        return new RedirectView("/login/sign-up");
+    }
 
     @GetMapping("find-password")
     public void goToFindPasswordForm(UserVO userVO){;}
 
     @PostMapping("find-password")
     public RedirectView findEmail(UserVO userVO){
-        UserVO foundEmail = userService.getEmail(userVO);
+        Optional<UserVO> foundEmail = userService.getEmail(userVO);
         log.info(foundEmail.toString());
+        if(foundEmail.isPresent()){
+            return new RedirectView("/login/login");
+        }
+        return new RedirectView("/login/sign-up");
+    }
+
+//    로그아웃
+    @GetMapping("logout")
+    public RedirectView logout(HttpSession session){
+        session.invalidate();
         return new RedirectView("/login/login");
     }
+
+
 
 }
