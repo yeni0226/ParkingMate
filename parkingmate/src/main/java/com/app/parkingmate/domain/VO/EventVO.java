@@ -9,34 +9,31 @@ import java.util.Date;
 @Component
 @Data
 public class EventVO {
-<<<<<<< HEAD
-=======
 //    이벤트 고유 id
 //    not null
-    private Integer EventId;
+    private Integer id;
 //    이벤트 상태
 //    not null
 //    기본 값 : 진행 중
 //    옵션 : 진행 중, 종료, 예정
-    private String EventStatus;
+    private String eventStatus;
 //    이벤트 제목
 //    not null
-    private String EventTitle;
+    private String eventTitle;
 //    이벤트 내용
 //    3000자
 //    not null
-    private String EventContent;
+    private String eventContent;
 //    이벤트 시작 날짜
 //    not null
-    private Date EventStartDate;
+    private Date eventStartDate;
 //    이벤트 종료 날짜
 //    기본 값 : 9999-12-31
 //    not null
-    private Date EventEndDate;
+    private Date eventEndDate;
 //    생성 날짜
-    private LocalDateTime CreateDate;
+    private LocalDateTime createDate;
 //    업데이트 날짜
-    private LocalDateTime UpdateDate;
->>>>>>> 3bf64e21b78a1e9a05f9cff3f4725b67150ef8e2
+    private LocalDateTime updateDate;
 
 }
