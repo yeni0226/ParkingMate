@@ -35,8 +35,11 @@ public class LoginController {
         if(foundMember.isPresent()){
             session.setAttribute("user", foundMember.get());
             return new RedirectView("/mypage/mypage-mobile");
+        }else{
+            attributes.addFlashAttribute("loginCheck", false);
+            return new RedirectView("/login/login");
         }
-        return new RedirectView("/login/login");
+
     }
 
 
@@ -56,9 +59,13 @@ public class LoginController {
             attributes.addFlashAttribute("dualEmail", false);
             return new RedirectView("/login/sign-up");
         }else{
-            userService.join(userVO, null);
-            log.info(userVO.toString());
-            return new RedirectView("/login/sign-up-complete");
+            if(userVO.getUserPassword().equals(userVO.getUserPasswordCheck())){
+                userService.join(userVO, null);
+                log.info(userVO.toString());
+                return new RedirectView("/login/sign-up-complete");
+            }
+            attributes.addFlashAttribute("passwordCheck", false);
+            return new RedirectView("/login/sign-up");
         }
     }
 
