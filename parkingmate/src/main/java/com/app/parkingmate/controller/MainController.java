@@ -111,6 +111,11 @@ public class MainController {
 //        return "/";
 //    }
 
+    @GetMapping("/main-page")
+    public String goToMain(){
+        return "/main/main-page";
+    }
+
     @PostMapping("/")
     public RedirectView login(UserVO userVO, HttpSession session, RedirectAttributes attributes){
         Optional<UserVO> foundMember = userService.login(userVO);
